@@ -1,32 +1,24 @@
-- name: Home
-  path: index.html
-  section_id: home
-  children:
-    - name: Home Studio
-      path: index.html
-    - name: Home Personal
-      path: index-personal.html
-- name: Pages
+- name: About
   path: about.html
   section_id: pages
   children:
     - name: About Us
       path: about.html
-    - name: Services
+    - name: Our Ethos
       path: services.html
-    - name: Services 2
+    - name: Financial
       path: services-2.html
-- name: Works
+- name: Initiatives
   path: portfolio.html
   section_id: works
   children:
-    - name: Portfolio Style 1
+    - name: Open Source Projects
       path: portfolio.html
-    - name: Portfolio Style 2
+    - name: Company Spotlight
       path: portfolio-2.html
-    - name: Single Page 1
+    - name: The Supply Chain
       path: portfolio-item.html
-    - name: Single Page 2
+    - name: How You Can Help
       path: portfolio-item-2.html
 - name: Contact
   path: contact.html
@@ -37,5 +29,5 @@
   children:
     - name: Blog
       path: blog/
-    - name: Single Page
+    - name: Resources
       path: travel/2016/04/06/beautiful-day.html
