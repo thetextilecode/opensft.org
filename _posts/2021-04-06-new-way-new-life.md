@@ -1,13 +1,14 @@
 ---
 layout: post
-title: new way, new move
-author: hornyou
-date: 2016-04-06 06:47:03 +0800
-categories: travel
+title: new way, new life
+author: OSFT
+date: 2021-04-06 06:48:03 +0800
+categories: travel, life
 images:
-- images/@stock/post-6.jpg
+- images/@stock/post-2.jpg
+- images/@stock/post-3.jpg
 excerpt:
-  Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.
+  Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices - today I choose to feel life, not to deny my humanity but embrace it.
 ---
 
 Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.

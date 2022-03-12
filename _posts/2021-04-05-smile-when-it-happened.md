@@ -1,11 +1,9 @@
 ---
 layout: post
-title: hello there
-author: hornyou
-date: 2016-04-06 06:49:03 +0800
-categories: travel
+title: Smile when it happened
+author: OSFT
 images:
-- images/@stock/post-5.jpg
+  - images/@stock/r-post-5.jpg
 excerpt:
   To feel the freedom that comes from being able to continue to make mistakes and choices.
 ---

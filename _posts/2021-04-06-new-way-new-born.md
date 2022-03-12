@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Smile when it happened
-author: hornyou
+title: new way, new born
+author: OSFT
+date: 2021-04-06 06:45:03 +0800
+categories: travel
 images:
-  - images/@stock/r-post-5.jpg
+- images/@stock/post-4.jpg
 excerpt:
-  To feel the freedom that comes from being able to continue to make mistakes and choices.
+  Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain...
 ---
 
 Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.
