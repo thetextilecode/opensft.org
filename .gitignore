@@ -1,8 +1,22 @@
-source "https://rubygems.org"
+# NPM
+node_modules
+npm-debug.log
 
-gem "jekyll", "~> 4.1"
-gem "jekyll-environment-variables"
+# Jekyll
+_site
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+**/Gemfile.lock
 
-group :jekyll_plugins do
-  gem "jekyll-sitemap"
-end
+# Temporary files
+tmp
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+.idea
