@@ -13,5 +13,10 @@
     "name": "Twitter",
     "link": "https://www.twitter.com/opensourceft",
     "icon": "fa fa-twitter"
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/groups/12638215/",
+    "icon": "fa fa-linkedin"
   }
 ]
