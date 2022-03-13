@@ -1,13 +1,13 @@
 ---
 layout: post
-title: new way, new born
+title: new way, new air
 author: OSFT
-date: 2021-04-06 06:45:03 +0800
+date: 2022-03-13 08:46:03
 categories: travel
 images:
-- images/@stock/post-4.jpg
+- images/@stock/post-1.jpg
 excerpt:
-  Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain...
+  To feel the freedom that comes from being able to continue to make mistakes and choices - today I choose to feel life, not to deny my humanity but embrace it.
 ---
 
 Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.

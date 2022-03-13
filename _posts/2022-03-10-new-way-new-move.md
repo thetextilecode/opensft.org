@@ -1,13 +1,13 @@
 ---
 layout: post
-title: beautiful day
+title: new way, new move
 author: OSFT
-date: 2021-04-06 06:50:03 +0800
+date: 2022-03-10 06:47:03
 categories: travel
 images:
-- images/@stock/post-7.jpg
+- images/@stock/post-6.jpg
 excerpt:
-  Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.
+  Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.
 ---
 
 Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices.
@@ -24,4 +24,3 @@ Friends can help each other. A true friend is someone who lets you have total fr
 
 
 Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, mollitia! Animi et dolore ab ratione cupiditate totam error ducimus, reiciendis voluptatum praesentium dignissimos vitae nostrum autem similique unde minus deleniti.
-

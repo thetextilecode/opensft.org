@@ -62,9 +62,14 @@
 .full.white {
   background: #fff; }
 
-.full.flower {
-  /*background-image: url(../images/@stock/flower.png);*/
+.full.plant {
   background-image: url(../images/@stock/plant.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed; }
+
+.full.flower {
+  background-image: url(../images/@stock/flower.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: fixed; }
