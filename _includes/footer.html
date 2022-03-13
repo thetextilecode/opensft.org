@@ -5,8 +5,12 @@
       {% if site.data.social %}
       {% include social.html %}
       {% endif %}
-      <p>Copyright ©2022 {{site.title}}.</p>
+
+      {% if site.footer.copyright_text %}
+      <p>{{ site.footer.copyright_text }}</p>
       <p>All rights reserved.</p>
+      {% endif %}
+
       <div class="four spacing"></div>
       <p class="back-to-top"><a href="#"><i class="fa fa-chevron-up"></i>Back to top</a></p>
     </div>

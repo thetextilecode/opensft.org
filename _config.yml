@@ -19,6 +19,8 @@ instagram_username: opensourceft
 twitter_username: opensourceft
 github_username:  opensourceft
 google_analytics_id: "G-21QV9LQ0RG"
+footer:
+  copyright_text: 'Copyright ©2022 Open Source Fashion & Textiles'
 
 seo:
   meta_og_title: "Open Source Fashion & Textiles"
