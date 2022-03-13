@@ -6,15 +6,15 @@
   section_id: works
   children:
     - name: Open Source Projects
-      path: portfolio
+      path: projects
     - name: Company Spotlight
-      path: portfolio-2
-    - name: The Supply Chain
-      path: portfolio-item
+      path: companies
+    - name: Learn
+      path: learn
     - name: Resources
-      path: travel/2016/04/06/beautiful-day
+      path: resources
     - name: How You Can Help
-      path: portfolio-item-2
+      path: join
 - name: Blog
   path: blog
   section_id: blog

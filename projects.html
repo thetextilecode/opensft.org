@@ -1,0 +1,72 @@
+---
+layout: default
+section_id: projects
+projects_left:
+- title: Kaoto
+  link_to: /kaoto
+  image: images/@stock/work-1.jpg
+  categories: Automation, Integration
+
+
+
+projects_right:
+- title: Spoolbox
+  link_to: /spoolbox
+  image: images/@stock/work-20.jpg
+  categories: Retail, Manufacturing
+
+---
+
+<div class="full light-grey">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">Projects</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-9 medium-centered columns">
+        <div class="header-quote">
+          <p>OSFT open source projects for the fashion and textile industry.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="gallery-left-section">
+        {% for project in page.projects_left %}
+          <div class="project-wrapper">
+            <a href="{{project.link_to}}" class="project">
+              <img src="{{site.url}}/{{project.image}}" alt="">
+              <div class="info">
+                <h3>{{project.title}}</h3>
+                <p>{{project.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="gallery-right-section">
+        {% for project in page.projects_right %}
+          <div class="project-wrapper">
+            <a href="{{project.link_to}}" class="project">
+              <img src="{{site.url}}/{{project.image}}" alt="">
+              <div class="info">
+                <h3>{{project.title}}</h3>
+                <p>{{project.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
