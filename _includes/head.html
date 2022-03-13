@@ -6,22 +6,22 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/css/app.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600,300" media="screen" rel="stylesheet"
         type="text/css" />
-  <link rel="stylesheet" href="{{ "/css/superslides.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/slick-theme.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/slick.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/linea-styles.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/linea-arrows-styles.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/font-awesome.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/chivo.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}"/>
-  <link rel="stylesheet" href="{{ "/css/responsive.css" | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" href="{{ "/css/superslides.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/slick-theme.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/slick.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/animate.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/linea-styles.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/linea-arrows-styles.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/font-awesome.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/chivo.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}"/>
+  <link rel="stylesheet" href="{{ "/css/responsive.css" | relative_url }}"/>
 
-  <script src="{{ "/js/modernizr/modernizr.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/js/modernizr/modernizr.js" | relative_url }}"></script>
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url  }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 </head>
