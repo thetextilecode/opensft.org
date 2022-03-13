@@ -15,8 +15,21 @@ email: hello@opensourceft.org
 description: Bridging the worlds of open source technology and fashion & textiles by providing you with resources and 
   training.
 url: "https://www.opensourceft.org" # the base hostname & protocol for your site
+instagram_username: opensourceft
 twitter_username: opensourceft
 github_username:  opensourceft
+google_analytics_id: "G-21QV9LQ0RG"
+
+seo:
+  meta_og_title: "Open Source Fashion & Textiles"
+  meta_og_type: "website"
+  meta_og_url: "https://www.opensourceft.org"
+  meta_og_image: ""
+  meta_og_description: "Bridging the worlds of open source technology and fashion & textiles by providing you with resources and 
+  training."
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@opensourceft"
+  meta_twitter_creator: "@opensourceft"
 
 # Build settings
 markdown: kramdown

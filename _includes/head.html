@@ -4,7 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600,300" media="screen" rel="stylesheet"
@@ -20,8 +19,22 @@
   <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}"/>
   <link rel="stylesheet" href="{{ "/css/responsive.css" | relative_url }}"/>
 
+  <!-- Makeshift favicon -->
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
+
   <script src="{{ "/js/modernizr/modernizr.js" | relative_url }}"></script>
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url  }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:title" content="{{ site.seo.meta_og_title }}" />
+  <meta property="og:type" content="{{ site.seo.meta_og_type }}" />
+  <meta property="og:url" content="{{ site.seo.meta_og_url }}" />
+  <meta property="og:image" content="{{ site.seo.meta_og_image }}" />
+  <meta property="og:description" content="{{ site.seo.meta_og_description }}" />
+  <meta name="twitter:card" content="{{ site.seo.meta_twitter_card }}" />
+  <meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}" />
+  <meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}" />
 </head>
