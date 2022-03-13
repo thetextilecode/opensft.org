@@ -1,33 +1,29 @@
 - name: About
-  path: about.html
+  path: about
   section_id: pages
   children:
     - name: About Us
-      path: about.html
-    - name: Our Ethos
-      path: services.html
-    - name: Financial
-      path: services-2.html
+      path: about
 - name: Initiatives
-  path: portfolio.html
+  path: portfolio
   section_id: works
   children:
     - name: Open Source Projects
-      path: portfolio.html
+      path: portfolio
     - name: Company Spotlight
-      path: portfolio-2.html
+      path: portfolio-2
     - name: The Supply Chain
-      path: portfolio-item.html
+      path: portfolio-item
     - name: How You Can Help
-      path: portfolio-item-2.html
+      path: portfolio-item-2
 - name: Contact
-  path: contact.html
+  path: contact
   section_id: contact
 - name: Blog
-  path: blog.html
+  path: blog
   section_id: blog
   children:
     - name: Blog
       path: blog/
     - name: Resources
-      path: travel/2016/04/06/beautiful-day.html
+      path: travel/2016/04/06/beautiful-day
