@@ -11,16 +11,14 @@
       path: portfolio-2
     - name: The Supply Chain
       path: portfolio-item
+    - name: Resources
+      path: travel/2016/04/06/beautiful-day
     - name: How You Can Help
       path: portfolio-item-2
-- name: Contact
-  path: contact
-  section_id: contact
 - name: Blog
   path: blog
   section_id: blog
-  children:
-    - name: Blog
-      path: blog/
-    - name: Resources
-      path: travel/2016/04/06/beautiful-day
+- name: Contact
+  path: contact
+  section_id: contact
+
