@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Github",
+    "link": "https://www.github.com/OpenSourceFT",
+    "icon": "fa fa-github"
+  },
+  {
+    "name": "Instagram",
+    "link": "https://www.instagram.com/opensourceft",
+    "icon": "fa fa-instagram"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://www.twitter.com/opensourceft",
+    "icon": "fa fa-twitter"
+  }
+]

@@ -2,13 +2,9 @@
   <div class="four spacing"></div>
   <div class="row">
     <div class="small-12 columns">
-      <ul class="socials">
-        <li><a href="#"><i class='fa fa-twitter'></i></a></li>
-        <li><a href="#"><i class='fa fa-facebook'></i></a></li>
-        <li><a href="#"><i class='fa fa-linkedin'></i></a></li>
-        <li><a href="#"><i class='fa fa-dribbble'></i></a></li>
-        <li><a href="#"><i class='fa fa-behance'></i></a></li>
-      </ul>
+      {% if site.data.social %}
+      {% include social.html %}
+      {% endif %}
       <p>Copyright ©2022 {{site.title}}.</p>
       <p>All rights reserved.</p>
       <div class="four spacing"></div>

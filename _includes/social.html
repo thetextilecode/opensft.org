@@ -1,0 +1,11 @@
+<div class="social">
+  <ul class="socials">
+    {% for item in site.data.social %}
+    <li>
+      <a href="{{ item.link }}" target="blank" rel="noopener nofollow">
+        <i class="{{ item.icon }}"></i>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
