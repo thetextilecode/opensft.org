@@ -11,3 +11,13 @@ excerpt:
 ---
 
 Can software help solve many of the sustainability problems that fashion and textile brands are facing? How can open source help?
+
+Artificial Intelligence
+
+Blockchain
+
+Business Intelligence
+
+Automation
+
+
