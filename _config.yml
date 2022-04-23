@@ -22,8 +22,7 @@ google_analytics_id: "G-21QV9LQ0RG"
 footer:
   copyright_text: 'Copyright ©2022 Open Source Fashion & Textiles'
 
-include:
-  - _site/_redirects
+include: [_site/_redirects]
 
 seo:
   meta_og_title: "Open Source Fashion & Textiles"

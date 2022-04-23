@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenSourceFT</title>
+    <title>OpenSFT</title>
     <description>Bridging the worlds of open source technology and fashion &amp; textiles by providing you with resources and training.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Apr 2022 17:46:55 +0100</pubDate>
-    <lastBuildDate>Sat, 23 Apr 2022 17:46:55 +0100</lastBuildDate>
+    <pubDate>Sat, 23 Apr 2022 18:03:47 +0100</pubDate>
+    <lastBuildDate>Sat, 23 Apr 2022 18:03:47 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
