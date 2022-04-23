@@ -11,10 +11,10 @@ exclude: ['README.md']
 permalink: pretty
 
 title: OpenSourceFT
-email: hello@opensourceft.org
+email: hello@opensft.org
 description: Bridging the worlds of open source technology and fashion & textiles by providing you with resources and 
   training.
-url: "https://www.opensourceft.org" # the base hostname & protocol for your site
+url: "https://www.opensft.org" # the base hostname & protocol for your site
 instagram_username: opensourceft
 twitter_username: opensourceft
 github_username:  opensourceft
@@ -25,7 +25,7 @@ footer:
 seo:
   meta_og_title: "Open Source Fashion & Textiles"
   meta_og_type: "website"
-  meta_og_url: "https://www.opensourceft.org"
+  meta_og_url: "https://www.opensft.org"
   meta_og_image: ""
   meta_og_description: "Bridging the worlds of open source technology and fashion & textiles by providing you with resources and 
   training."
