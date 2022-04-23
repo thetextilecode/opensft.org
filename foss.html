@@ -1,0 +1,59 @@
+---
+layout: default
+section_id: foss
+---
+
+<div class="full light-grey">
+  <div class="four spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h1 class="wow slideInUp">Free and Open Source Ecommerce & Fashion Projects</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-9 medium-centered columns">
+        <div class="header-quote">
+          <p>"A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full">
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="gallery-left-section">
+        {% for item in site.data.platforms %}
+          <div class="work-wrapper">
+            <a href="{{item.url}}" target="_blank" class="work">
+              <div class="info">
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}</p>
+                <p>{{item.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="gallery-right-section">
+        {% for item in site.data.crms %}
+          <div class="work-wrapper">
+            <a href="{{item.url}}" target="_blank" class="work">
+              <div class="info">
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}</p>
+                <p>{{item.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
+

@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Bagisto",
+    "url": "https://github.com/bagisto/bagisto",
+    "description": "An easy to use, free and open source laravel eCommerce platform to build your online shop in no time.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Magento",
+    "url": "https://github.com/magento/magento2",
+    "description": "Magento is an open-source e-commerce platform written in PHP. It uses multiple other PHP frameworks such as Laminas and Symfony.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "nopCommerce",
+    "url": "https://github.com/nopSolutions/nopCommerce",
+    "description": "ASP.NET Core eCommerce software. nopCommerce is a free and open-source shopping cart.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Odoo",
+    "url": "https://www.odoo.com/app/ecommerce",
+    "description": "Open Source Apps To Grow Your Business.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Opencart",
+    "url": "https://github.com/opencart/opencart",
+    "description": "A free shopping cart system. OpenCart is an open source PHP-based online e-commerce solution.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "OSCommerce",
+    "url": "https://github.com/osCommerce",
+    "description": "OsCommerce is an e-commerce and online store-management software program. It can be used on any web server that has PHP and MySQL installed. It is available as free software under the GNU General Public License.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Prestashop",
+    "url": "https://github.com/PrestaShop/PrestaShop",
+    "description": "PrestaShop is an Open Source e-commerce platform, committed to providing the best shopping cart experience for both merchants and customers.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Saleor",
+    "url": "https://github.com/saleor/saleor",
+    "description": "A modular, high performance, headless e-commerce platform built with Python, GraphQL, Django, and React.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Shopware",
+    "url": "https://github.com/shopware/platform",
+    "description": "Shopware 6 is an open commerce platform based on Symfony Framework and Vue and supported by a worldwide community and more then 1.500 community extensions.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Snipcart",
+    "url": "https://github.com/snipcart",
+    "description": "Add a shopping cart to any website.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Spree",
+    "url": "https://github.com/spree/spree",
+    "description": "Open Source headless multi-language/multi-currency/multi-store eCommerce platform.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Sylius",
+    "url": "https://github.com/Sylius/Sylius",
+    "description": "Sylius is an Open Source Headless eCommerce Platform based on Symfony.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Vendure",
+    "url": "https://github.com/vendure-ecommerce/vendure",
+    "description": "A headless GraphQL ecommerce framework.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Woocommerce",
+    "url": "https://github.com/woocommerce/woocommerce",
+    "description": "A customizable, open-source eCommerce platform built on WordPress. Build any commerce solution you can imagine.",
+    "image": "",
+    "categories": []
+  },
+  {
+    "title": "Zen Cart",
+    "url": "https://github.com/zencart/zencart",
+    "description": "Zen Cart® is a full-function e-commerce application for your website.",
+    "image": "",
+    "categories": []
+  }
+]
