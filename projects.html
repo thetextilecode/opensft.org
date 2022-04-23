@@ -3,15 +3,16 @@ layout: default
 section_id: projects
 projects_left:
 - title: Kaoto
-  link_to: /projects/kaoto
-  image: images/@stock/work-1.jpg
+  link: https://www.kaoto.io
+  image: images/kaoto-automation-integration.gif
   categories: Automation, Integration
+  description: "Kaoto is an open source integration editor with a user-friendly drag and drop interface. Use it to automate common tasks in your day-to-day ecommerce workflow."
 
 projects_right:
 - title: Spoolbox
-  link_to: /projects/spoolbox
-  image: images/@stock/work-20.jpg
+  link: https://www.spoolbox.io
   categories: Retail, Manufacturing
+  description: "Spoolbox is our open source platform for ecommerce that puts sustainability first. Understand how sustainable your decisions are and share it with your customers"
 
 ---
 
@@ -39,13 +40,18 @@ projects_right:
       <div class="gallery-left-section">
         {% for project in page.projects_left %}
           <div class="project-wrapper">
-            <a href="{{project.link_to}}" class="project">
+            <a href="{{project.link}}" class="project" target="_blank" rel="nofollow">
               <img src="{{site.url}}/{{project.image}}" alt="">
               <div class="info">
                 <h3>{{project.title}}</h3>
-                <p>{{project.categories}}</p>
               </div>
             </a>
+              <div class="info">
+                <p>{{project.description}}</p>
+                <a href="{{project.link}}" class="project" target="_blank" rel="nofollow">
+                <p>{{project.categories}}</p>
+                </a>
+              </div>
           </div>
         {% endfor %}
       </div>
@@ -53,15 +59,20 @@ projects_right:
     <div class="large-6 columns">
       <div class="gallery-right-section">
         {% for project in page.projects_right %}
-          <div class="project-wrapper">
-            <a href="{{project.link_to}}" class="project">
-              <img src="{{site.url}}/{{project.image}}" alt="">
-              <div class="info">
-                <h3>{{project.title}}</h3>
-                <p>{{project.categories}}</p>
-              </div>
+        <div class="project-wrapper">
+          <a href="{{project.link}}" class="project" target="_blank" rel="nofollow">
+            <img src="{{site.url}}/{{project.image}}" alt="">
+            <div class="info">
+              <h3>{{project.title}}</h3>
+            </div>
+          </a>
+          <div class="info">
+            <p>{{project.description}}</p>
+            <a href="{{project.link}}" class="project" target="_blank" rel="nofollow">
+              <p>{{project.categories}}</p>
             </a>
           </div>
+        </div>
         {% endfor %}
       </div>
     </div>
