@@ -10,7 +10,7 @@ baseurl: ''  # the subpath of your site, e.g. /blog
 exclude: ['README.md']
 permalink: pretty
 
-title: OpenSourceFT
+title: OpenSFT
 email: hello@opensft.org
 description: Bridging the worlds of open source technology and fashion & textiles by providing you with resources and 
   training.
@@ -21,6 +21,9 @@ github_username:  opensourceft
 google_analytics_id: "G-21QV9LQ0RG"
 footer:
   copyright_text: 'Copyright ©2022 Open Source Fashion & Textiles'
+
+include:
+  - _site/_redirects
 
 seo:
   meta_og_title: "Open Source Fashion & Textiles"
