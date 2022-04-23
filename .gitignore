@@ -5,7 +5,6 @@ npm-debug.log
 # Jekyll
 _site
 _site/
-!_site/_redirects
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
