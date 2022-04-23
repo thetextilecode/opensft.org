@@ -1,9 +1,9 @@
 [
   {
     "name": "Kaoto",
-    "link": "",
-    "image": "images/@stock/work-1.jpg",
-    "description": ""
+    "link": "https://kaoto.io",
+    "image": "images/kaoto-automation-integration.gif",
+    "description": "Kaoto is an open source integration editor with a user-friendly drag and drop interface. Use it to automate common tasks in your day-to-day ecommerce workflow."
   },
   {
     "name": "Spoolbox",
