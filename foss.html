@@ -3,57 +3,38 @@ layout: default
 section_id: foss
 ---
 
-<div class="full light-grey">
-  <div class="four spacing"></div>
+
+<div class="full">
   <div class="section-title">
     <div class="row">
       <div class="medium-10 medium-centered columns">
-        <h1 class="wow slideInUp">Free and Open Source Ecommerce & Fashion Projects</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="medium-9 medium-centered columns">
-        <div class="header-quote">
-          <p>"A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."</p>
-        </div>
+        <h2>FOSS Ecommerce & Fashion Projects</h2>
+        <p>Free and open source projects.</p>
       </div>
     </div>
   </div>
+  <div class="row">
+    {% for item in site.data.platforms %}
+    <div class="large-3 columns">
+      <div class="process">
+<!--        <h3><span>0{{forloop.index}}.</span>{{item.title}}</h3>-->
+        <a href="{{item.url}}" target="_blank" rel="nofollow"><span>0{{forloop.index}}.</span>{{item.title}}</a>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="full centered-text">
+  <div class="two spacing"></div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Have a project in mind?</h2>
+      <div class="two spacing"></div>
+      <a href="{{site.url}}/contact" class="button brown boxed">Let's talk</a>
+    </div>
+  </div>
+  <div class="two spacing"></div>
 </div>
 
-<div class="full">
-  <div class="row">
-    <div class="large-6 columns">
-      <div class="gallery-left-section">
-        {% for item in site.data.platforms %}
-          <div class="work-wrapper">
-            <a href="{{item.url}}" target="_blank" class="work">
-              <div class="info">
-                <h3>{{item.title}}</h3>
-                <p>{{item.description}}</p>
-                <p>{{item.categories}}</p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="large-6 columns">
-      <div class="gallery-right-section">
-        {% for item in site.data.crms %}
-          <div class="work-wrapper">
-            <a href="{{item.url}}" target="_blank" class="work">
-              <div class="info">
-                <h3>{{item.title}}</h3>
-                <p>{{item.description}}</p>
-                <p>{{item.categories}}</p>
-              </div>
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  <div class="spacing"></div>
-</div>
 
