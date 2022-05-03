@@ -29,6 +29,9 @@ section_id: blog
               /
             {% endif %}
             <span>{{page.date | date: "%B %d, %Y" }}</span>
+            {% if page.lastUpdated %}/
+            <span><i>Last Updated: {{page.lastUpdated | date: "%B %d, %Y" }}</i></span>
+            {% endif %}
             <!--
             /
             <span><a href="#">2 Comments</a></span>
