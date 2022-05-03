@@ -7,7 +7,10 @@ categories: updates
 images:
 - images/@stock/post-4.jpg
 excerpt:
-  We're a new initiative with a love for both open source and fashion. Find out what we're about.
+  We're a nonprofit association with a love for both open source and fashion. Our mission is to empower businesses in the fashion and textile sector to make more conscious and sustainable decisions by using open source.
 ---
 
-We're a new initiative with a love for both open source and fashion. Find out what we're about.
+We're a nonprofit association with a love for both open source and fashion. 
+
+Our mission is to empower businesses in the fashion and textile sector to make more conscious and sustainable decisions by using open source.
+

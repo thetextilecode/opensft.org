@@ -3,6 +3,7 @@ layout: post
 title: Can Fashion Change?
 author: OSFT
 date: 2022-03-08 06:48:03
+lastUpdated: 2022-05-02 10:42:28
 categories: opinion
 images:
 - images/@stock/post-2.jpg
