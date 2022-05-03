@@ -2,7 +2,7 @@
   path: about
   section_id: pages
 - name: Initiatives
-  path: portfolio
+  path: projects
   section_id: works
   children:
     - name: Open Source Projects
@@ -13,9 +13,6 @@
       path: resources
     - name: How You Can Help
       path: join
-- name: Blog
-  path: blog
-  section_id: blog
 - name: Contact
   path: contact
   section_id: contact
