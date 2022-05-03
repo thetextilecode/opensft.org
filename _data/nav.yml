@@ -7,8 +7,6 @@
   children:
     - name: Open Source Projects
       path: projects
-    - name: Company Spotlight
-      path: companies
     - name: Learn
       path: learn
     - name: Resources
