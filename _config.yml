@@ -20,7 +20,7 @@ twitter_username: opensourceft
 github_username:  opensft
 google_analytics_id: "G-9WS3JV03MY"
 footer:
-  copyright_text: 'Copyright ©2022 Open Source Fashion & Textiles'
+  copyright_text: 'Copyright 2022 © Open Source Fashion & Textiles'
 
 include: [_site]
 keep_files:
