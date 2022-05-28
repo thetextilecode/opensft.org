@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-// import { fetchByCatagory } from "../../redux/action/product";
+// import { fetchByCategory } from "../../redux/action/product";
 import { server } from "../../config/index";
 import FeaturedSlider from "../sliders/Featured";
 import NewArrivalTabSlider from "../sliders/NewArrivalTab";
 import TrendingSlider from "../sliders/Trending";
 import Link from "next/link"
 
-function FeatchTabSlider() {
+function FetchTabSlider() {
     const [active, setActive] = useState("1");
     const [featured, setFeatured] = useState([]);
     const [trending, setTrending] = useState([]);
@@ -92,18 +92,18 @@ function FeatchTabSlider() {
                 <div className="col-lg-9 col-md-12">
                     <div className="tab-content wow fadeIn animated" id="myTabContent">
                         <div className={active === "1" ? "tab-pane fade show active" : "tab-pane fade"}>
-                            <div className="carausel-4-columns-cover card-product-small arrow-center position-relative">
+                            <div className="carousel-4-columns-cover card-product-small arrow-center position-relative">
                                 <FeaturedSlider products={featured} />
                             </div>
                         </div>
 
                         <div className={active === "2" ? "tab-pane fade show active" : "tab-pane fade"}>
-                            <div className="carausel-4-columns-cover card-product-small arrow-center position-relative">
+                            <div className="carousel-4-columns-cover card-product-small arrow-center position-relative">
                                 <TrendingSlider products={trending} />
                             </div>
                         </div>
                         <div className={active === "3" ? "tab-pane fade show active" : "tab-pane fade"}>
-                            <div className="carausel-4-columns-cover card-product-small arrow-center position-relative">
+                            <div className="carousel-4-columns-cover card-product-small arrow-center position-relative">
                                 <NewArrivalTabSlider products={newArrival} />
                             </div>
                         </div>
@@ -113,4 +113,4 @@ function FeatchTabSlider() {
         </>
     );
 }
-export default FeatchTabSlider;
+export default FetchTabSlider;

@@ -4,12 +4,13 @@ import searchItemsByText from '../../util/searchItemsByText'
 import * as Types from '../constants/actionTypes'
 
 // Fetch Product fetchProduct
-export const fetchProduct = (searchTerm, url, filters) => async dispatch => {
+export const fetchProduct = (searchTerm: any, url: RequestInfo | URL, filters: any) => async dispatch => {
     try {
 
         const sendRequest = await fetch(url)
         const data = await sendRequest.json()
 
+        // @ts-ignore
         window.products = data
 
         const searchedItems = searchItemsByText(searchTerm, data)
@@ -28,9 +29,8 @@ export const fetchProduct = (searchTerm, url, filters) => async dispatch => {
 
 
 // Fetch More Product 
-export const fetchMoreProduct = (url, total) => async dispatch => {
+export const fetchMoreProduct = (url: RequestInfo | URL, total: any) => async dispatch => {
     try {
-
         const sendRequest = await fetch(url)
         const data = await sendRequest.json()
 
@@ -49,18 +49,16 @@ export const fetchMoreProduct = (url, total) => async dispatch => {
 }
 
 
-// Fetch Product By Catagory
+// Fetch Product By Category
 
-export const fetchByCatagory = async (url, filters) => {
+export const fetchByCategory = async (url: RequestInfo | URL, filters?: {
+        category: any // const filteredList  = filterProductList(searchedItems,filters)
+    }) => {
     try {
-
-        const sendRequest = await fetch(url)
-        const data = await sendRequest.json()
-        const filteredList = filterProductList(data, filters)
-
-        return filteredList
-
+        const sendRequest = await fetch(url);
+        const data = await sendRequest.json();
+        return filterProductList(data, filters);
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }

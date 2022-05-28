@@ -62,12 +62,12 @@ const PriceRange = ({ updateProductFilters }) => {
 
     return (
         <>
-            <ul class="categor-list">
+            <ul className="categor-list">
                 {data.map((item, i) => (
                     <>
                         <li onClick={() => handleClick(i, item.min, item.max)}>
                             <a
-                                class={
+                                className={
                                     active == i
                                         ? "cat-item text-brand"
                                         : "cat-item text-muted"

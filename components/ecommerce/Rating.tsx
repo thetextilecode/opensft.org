@@ -32,7 +32,7 @@ const Rating = ({ updateProductRating }) => {
             {ratings.map((rate, i) => (
                 <>
                     <div
-                        class={active == i && "active"}
+                        className={active == i && "active"}
                         onClick={() => handleClick(i, rate.value)}
                     >
                         <a>
@@ -40,35 +40,35 @@ const Rating = ({ updateProductRating }) => {
                                 "All"
                             ) : (
                                 <>
-                                    <div class="product-rate-cover">
-                                        <div class="product-rate d-inline-block">
+                                    <div className="product-rate-cover">
+                                        <div className="product-rate d-inline-block">
                                             {rate.value == 1 && (
                                                 <div
-                                                    class="product-rating"
+                                                    className="product-rating"
                                                     style={{ width: "20%" }}
                                                 ></div>
                                             )}
                                             {rate.value == 2 && (
                                                 <div
-                                                    class="product-rating"
+                                                    className="product-rating"
                                                     style={{ width: "40%" }}
                                                 ></div>
                                             )}
                                             {rate.value == 3 && (
                                                 <div
-                                                    class="product-rating"
+                                                    className="product-rating"
                                                     style={{ width: "60%" }}
                                                 ></div>
                                             )}
                                             {rate.value == 4 && (
                                                 <div
-                                                    class="product-rating"
+                                                    className="product-rating"
                                                     style={{ width: "80%" }}
                                                 ></div>
                                             )}
                                             {rate.value == 5 && (
                                                 <div
-                                                    class="product-rating"
+                                                    className="product-rating"
                                                     style={{ width: "100%" }}
                                                 ></div>
                                             )}

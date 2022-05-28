@@ -4,10 +4,14 @@ import { connect } from "react-redux";
 import { updateProductFilters } from "../../redux/action/productFiltersAction";
 import CheckBox from "./Checkbox";
 
-const ContitionFilter = ({ updateProductFilters }) => {
+export interface IConditionFilter {
+    updateProductFilters?: any
+}
+
+const ConditionFilter = ({ updateProductFilters }: IConditionFilter) => {
     // console.log(updateProductFilters);
 
-    const [sizes, setSizeCheckbox] = useState([
+    const [sizes, setSizeCheckbox] = useState<{value: string;}[]>([
         { value: "new" },
         { value: "refurbished " },
         { value: "used" },
@@ -29,7 +33,7 @@ const ContitionFilter = ({ updateProductFilters }) => {
     const handleCheckBox = (
         event,
         filters,
-        updatefilters,
+        updateFilters,
         selectFilter,
         text
     ) => {
@@ -52,7 +56,7 @@ const ContitionFilter = ({ updateProductFilters }) => {
             }
         });
 
-        updatefilters([...updateSizes]);
+        updateFilters([...updateSizes]);
     };
 
     return (
@@ -84,4 +88,4 @@ const mapDidpatchToProps = {
     updateProductFilters,
 };
 
-export default connect(mapStateToProps, mapDidpatchToProps)(ContitionFilter);
+export default connect(mapStateToProps, mapDidpatchToProps)(ConditionFilter);

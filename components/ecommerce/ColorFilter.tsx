@@ -32,10 +32,10 @@ const ColorFilter = ({ updateProductFilters }) => {
 
     return (
         <>
-            <ul class="list-filter color-filter">
+            <ul className="list-filter color-filter">
                 {colors.map((tag, i) => (
                     <li
-                        class={active == i && "active"}
+                        className={active == i && "active"}
                         onClick={() => handleClick(i, tag.value)}
                     >
                         <a>
@@ -43,7 +43,7 @@ const ColorFilter = ({ updateProductFilters }) => {
                                 "All"
                             ) : (
                                 <span
-                                    class={`product-color-${tag.value}`}
+                                    className={`product-color-${tag.value}`}
                                 ></span>
                             )}
                         </a>

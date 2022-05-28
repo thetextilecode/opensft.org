@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { fetchByCatagory } from "../../redux/action/product";
+import { fetchByCategory } from "../../redux/action/product";
 import BestSeller from "../sliders/BestSeller";
 import Discount from "../sliders/Discount";
 import Featured from "../sliders/Featured";
@@ -9,21 +9,23 @@ import Related from "../sliders/Related";
 import Trending from "../sliders/Trending";
 
 const FetchSlider = ({ productFilters }) => {
-    const [featured, setFeatured] = useState([]);
-    const [trending, setTrending] = useState([]);
-    const [bestSeller, setBestSeller] = useState([]);
-    const [newArrival, setNewArrival] = useState([]);
-    const [discount, setDiscount] = useState([]);
-    const [related, setRelated] = useState([]);
+    const [featured, setFeatured] = useState<any[]>([]);
+    const [trending, setTrending] = useState<any[]>([]);
+    const [bestSeller, setBestSeller] = useState<any[]>([]);
+    const [newArrival, setNewArrival] = useState<any[]>([]);
+    const [discount, setDiscount] = useState<any[]>([]);
+    const [related, setRelated] = useState<any[]>([]);
 
     useEffect(() => {
-        fetchProducts();
+        fetchProducts().then((products) => {
+            // do something
+        });
     }, [productFilters.category]);
 
     const fetchProducts = async () => {
 
         // With Category
-        const allProducts = await fetchByCatagory("/static/product.json", {
+        const allProducts = await fetchByCategory("/static/product.json", {
             category: productFilters.category,
         });
 

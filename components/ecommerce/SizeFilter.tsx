@@ -34,10 +34,10 @@ const SizeFilter = ({ updateProductFilters }) => {
 
     return (
         <>
-        <ul class="list-filter size-filter font-small">
+        <ul className="list-filter size-filter font-small">
         {sizes.map((tag, i) => (
                     <li
-                        class={active == i && "active"}
+                        className={active == i && "active"}
                         onClick={() => handleClick(i, tag.value)}
                     >
                         <a>

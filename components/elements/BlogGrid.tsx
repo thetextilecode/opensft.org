@@ -63,7 +63,7 @@ const BlogGrid = ({ show, col }) => {
     return (
         <>
             {data.slice(0, show).map((item, i) => (
-                <div class={`col-lg-${col}`}>
+                <div className={`col-lg-${col}`}>
                     <article className="wow fadeIn animated hover-up mb-30">
                         <div className="post-thumb img-hover-scale">
                             <Link href="/blog-post-right">

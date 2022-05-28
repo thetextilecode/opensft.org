@@ -1,5 +1,5 @@
-import FeatchTab from "../components/ecommerce/fetchTab";
-import FeatchTab2 from "../components/ecommerce/fetchTabSlider";
+import FetchTab from "../components/ecommerce/fetchTab";
+import FetchTab2 from "../components/ecommerce/fetchTabSlider";
 import Banner2 from "../components/elements/Banner2";
 import Bottom from "../components/elements/Bottom";
 import QuickView from "./../components/ecommerce/QuickView";
@@ -16,7 +16,6 @@ import BrandSlider from "./../components/sliders/Brand";
 import CategorySlider from "./../components/sliders/Category";
 import Intro1 from "./../components/sliders/Intro1";
 import NewArrival from "./../components/sliders/NewArrival";
-
 
 export default function Home() {
     return (
@@ -39,7 +38,7 @@ export default function Home() {
                 <section className="product-tabs section-padding position-relative wow fadeIn animated">
                     <div className="container">
                         <div className="col-lg-12">
-                            <FeatchTab />
+                            <FetchTab />
                         </div>
                     </div>
                 </section>
@@ -55,10 +54,10 @@ export default function Home() {
                         <h3 className="section-title mb-20">
                             <span>Popular</span> Categories
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <div
-                                className="carausel-6-columns"
-                                id="carausel-6-columns"
+                                className="carousel-6-columns"
+                                id="carousel-6-columns"
                             >
                                 <CategorySlider />
                             </div>
@@ -79,7 +78,7 @@ export default function Home() {
                         <h3 className="section-title mb-20">
                             <span>New</span> Arrivals
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <NewArrival />
                         </div>
                     </div>
@@ -103,7 +102,7 @@ export default function Home() {
                         <h3 className="section-title mb-20 wow fadeIn animated">
                             <span>Featured</span> Brands
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative wow fadeIn animated">
+                        <div className="carousel-6-columns-cover position-relative wow fadeIn animated">
                             <BrandSlider />
                         </div>
                     </div>
@@ -111,7 +110,7 @@ export default function Home() {
 
                 <section className="bg-grey-9 section-padding">
                     <div className="container pt-25 pb-25">
-                        <FeatchTab2 />
+                        <FetchTab2 />
                     </div>
                 </section>
 

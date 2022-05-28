@@ -1,21 +1,27 @@
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import React, { useEffect, useState } from "react";
-import { fetchByCatagory } from "../../redux/action/product";
+import { useEffect, useState } from "react";
+import { fetchByCategory } from "../../redux/action/product";
 import SingleProduct from "./../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const RelatedSlider = () => {
+export interface IRelatedSlider {
+  related?: any
+}
+
+const RelatedSlider = ({}: IRelatedSlider) => {
     const [related, setRelated] = useState([]);
 
     useEffect(() => {
-        fetchProducts();
+        fetchProducts().then((products) => {
+          // do something
+        });
     }, []);
 
     const fetchProducts = async () => {
         // With Category
-        const allProducts = await fetchByCatagory("/static/product.json");
+        const allProducts = await fetchByCategory("/static/product.json");
         setRelated(allProducts);
     };
 
@@ -39,13 +45,13 @@ const RelatedSlider = () => {
             </Swiper>
 
             <div
-                class="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
+                className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
             >
-                <span class="slider-btn slider-prev slick-arrow custom_prev_n">
-                    <i class="fi-rs-angle-left"></i>
+                <span className="slider-btn slider-prev slick-arrow custom_prev_n">
+                    <i className="fi-rs-angle-left"></i>
                 </span>
-                <span class="slider-btn slider-next slick-arrow custom_next_n">
-                    <i class="fi-rs-angle-right"></i>
+                <span className="slider-btn slider-next slick-arrow custom_next_n">
+                    <i className="fi-rs-angle-right"></i>
                 </span>
             </div>
             

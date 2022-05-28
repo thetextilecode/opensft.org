@@ -191,7 +191,7 @@ const ProductDetails = ({
                                                             <li key={i}>
                                                                 <a href="#">
                                                                     <span
-                                                                        class={`product-color-${clr}`}
+                                                                        className={`product-color-${clr}`}
                                                                     ></span>
                                                                 </a>
                                                             </li>

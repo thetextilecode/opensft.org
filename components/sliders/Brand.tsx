@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Navigation]);
 
 const BrandSlider = () => {
-    var data = [
+    const data = [
         {
             id: 1,
             img: "brand-1.png",
@@ -41,7 +41,7 @@ const BrandSlider = () => {
                     prevEl: ".custom_prev_br1",
                     nextEl: ".custom_next_br1",
                 }}
-                className="carausel-6-columns text-center"
+                className="carousel-6-columns text-center"
             >
                 {data.map((item, i) => (
                     <SwiperSlide>
@@ -57,8 +57,8 @@ const BrandSlider = () => {
             </Swiper>
 
             <div
-                className="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
-                id="carausel-6-columns-3-arrows"
+                className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+                id="carousel-6-columns-3-arrows"
             >
                 <span className="slider-btn slider-prev slick-arrow custom_prev_br1">
                     <i className="fi-rs-angle-left"></i>

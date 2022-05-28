@@ -49,7 +49,7 @@ const BannerFeatures = () => {
                             src={`assets/imgs/theme/icons/${item.img}`}
                             alt=""
                         />
-                        <h4 class={item.color}>{item.title}</h4>
+                        <h4 className={item.color}>{item.title}</h4>
                     </div>
                 </div>
             ))}

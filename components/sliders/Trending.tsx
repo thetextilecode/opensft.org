@@ -4,7 +4,12 @@ import SingleProduct from "./../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const TrendingSlider = ({ products }) => {
+export interface ITrendingSlider {
+  products?: any[],
+  trending?: any[]
+}
+
+const TrendingSlider = ({ products }: ITrendingSlider) => {
     return (
         <>
             <Swiper
@@ -24,7 +29,7 @@ const TrendingSlider = ({ products }) => {
                 ))}
             </Swiper>
 
-            <div className="slider-arrow slider-arrow-2 carausel-4-columns-arrow">
+            <div className="slider-arrow slider-arrow-2 carousel-4-columns-arrow">
                 <span className="slider-btn slider-prev slick-arrow custom_prev_t">
                     <i className="fi-rs-angle-left"></i>
                 </span>

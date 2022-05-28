@@ -1,4 +1,10 @@
-const CheckBox = ({ filters, handleCheckBox }) => {
+export interface ICheckbox {
+    filters?: {checked?: boolean, name?: string, value: string}[],
+    handleCheckBox?: any,
+    heading?: string
+}
+
+const CheckBox = ({ filters, handleCheckBox }: ICheckbox) => {
     return (
         <>
             {filters.map((item, id) => (

@@ -39,7 +39,7 @@ const NewArrival = () => {
                     prevEl: ".custom_prev_n",
                     nextEl: ".custom_next_n",
                 }}
-                className="carausel-6-columns carausel-arrow-center"
+                className="carousel-6-columns carousel-arrow-center"
             >
                 {newArrival.map((product, i) => (
                     <SwiperSlide key={i}>
@@ -49,8 +49,8 @@ const NewArrival = () => {
             </Swiper>
 
             <div
-                className="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
-                id="carausel-6-columns-2-arrows"
+                className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+                id="carousel-6-columns-2-arrows"
             >
                 <span className="slider-btn slider-prev slick-arrow custom_prev_n">
                     <i className="fi-rs-angle-left"></i>

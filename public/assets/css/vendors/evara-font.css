@@ -8,7 +8,7 @@
 }
 
 i[class^="evara-font-"]:before, i[class*=" evara-font-"]:before {
-    font-family: evara-font !important;
+    font-family: evara-font, serif !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;

@@ -1,7 +1,7 @@
 import Layout from "../components/layout/Layout";
 import Intro2 from "../components/sliders/Intro2";
 import CategoryProduct from "./../components/ecommerce/CategoryProduct";
-import FeatchTab from '../components/ecommerce/fetchTab';
+import FetchTab from '../components/ecommerce/fetchTab';
 import FetchTabSlider from './../components/ecommerce/fetchTabSlider';
 import PriceRangeSlider from './../components/ecommerce/PriceRangeSlider';
 import Banner2 from './../components/elements/Banner2';
@@ -55,7 +55,7 @@ function Index2() {
                                 <Banner6/>
                             </div>
                             <div className="col-lg-9">
-                            <FeatchTab/>
+                            <FetchTab/>
                             </div>
                         </div>
                     </div>
@@ -71,10 +71,10 @@ function Index2() {
                         <h3 className="section-title mb-20">
                             <span>Popular</span> Categories
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <div
-                                className="carausel-6-columns"
-                                id="carausel-6-columns"
+                                className="carousel-6-columns"
+                                id="carousel-6-columns"
                             >
                                 <CategorySlider/>
                             </div>
@@ -100,7 +100,7 @@ function Index2() {
                         <h3 className="section-title mb-20">
                             <span>New</span> Arrivals
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <NewArrival/>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ function Index2() {
                         <h3 className="section-title mb-20 wow fadeIn animated">
                             <span>Featured</span> Brands
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative wow fadeIn animated">
+                        <div className="carousel-6-columns-cover position-relative wow fadeIn animated">
                             <BrandSlider/>
                         </div>
                     </div>

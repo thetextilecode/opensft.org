@@ -26,11 +26,11 @@ const Tags = ({ updateProductFilters }) => {
     };
     return (
         <>
-            <ul class="categor-list">
+            <ul className="categor-list">
                 {tags.map((tag, i) => (
                     <li onClick={() => handleClick(i, tag.value)}>
                         <a
-                            class={
+                            className={
                                 active == i
                                     ? "cat-item text-brand"
                                     : "cat-item text-muted"

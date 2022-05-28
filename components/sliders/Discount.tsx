@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from "react";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fetchByCatagory } from "../../redux/action/product";
+import { fetchByCategory } from "../../redux/action/product";
 import SingleProduct from "./../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const DiscountSlider = () => {
+export interface IDiscountSlider {
+  discount?: any
+}
+
+const DiscountSlider = ({}: IDiscountSlider) => {
     const [discount, setDiscount] = useState([]);
 
     console.log(discount);
 
     useEffect(() => {
-        fetchProducts();
+        fetchProducts().then((products) => {
+          // do something
+        });
     }, []);
 
     const fetchProducts = async () => {
         // With Category
-        const allProducts = await fetchByCatagory("/static/product.json");
+        const allProducts = await fetchByCategory("/static/product.json");
 
         // Discount
         const discountProduct = allProducts.filter(

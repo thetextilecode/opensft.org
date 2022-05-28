@@ -1,13 +1,16 @@
 import { useState } from "react";
-
 import Link from "next/link";
 import Timer from "./Timer";
-const IntroPopup = () => {
-    const [openClass, setOpenClass] = useState(0);
+
+export interface IIntroPopup {}
+
+const IntroPopup = ({}: IIntroPopup) => {
+    const [openClass, setOpenClass] = useState<boolean>(false);
 
     const handleRemove = () => {
         setOpenClass(!openClass);
     };
+
     const fixDate = new Date();
     return (
         <>
@@ -78,7 +81,7 @@ const IntroPopup = () => {
             </div>
 
             <div
-                class={
+                className={
                     openClass
                         ? "modal-backdrop fade d-none"
                         : "modal-backdrop fade show"

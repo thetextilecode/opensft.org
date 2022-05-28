@@ -5,7 +5,7 @@ import NewArrivalTab from './../elements/NewArrivalTab';
 import TrendingTab from './../elements/TrendingTab';
 import Link from "next/link"
 
-function FeatchTab() {
+function FetchTab() {
     const [active, setActive] = useState("1");
     const [featured, setFeatured] = useState([]);
     const [trending, setTrending] = useState([]);
@@ -90,4 +90,4 @@ function FeatchTab() {
         </>
     );
 }
-export default FeatchTab;
+export default FetchTab;

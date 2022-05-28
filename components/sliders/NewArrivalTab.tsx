@@ -4,7 +4,12 @@ import SingleProduct from "../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const NewArrivalTabSlider = ({ products }) => {
+export interface INewArrivalTabSlider {
+  newArrival?: any,
+  products?: any[]
+}
+
+const NewArrivalTabSlider = ({ products }: INewArrivalTabSlider) => {
     return (
         <>
             <Swiper
@@ -27,7 +32,7 @@ const NewArrivalTabSlider = ({ products }) => {
                 ))}
             </Swiper>
 
-            <div className="slider-arrow slider-arrow-2 carausel-4-columns-arrow">
+            <div className="slider-arrow slider-arrow-2 carousel-4-columns-arrow">
                 <span className="slider-btn slider-prev slick-arrow custom_prev_n">
                     <i className="fi-rs-angle-left"></i>
                 </span>

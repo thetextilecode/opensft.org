@@ -1,6 +1,8 @@
 import Layout from "../components/layout/Layout";
 
-function About() {
+export interface IAbout {}
+
+function About({}: IAbout) {
     return (
         <>
             <Layout parent="Home" sub="Pages" subChild="About">

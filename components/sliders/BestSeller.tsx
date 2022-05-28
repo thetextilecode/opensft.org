@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fetchByCatagory } from "../../redux/action/product";
+import { fetchByCategory } from "../../redux/action/product";
 import SingleProduct from "./../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const BestSellerSlider = () => {
+export interface IBestSellerSlider {
+  bestSeller?: any
+}
+
+const BestSellerSlider = ({}: IBestSellerSlider) => {
 
 
     const [bestSeller, setBestSeller] = useState([]);
@@ -18,7 +22,7 @@ const BestSellerSlider = () => {
     const fetchProducts = async () => {
 
         // With Category
-        const allProducts = await fetchByCatagory("/static/product.json");        
+        const allProducts = await fetchByCategory("/static/product.json");        
 
         // Best Seller
         const bestSellerProducts = allProducts.sort(function (a, b) {

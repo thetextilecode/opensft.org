@@ -1,4 +1,4 @@
-import FeatchTab from "../components/ecommerce/fetchTab";
+import FetchTab from "../components/ecommerce/fetchTab";
 import Banner2 from "../components/elements/Banner2";
 import Layout from "../components/layout/Layout";
 import FetchTabSlider from "./../components/ecommerce/fetchTabSlider";
@@ -86,7 +86,7 @@ function Test() {
                 <section className="product-tabs section-padding position-relative wow fadeIn animated">
                     <div className="container">
                         <div className="col-lg-12">
-                            <FeatchTab />
+                            <FetchTab />
                         </div>
                     </div>
                 </section>
@@ -102,10 +102,10 @@ function Test() {
                         <h3 className="section-title mb-20">
                             <span>Popular</span> Categories
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <div
-                                className="carausel-6-columns"
-                                id="carausel-6-columns"
+                                className="carousel-6-columns"
+                                id="carousel-6-columns"
                             >
                                 <CategorySlider />
                             </div>
@@ -126,7 +126,7 @@ function Test() {
                         <h3 className="section-title mb-20">
                             <span>New</span> Arrivals
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative">
+                        <div className="carousel-6-columns-cover position-relative">
                             <NewArrival />
                         </div>
                     </div>
@@ -150,7 +150,7 @@ function Test() {
                         <h3 className="section-title mb-20 wow fadeIn animated">
                             <span>Featured</span> Brands
                         </h3>
-                        <div className="carausel-6-columns-cover position-relative wow fadeIn animated">
+                        <div className="carousel-6-columns-cover position-relative wow fadeIn animated">
                             <BrandSlider />
                         </div>
                     </div>

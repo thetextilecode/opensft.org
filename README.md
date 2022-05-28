@@ -17,7 +17,11 @@
 
 Please do not modify the `next-env.d.ts` file. It ensures Next.js types are picked up by the TypeScript compiler.
 
-## SASS
+## Etc
 
+Lint:
+`npm run lint`
+
+Sass:
 `npm run sass`
 

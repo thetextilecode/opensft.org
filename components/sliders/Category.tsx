@@ -88,8 +88,8 @@ const CategorySlider = () => {
             </Swiper>
 
             <div
-                className="slider-arrow slider-arrow-2 carausel-6-columns-arrow"
-                id="carausel-6-columns-arrows"
+                className="slider-arrow slider-arrow-2 carousel-6-columns-arrow"
+                id="carousel-6-columns-arrows"
             >
                 <span className="slider-btn slider-prev slick-arrow custom_prev_ct1">
                     <i className="fi-rs-angle-left"></i>

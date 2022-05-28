@@ -4,7 +4,12 @@ import SingleProduct from "./../ecommerce/SingleProduct";
 
 SwiperCore.use([Navigation]);
 
-const FeaturedSlider = ({ products }) => {
+export interface IFeaturedSlider {
+  featured?: any[],
+  products?: any[]
+}
+
+const FeaturedSlider = ({ products }: IFeaturedSlider) => {
     
     return (
         <>
@@ -29,7 +34,7 @@ const FeaturedSlider = ({ products }) => {
             </Swiper>          
 
             <div
-                className="slider-arrow slider-arrow-2 carausel-4-columns-arrow"
+                className="slider-arrow slider-arrow-2 carousel-4-columns-arrow"
                 
             >
                 <span className="slider-btn slider-prev slick-arrow custom_prev_f">

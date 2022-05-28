@@ -66,7 +66,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }) => {
                                             <li>
                                                 <a href="#">
                                                     <span
-                                                        class={`product-color-${item}`}
+                                                        className={`product-color-${item}`}
                                                     ></span>
                                                 </a>
                                             </li>
