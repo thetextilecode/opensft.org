@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { updateProductFilters } from "../../redux/action/productFiltersAction";
-import ProductId from "./../../pages/products/[slug]";
+import ProductId from "../../pages/products/[slug]";
 
 const PriceRange = ({ updateProductFilters }) => {
 

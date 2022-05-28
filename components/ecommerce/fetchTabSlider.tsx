@@ -81,7 +81,7 @@ function FeatchTabSlider() {
                                 Clothing
                             </h4>
 
-                            <Link href="/products">
+                            <Link href="/index">
                                 <a className="text-white">
                                     Shop Now <i className="fi-rs-arrow-right"></i>
                                 </a>

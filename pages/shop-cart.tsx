@@ -42,7 +42,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
 
                                                     <td className="product-des product-name">
                                                         <h5 className="product-name">
-                                                            <Link href="/products">
+                                                            <Link href="/index">
                                                                 <a>{item.title}</a>
                                                             </Link>
                                                         </h5>

@@ -11,7 +11,7 @@ const Banner6 = () => {
                         Save 17% on <br />
                         Office Dress
                     </h4>
-                    <Link href="/products">
+                    <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>

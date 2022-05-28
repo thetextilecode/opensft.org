@@ -1,33 +1,36 @@
 import Layout from "../components/layout/Layout";
-import Intro2 from "../components/sliders/Intro2";
 import CategoryProduct from "./../components/ecommerce/CategoryProduct";
-import FeatchTab from './../components/ecommerce/fetchTab';
-import FetchTabSlider from './../components/ecommerce/fetchTabSlider';
-import PriceRangeSlider from './../components/ecommerce/PriceRangeSlider';
-import Banner2 from './../components/elements/Banner2';
-import Banner3 from './../components/elements/Banner3';
-import Banner4 from './../components/elements/Banner4';
+import FeatchTab from "../components/ecommerce/fetchTab";
+import FetchTabSlider from "./../components/ecommerce/fetchTabSlider";
+import PriceRangeSlider from "./../components/ecommerce/PriceRangeSlider";
+import Banner2 from "./../components/elements/Banner2";
+import Banner3 from "./../components/elements/Banner3";
+import Banner4 from "./../components/elements/Banner4";
 import Banner5 from "./../components/elements/Banner5";
-import Banner6 from './../components/elements/Banner6';
-import BannerFeatures from './../components/elements/BannerFeatures';
-import Deals1 from './../components/elements/Deals1';
-import Deals2 from './../components/elements/Deals2';
-import HomeBlog from './../components/elements/HomeBlog';
-import IntroPopup from './../components/elements/IntroPopup';
-import BrandSlider from './../components/sliders/Brand';
-import CategorySlider from './../components/sliders/Category';
-import NewArrival from './../components/sliders/NewArrival';
+import Banner6 from "./../components/elements/Banner6";
+import BannerFeatures from "./../components/elements/BannerFeatures";
+import Deals1 from "./../components/elements/Deals1";
+import Deals2 from "./../components/elements/Deals2";
+import HomeBlog from "./../components/elements/HomeBlog";
+import IntroPopup from "../components/elements/IntroPopup";
+import BrandSlider from "./../components/sliders/Brand";
+import CategorySlider from "./../components/sliders/Category";
+import Intro4 from "./../components/sliders/intro4";
+import NewArrival from "./../components/sliders/NewArrival";
 import Bottom from './../components/elements/Bottom';
 
-function Index2() {
+function Test() {
     return (
         <>
-         <IntroPopup/>
-         <Layout noBreadcrumb="d-none" headerStyle="header-style-2">
-                <section className="home-slider position-relative">
-                    <Intro2 />
+            <IntroPopup />
+            <Layout noBreadcrumb="d-none" headerStyle="header-style-4">
+                <section className="home-slider position-relative mb-30">
+                    <div className="container">
+                        <div className="home-slide-cover bg-grey-10 mt-30">
+                            <Intro4 />
+                        </div>
+                    </div>
                 </section>
-
                 <section className="banners mb-15">
                     <div className="container">
                         <div className="row">
@@ -48,21 +51,21 @@ function Index2() {
                                 </div>
                                 {/* <div className="widget-category mb-30">
                                     <h5 className="section-title style-1 mb-30 wow fadeIn animated">
-                                    Price Range
+                                        Price Range
                                     </h5>
-                                    <PriceRangeSlider/>
+                                    <PriceRangeSlider />
                                 </div> */}
-                                <Banner6/>
+                                <Banner6 />
                             </div>
                             <div className="col-lg-9">
-                            <FeatchTab/>
+                                <FeatchTab />
                             </div>
                         </div>
                     </div>
                 </section>
                 <section className="banner-2 section-padding pb-0">
                     <div className="container">
-                        <Banner2/>
+                        <Banner2 />
                     </div>
                 </section>
 
@@ -76,7 +79,7 @@ function Index2() {
                                 className="carausel-6-columns"
                                 id="carausel-6-columns"
                             >
-                                <CategorySlider/>
+                                <CategorySlider />
                             </div>
                         </div>
                     </div>
@@ -86,10 +89,10 @@ function Index2() {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6 deal-co">
-                                <Deals1/>
+                                <Deals1 />
                             </div>
                             <div className="col-lg-6 deal-co">
-                                <Deals2/>
+                                <Deals2 />
                             </div>
                         </div>
                     </div>
@@ -101,7 +104,7 @@ function Index2() {
                             <span>New</span> Arrivals
                         </h3>
                         <div className="carausel-6-columns-cover position-relative">
-                            <NewArrival/>
+                            <NewArrival />
                         </div>
                     </div>
                 </section>
@@ -112,14 +115,14 @@ function Index2() {
                             <span>Featured</span> Brands
                         </h3>
                         <div className="carausel-6-columns-cover position-relative wow fadeIn animated">
-                            <BrandSlider/>
+                            <BrandSlider />
                         </div>
                     </div>
                 </section>
 
                 <section className="bg-grey-9 section-padding">
                     <div className="container pt-25 pb-25">
-                        <FetchTabSlider/>
+                        <FetchTabSlider />
                     </div>
                 </section>
 
@@ -130,11 +133,11 @@ function Index2() {
                                 <h3 className="section-title mb-20">
                                     <span>From</span> blog
                                 </h3>
-                                <HomeBlog/>
+                                <HomeBlog />
                             </div>
                             <div className="col-lg-6">
                                 <div className="row">
-                                    <Banner3/>
+                                    <Banner3 />
                                 </div>
                             </div>
                         </div>
@@ -145,7 +148,7 @@ function Index2() {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <Banner4/>
+                                <Banner4 />
                             </div>
                         </div>
                     </div>
@@ -156,7 +159,7 @@ function Index2() {
                 <section className="featured section-padding">
                     <div className="container">
                         <div className="row">
-                            <BannerFeatures/>
+                            <BannerFeatures />
                         </div>
                     </div>
                 </section>
@@ -165,4 +168,4 @@ function Index2() {
     );
 }
 
-export default Index2;
+export default Test;

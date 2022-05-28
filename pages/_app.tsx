@@ -10,13 +10,13 @@ import "../public/assets/css/main.css";
 import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-
+import { AppProps } from 'next/app';
 // Swiper Slider
 import "swiper/css";
 import "swiper/css/navigation";
 import Preloader from "./../components/elements/Preloader";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true);

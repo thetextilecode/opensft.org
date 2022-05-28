@@ -12,7 +12,7 @@ const Banner5 = () => {
                             Save 20% on <br />
                             Woman Bag
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>
@@ -29,7 +29,7 @@ const Banner5 = () => {
                             Great Summer <br />
                             Collection
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>
@@ -46,7 +46,7 @@ const Banner5 = () => {
                             Shop Today’s <br />
                             Deals & Offers
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>

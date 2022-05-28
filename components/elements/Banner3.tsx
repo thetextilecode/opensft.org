@@ -12,7 +12,7 @@ const Banner3 = () => {
                             Save 17% on <br />
                             Autumn Hat
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>
@@ -29,7 +29,7 @@ const Banner3 = () => {
                             Save 20% on <br />
                             Women's socks
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>
@@ -44,7 +44,7 @@ const Banner3 = () => {
                             Save 20% on <br />
                             Eardrop
                         </h4>
-                        <Link href="/products">
+                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>

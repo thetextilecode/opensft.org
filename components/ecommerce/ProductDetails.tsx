@@ -117,7 +117,7 @@ const ProductDetails = ({
                                                 <div className="pro-details-brand">
                                                     <span>
                                                         Brands:
-                                                        <Link href="/products">
+                                                        <Link href="/index">
                                                             <a>
                                                                 {product.brand}
                                                             </a>

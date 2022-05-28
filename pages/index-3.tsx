@@ -9,7 +9,7 @@ import BannerFeatures from "./../components/elements/BannerFeatures";
 import Deals1 from "./../components/elements/Deals1";
 import Deals2 from "./../components/elements/Deals2";
 import HomeBlog from "./../components/elements/HomeBlog";
-import IntroPopup from './../components/elements/IntroPopup';
+import IntroPopup from '../components/elements/IntroPopup';
 import BrandSlider from "./../components/sliders/Brand";
 import CategorySlider from "./../components/sliders/Category";
 import Intro3 from "./../components/sliders/intro3";
@@ -44,7 +44,7 @@ function Test() {
                                             Save 17% on <br />
                                             Autumn Hat
                                         </h4>
-                                        <Link href="/products">
+                                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>
@@ -63,7 +63,7 @@ function Test() {
                                             Save 20% on <br />
                                             Eardrop
                                         </h4>
-                                        <Link href="/products">
+                                        <Link href="/index">
                             <a>
                                 Shop Now <i className="fi-rs-arrow-right"></i>
                             </a>

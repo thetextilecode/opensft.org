@@ -8,7 +8,7 @@ import Pagination from "../../components/ecommerce/Pagination";
 import PriceRangeSlider from "../../components/ecommerce/PriceRangeSlider";
 import QuickView from "../../components/ecommerce/QuickView";
 import ShowSelect from "../../components/ecommerce/ShowSelect";
-import SingleProduct from "../../components/ecommerce/SingleProduct";
+import SingleProductList from "../../components/ecommerce/SingleProductList";
 import SizeFilter from "../../components/ecommerce/SizeFilter";
 import SortSelect from "../../components/ecommerce/SortSelect";
 import WishlistModal from "../../components/ecommerce/WishlistModal";
@@ -16,7 +16,7 @@ import Layout from "../../components/layout/Layout";
 import { fetchProduct } from "../../redux/action/product";
 import Link from "next/link"
 
-const Products = ({ products, productFilters, fetchProduct }) => {
+const ProductsList = ({ products, productFilters, fetchProduct }) => {
     console.log(products);
 
     let Router = useRouter(),
@@ -71,11 +71,11 @@ const Products = ({ products, productFilters, fetchProduct }) => {
     };
     return (
         <>
-            <Layout parent="Home" sub="Shop" subChild="Grid">
+            <Layout parent="Home" sub="Shop" subChild="List">
                 <section className="mt-50 mb-50">
                     <div className="container">
                         <div className="row flex-row-reverse">
-                        <div className="col-lg-3 primary-sidebar sticky-sidebar">
+                            <div className="col-lg-3 primary-sidebar sticky-sidebar">
                                 <div className="widget-category mb-30">
                                     <h5 className="section-title style-1 mb-30 wow fadeIn animated">
                                         Category
@@ -95,13 +95,16 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                         <div className="price-filter-inner">
                                             <br />
                                             <PriceRangeSlider />
+
                                             <br />
                                         </div>
                                     </div>
 
                                     <div className="list-group">
                                         <div className="list-group-item mb-10 mt-10">
-                                            <label className="fw-900">Color</label>
+                                            <label className="fw-900">
+                                                Color
+                                            </label>
                                             <BrandFilter />
                                             <label className="fw-900 mt-15">
                                                 Item Condition
@@ -128,9 +131,7 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                         </div>
                                         <div className="content pt-10">
                                             <h5>
-                                                <a>
-                                                    Chen Cardigan
-                                                </a>
+                                                <a>Chen Cardigan</a>
                                             </h5>
                                             <p className="price mb-0 mt-5">
                                                 $99.50
@@ -152,9 +153,7 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                         </div>
                                         <div className="content pt-10">
                                             <h6>
-                                                <a>
-                                                    Chen Sweater
-                                                </a>
+                                                <a>Chen Sweater</a>
                                             </h6>
                                             <p className="price mb-0 mt-5">
                                                 $89.50
@@ -176,9 +175,7 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                         </div>
                                         <div className="content pt-10">
                                             <h6>
-                                                <a>
-                                                    Colorful Jacket
-                                                </a>
+                                                <a>Colorful Jacket</a>
                                             </h6>
                                             <p className="price mb-0 mt-5">
                                                 $25
@@ -203,7 +200,7 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                             Save 17% on <br />
                                             Office Dress
                                         </h4>
-                                        <Link href="/products">
+                                        <Link href="/index">
                                             <a>
                                                 Shop Now
                                                 <i className="fi-rs-arrow-right"></i>
@@ -216,7 +213,6 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                 <div className="shop-product-fillter">
                                     <div className="totall-product">
                                         <p>
-                                            
                                             We found
                                             <strong className="text-brand">
                                                 {products.items.length}
@@ -242,11 +238,9 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                     )}
 
                                     {getPaginatedProducts.map((item, i) => (
-                                        <div
-                                            className="col-lg-4 col-md-4 col-12 col-sm-6"
-                                            key={i}
-                                        >
-                                            <SingleProduct product={item} />
+                                        <div className="" key={i}>
+                                            {/* <SingleProduct product={item} /> */}
+                                            <SingleProductList product={item} />
                                         </div>
                                     ))}
                                 </div>
@@ -266,14 +260,13 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                                     </nav>
                                 </div>
                             </div>
-
-                            
                         </div>
                     </div>
                 </section>
                 <WishlistModal />
                 {/* <CompareModal /> */}
-                <QuickView />
+                {/* <CartSidebar /> */}
+                <QuickView />                
             </Layout>
         </>
     );
@@ -285,7 +278,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDidpatchToProps = {
+    // openCart,
     fetchProduct,
+    // fetchMoreProduct,
 };
 
-export default connect(mapStateToProps, mapDidpatchToProps)(Products);
+export default connect(mapStateToProps, mapDidpatchToProps)(ProductsList);

@@ -10,7 +10,7 @@ import SortSelect from "../../components/ecommerce/SortSelect";
 import WishlistModal from "../../components/ecommerce/WishlistModal";
 import Layout from "../../components/layout/Layout";
 import { fetchProduct } from "../../redux/action/product";
-import ShopFilter from "./../../components/ecommerce/Filter";
+import ShopFilter from "../../components/ecommerce/Filter";
 import Link from "next/link";
 
 const ProductsFullWidth = ({ products, productFilters, fetchProduct }) => {

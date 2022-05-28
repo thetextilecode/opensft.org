@@ -12,10 +12,10 @@ const IntroPopup = () => {
     return (
         <>
             <div
-                class={
+                className={
                     openClass
                         ? "modal fade custom-modal d-none"
-                        : "modal fade custom-modal  show d-block"
+                        : "modal fade custom-modal show d-block"
                 }
             >
                 <div className="modal-dialog">

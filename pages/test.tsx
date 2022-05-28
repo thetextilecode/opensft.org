@@ -1,5 +1,5 @@
 import CompareModal from "./../components/ecommerce/CompareModal";
-import Layout from "./../components/layout/Layout";
+import Layout from "../components/layout/Layout";
 
 function Test() {
     return (
