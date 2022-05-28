@@ -6,14 +6,12 @@
 
 `npm install`
 
-## Run It
+## Build & Run
 
+`npm run build`
 `npm run start`
 
 ## Development
 
 `npm run dev`
 
-## Building
-
-`npm run build`
