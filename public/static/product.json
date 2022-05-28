@@ -1,0 +1,903 @@
+[
+    {
+        "title": "Colorful Pattern Shirts",
+        "slug": "colorful_pattern_shirts",
+        "moreLove": true,
+        "id": "1",
+        "price": 238.85,
+        "oldPrice": 245.8,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-1-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-1-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-1-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-1-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-1-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "clothing",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 14,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "stock": 0,
+        "review": 10,
+        "rating": 3,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Cartoon Astronaut T-Shirts",
+        "slug": "cartoon_astronaut_t-Shirts",
+        "moreLove": true,
+        "id": "2",
+        "price": 78,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-2-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-2-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-2-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-2-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-2-1.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "blue",
+        "brand": "armani",
+        "category": "jeans",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": "2021-02-03T06:48:07"
+    },
+    {
+        "title": "Plain Striola Shirts",
+        "slug": "plain_striola_shirts",
+        "moreLove": true,
+        "id": "3",
+        "price": 35,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-3-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-3-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-3-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-3-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-3-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "accessories",
+        "featured": true,
+        "trending": true,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "shoe",
+        "sizes": "s",
+        "review": 10,
+        "rating": 5,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Landscape Painting Shirt",
+        "slug": "landscape_painting_shirt",
+        "moreLove": true,
+        "id": "4",
+        "price": 55,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-4-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-4-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-4-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-4-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-4-1.jpg"
+            }
+        ],
+        "condition": "used",
+        "color": "blue",
+        "brand": "armani",
+        "category": "trousers",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Letter Print T-Shirt",
+        "slug": "letter_print_t-Shirt",
+        "moreLove": true,
+        "id": "5",
+        "price": 110,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-5-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-5-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-5-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-5-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-5-1.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "red",
+        "brand": "adidas",
+        "category": "shoe",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "shoe",
+        "sizes": "s",
+        "review": 10,
+        "rating": 5,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Element Pattern Print Shirts",
+        "slug": "element_pattern_print_shirts",
+        "moreLove": true,
+        "id": "6",
+        "price": 150,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-6-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-6-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-6-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-6-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-6-2.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "green",
+        "brand": "helix",
+        "category": "jeans",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "review": 10,
+        "rating": 3,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Vintage Shirt",
+        "moreLove": true,
+        "id": "7",
+        "price": 98,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-7-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-7-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-7-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-7-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-7-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "trousers",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "shoe",
+        "sizes": "s",
+        "review": 10,
+        "rating": 2,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Henley Shirt",
+        "slug": "henley_shirt",
+        "moreLove": true,
+        "id": "8",
+        "price": 24,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-8-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-8-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-8-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-8-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-8-1.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "blue",
+        "brand": "armani",
+        "category": "shoe",
+        "featured": true,
+        "trending": true,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "dress",
+        "sizes": "s",
+        "review": 10,
+        "rating": 1,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Cotton Leaf Printed",
+        "slug": "cotton_leaf_printed",
+        "moreLove": true,
+        "id": "9",
+        "price": 146,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-9-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-9-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-9-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-9-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-9-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "accessories",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": false
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "dress",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Chen Cardigan",
+        "slug": "chen_cardigan",
+        "moreLove": true,
+        "id": "10",
+        "price": 67,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-10-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-10-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-10-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-10-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-10-1.jpg"
+            }
+        ],
+        "condition": "used",
+        "color": "blue",
+        "brand": "armani",
+        "category": "jacket",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Chen Sweater",
+        "slug": "chen_sweater",
+        "moreLove": true,
+        "id": "11",
+        "price": 116,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-11-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-11-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-11-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-11-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-11-1.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "red",
+        "brand": "adidas",
+        "category": "jacket",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "dress",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Colorful Jacket",
+        "slug": "colorful_jacket",
+        "moreLove": true,
+        "id": "12",
+        "price": 73,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-12-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-12-2.jpg"
+            }
+        ],
+        "totalSell": 1227,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-12-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-12-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-12-1.jpg"
+            }
+        ],
+        "condition": "refurbished",
+        "color": "green",
+        "brand": "helix",
+        "category": "jeans",
+        "featured": true,
+        "trending": false,
+        "discount": {
+            "percentage": 4,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "dress",
+        "sizes": "s",
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Mens Porcelain Shirt",
+        "slug": "mens_porcelain_shirt",
+        "moreLove": true,
+        "id": "13",
+        "price": 238.85,
+        "oldPrice": 245.8,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-13-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-13-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-13-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-13-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-13-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "clothing",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 14,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "stock": 8,
+        "review": 10,
+        "rating": 4,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Ethnic Floral Casual Shirts",
+        "slug": "ethnic_floral_casual_shirts",
+        "moreLove": true,
+        "id": "14",
+        "price": 238.85,
+        "oldPrice": 245.8,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-14-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-14-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-14-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-14-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-14-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "clothing",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 14,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "stock": 8,
+        "review": 10,
+        "rating": 3,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Flowers Sleeve Lapel Shirt",
+        "slug": "flowers_sleeve_lapel_shirt",
+        "moreLove": true,
+        "id": "15",
+        "price": 238.85,
+        "oldPrice": 245.8,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-15-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-15-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-15-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-15-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-15-1.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "clothing",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 14,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "stock": 8,
+        "review": 10,
+        "rating": 3,
+        "ratingScore": 90,
+        "created": ""
+    },
+    {
+        "title": "Maecenas eget",
+        "slug": "maecenas_eget",
+        "moreLove": true,
+        "id": "16",
+        "price": 238.85,
+        "oldPrice": 245.8,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
+        "images": [
+            {
+                "img": "/assets/imgs/shop/product-1-1.jpg"
+            },
+            {
+                "img": "/assets/imgs/shop/product-1-2.jpg"
+            }
+        ],
+        "totalSell": 27,
+        "gallery": [
+            {
+                "thumb": "/assets/imgs/shop/product-16-1.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-2.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-3.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-4.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-5.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-6.jpg"
+            },
+            {
+                "thumb": "/assets/imgs/shop/product-16-7.jpg"
+            }
+        ],
+        "condition": "new",
+        "color": "blue",
+        "brand": "armani",
+        "category": "clothing",
+        "featured": false,
+        "trending": true,
+        "discount": {
+            "percentage": 14,
+            "expireDate": null,
+            "isActive": true
+        },
+        "variations": [
+            "red",
+            "yellow",
+            "white",
+            "orange",
+            "cyan",
+            "green",
+            "purple"
+        ],
+        "weight": 150,
+        "tags": "women",
+        "sizes": "s",
+        "stock": 8,
+        "review": 10,
+        "rating": 3,
+        "ratingScore": 50,
+        "created": ""
+    }
+]
