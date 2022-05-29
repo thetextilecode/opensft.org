@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Info } from '../../config';
 
 const Footer = () => {
   return (
@@ -57,10 +58,10 @@ const Footer = () => {
                 <div className='logo logo-width-1 wow fadeIn animated'>
                   <Link href='/'><a>
                     <Image
-                      src='/assets/imgs/theme/logo.svg'
-                      alt='logo'
-                      width={120}
-                      height={33}
+                      src={Info.logo}
+                      alt={Info.companyName + ' logo'}
+                      width={Info.logoWidth}
+                      height={Info.logoHeight}
                     />
                   </a>
                   </Link>
@@ -69,12 +70,10 @@ const Footer = () => {
                   Contact
                 </h5>
                 <p className='wow fadeIn animated'>
-                  <strong>Address: </strong>562 Wellington
-                  Road, Street 32, San Francisco
+                  <strong>Address: </strong>{Info.addressLine1} {Info.addressLine2} {Info.addressCity} {Info.addressPostcode}
                 </p>
                 <p className='wow fadeIn animated'>
-                  <strong>Phone: </strong>+01 2222 365
-                  /(+91) 01 2345 6789
+                  <strong>Phone: </strong>{Info.phone}
                 </p>
                 <p className='wow fadeIn animated'>
                   <strong>Hours: </strong>10:00 - 18:00,

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
+import { Info } from '../../config';
 
 export interface IHeader {
   headerStyle?: any,
@@ -156,10 +157,10 @@ const Header = ({
               <Link href='/'>
                 <a>
                   <Image
-                    src='/assets/imgs/theme/logo.svg'
-                    alt='logo'
-                    width={120}
-                    height={33}
+                    src={Info.logo}
+                    alt={Info.companyName + ' Logo'}
+                    width={Info.logoWidth}
+                    height={Info.logoHeight}
                   />
                 </a>
               </Link>

@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Head from 'next/head';
 import Header from './Header';
 import MobileMenu from './MobileMenu';
+import { SEO } from '../../config';
 
 export interface ILayout {
   children?: ReactNode,
@@ -25,13 +26,27 @@ const Layout = ({ children, parent, sub, subChild, noBreadcrumb, headerStyle }: 
   return (
     <>
       <Head>
-        <title>Open Source Fashion & Textiles | nonprofit for FOSS in fashion</title>
-        <meta name='description' content='Bridging the worlds of open source technology and fashion & textiles by providing you with resources and
-  training.' />
-        <link rel='icon' href='/favicon.ico' />
+        <title>{SEO.title}</title>
+        <meta name='description' content={SEO.meta_og_description} />
+        {/*<link rel='icon' href='/favicon.ico' />*/}
         <style>@import
           url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Spartan:wght@300;400;500;600;700&display=swap');
         </style>
+
+        {/*<!-- Makeshift favicon -->*/}
+        <link rel="icon"
+              href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>"/>
+
+        {/*<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />*/}
+        <meta name="description" content={ SEO.meta_og_description  } />
+          <meta property="og:title" content={ SEO.meta_og_title } />
+          <meta property="og:type" content={ SEO.meta_og_type } />
+          <meta property="og:url" content={ SEO.meta_og_url } />
+          <meta property="og:image" content={ SEO.meta_og_image } />
+          <meta property="og:description" content={ SEO.meta_og_description } />
+          <meta name="twitter:card" content={ SEO.meta_twitter_card } />
+          <meta name="twitter:site" content={ SEO.meta_twitter_site } />
+          <meta name="twitter:creator" content={ SEO.meta_twitter_creator } />
       </Head>
 
       {isToggled && <div className='body-overlay-1' onClick={toggleClick}></div>}
