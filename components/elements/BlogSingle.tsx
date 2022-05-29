@@ -157,7 +157,6 @@ const BlogSingle = () => {
               src='/assets/imgs/banner/banner-4.png'
               alt=''
               layout={'responsive'}
-              // objectFit='contain' // Scale your image down to fit into the container
               width={1320}
               height={300}
             />
@@ -165,7 +164,6 @@ const BlogSingle = () => {
           <div className='banner-text'>
             <h6 className='mb-15 mt-40'>Repair Services</h6>
             <h5 className='fw-600 mb-20'>
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
               We're an Apple <br />
               Authorised Service Provider
             </h5>
