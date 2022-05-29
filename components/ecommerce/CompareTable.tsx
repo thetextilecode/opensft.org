@@ -21,7 +21,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
   return (
     <table className='table text-center'>
       <tbody>
-      {features.map((feature:any, i: number) => (
+      {features.map((feature: any, i: number) => (
         <tr key={i}>
           <th
             className='text-muted font-md fw-600'
@@ -32,7 +32,12 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
           {data.map((product, i) =>
             feature == 'preview' ? (
               <td className='row_img' key={i}>
-                <Image src={product.images[0].img} layout={'fill'} alt={''} />
+                {/*<div style={{ width: '100%' }}>*/}
+                  {/*<Image src={product.images[0].img} layout={'fill'} alt={''} />*/}
+                  <img src={product.images[0].img} alt={''} />
+                  {/*<Image src={product.images[0].img} layout={'responsive'} alt={''}*/}
+                  {/*       width={product.images[0].imgOriginalWidth} height={product.images[0].imgOriginalHeight} />*/}
+                {/*</div>*/}
               </td>
             ) : feature == 'name' ? (
               <td className='product_name'>
@@ -59,7 +64,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                       </div>
 
                       <span className='rating_num'>
-                          ({product.review})
+                        ({product.review})
                       </span>
                     </>
                   )}
@@ -89,8 +94,8 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                   <span>In Stock</span>
                 ) : (
                   <span className='text-brand font-weight-bold'>
-                                            Out of stock
-                                        </span>
+                    Out of stock
+                  </span>
                 )}
               </td>
             ) : feature == 'weight' ? (
