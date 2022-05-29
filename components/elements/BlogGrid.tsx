@@ -1,9 +1,13 @@
-import React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 
-const BlogGrid = ({ show, col }) => {
-    var data = [
+export interface IBlogGrid {
+    col?: any,
+    show?: any
+}
+
+const BlogGrid = ({ show, col }: IBlogGrid) => {
+    const data: { [key: string]: any }[] = [
         {
             id: 1,
             title: "The litigants on the screen are not actors",
@@ -63,14 +67,15 @@ const BlogGrid = ({ show, col }) => {
     return (
         <>
             {data.slice(0, show).map((item, i) => (
-                <div className={`col-lg-${col}`}>
+                <div className={`col-lg-${col}`} key={i}>
                     <article className="wow fadeIn animated hover-up mb-30">
                         <div className="post-thumb img-hover-scale">
                             <Link href="/blog-post-right">
                                 <a>
-                                    <img
+                                    <Image
                                         src={`/assets/imgs/blog/${item.img}`}
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </a>
                             </Link>

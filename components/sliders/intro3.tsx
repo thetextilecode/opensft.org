@@ -3,6 +3,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
+import Image from "next/image";
 
 SwiperCore.use([Navigation, Pagination, EffectFade]);
 
@@ -48,7 +49,7 @@ const Intro3 = () => {
                                     </Link>
                                 </div>
                                 <div className="slider-img">
-                                    <img
+                                    <Image
                                         src="/assets/imgs/slider/slider-4.png"
                                         alt=""
                                     />
@@ -81,7 +82,7 @@ const Intro3 = () => {
                                     </Link>
                                 </div>
                                 <div className="slider-img">
-                                    <img
+                                    <Image
                                         src="/assets/imgs/slider/slider-5.png"
                                         alt=""
                                     />

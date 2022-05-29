@@ -28,24 +28,21 @@ const BrandFilter = ({ updateProductFilters }) => {
     };
 
     return (
-        <>
-        <ul className="categor-list">
+      <ul className="category-list">
         {brands.map((tag, i) => (
-                    <li onClick={() => handleClick(i, tag.value)}>
-                        <a
-                            className={
-                                active == i
-                                    ? "cat-item text-brand"
-                                    : "cat-item text-muted"
-                            }
-                        >
-                            {i == 0 ? "All" : `${tag.value}`}
-                        </a>
-                    </li>
-                ))}
-        </ul>
-          
-        </>
+          <li onClick={() => handleClick(i, tag.value)} key={i}>
+            <a
+              className={
+                active == i
+                  ? "cat-item text-brand"
+                  : "cat-item text-muted"
+              }
+            >
+              {i == 0 ? "All" : `${tag.value}`}
+            </a>
+          </li>
+        ))}
+      </ul>
     );
 };
 

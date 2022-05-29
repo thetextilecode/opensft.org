@@ -1,52 +1,54 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { updateProductFilters } from "../../redux/action/productFiltersAction";
+import { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
+import { updateProductFilters } from '../../redux/action/productFiltersAction';
 
-const Tags = ({ updateProductFilters }) => {
-    const tags = [
-        { value: "" },
-        { value: "women" },
-        { value: "dress" },
-        { value: "shoe" },
-    ];
-    const [selectedTags, setTags] = useState([]);
-    const [active, setActive] = useState(0);
-    useEffect(() => {
-        const filters = {
-            tags: selectedTags, //
-        };
+export interface ITags {
+  updateProductFilters?: any;
+}
 
-        updateProductFilters(filters);
-    }, [selectedTags]);
+const Tags = ({ updateProductFilters }: ITags) => {
+  const tags: { value: string }[] = [
+    { value: '' },
+    { value: 'women' },
+    { value: 'dress' },
+    { value: 'shoe' },
+  ];
 
-    const handleClick = (i, target) => {
-        setTags(target);
-        setActive(active == i ? 0 : i);
+  const [selectedTags, setTags] = useState([]);
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const filters = {
+      tags: selectedTags, //
     };
-    return (
-        <>
-            <ul className="categor-list">
-                {tags.map((tag, i) => (
-                    <li onClick={() => handleClick(i, tag.value)}>
-                        <a
-                            className={
-                                active == i
-                                    ? "cat-item text-brand"
-                                    : "cat-item text-muted"
-                            }
-                        >
-                            {i == 0 ? "All" : `${tag.value}`}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </>
-    );
+
+    updateProductFilters(filters);
+  }, [selectedTags]);
+
+  const handleClick = (i, target) => {
+    setTags(target);
+    setActive(active == i ? 0 : i);
+  };
+  return (
+    <ul className='category-list'>
+      {tags.map((tag, i) => (
+        <li onClick={() => handleClick(i, tag.value)} key={i}>
+          <a
+            className={
+              active == i
+                ? 'cat-item text-brand'
+                : 'cat-item text-muted'
+            }
+          >
+            {i == 0 ? 'All' : `${tag.value}`}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 const mapDidpatchToProps = {
-    updateProductFilters,
+  updateProductFilters,
 };
 
 export default connect(null, mapDidpatchToProps)(Tags);

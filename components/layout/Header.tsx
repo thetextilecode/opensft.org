@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 import Search from "../ecommerce/Search";
+import Image from 'next/image';
 
 export interface IHeader {
     headerStyle?: any,
@@ -89,9 +90,10 @@ const Header = ({
                                           <li>
                                               <Link href="/#">
                                                   <a>
-                                                      <img
+                                                      <Image
                                                         src="/assets/imgs/theme/flag-fr.png"
                                                         alt=""
+                                                        layout="fill"
                                                       />
                                                       Français
                                                   </a>
@@ -100,9 +102,10 @@ const Header = ({
                                           <li>
                                               <Link href="/#">
                                                   <a>
-                                                      <img
+                                                      <Image
                                                         src="/assets/imgs/theme/flag-dt.png"
                                                         alt=""
+                                                        layout="fill"
                                                       />
                                                       Deutsch
                                                   </a>
@@ -111,9 +114,10 @@ const Header = ({
                                           <li>
                                               <Link href="/#">
                                                   <a>
-                                                      <img
+                                                      <Image
                                                         src="/assets/imgs/theme/flag-ru.png"
                                                         alt=""
+                                                        layout="fill"
                                                       />
                                                       Pусский
                                                   </a>
@@ -139,9 +143,10 @@ const Header = ({
                       <div className="logo logo-width-1">
                           <Link href="/">
                               <a>
-                                  <img
+                                  <Image
                                     src="/assets/imgs/theme/logo.svg"
                                     alt="logo"
+                                    layout="fill"
                                   />
                               </a>
                           </Link>
@@ -155,10 +160,11 @@ const Header = ({
                                   <div className="header-action-icon-2">
                                       <Link href="/shop-compare">
                                           <a>
-                                              <img
+                                              <Image
                                                 className="svgInject"
                                                 alt="Evara"
                                                 src="/assets/imgs/theme/icons/icon-compare.svg"
+                                                layout="fill"
                                               />
                                               <span className="pro-count blue">
                                                         {totalCompareItems}
@@ -169,10 +175,11 @@ const Header = ({
                                   <div className="header-action-icon-2">
                                       <Link href="/shop-wishlist">
                                           <a>
-                                              <img
+                                              <Image
                                                 className="svgInject"
                                                 alt="Evara"
                                                 src="/assets/imgs/theme/icons/icon-heart.svg"
+                                                layout="fill"
                                               />
                                               <span className="pro-count blue">
                                                         {totalWishlistItems}
@@ -183,9 +190,10 @@ const Header = ({
                                   <div className="header-action-icon-2">
                                       <Link href="/shop-cart">
                                           <a className="mini-cart-icon">
-                                              <img
+                                              <Image
                                                 alt="Evara"
                                                 src="/assets/imgs/theme/icons/icon-cart.svg"
+                                                layout="fill"
                                               />
                                               <span className="pro-count blue">
                                                         {totalCartItems}
@@ -211,9 +219,10 @@ const Header = ({
                       <div className="logo logo-width-1 d-block d-lg-none">
                           <Link href="/">
                               <a>
-                                  <img
+                                  <Image
                                     src="/assets/imgs/theme/logo.svg"
                                     alt="logo"
+                                    layout="fill"
                                   />
                               </a>
                           </Link>
@@ -397,9 +406,10 @@ const Header = ({
                                                   </li>
                                                   <li className="mega-menu-col col-lg-5">
                                                       <div className="header-banner2">
-                                                          <img
+                                                          <Image
                                                             src="/assets/imgs/banner/menu-banner-2.jpg"
                                                             alt="menu_banner1"
+                                                            layout="fill"
                                                           />
                                                           <div className="banne_info">
                                                               <h6>
@@ -418,9 +428,10 @@ const Header = ({
                                                           </div>
                                                       </div>
                                                       <div className="header-banner2">
-                                                          <img
+                                                          <Image
                                                             src="/assets/imgs/banner/menu-banner-3.jpg"
                                                             alt="menu_banner2"
+                                                            layout="fill"
                                                           />
                                                           <div className="banne_info">
                                                               <h6>
@@ -595,9 +606,10 @@ const Header = ({
                                                   </li>
                                                   <li className="mega-menu-col col-lg-5">
                                                       <div className="header-banner2">
-                                                          <img
+                                                          <Image
                                                             src="/assets/imgs/banner/menu-banner-4.jpg"
                                                             alt="menu_banner1"
+                                                            layout="fill"
                                                           />
                                                           <div className="banne_info">
                                                               <h6>
@@ -782,9 +794,10 @@ const Header = ({
                                                   </li>
                                                   <li className="mega-menu-col col-lg-5">
                                                       <div className="header-banner2">
-                                                          <img
+                                                          <Image
                                                             src="/assets/imgs/banner/menu-banner-5.jpg"
                                                             alt="menu_banner1"
+                                                            layout="fill"
                                                           />
                                                           <div className="banne_info">
                                                               <h6>
@@ -803,9 +816,10 @@ const Header = ({
                                                           </div>
                                                       </div>
                                                       <div className="header-banner2">
-                                                          <img
+                                                          <Image
                                                             src="/assets/imgs/banner/menu-banner-6.jpg"
                                                             alt="menu_banner2"
+                                                            layout="fill"
                                                           />
                                                           <div className="banne_info">
                                                               <h6>
@@ -1219,9 +1233,10 @@ const Header = ({
                                                   <div className="menu-banner-wrap">
                                                       <Link href="/products/shop-grid-right">
                                                           <a>
-                                                              <img
+                                                              <Image
                                                                 src="/assets/imgs/banner/menu-banner.jpg"
                                                                 alt="Evara"
+                                                                layout="fill"
                                                               />
                                                           </a>
                                                       </Link>
@@ -1420,9 +1435,10 @@ const Header = ({
                               <div className="header-action-icon-2">
                                   <Link href="/shop-wishlist">
                                       <a>
-                                          <img
+                                          <Image
                                             alt="Evara"
                                             src="/assets/imgs/theme/icons/icon-compare.svg"
+                                            layout="fill"
                                           />
                                           <span className="pro-count white">
                                                     {totalCompareItems}
@@ -1433,9 +1449,10 @@ const Header = ({
                               <div className="header-action-icon-2">
                                   <Link href="/shop-wishlist">
                                       <a>
-                                          <img
+                                          <Image
                                             alt="Evara"
                                             src="/assets/imgs/theme/icons/icon-heart.svg"
+                                            layout="fill"
                                           />
                                           <span className="pro-count white">
                                                     {totalWishlistItems}
@@ -1446,9 +1463,10 @@ const Header = ({
                               <div className="header-action-icon-2">
                                   <Link href="/shop-cart">
                                       <a className="mini-cart-icon">
-                                          <img
+                                          <Image
                                             alt="Evara"
                                             src="/assets/imgs/theme/icons/icon-cart.svg"
+                                            layout="fill"
                                           />
                                           <span className="pro-count white">
                                                     {totalCartItems}
@@ -1461,9 +1479,10 @@ const Header = ({
                                               <div className="shopping-cart-img">
                                                   <Link href="/products/shop-grid-right">
                                                       <a>
-                                                          <img
+                                                          <Image
                                                             alt="Evara"
                                                             src="/assets/imgs/shop/thumbnail-3.jpg"
+                                                            layout="fill"
                                                           />
                                                       </a>
                                                   </Link>
@@ -1495,9 +1514,10 @@ const Header = ({
                                               <div className="shopping-cart-img">
                                                   <Link href="/products/shop-grid-right">
                                                       <a>
-                                                          <img
+                                                          <Image
                                                             alt="Evara"
                                                             src="/assets/imgs/shop/thumbnail-4.jpg"
+                                                            layout="fill"
                                                           />
                                                       </a>
                                                   </Link>

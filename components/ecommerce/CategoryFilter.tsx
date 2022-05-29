@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { connect } from "react-redux";
 import { updateProductCategory } from "../../redux/action/productFiltersAction";
 import { useState } from "react";
@@ -13,7 +12,7 @@ const CategoryFilter = ({ updateProductCategory }) => {
         setActive(active == i ? 0 : i);
     };
 
-    const categories = [
+    const categories: { title: string }[] = [
         { title: "" },
         { title: "jeans" },
         { title: "shoe" },
@@ -23,23 +22,21 @@ const CategoryFilter = ({ updateProductCategory }) => {
     ];
 
     return (
-        <>
-            <ul className="categor-list">
-                {categories.map((item, i) => (
-                    <li onClick={() => selectCategory(i, item.title)}>
-                        <a
-                            className={
-                                active == i
-                                    ? "cat-item text-brand"
-                                    : "cat-item text-muted"
-                            }
-                        >
-                            {i == 0 ? "All" : `${item.title}`}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </>
+      <ul className="category-list">
+        {categories.map((item, i) => (
+          <li onClick={() => selectCategory(i, item.title)} key={i}>
+            <a
+              className={
+                active == i
+                  ? "cat-item text-brand"
+                  : "cat-item text-muted"
+              }
+            >
+              {i == 0 ? "All" : `${item.title}`}
+            </a>
+          </li>
+        ))}
+      </ul>
     );
 };
 

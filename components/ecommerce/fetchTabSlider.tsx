@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import { fetchByCategory } from "../../redux/action/product";
-import { server } from "../../config/index";
+import { server } from '../../config';
 import FeaturedSlider from "../sliders/Featured";
 import NewArrivalTabSlider from "../sliders/NewArrivalTab";
 import TrendingSlider from "../sliders/Trending";
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
 
 function FetchTabSlider() {
     const [active, setActive] = useState("1");
@@ -73,7 +74,7 @@ function FetchTabSlider() {
             <div className="row">
                 <div className="col-lg-3 d-none d-lg-flex">
                     <div className="banner-img style-2 wow fadeIn animated">
-                        <img src="assets/imgs/banner/banner-9.jpg" alt="" />
+                        <Image src="assets/imgs/banner/banner-9.jpg" alt="" layout={'fill'} />
                         <div className="banner-text">
                             <span>Woman Area</span>
                             <h4 className="mt-5">

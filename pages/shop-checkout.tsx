@@ -1,11 +1,11 @@
-import React from "react";
 import { connect } from "react-redux";
 import Layout from "../components/layout/Layout";
+import Image from "next/image";
 
-import Link from "next/link";
 import { clearCart, closeCart, decreaseQuantity, deleteFromCart, increaseQuantity, openCart } from "../redux/action/cart";
+import { ICart } from './shop-cart';
 
-const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, decreaseQuantity, deleteFromCart, clearCart }) => {
+const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, decreaseQuantity, deleteFromCart, clearCart }: ICart) => {
     const price = () => {
         let price = 0;
         cartItems.forEach((item) => (price += item.price * item.quantity));
@@ -19,23 +19,23 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                 <section className="mt-50 mb-50">
                     <div className="container">
                         <div className="row">
-                            <div class="col-md-6">
-                                <div class="mb-25">
+                            <div className="col-md-6">
+                                <div className="mb-25">
                                     <h4>Billing Details</h4>
                                 </div>
                                 <form method="post">
-                                    <div class="form-group">
-                                        <input type="text" required="" name="fname" placeholder="First name *" />
+                                    <div className="form-group">
+                                        <input type="text" required={true} name="fname" placeholder="First name *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" required="" name="lname" placeholder="Last name *" />
+                                    <div className="form-group">
+                                        <input type="text" required={true} name="lname" placeholder="Last name *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="cname" placeholder="Company Name" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="cname" placeholder="Company Name" />
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom_select">
-                                            <select class="form-control select-active">
+                                    <div className="form-group">
+                                        <div className="custom_select">
+                                            <select className="form-control select-active">
                                                 <option value="">Select an option...</option>
                                                 <option value="AX">Aland Islands</option>
                                                 <option value="AF">Afghanistan</option>
@@ -284,64 +284,64 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" name="billing_address" required="" placeholder="Address *" />
+                                    <div className="form-group">
+                                        <input type="text" name="billing_address" required={true} placeholder="Address *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" name="billing_address2" required="" placeholder="Address line2" />
+                                    <div className="form-group">
+                                        <input type="text" name="billing_address2" required={true} placeholder="Address line2" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="city" placeholder="City / Town *" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="city" placeholder="City / Town *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="state" placeholder="State / County *" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="state" placeholder="State / County *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="zipcode" placeholder="Postcode / ZIP *" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="zipcode" placeholder="Postcode / ZIP *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="phone" placeholder="Phone *" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="phone" placeholder="Phone *" />
                                     </div>
-                                    <div class="form-group">
-                                        <input required="" type="text" name="email" placeholder="Email address *" />
+                                    <div className="form-group">
+                                        <input required={true} type="text" name="email" placeholder="Email address *" />
                                     </div>
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <div class="custome-checkbox">
-                                                <input class="form-check-input" type="checkbox" name="checkbox" id="createaccount" />
-                                                <label class="form-check-label label_info" data-bs-toggle="collapse" data-target="#collapsePassword" aria-controls="collapsePassword" for="createaccount">
+                                    <div className="form-group">
+                                        <div className="checkbox">
+                                            <div className="custome-checkbox">
+                                                <input className="form-check-input" type="checkbox" name="checkbox" id="createaccount" />
+                                                <label className="form-check-label label_info" data-bs-toggle="collapse" data-target="#collapsePassword" aria-controls="collapsePassword" htmlFor="createaccount">
                                                     <span>Create an account?</span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="collapsePassword" class="form-group create-account collapse in">
-                                        <input required="" type="password" placeholder="Password" name="password" />
+                                    <div id="collapsePassword" className="form-group create-account collapse in">
+                                        <input required={true} type="password" placeholder="Password" name="password" />
                                     </div>
-                                    <div class="ship_detail">
-                                        <div class="form-group">
-                                            <div class="chek-form">
-                                                <div class="custome-checkbox">
-                                                    <input class="form-check-input" type="checkbox" name="checkbox" id="differentaddress" />
-                                                    <label class="form-check-label label_info" data-bs-toggle="collapse" data-target="#collapseAddress" aria-controls="collapseAddress" for="differentaddress">
+                                    <div className="ship_detail">
+                                        <div className="form-group">
+                                            <div className="chek-form">
+                                                <div className="custome-checkbox">
+                                                    <input className="form-check-input" type="checkbox" name="checkbox" id="differentaddress" />
+                                                    <label className="form-check-label label_info" data-bs-toggle="collapse" data-target="#collapseAddress" aria-controls="collapseAddress" htmlFor="differentaddress">
                                                         <span>Ship to a different address?</span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="collapseAddress" class="different_address collapse in">
-                                            <div class="form-group">
-                                                <input type="text" required="" name="fname" placeholder="First name *" />
+                                        <div id="collapseAddress" className="different_address collapse in">
+                                            <div className="form-group">
+                                                <input type="text" required={true} name="fname" placeholder="First name *" />
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" required="" name="lname" placeholder="Last name *" />
+                                            <div className="form-group">
+                                                <input type="text" required={true} name="lname" placeholder="Last name *" />
                                             </div>
-                                            <div class="form-group">
-                                                <input required="" type="text" name="cname" placeholder="Company Name" />
+                                            <div className="form-group">
+                                                <input required={true} type="text" name="cname" placeholder="Company Name" />
                                             </div>
-                                            <div class="form-group">
-                                                <div class="custom_select">
-                                                    <select class="form-control select-active">
+                                            <div className="form-group">
+                                                <div className="custom_select">
+                                                    <select className="form-control select-active">
                                                         <option value="">Select an option...</option>
                                                         <option value="AX">Aland Islands</option>
                                                         <option value="AF">Afghanistan</option>
@@ -590,42 +590,42 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" name="billing_address" required="" placeholder="Address *" />
+                                            <div className="form-group">
+                                                <input type="text" name="billing_address" required={true} placeholder="Address *" />
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" name="billing_address2" required="" placeholder="Address line2" />
+                                            <div className="form-group">
+                                                <input type="text" name="billing_address2" required={true} placeholder="Address line2" />
                                             </div>
-                                            <div class="form-group">
-                                                <input required="" type="text" name="city" placeholder="City / Town *" />
+                                            <div className="form-group">
+                                                <input required={true} type="text" name="city" placeholder="City / Town *" />
                                             </div>
-                                            <div class="form-group">
-                                                <input required="" type="text" name="state" placeholder="State / County *" />
+                                            <div className="form-group">
+                                                <input required={true} type="text" name="state" placeholder="State / County *" />
                                             </div>
-                                            <div class="form-group">
-                                                <input required="" type="text" name="zipcode" placeholder="Postcode / ZIP *" />
+                                            <div className="form-group">
+                                                <input required={true} type="text" name="zipcode" placeholder="Postcode / ZIP *" />
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-20">
+                                    <div className="mb-20">
                                         <h5>Additional information</h5>
                                     </div>
-                                    <div class="form-group mb-30">
-                                        <textarea rows="5" placeholder="Order notes"></textarea>
+                                    <div className="form-group mb-30">
+                                        <textarea rows={5} placeholder="Order notes"></textarea>
                                     </div>
                                 </form>
                             </div>
-                            <div class="col-md-6">
-                                <div class="order_review">
-                                    <div class="mb-20">
+                            <div className="col-md-6">
+                                <div className="order_review">
+                                    <div className="mb-20">
                                         <h4>Your Orders</h4>
                                     </div>
                                     <div className="table-responsive order_table text-center">
                                         {cartItems.length <= 0 && "No Products"}
-                                        <table class={cartItems.length > 0 ? "table" : "d-none"}>
+                                        <table className={cartItems.length > 0 ? "table" : "d-none"}>
                                             <thead>
                                                 <tr>
-                                                    <th colspan="2">Product</th>
+                                                    <th colSpan={2}>Product</th>
                                                     <th>Total</th>
                                                 </tr>
                                             </thead>
@@ -633,14 +633,14 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                                                 {cartItems.map((item, i) => (
                                                     <>
                                                         <tr>
-                                                            <td class="image product-thumbnail">
-                                                                <img src={item.images[0].img} alt="#" />
+                                                            <td className="image product-thumbnail">
+                                                                <Image src={item.images[0].img} alt="#" />
                                                             </td>
                                                             <td>
                                                                 <h5>
                                                                     <a>{item.title}</a>
                                                                 </h5>{" "}
-                                                                <span class="product-qty">x {item.quantity}</span>
+                                                                <span className="product-qty">x {item.quantity}</span>
                                                             </td>
                                                             <td>${item.quantity * item.price}</td>
                                                         </tr>
@@ -648,62 +648,62 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                                                 ))}
                                                 <tr>
                                                     <th>SubTotal</th>
-                                                    <td class="product-subtotal" colspan="2">
+                                                    <td className="product-subtotal" colSpan={2}>
                                                         ${price()}
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Shipping</th>
-                                                    <td colspan="2">
+                                                    <td colSpan={2}>
                                                         <em>Free Shipping</em>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>Total</th>
-                                                    <td colspan="2" class="product-subtotal">
-                                                        <span class="font-xl text-brand fw-900">${price()}</span>
+                                                    <td colSpan={2} className="product-subtotal">
+                                                        <span className="font-xl text-brand fw-900">${price()}</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
 
-                                    <div class="bt-1 border-color-1 mt-30 mb-30"></div>
-                                    <div class="payment_method">
-                                        <div class="mb-25">
+                                    <div className="bt-1 border-color-1 mt-30 mb-30"></div>
+                                    <div className="payment_method">
+                                        <div className="mb-25">
                                             <h5>Payment</h5>
                                         </div>
-                                        <div class="payment_option">
-                                            <div class="custome-radio">
-                                                <input class="form-check-input" required="" type="radio" name="payment_option" id="exampleRadios3" checked={true} />
-                                                <label class="form-check-label" for="exampleRadios3" data-bs-toggle="collapse" data-target="#bankTranfer" aria-controls="bankTranfer">
+                                        <div className="payment_option">
+                                            <div className="custome-radio">
+                                                <input className="form-check-input" required={true} type="radio" name="payment_option" id="exampleRadios3" checked={true} />
+                                                <label className="form-check-label" htmlFor="exampleRadios3" data-bs-toggle="collapse" data-target="#bankTranfer" aria-controls="bankTranfer">
                                                     Direct Bank Transfer
                                                 </label>
-                                                <div class="form-group collapse in" id="bankTranfer">
-                                                    <p class="text-muted mt-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. </p>
+                                                <div className="form-group collapse in" id="bankTranfer">
+                                                    <p className="text-muted mt-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. </p>
                                                 </div>
                                             </div>
-                                            <div class="custome-radio">
-                                                <input class="form-check-input" required="" type="radio" name="payment_option" id="exampleRadios4" checked={true} />
-                                                <label class="form-check-label" for="exampleRadios4" data-bs-toggle="collapse" data-target="#checkPayment" aria-controls="checkPayment">
+                                            <div className="custome-radio">
+                                                <input className="form-check-input" required={true} type="radio" name="payment_option" id="exampleRadios4" checked={true} />
+                                                <label className="form-check-label" htmlFor="exampleRadios4" data-bs-toggle="collapse" data-target="#checkPayment" aria-controls="checkPayment">
                                                     Check Payment
                                                 </label>
-                                                <div class="form-group collapse in" id="checkPayment">
-                                                    <p class="text-muted mt-5">Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode. </p>
+                                                <div className="form-group collapse in" id="checkPayment">
+                                                    <p className="text-muted mt-5">Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode. </p>
                                                 </div>
                                             </div>
-                                            <div class="custome-radio">
-                                                <input class="form-check-input" required="" type="radio" name="payment_option" id="exampleRadios5" checked={true} />
-                                                <label class="form-check-label" for="exampleRadios5" data-bs-toggle="collapse" data-target="#paypal" aria-controls="paypal">
+                                            <div className="custome-radio">
+                                                <input className="form-check-input" required={true} type="radio" name="payment_option" id="exampleRadios5" checked={true} />
+                                                <label className="form-check-label" htmlFor="exampleRadios5" data-bs-toggle="collapse" data-target="#paypal" aria-controls="paypal">
                                                     Paypal
                                                 </label>
-                                                <div class="form-group collapse in" id="paypal">
-                                                    <p class="text-muted mt-5">Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
+                                                <div className="form-group collapse in" id="paypal">
+                                                    <p className="text-muted mt-5">Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-fill-out btn-block mt-30">
+                                    <a href="#" className="btn btn-fill-out btn-block mt-30">
                                         Place Order
                                     </a>
                                 </div>

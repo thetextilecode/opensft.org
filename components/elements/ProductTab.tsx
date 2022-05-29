@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 const ProductTab = () => {
     const [activeIndex, setActiveIndex] = useState(1);
@@ -256,7 +257,7 @@ const ProductTab = () => {
                                         <div className="single-comment justify-content-between d-flex">
                                             <div className="user justify-content-between d-flex">
                                                 <div className="thumb text-center">
-                                                    <img
+                                                    <Image
                                                         src="/assets/imgs/page/avatar-6.jpg"
                                                         alt=""
                                                     />
@@ -305,7 +306,7 @@ const ProductTab = () => {
                                         <div className="single-comment justify-content-between d-flex">
                                             <div className="user justify-content-between d-flex">
                                                 <div className="thumb text-center">
-                                                    <img
+                                                    <Image
                                                         src="/assets/imgs/page/avatar-7.jpg"
                                                         alt=""
                                                     />
@@ -353,7 +354,7 @@ const ProductTab = () => {
                                         <div className="single-comment justify-content-between d-flex">
                                             <div className="user justify-content-between d-flex">
                                                 <div className="thumb text-center">
-                                                    <img
+                                                    <Image
                                                         src="/assets/imgs/page/avatar-8.jpg"
                                                         alt=""
                                                     />
@@ -422,9 +423,9 @@ const ProductTab = () => {
                                             style={{
                                                 width: " 50%",
                                             }}
-                                            aria-valuenow="50"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
+                                            aria-valuenow={50}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
                                         >
                                             50%
                                         </div>
@@ -437,9 +438,9 @@ const ProductTab = () => {
                                             style={{
                                                 width: " 25%",
                                             }}
-                                            aria-valuenow="25"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
+                                            aria-valuenow={25}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
                                         >
                                             25%
                                         </div>
@@ -452,9 +453,9 @@ const ProductTab = () => {
                                             style={{
                                                 width: " 45%",
                                             }}
-                                            aria-valuenow="45"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
+                                            aria-valuenow={45}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
                                         >
                                             45%
                                         </div>
@@ -467,9 +468,9 @@ const ProductTab = () => {
                                             style={{
                                                 width: " 65%",
                                             }}
-                                            aria-valuenow="65"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
+                                            aria-valuenow={65}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
                                         >
                                             65%
                                         </div>
@@ -482,9 +483,9 @@ const ProductTab = () => {
                                             style={{
                                                 width: " 85%",
                                             }}
-                                            aria-valuenow="85"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
+                                            aria-valuenow={85}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
                                         >
                                             85%
                                         </div>
@@ -513,8 +514,8 @@ const ProductTab = () => {
                                                         className="form-control w-100"
                                                         name="comment"
                                                         id="comment"
-                                                        cols="30"
-                                                        rows="9"
+                                                        cols={30}
+                                                        rows={9}
                                                         placeholder="Write Comment"
                                                     ></textarea>
                                                 </div>

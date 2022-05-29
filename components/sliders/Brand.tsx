@@ -1,5 +1,6 @@
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 SwiperCore.use([Navigation]);
 
@@ -44,12 +45,13 @@ const BrandSlider = () => {
                 className="carousel-6-columns text-center"
             >
                 {data.map((item, i) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={i}>
                         <div className="brand-logo">
-                            <img
+                            <Image
                                 className="img-grey-hover"
                                 src={`assets/imgs/banner/${item.img}`}
                                 alt=""
+                                layout={'fill'}
                             />
                         </div>
                     </SwiperSlide>

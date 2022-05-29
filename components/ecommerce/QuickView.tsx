@@ -1,21 +1,26 @@
-import React from "react";
 import { connect } from "react-redux";
 import { Modal } from 'react-responsive-modal';
 import { closeQuickView } from '../../redux/action/quickViewAction';
 import ProductDetails from "./ProductDetails";
+import Image from "next/image";
 
-const images = [
+const images: {src: string}[] = [
     { src: "/images/offer/offer-1.jpg" },
     { src: "/images/offer/offer-2.jpg" },
     { src: "/images/offer/offer-3.jpg" },
 ];
 
-const QuickView = ({ quickView, closeQuickView }) => {
+export interface IQuickView {
+  closeQuickView?: any;
+  quickView?: any;
+}
+
+const QuickView = ({ quickView, closeQuickView }: IQuickView) => {
     const settings = {
         customPaging: function (i) {
             return (
                 <a>
-                    <img src={images[i].src} width="75" />
+                    <Image src={images[i].src} width={75} alt={''} layout={'fill'} />
                 </a>
             );
         },
@@ -28,15 +33,13 @@ const QuickView = ({ quickView, closeQuickView }) => {
     };
 
     return (
-        <>
-            <Modal open={quickView ? true : false} onClose={closeQuickView}>
-                {quickView && (
-                    <div className="quick-view">
-                        <ProductDetails product={quickView} quickView={quickView} />
-                    </div>
-                )}
-            </Modal>
-        </>
+      <Modal open={quickView ? true : false} onClose={closeQuickView}>
+        {quickView && (
+          <div className="quick-view">
+            <ProductDetails product={quickView} quickView={quickView} />
+          </div>
+        )}
+      </Modal>
     );
 };
 

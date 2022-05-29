@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
 
 const BlogList = ({ show }) => {
-    var data = [
+    const data = [
         {
             id: 1,
             title: "The litigants on the screen are not actors",
@@ -62,7 +61,7 @@ const BlogList = ({ show }) => {
     return (
         <>
             {data.slice(0, show).map((item, i) => (
-                <article className="wow fadeIn animated hover-up mb-30">
+                <article className="wow fadeIn animated hover-up mb-30" key={i}>
                     <div
                         className="post-thumb"
                         style={{

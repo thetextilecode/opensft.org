@@ -1,5 +1,6 @@
 import BlogSidebar from "../components/elements/BlogSidebar";
 import Layout from "../components/layout/Layout";
+import Image from 'next/image';
 
 function Guide() {
     return (
@@ -22,7 +23,7 @@ function Guide() {
                                         </div>
                                     </div>
                                     <figure className="single-thumbnail">
-                                        <img src="assets/imgs/page/img-1.jpg" alt="" />
+                                        <Image src="assets/imgs/page/img-1.jpg" alt="" layout="fill" />
                                     </figure>
                                     <div className="single-content">
                                         <h4>1. Account Registering</h4>

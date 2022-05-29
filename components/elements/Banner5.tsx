@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 const Banner5 = () => {
     return (
         <>
             <div className="col-lg-4 col-md-6">
                 <div className="banner-img wow fadeIn animated">
-                    <img src="/assets/imgs/banner/banner-1.png" alt="" />
+                    <Image src="/assets/imgs/banner/banner-1.png" alt="" layout={'fill'} />
                     <div className="banner-text">
                         <span>Smart Offer</span>
                         <h4>
@@ -22,7 +24,7 @@ const Banner5 = () => {
             </div>
             <div className="col-lg-4 col-md-6">
                 <div className="banner-img wow fadeIn animated">
-                    <img src="/assets/imgs/banner/banner-2.png" alt="" />
+                    <Image src="/assets/imgs/banner/banner-2.png" alt="" layout={'fill'} />
                     <div className="banner-text">
                         <span>Sale off</span>
                         <h4>
@@ -39,7 +41,7 @@ const Banner5 = () => {
             </div>
             <div className="col-lg-4 d-md-none d-lg-flex">
                 <div className="banner-img wow fadeIn animated  mb-sm-0">
-                    <img src="/assets/imgs/banner/banner-3.png" alt="" />
+                    <Image src="/assets/imgs/banner/banner-3.png" alt="" layout={'fill'} />
                     <div className="banner-text">
                         <span>New Arrivals</span>
                         <h4>

@@ -15,7 +15,7 @@
 
 `npm run dev`
 
-Please do not modify the `next-env.d.ts` file. It ensures Next.js types are picked up by the TypeScript compiler.
+Please do not modify the `next-env.d.ts` file. It ensures Next.js types are picked up by the TypeScript compiler. If you need to add an interface please add it to `types.d.ts`.
 
 ## Etc
 

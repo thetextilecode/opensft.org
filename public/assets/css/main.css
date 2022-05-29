@@ -4781,23 +4781,23 @@ table .product-thumbnail img {
   box-shadow: 20px 20px 54px rgba(0, 0, 0, 0.03);
 }
 
-.shop-product-fillter-header .categor-list li {
+.shop-product-fillter-header .category-list li {
   font-size: 12px;
 }
 
-.shop-product-fillter-header .categor-list li + li {
+.shop-product-fillter-header .category-list li + li {
   border-top: 1px solid #f7f8f9;
   padding-top: 5px;
   margin-top: 5px;
 }
 
-.shop-product-fillter-header .categor-list li a {
+.shop-product-fillter-header .category-list li a {
   font-size: 14px;
   color: #4f5d77;
   margin-right: 10px;
 }
 
-.shop-product-fillter-header .categor-list li a:hover {
+.shop-product-fillter-header .category-list li a:hover {
   color: #088178;
 }
 
@@ -7708,14 +7708,14 @@ span.fi-rs-apps {
   margin-right: 15px;
 }
 
-.newsletter .form-subcriber input {
+.newsletter .form-subscriber input {
   border-radius: 4px 0 0 4px;
   border: 0;
   padding: 0 20px 0 30px;
   font-size: 14px;
 }
 
-.newsletter .form-subcriber button {
+.newsletter .form-subscriber button {
   border-radius: 0 4px 4px 0;
   border: 0;
   font-size: 14px;

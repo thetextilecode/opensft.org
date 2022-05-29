@@ -1,23 +1,19 @@
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { updateProductFilters } from "../../redux/action/productFiltersAction";
-import CheckBox from "./Checkbox";
 
 const SizeFilter = ({ updateProductFilters }) => {
     // console.log(updateProductFilters);
 
-    const sizes = [
+    const sizes: {value: string}[] = [
         {value: "s"},
         {value: "m "},
         {value: "l"},
         {value: "xl"},
     ];
 
-    
-
     const [selectedSizes, setSizes] = useState([]);
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState();
 
     useEffect(() => {
         const filters = {
@@ -39,6 +35,7 @@ const SizeFilter = ({ updateProductFilters }) => {
                     <li
                         className={active == i && "active"}
                         onClick={() => handleClick(i, tag.value)}
+                        key={i}
                     >
                         <a>
                         {i == 0 ? "All" : `${tag.value}`}

@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { updateProductFilters } from "../../redux/action/productFiltersAction";
 
-const ColorFilter = ({ updateProductFilters }) => {
-    const colors = [
+export interface IColorFilter {
+  updateProductFilters?: any;
+}
+
+const ColorFilter = ({ updateProductFilters }: IColorFilter) => {
+    const colors: { value: string }[] = [
         { value: "" },
         { value: "red" },
         { value: "yellow" },
@@ -37,6 +41,7 @@ const ColorFilter = ({ updateProductFilters }) => {
                     <li
                         className={active == i && "active"}
                         onClick={() => handleClick(i, tag.value)}
+                        key={i}
                     >
                         <a>
                             {i == 0 ? (

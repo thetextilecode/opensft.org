@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { useState } from "react";
 import { connect } from "react-redux";
@@ -14,6 +15,17 @@ import ProductTab from "../elements/ProductTab";
 import RelatedSlider from "../sliders/Related";
 import ThumbSlider from "../sliders/Thumb";
 
+export interface IProductDetails {
+  addToCart?: any;
+  addToCompare?: any;
+  addToWishlist?: any;
+  cartItems?: any;
+  decreaseQuantity?: any;
+  increaseQuantity?: any;
+  product?: any;
+  quickView?: any;
+}
+
 const ProductDetails = ({
     product,
     cartItems,
@@ -23,7 +35,7 @@ const ProductDetails = ({
     increaseQuantity,
     decreaseQuantity,
     quickView,
-}) => {
+}: IProductDetails) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleCart = (product) => {
@@ -75,33 +87,37 @@ const ProductDetails = ({
                                                 </li>
                                                 <li className="social-facebook">
                                                     <a href="#">
-                                                        <img
+                                                        <Image
                                                             src="/assets/imgs/theme/icons/icon-facebook.svg"
                                                             alt=""
+                                                            layout={'fill'}
                                                         />
                                                     </a>
                                                 </li>
                                                 <li className="social-twitter">
                                                     <a href="#">
-                                                        <img
+                                                        <Image
                                                             src="/assets/imgs/theme/icons/icon-twitter.svg"
                                                             alt=""
+                                                            layout={'fill'}
                                                         />
                                                     </a>
                                                 </li>
                                                 <li className="social-instagram">
                                                     <a href="#">
-                                                        <img
+                                                        <Image
                                                             src="/assets/imgs/theme/icons/icon-instagram.svg"
                                                             alt=""
+                                                            layout={'fill'}
                                                         />
                                                     </a>
                                                 </li>
                                                 <li className="social-linkedin">
                                                     <a href="#">
-                                                        <img
+                                                        <Image
                                                             src="/assets/imgs/theme/icons/icon-pinterest.svg"
                                                             alt=""
+                                                            layout={'fill'}
                                                         />
                                                     </a>
                                                 </li>
@@ -167,8 +183,7 @@ const ProductDetails = ({
                                                 <ul>
                                                     <li className="mb-10">
                                                         <i className="fi-rs-crown mr-5"></i>
-                                                        1 Year AL Jazeera Brand
-                                                        Warranty
+                                                        1 Year AL Jazeera Brand Warranty
                                                     </li>
                                                     <li className="mb-10">
                                                         <i className="fi-rs-refresh mr-5"></i>
@@ -176,8 +191,7 @@ const ProductDetails = ({
                                                     </li>
                                                     <li>
                                                         <i className="fi-rs-credit-card mr-5"></i>
-                                                        Cash on Delivery
-                                                        available
+                                                        Cash on Delivery available
                                                     </li>
                                                 </ul>
                                             </div>
@@ -234,35 +248,21 @@ const ProductDetails = ({
                                                     <a
                                                         onClick={(e) =>
                                                             !inCart
-                                                                ? setQuantity(
-                                                                      quantity >
-                                                                          1
-                                                                          ? quantity -
-                                                                                1
-                                                                          : 1
-                                                                  )
-                                                                : decreaseQuantity(
-                                                                      product?.id
-                                                                  )
+                                                                ? setQuantity(quantity > 1 ? quantity - 1 : 1
+                                                                  ) : decreaseQuantity(product?.id)
                                                         }
                                                         className="qty-down"
                                                     >
                                                         <i className="fi-rs-angle-small-down"></i>
                                                     </a>
                                                     <span className="qty-val">
-                                                        {inCart?.quantity ||
-                                                            quantity}
+                                                        {inCart?.quantity || quantity}
                                                     </span>
                                                     <a
                                                         onClick={() =>
                                                             !inCart
-                                                                ? setQuantity(
-                                                                      quantity +
-                                                                          1
-                                                                  )
-                                                                : increaseQuantity(
-                                                                      product.id
-                                                                  )
+                                                                ? setQuantity(quantity + 1)
+                                                                : increaseQuantity(product.id)
                                                         }
                                                         className="qty-up"
                                                     >
@@ -287,9 +287,7 @@ const ProductDetails = ({
                                                         aria-label="Add To Wishlist"
                                                         className="action-btn hover-up"
                                                         onClick={(e) =>
-                                                            handleWishlist(
-                                                                product
-                                                            )
+                                                            handleWishlist(product)
                                                         }
                                                     >
                                                         <i className="fi-rs-heart"></i>
@@ -298,9 +296,7 @@ const ProductDetails = ({
                                                         aria-label="Compare"
                                                         className="action-btn hover-up"
                                                         onClick={(e) =>
-                                                            handleCompare(
-                                                                product
-                                                            )
+                                                            handleCompare(product)
                                                         }
                                                     >
                                                         <i className="fi-rs-shuffle"></i>
@@ -325,8 +321,7 @@ const ProductDetails = ({
                                                 <li>
                                                     Availability:
                                                     <span className="in-stock text-success ml-5">
-                                                        {product.stock} Items In
-                                                        Stock
+                                                        {product.stock} Items In Stock
                                                     </span>
                                                 </li>
                                             </ul>
@@ -350,10 +345,11 @@ const ProductDetails = ({
                                             </div>
                                         </div>
                                         <div className="banner-img banner-big wow fadeIn f-none animated mt-50">
-                                            <img
+                                            <Image
                                                 className="border-radius-10"
                                                 src="/assets/imgs/banner/banner-4.png"
                                                 alt=""
+                                                layout={'fill'}
                                             />
                                             <div className="banner-text">
                                                 <h4 className="mb-15 mt-40">

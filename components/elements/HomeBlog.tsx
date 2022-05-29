@@ -1,5 +1,4 @@
-import React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 
 const HomeBlog = () => {
@@ -11,9 +10,10 @@ const HomeBlog = () => {
                         <div className="post-thumb d-flex mr-15">
                             <Link href="/blog-post-fullwidth">
                                 <a className="color-white">
-                                    <img
+                                    <Image
                                         src="assets/imgs/blog/blog-2.jpg"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </a>
                             </Link>
@@ -57,9 +57,10 @@ const HomeBlog = () => {
                         <div className="post-thumb d-flex mr-15">
                             <Link href="/blog-post-fullwidth">
                                 <a className="color-white">
-                                    <img
+                                    <Image
                                         src="assets/imgs/blog/blog-1.jpg"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </a>
                             </Link>

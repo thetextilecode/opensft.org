@@ -71,7 +71,7 @@ const ProductsFullWidth = ({ products, productFilters, fetchProduct }) => {
                 <section className="mt-50 mb-50">
                     <div className="container">
                         <div className="row">
-                            <div class="col-lg-12">
+                            <div className="col-lg-12">
                                 <ShopFilter />
                             </div>
                             <div className="col-lg-12">

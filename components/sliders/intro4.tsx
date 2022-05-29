@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
@@ -54,7 +55,7 @@ const Intro4 = () => {
                                 </div>
                                 <div className="col-lg-7 col-md-6">
                                     <div className="single-slider-img single-slider-img-1">
-                                        <img
+                                        <Image
                                             className="animated"
                                             src="assets/imgs/slider/slider-6.png"
                                             alt=""
@@ -93,7 +94,7 @@ const Intro4 = () => {
                                 </div>
                                 <div className="col-lg-7 col-md-6">
                                     <div className="single-slider-img single-slider-img-1">
-                                        <img
+                                        <Image
                                             className="animated"
                                             src="assets/imgs/slider/slider-7.png"
                                             alt=""

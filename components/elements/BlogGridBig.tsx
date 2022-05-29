@@ -1,9 +1,12 @@
-import React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 
-const BlogGridBig = ({ show }) => {
-    var data = [
+export interface IBlogGridBig {
+    show?: any;
+}
+
+const BlogGridBig = ({ show }: IBlogGridBig) => {
+    const data: { [key: string]: any }[] = [
         {
             id: 1,
             title: "The litigants on the screen are not actors",
@@ -63,7 +66,7 @@ const BlogGridBig = ({ show }) => {
     return (
         <>
             {data.slice(0, show).map((item, i) => (
-                <div className="col-12">
+                <div className="col-12" key={i}>
                     <article className="first-post mb-30 wow fadeIn animated hover-up">
                         <div className="img-hover-slide position-relative overflow-hidden">
                             <span className="top-right-icon bg-dark">
@@ -72,7 +75,7 @@ const BlogGridBig = ({ show }) => {
                             <div className="post-thumb img-hover-scale">
                                 <Link href="/blog-post-right">
                                     <a>
-                                        <img
+                                        <Image
                                             src={`/assets/imgs/blog/${item.img}`}
                                             alt=""
                                         />

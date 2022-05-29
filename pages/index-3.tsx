@@ -16,7 +16,7 @@ import Intro3 from "./../components/sliders/intro3";
 import NewArrival from "./../components/sliders/NewArrival";
 import Link from "next/link";
 import Bottom from './../components/elements/Bottom';
-
+import Image from "next/image";
 
 function Test() {
     return (
@@ -33,10 +33,11 @@ function Test() {
                             </div>
                             <div className="col-lg-3 d-md-none d-lg-block">
                                 <div className="banner-img banner-1 wow fadeIn  animated home-3">
-                                    <img
+                                    <Image
                                         className="border-radius-10"
                                         src="assets/imgs/banner/banner-5.jpg"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                     <div className="banner-text">
                                         <span>Accessories</span>
@@ -52,10 +53,11 @@ function Test() {
                                     </div>
                                 </div>
                                 <div className="banner-img banner-2 wow fadeIn  animated mb-0">
-                                    <img
+                                    <Image
                                         className="border-radius-10"
                                         src="assets/imgs/banner/banner-7.jpg"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                     <div className="banner-text">
                                         <span>Smart Offer</span>
@@ -189,7 +191,6 @@ function Test() {
                         </div>
                     </div>
                 </section>
-
                 <Bottom/>
             </Layout>
         </>

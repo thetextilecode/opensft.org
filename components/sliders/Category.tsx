@@ -1,5 +1,6 @@
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 import Link from "next/link";
 
@@ -65,12 +66,12 @@ const CategorySlider = () => {
                 className="custom-class"
             >
                 {data.map((item, i) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={i}>
                         <div className="card-1">
                             <figure className=" img-hover-scale overflow-hidden">
                                <Link href="/products/shop-grid-right">
                                     <a>
-                                        <img
+                                        <Image
                                             src={`assets/imgs/shop/${item.img}`}
                                             alt=""
                                         />

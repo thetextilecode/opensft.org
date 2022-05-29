@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogSingle = () => {
-    // @ts-ignore
     return (
       <div className="single-page pl-30">
-          {/* eslint-disable react/no-unescaped-entities */}
           <div className="single-header style-2">
               <h1 className="mb-30">
                   Best smartwatch 2021: the top wearables you can buy
@@ -29,34 +28,38 @@ const BlogSingle = () => {
                           </li>
                           <li className="social-facebook">
                               <a href="#">
-                                  <img
+                                  <Image
                                     src="assets/imgs/theme/icons/icon-facebook.svg"
                                     alt=""
+                                    layout={'fill'}
                                   />
                               </a>
                           </li>
                           <li className="social-twitter">
 
                               <a href="#">
-                                  <img
+                                  <Image
                                     src="assets/imgs/theme/icons/icon-twitter.svg"
                                     alt=""
+                                    layout={'fill'}
                                   />
                               </a>
                           </li>
                           <li className="social-instagram">
                               <a href="#">
-                                  <img
+                                  <Image
                                     src="assets/imgs/theme/icons/icon-instagram.svg"
                                     alt=""
+                                    layout={'fill'}
                                   />
                               </a>
                           </li>
                           <li className="social-linkedin">
                               <a href="#">
-                                  <img
+                                  <Image
                                     src="assets/imgs/theme/icons/icon-pinterest.svg"
                                     alt=""
+                                    layout={'fill'}
                                   />
                               </a>
                           </li>
@@ -65,7 +68,7 @@ const BlogSingle = () => {
               </div>
           </div>
           <figure className="single-thumbnail">
-              <img src="assets/imgs/blog/blog-6.jpg" alt="" />
+              <Image src="assets/imgs/blog/blog-6.jpg" alt="" />
           </figure>
           <div className="single-content">
               <p>
@@ -183,10 +186,11 @@ const BlogSingle = () => {
                   esse quisquam labore, at est!
               </p>
               <div className="banner-img banner-big wow fadeIn f-none  mb-30  animated">
-                  <img
+                  <Image
                     className="border-radius-10"
                     src="assets/imgs/banner/banner-4.png"
                     alt=""
+                    layout={'fill'}
                   />
                   <div className="banner-text">
                       <h6 className="mb-15 mt-40">Repair Services</h6>
@@ -251,34 +255,38 @@ const BlogSingle = () => {
                       </li>
                       <li className="social-facebook">
                           <a href="#">
-                              <img
+                              <Image
                                 src="assets/imgs/theme/icons/icon-facebook.svg"
                                 alt=""
+                                layout={'fill'}
                               />
                           </a>
                       </li>
                       <li className="social-twitter">
 
                           <a href="#">
-                              <img
+                              <Image
                                 src="assets/imgs/theme/icons/icon-twitter.svg"
                                 alt=""
+                                layout={'fill'}
                               />
                           </a>
                       </li>
                       <li className="social-instagram">
                           <a href="#">
-                              <img
+                              <Image
                                 src="assets/imgs/theme/icons/icon-instagram.svg"
                                 alt=""
+                                layout={'fill'}
                               />
                           </a>
                       </li>
                       <li className="social-linkedin">
                           <a href="#">
-                              <img
+                              <Image
                                 src="assets/imgs/theme/icons/icon-pinterest.svg"
                                 alt=""
+                                layout={'fill'}
                               />
                           </a>
                       </li>
@@ -293,9 +301,10 @@ const BlogSingle = () => {
                           <div className="single-comment justify-content-between d-flex">
                               <div className="user justify-content-between d-flex">
                                   <div className="thumb text-center">
-                                      <img
+                                      <Image
                                         src="assets/imgs/page/avatar-6.jpg"
                                         alt=""
+                                        layout={'fill'}
                                       />
                                       <h6>
                                           <a href="#">Jacky Chan</a>
@@ -335,9 +344,10 @@ const BlogSingle = () => {
                           <div className="single-comment justify-content-between d-flex">
                               <div className="user justify-content-between d-flex">
                                   <div className="thumb text-center">
-                                      <img
+                                      <Image
                                         src="assets/imgs/page/avatar-7.jpg"
                                         alt=""
+                                        layout={'fill'}
                                       />
                                       <h6>
                                           <a href="#">Ana Rosie</a>
@@ -377,9 +387,10 @@ const BlogSingle = () => {
                           <div className="single-comment justify-content-between d-flex">
                               <div className="user justify-content-between d-flex">
                                   <div className="thumb text-center">
-                                      <img
+                                      <Image
                                         src="assets/imgs/page/avatar-8.jpg"
                                         alt=""
+                                        layout={'fill'}
                                       />
                                       <h6>
                                           <a href="#">Steven Keny</a>
@@ -519,8 +530,8 @@ const BlogSingle = () => {
                                               className="form-control w-100"
                                               name="comment"
                                               id="comment"
-                                              cols="30"
-                                              rows="9"
+                                              cols={30}
+                                              rows={9}
                                               placeholder="Write Comment"
                                             ></textarea>
                                   </div>
