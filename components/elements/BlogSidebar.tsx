@@ -223,7 +223,7 @@ const BlogSidebar = () => {
 
       <div className='banner-img wow fadeIn mb-45 animated d-lg-block d-none animated'>
         <div style={{ width: '100%' }}>
-        <Image src='/assets/imgs/banner/banner-11.jpg' alt='' layout={'responsive'} width={600} height={687} />
+          <Image src='/assets/imgs/banner/banner-11.jpg' alt='' layout={'responsive'} width={600} height={687} />
         </div>
         <div className='banner-text'>
           <span>Women Zone</span>

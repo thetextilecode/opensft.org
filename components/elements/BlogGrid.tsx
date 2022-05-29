@@ -21,8 +21,8 @@ const BlogGrid = ({ show, col }: IBlogGrid) => {
                       src={`/assets/imgs/blog/${item.img}`}
                       alt=''
                       layout={'responsive'}
-                      height={item.imgOriginalHeight}
-                      width={item.imgOriginalWidth}
+                      height={item.imgOriginalHeight ?? 1200}
+                      width={item.imgOriginalWidth ?? 800}
                     />
                   </a>
                 </div>

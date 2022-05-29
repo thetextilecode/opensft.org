@@ -16,6 +16,7 @@ const Tags = ({ updateProductFilters }: ITags) => {
 
   const [selectedTags, setTags] = useState([]);
   const [active, setActive] = useState(0);
+
   useEffect(() => {
     const filters = {
       tags: selectedTags, //
@@ -28,6 +29,7 @@ const Tags = ({ updateProductFilters }: ITags) => {
     setTags(target);
     setActive(active == i ? 0 : i);
   };
+
   return (
     <ul className='category-list'>
       {tags.map((tag, i) => (
