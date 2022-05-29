@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Info } from '../../config';
+import { Info, Social } from '../../config';
+import SocialIcons from '../elements/SocialIcons';
 
 const Footer = () => {
   return (
@@ -76,54 +77,12 @@ const Footer = () => {
                   <strong>Phone: </strong>{Info.phone}
                 </p>
                 <p className='wow fadeIn animated'>
-                  <strong>Hours: </strong>10:00 - 18:00,
-                  Mon - Sat
+                  <strong>Hours: </strong>{Info.hours}
                 </p>
                 <h5 className='mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated'>
                   Follow Us
                 </h5>
-                <div className='mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0'>
-                  <a href='#'>
-                    <Image
-                      src='/assets/imgs/theme/icons/icon-facebook.svg'
-                      alt='Facebook'
-                      width={20}
-                      height={20}
-                    />
-                  </a>
-                  <a href='#'>
-                    <Image
-                      src='/assets/imgs/theme/icons/icon-twitter.svg'
-                      alt='Twitter'
-                      width={20}
-                      height={20}
-                    />
-                  </a>
-                  <a href='#'>
-                    <Image
-                      src='/assets/imgs/theme/icons/icon-instagram.svg'
-                      alt='Instagram'
-                      width={20}
-                      height={20}
-                    />
-                  </a>
-                  <a href='#'>
-                    <Image
-                      src='/assets/imgs/theme/icons/icon-pinterest.svg'
-                      alt='Pinterest'
-                      width={20}
-                      height={20}
-                    />
-                  </a>
-                  <a href='#'>
-                    <Image
-                      src='/assets/imgs/theme/icons/icon-youtube.svg'
-                      alt='YouTube'
-                      width={20}
-                      height={20}
-                    />
-                  </a>
-                </div>
+                <SocialIcons facebook={Social.facebook} instagram={Social.instagram} twitter={Social.twitter} />
               </div>
             </div>
             <div className='col-lg-2 col-md-3'>
@@ -233,14 +192,12 @@ const Footer = () => {
           <div className='col-lg-6'>
             <p className='float-md-left font-sm text-muted mb-0'>
               &copy; {new Date().getFullYear()},
-              <strong className='text-brand'> Open Source Fashion Textiles</strong> CIC
+              <strong className='text-brand'>{Info.companyName}</strong>
             </p>
           </div>
           <div className='col-lg-6'>
             <p className='text-lg-end text-start font-sm text-muted mb-0'>
-              Copyright
-              <a href='https://opensft.rg' target='_blank' rel='noreferrer'> OpenSFT</a>
-              . All rights reserved
+              {Info.copyright}
             </p>
           </div>
         </div>
