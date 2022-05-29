@@ -11,12 +11,21 @@ export interface IRelatedSlider {
 }
 
 const RelatedSlider = ({}: IRelatedSlider) => {
-  const [related, setRelated] = useState([]);
+  const [related, setRelated] = useState<any>([]);
 
   useEffect(() => {
+    let isMounted = true;
+
     fetchProducts().then((products) => {
-      // do something
+      if(isMounted) {
+        // do something
+        // setRelated(products);
+      }
     });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const fetchProducts = async () => {

@@ -28,10 +28,18 @@ const SingleProduct = ({
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     setLoading(true);
     setTimeout(() => {
-      setLoading(false);
+      if(isMounted) {
+        setLoading(false);
+      }
     }, 2000);
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const handleCart = (product: IProduct) => {
