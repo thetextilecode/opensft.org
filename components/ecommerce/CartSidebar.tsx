@@ -66,7 +66,7 @@ const CartSidebar = ({
             <li key={i}>
               <div className='d-flex'>
                 <div className='flex-grow-1'>
-                  <Image
+                  <img
                     src={item.image}
                     style={{
                       width: '75px',
@@ -74,7 +74,6 @@ const CartSidebar = ({
                     }}
                     className='align-self-center mr-2'
                     alt=''
-                    layout={'fill'}
                   />
                   <div>
                     <h6 className='mb-0'>

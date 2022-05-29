@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import Layout from "../components/layout/Layout";
-import Image from 'next/image';
 import Link from "next/link";
 
 import { clearCart, closeCart, decreaseQuantity, deleteFromCart, increaseQuantity, openCart } from "../redux/action/cart";
@@ -48,7 +47,8 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                     {cartItems.map((item, i: number) => (
                       <tr key={i}>
                         <td className="image product-thumbnail">
-                          <Image src={item.images[0].img} layout={'fill'} alt={''} />
+                          {/*<Image src={item.images[0].img} layout={'fill'} alt={''} />*/}
+                          <img src={item.images[0].img} />
                         </td>
 
                         <td className="product-des product-name">
