@@ -624,13 +624,13 @@ const Header = ({
                             </ul>
                           </li>
                           <li className='mega-menu-col col-lg-5'>
-                            <div className='header-banner2'>
+                            <div className='header-banner2' style={{ width: '100%' }}>
                               <Image
                                 src='/assets/imgs/banner/menu-banner-4.jpg'
                                 alt='menu_banner1'
                                 layout={'responsive'}
-                                width={370}
-                                height={410}
+                                width={1320}
+                                height={300}
                               />
                               <div className='banner_info'>
                                 <h6>

@@ -110,7 +110,7 @@ const CartSidebar = ({
                   {item.quantity * item.price}
                   <span
                     className='ml-2'
-                    onClick={(e) =>
+                    onClick={() =>
                       deleteFromCart(item.id)
                     }
                   >

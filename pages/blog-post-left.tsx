@@ -2,10 +2,7 @@ import BlogSidebar from '../components/elements/BlogSidebar';
 import BlogSingle from '../components/elements/BlogSingle';
 import Layout from '../components/layout/Layout';
 
-export interface IPageBlogSingle {
-}
-
-function PageBlogSingle({}: IPageBlogSingle) {
+function PageBlogSingle() {
   return (
     <Layout parent='Home' sub='Blog' subChild='Blog Details'>
       <section className='mt-50 mb-50'>

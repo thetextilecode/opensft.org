@@ -150,14 +150,14 @@ const BlogSingle = () => {
           maiores, voluptatum quae sunt sit nisi voluptatem sed,
           esse quisquam labore, at est!
         </p>
-        <div className='banner-img banner-big wow fadeIn f-none  mb-30 animated'>
-          <div style={{ position: 'relative', width: '100%', paddingBottom: '20%' }}>
+        <div className='banner-img banner-big wow fadeIn f-none mb-30 animated'>
+          <div style={{ position: 'relative', width: '100%' }}>
             <Image
               className='border-radius-10'
               src='/assets/imgs/banner/banner-4.png'
               alt=''
               layout={'responsive'}
-              objectFit='contain' // Scale your image down to fit into the container
+              // objectFit='contain' // Scale your image down to fit into the container
               width={1320}
               height={300}
             />

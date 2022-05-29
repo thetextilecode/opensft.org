@@ -6,6 +6,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'react-hooks'],
   rules: {
+    '@next/next/no-img-element': 'off',
     'react-hooks/exhaustive-deps': 'off',
     'react/no-unescaped-entities': 'off',
     'no-unused-vars': 'off',
