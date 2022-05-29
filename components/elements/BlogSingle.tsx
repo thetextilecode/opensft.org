@@ -27,11 +27,13 @@ const BlogSingle = () => {
         </div>
       </div>
       <figure className='single-thumbnail'>
+        <div style={{ width: '100%' }}>
         <Image src='/assets/imgs/blog/blog-6.jpg'
                alt=''
                layout={'responsive'}
                width={1200}
                height={800} />
+        </div>
       </figure>
       <div className='single-content'>
         <p>

@@ -202,12 +202,15 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                   </div>
                 </div>
                 <div className="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
+                  <div style={{ width: '100%' }}>
                   <Image
                     src="/assets/imgs/banner/banner-11.jpg"
                     alt=""
-                    width={280}
-                    height={280}
+                    layout={'responsive'}
+                    width={600}
+                    height={687}
                   />
+                  </div>
                   <div className="banner-text">
                     <span>Women Zone</span>
                     <h4>

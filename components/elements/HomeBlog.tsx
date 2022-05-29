@@ -9,13 +9,10 @@ const HomeBlog = () => {
           <div className='post-thumb d-flex mr-15'>
             <Link href='/blog-post-fullwidth'>
               <a className='color-white'>
-                <Image
-                  src='/assets/imgs/blog/blog-2.jpg'
-                  alt=''
-                  layout={'responsive'}
-                  width={1200}
-                  height={800}
-                />
+                  <img
+                    src='/assets/imgs/blog/blog-2.jpg'
+                    alt=''
+                  />
               </a>
             </Link>
           </div>
@@ -58,13 +55,10 @@ const HomeBlog = () => {
           <div className='post-thumb d-flex mr-15'>
             <Link href='/blog-post-fullwidth'>
               <a className='color-white'>
-                <Image
-                  src='/assets/imgs/blog/blog-1.jpg'
-                  alt=''
-                  layout={'responsive'}
-                  width={1200}
-                  height={800}
-                />
+                  <img
+                    src='/assets/imgs/blog/blog-1.jpg'
+                    alt=''
+                  />
               </a>
             </Link>
           </div>

@@ -18,15 +18,17 @@ const BlogGridBig = ({ show }: IBlogGridBig) => {
               </span>
               <div className='post-thumb img-hover-scale'>
                 <Link href='/blog-post-right'>
-                  <a>
-                    <Image
-                      src={`/assets/imgs/blog/${item.img}`}
-                      layout={'responsive'}
-                      height={item.imgOriginalHeight}
-                      width={item.imgOriginalWidth}
-                      alt=''
-                    />
-                  </a>
+                  <div style={{ width: '100%' }}>
+                    <a>
+                      <Image
+                        src={`/assets/imgs/blog/${item.img}`}
+                        layout={'responsive'}
+                        height={item.imgOriginalHeight}
+                        width={item.imgOriginalWidth}
+                        alt=''
+                      />
+                    </a>
+                  </div>
                 </Link>
               </div>
             </div>

@@ -8,12 +8,15 @@ const Bottom = () => {
         <div className='row'>
           <div className='col-lg-3 col-md-6 mb-sm-5 mb-md-0'>
             <div className='banner-img wow fadeIn animated mb-md-4 mb-lg-0'>
+              <div style={{ width: '100%' }}>
               <Image
                 src='/assets/imgs/banner/banner-10.jpg'
                 alt=''
+                layout={'responsive'}
                 width={306}
                 height={372}
               />
+              </div>
               <div className='banner-text'>
                 <span>Shoes Zone</span>
                 <h4>

@@ -15,13 +15,17 @@ const BlogGrid = ({ show, col }: IBlogGrid) => {
           <article className='wow fadeIn animated hover-up mb-30'>
             <div className='post-thumb img-hover-scale'>
               <Link href='/blog-post-right'>
-                <a>
-                  <Image
-                    src={`/assets/imgs/blog/${item.img}`}
-                    alt=''
-                    layout={'fill'}
-                  />
-                </a>
+                <div style={{ width: '100%' }}>
+                  <a>
+                    <Image
+                      src={`/assets/imgs/blog/${item.img}`}
+                      alt=''
+                      layout={'responsive'}
+                      height={item.imgOriginalHeight}
+                      width={item.imgOriginalWidth}
+                    />
+                  </a>
+                </div>
               </Link>
               <div className='entry-meta'>
                 <Link href='/blog-category-grid'>

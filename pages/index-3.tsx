@@ -33,12 +33,16 @@ function Test() {
                             </div>
                             <div className="col-lg-3 d-md-none d-lg-block">
                                 <div className="banner-img banner-1 wow fadeIn  animated home-3">
-                                    <Image
+                                  <div style={{ width: '100%' }}>
+                                  <Image
                                         className="border-radius-10"
                                         src="/assets/imgs/banner/banner-5.jpg"
                                         alt=""
-                                        layout={'fill'}
+                                        layout={'responsive'}
+                                        width={600}
+                                        height={712}
                                     />
+                                  </div>
                                     <div className="banner-text">
                                         <span>Accessories</span>
                                         <h4>
@@ -53,12 +57,16 @@ function Test() {
                                     </div>
                                 </div>
                                 <div className="banner-img banner-2 wow fadeIn  animated mb-0">
-                                    <Image
+                                  <div style={{ width: '100%' }}>
+                                  <Image
                                         className="border-radius-10"
                                         src="/assets/imgs/banner/banner-7.jpg"
                                         alt=""
-                                        layout={'fill'}
+                                        layout={'responsive'}
+                                        width={600}
+                                        height={334}
                                     />
+                                  </div>
                                     <div className="banner-text">
                                         <span>Smart Offer</span>
                                         <h4>

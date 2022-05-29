@@ -60,22 +60,30 @@ const SingleProduct = ({
                 as={`/products/${product.slug}`}
               >
                 <a>
+                  {/*<div style={{ width: '100%' }}>*/}
+
                   <Image
-                    className='default-img'
-                    src={product.images[0].img}
-                    alt=''
-                    layout={'responsive'}
-                    width={product.images[0].width}
-                    height={product.images[0].height}
-                  />
+                      className='default-img'
+                      src={product.images[0].img}
+                      alt=''
+                      layout={'fill'}
+                      // layout={'responsive'}
+                      // width={product.images[0].width}
+                      // height={product.images[0].height}
+                    />
+                  {/*</div>*/}
+                  <div style={{ width: '100%' }}>
+
                   <Image
-                    className='hover-img'
-                    src={product.images[1].img}
-                    alt=''
-                    layout={'responsive'}
-                    width={product.images[1].width}
-                    height={product.images[1].height}
-                  />
+                      className='hover-img'
+                      src={product.images[1].img}
+                      alt=''
+                      // layout={'fill'}
+                      layout={'responsive'}
+                      width={product.images[1].width}
+                      height={product.images[1].height}
+                    />
+                  </div>
                 </a>
               </Link>
             </div>

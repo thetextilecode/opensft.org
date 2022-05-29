@@ -51,6 +51,7 @@ const SingleProductList = ({
                 href='/products/[slug]'
                 as={`/products/${product.slug}`}
               >
+                <div style={{ width: '100%' }}>
                 <a>
                   <Image
                     className='default-img'
@@ -69,6 +70,7 @@ const SingleProductList = ({
                     layout={'responsive'}
                   />
                 </a>
+                </div>
               </Link>
             </div>
           </div>

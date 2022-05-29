@@ -14,6 +14,7 @@ import { addToWishlist } from '../../redux/action/wishlistAction';
 import ProductTab from '../elements/ProductTab';
 import RelatedSlider from '../sliders/Related';
 import ThumbSlider from '../sliders/Thumb';
+import ShareIcons from '../elements/ShareIcons';
 
 export interface IProductDetails {
   addToCart?: any;
@@ -78,47 +79,7 @@ const ProductDetails = ({
                       </div>
                     </div>
 
-                    <div className='social-icons single-share'>
-                      <ul className='text-grey-5 d-inline-block'>
-                        <li>
-                          <strong className='mr-10'>
-                            Share this:
-                          </strong>
-                        </li>
-                        <li className='social-facebook'>
-                          <a href='#'>
-                            <img
-                              src='/assets/imgs/theme/icons/icon-facebook.svg'
-                              alt='Facebook'
-                            />
-                          </a>
-                        </li>
-                        <li className='social-twitter'>
-                          <a href='#'>
-                            <img
-                              src='/assets/imgs/theme/icons/icon-twitter.svg'
-                              alt='Twitter'
-                            />
-                          </a>
-                        </li>
-                        <li className='social-instagram'>
-                          <a href='#'>
-                            <img
-                              src='/assets/imgs/theme/icons/icon-instagram.svg'
-                              alt='Instagram'
-                            />
-                          </a>
-                        </li>
-                        <li className='social-linkedin'>
-                          <a href='#'>
-                            <img
-                              src='/assets/imgs/theme/icons/icon-pinterest.svg'
-                              alt='Pinterest'
-                            />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                    <ShareIcons/>
                   </div>
                   <div className='col-md-6 col-sm-12 col-xs-12'>
                     <div className='detail-info'>
@@ -341,6 +302,7 @@ const ProductDetails = ({
                       </div>
                     </div>
                     <div className='banner-img banner-big wow fadeIn f-none animated mt-50'>
+                      <div style={{ width: '100%' }}>
                       <Image
                         className='border-radius-10'
                         src='/assets/imgs/banner/banner-4.png'
@@ -349,6 +311,7 @@ const ProductDetails = ({
                         width={1320}
                         height={300}
                       />
+                      </div>
                       <div className='banner-text'>
                         <h4 className='mb-15 mt-40'>
                           Repair Services

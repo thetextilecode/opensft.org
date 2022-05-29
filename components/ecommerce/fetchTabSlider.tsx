@@ -74,7 +74,9 @@ function FetchTabSlider() {
       <div className='row'>
         <div className='col-lg-3 d-none d-lg-flex'>
           <div className='banner-img style-2 wow fadeIn animated'>
-            <Image src='/assets/imgs/banner/banner-9.jpg' alt='' width={304} height={357} />
+            <div style={{ width: '100%' }}>
+            <Image src='/assets/imgs/banner/banner-9.jpg' alt='' width={304} height={357} layout={'responsive'}/>
+            </div>
             <div className='banner-text'>
               <span>Woman Area</span>
               <h4 className='mt-5'>
