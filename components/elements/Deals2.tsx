@@ -10,7 +10,7 @@ const Deals2 = () => {
                 className="deal wow fadeIn animated mb-md-4 mb-sm-4 mb-lg-0"
                 style={{
                     backgroundImage:
-                        "url('assets/imgs/banner/menu-banner-8.jpg')",
+                        "url('/assets/imgs/banner/menu-banner-8.jpg')",
                 }}
             >
                 <div className="deal-top">

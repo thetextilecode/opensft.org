@@ -9,6 +9,18 @@ declare global {
   }
 }
 
+export interface IBlogPost {
+  id: number;
+  category?: string;
+  date?: string;
+  desc?: string;
+  img?: string;
+  imgOriginalHeight?: number;
+  imgOriginalWidth?: number;
+  title: string;
+  views?: number;
+}
+
 export interface IProduct {
   brand?: string;
   created?: boolean;
@@ -19,6 +31,8 @@ export interface IProduct {
   };
   images?: {
     img?: any;
+    height: number;
+    width: number;
   }[];
   items: any[];
   oldPrice?: any;

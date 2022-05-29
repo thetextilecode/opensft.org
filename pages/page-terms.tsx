@@ -23,7 +23,7 @@ function Terms() {
                     </div>
                   </div>
                   <figure className="single-thumbnail">
-                    <Image src="assets/imgs/blog/blog-10.jpg" alt="" layout={'fill'}/>
+                    <Image src="/assets/imgs/blog/blog-10.jpg" alt="" layout={'fill'}/>
                   </figure>
                   <div className="single-content">
                     <p> Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://Evara.com website (the “Service”) operated by Evara (“us”, “we”, or “our”).</p>

@@ -133,7 +133,9 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                       <Image
                         src="/assets/imgs/shop/thumbnail-3.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -156,7 +158,9 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                       <Image
                         src="/assets/imgs/shop/thumbnail-4.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -179,7 +183,9 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                       <Image
                         src="/assets/imgs/shop/thumbnail-5.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -202,7 +208,8 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                   <Image
                     src="/assets/imgs/banner/banner-11.jpg"
                     alt=""
-                    layout={'fill'}
+                    width={293}
+                    height={293}
                   />
                   <div className="banner-text">
                     <span>Women Zone</span>

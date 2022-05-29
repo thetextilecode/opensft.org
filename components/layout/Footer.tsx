@@ -14,7 +14,8 @@ const Footer = () => {
                     className='icon-email'
                     src='/assets/imgs/theme/icons/icon-email.svg'
                     alt=''
-                    layout='fill'
+                    width={40}
+                    height={40}
                   />
                   <h4 className='font-size-20 mb-0 ml-3'>
                     Sign up to Newsletter
@@ -58,7 +59,8 @@ const Footer = () => {
                     <Image
                       src='/assets/imgs/theme/logo.svg'
                       alt='logo'
-                      layout='fill'
+                      width={120}
+                      height={33}
                     />
                   </a>
                   </Link>
@@ -85,36 +87,41 @@ const Footer = () => {
                   <a href='#'>
                     <Image
                       src='/assets/imgs/theme/icons/icon-facebook.svg'
-                      alt=''
-                      layout='fill'
+                      alt='Facebook'
+                      width={20}
+                      height={20}
                     />
                   </a>
                   <a href='#'>
                     <Image
                       src='/assets/imgs/theme/icons/icon-twitter.svg'
-                      alt=''
-                      layout='fill'
+                      alt='Twitter'
+                      width={20}
+                      height={20}
                     />
                   </a>
                   <a href='#'>
                     <Image
                       src='/assets/imgs/theme/icons/icon-instagram.svg'
-                      alt=''
-                      layout='fill'
+                      alt='Instagram'
+                      width={20}
+                      height={20}
                     />
                   </a>
                   <a href='#'>
                     <Image
                       src='/assets/imgs/theme/icons/icon-pinterest.svg'
-                      alt=''
-                      layout='fill'
+                      alt='Pinterest'
+                      width={20}
+                      height={20}
                     />
                   </a>
                   <a href='#'>
                     <Image
                       src='/assets/imgs/theme/icons/icon-youtube.svg'
-                      alt=''
-                      layout='fill'
+                      alt='YouTube'
+                      width={20}
+                      height={20}
                     />
                   </a>
                 </div>
@@ -188,14 +195,16 @@ const Footer = () => {
                         className='active'
                         src='/assets/imgs/theme/app-store.jpg'
                         alt=''
-                        layout='fill'
+                        width={166}
+                        height={47}
                       />
                     </a>
                     <a href='#' className='hover-up'>
                       <Image
                         src='/assets/imgs/theme/google-play.jpg'
                         alt=''
-                        layout='fill'
+                        width={166}
+                        height={47}
                       />
                     </a>
                   </div>
@@ -208,7 +217,8 @@ const Footer = () => {
                     className='wow fadeIn animated'
                     src='/assets/imgs/theme/payment-method.png'
                     alt=''
-                    layout='fill'
+                    height={32}
+                    width={224}
                   />
                 </div>
               </div>

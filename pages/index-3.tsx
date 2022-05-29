@@ -35,7 +35,7 @@ function Test() {
                                 <div className="banner-img banner-1 wow fadeIn  animated home-3">
                                     <Image
                                         className="border-radius-10"
-                                        src="assets/imgs/banner/banner-5.jpg"
+                                        src="/assets/imgs/banner/banner-5.jpg"
                                         alt=""
                                         layout={'fill'}
                                     />
@@ -55,7 +55,7 @@ function Test() {
                                 <div className="banner-img banner-2 wow fadeIn  animated mb-0">
                                     <Image
                                         className="border-radius-10"
-                                        src="assets/imgs/banner/banner-7.jpg"
+                                        src="/assets/imgs/banner/banner-7.jpg"
                                         alt=""
                                         layout={'fill'}
                                     />

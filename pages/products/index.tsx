@@ -7,7 +7,7 @@ import Pagination from "../../components/ecommerce/Pagination";
 import PriceRangeSlider from "../../components/ecommerce/PriceRangeSlider";
 import QuickView from "../../components/ecommerce/QuickView";
 import ShowSelect from "../../components/ecommerce/ShowSelect";
-import SingleProduct, { IProduct } from '../../components/ecommerce/SingleProduct';
+import SingleProduct from '../../components/ecommerce/SingleProduct';
 import SizeFilter from "../../components/ecommerce/SizeFilter";
 import SortSelect from "../../components/ecommerce/SortSelect";
 import WishlistModal from "../../components/ecommerce/WishlistModal";
@@ -15,6 +15,7 @@ import Layout from "../../components/layout/Layout";
 import { fetchProduct } from "../../redux/action/product";
 import Link from "next/link";
 import Image from "next/image";
+import { IProduct } from '../../types';
 
 export interface IProducts {
   fetchProduct?: any;
@@ -131,7 +132,9 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                       <Image
                         src="/assets/imgs/shop/thumbnail-3.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -154,7 +157,9 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                       <Image
                         src="/assets/imgs/shop/thumbnail-4.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -177,7 +182,9 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                       <Image
                         src="/assets/imgs/shop/thumbnail-5.jpg"
                         alt="#"
-                        layout={'fill'}
+                        layout={'responsive'}
+                        width={600}
+                        height={600}
                       />
                     </div>
                     <div className="content pt-10">
@@ -200,7 +207,9 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                   <Image
                     src="/assets/imgs/banner/banner-11.jpg"
                     alt=""
-                    layout={'fill'}
+                    layout={'responsive'}
+                    width={600}
+                    height={600}
                   />
                   <div className="banner-text">
                     <span>Women Zone</span>

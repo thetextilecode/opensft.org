@@ -484,11 +484,11 @@
     ---------------------------------------*/
     paymentMethodChanged();
 	function paymentMethodChanged() {
-		var $order_review = $( '.payment-method' );
+		const $order_review = $( '.payment-method' );
 
 		$order_review.on( 'click', 'input[name="payment_method"]', function() {
-			var selectedClass = 'payment-selected';
-			var parent = $( this ).parents( '.sin-payment' ).first();
+			const selectedClass = 'payment-selected';
+			const parent = $( this ).parents( '.sin-payment' ).first();
 			parent.addClass( selectedClass ).siblings().removeClass( selectedClass );
 		} );
 	}
@@ -515,7 +515,7 @@
     
     /*====== SidebarSearch ======*/
     function sidebarSearch() {
-        var searchTrigger = $('.search-active'),
+        const searchTrigger = $('.search-active'),
             endTriggersearch = $('.search-close'),
             container = $('.main-search-active');
         
@@ -528,12 +528,13 @@
             container.removeClass('search-visible');
         });
         
-    };
+    }
+
     sidebarSearch();
     
      /*====== Sidebar menu Active ======*/
     function mobileHeaderActive() {
-        var navbarTrigger = $('.burger-icon'),
+        const navbarTrigger = $('.burger-icon'),
             endTrigger = $('.mobile-menu-close'),
             container = $('.mobile-header-active'),
             wrapper4 = $('body');
@@ -555,14 +556,14 @@
             container.removeClass('sidebar-visible');
             wrapper4.removeClass('mobile-menu-active');
         });
-    };
+    }
     mobileHeaderActive();
     
     
    /*---------------------
         Mobile menu active
     ------------------------ */
-    var $offCanvasNav = $('.mobile-menu'),
+    const $offCanvasNav = $('.mobile-menu'),
         $offCanvasNavSubMenu = $offCanvasNav.find('.dropdown');
     
     /*Add Toggle Button With Off Canvas Sub Menu*/
@@ -573,7 +574,7 @@
     
     /*Category Sub Menu Toggle*/
     $offCanvasNav.on('click', 'li a, li .menu-expand', function(e) {
-        var $this = $(this);
+        const $this = $(this);
         if ( ($this.parent().attr('class').match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/)) && ($this.attr('href') === '#' || $this.hasClass('menu-expand')) ) {
             e.preventDefault();
             if ($this.siblings('ul:visible').length){
@@ -601,7 +602,7 @@
     });
     
     /*--- Mobile demo active ----*/
-    var demo = $('.tm-demo-options-wrapper');
+    const demo = $('.tm-demo-options-wrapper');
     $('.view-demo-btn-active').on('click', function (e) {
         e.preventDefault();
         demo.toggleClass('demo-open');

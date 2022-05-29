@@ -53,6 +53,7 @@ const Intro2 = () => {
                                         className="animated"
                                         src="/assets/imgs/slider/slider-3.png"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </div>
                             </div>
@@ -87,6 +88,7 @@ const Intro2 = () => {
                                         className="animated"
                                         src="/assets/imgs/slider/slider-1.png"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </div>
                             </div>
@@ -119,6 +121,7 @@ const Intro2 = () => {
                                         className="animated"
                                         src="/assets/imgs/slider/slider-2.png"
                                         alt=""
+                                        layout={'fill'}
                                     />
                                 </div>
                             </div>

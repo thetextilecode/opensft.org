@@ -71,7 +71,7 @@ const BlogSidebar = () => {
                           <Link href="/blog-post-fullwidth">
                               <a>
                                   <Image
-                                    src="assets/imgs/blog/blog-1.jpg"
+                                    src="/assets/imgs/blog/blog-1.jpg"
                                     alt=""
                                     layout={'fill'}
                                   />
@@ -97,7 +97,7 @@ const BlogSidebar = () => {
                           <Link href="/blog-post-fullwidth">
                               <a>
                                   <Image
-                                    src="assets/imgs/blog/blog-3.jpg"
+                                    src="/assets/imgs/blog/blog-3.jpg"
                                     alt=""
                                     layout={'fill'}
                                   />
@@ -124,7 +124,7 @@ const BlogSidebar = () => {
                           <Link href="/blog-post-fullwidth">
                               <a>
                                   <Image
-                                    src="assets/imgs/blog/blog-4.jpg"
+                                    src="/assets/imgs/blog/blog-4.jpg"
                                     alt=""
                                     layout={'fill'}
                                   />
@@ -150,7 +150,7 @@ const BlogSidebar = () => {
                           <Link href="/blog-post-fullwidth">
                               <a>
                                   <Image
-                                    src="assets/imgs/blog/blog-5.jpg"
+                                    src="/assets/imgs/blog/blog-5.jpg"
                                     alt=""
                                     layout={'fill'}
                                   />
@@ -177,9 +177,11 @@ const BlogSidebar = () => {
                           <Link href="/blog-post-fullwidth">
                               <a>
                                   <Image
-                                    src="assets/imgs/blog/blog-6.jpg"
+                                    src="/assets/imgs/blog/blog-6.jpg"
                                     alt=""
-                                    layout={'fill'}
+                                    layout={'responsive'}
+                                    width={1200}
+                                    height={800}
                                   />
                               </a>
                           </Link>
@@ -202,7 +204,7 @@ const BlogSidebar = () => {
           </div>
 
           <div className="banner-img wow fadeIn mb-45 animated d-lg-block d-none animated">
-              <Image src="assets/imgs/banner/banner-11.jpg" alt="" layout={'fill'} />
+              <Image src="/assets/imgs/banner/banner-11.jpg" alt="" layout={'fill'} />
               <div className="banner-text">
                   <span>Women Zone</span>
                   <h4>

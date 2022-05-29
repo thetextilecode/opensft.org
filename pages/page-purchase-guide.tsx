@@ -23,7 +23,7 @@ function Guide() {
                                         </div>
                                     </div>
                                     <figure className="single-thumbnail">
-                                        <Image src="assets/imgs/page/img-1.jpg" alt="" layout="fill" />
+                                        <Image src="/assets/imgs/page/img-1.jpg" alt="" layout="responsive" />
                                     </figure>
                                     <div className="single-content">
                                         <h4>1. Account Registering</h4>

@@ -7422,7 +7422,7 @@ span.fi-rs-apps {
   margin-bottom: 15px;
 }
 
-.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banne_info {
+.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banner_info {
   position: absolute;
   right: 0;
   top: 50%;
@@ -7431,14 +7431,14 @@ span.fi-rs-apps {
   padding: 15px;
 }
 
-.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banne_info a {
+.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banner_info a {
   text-transform: capitalize;
   position: relative;
   padding: 0;
   color: #272a2c !important;
 }
 
-.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banne_info a::before {
+.category-dropdown-wrap ul li.has-children .dropdown-menu .header-banner2 .banner_info a::before {
   content: "";
   position: absolute;
   left: 0;
