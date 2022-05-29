@@ -61,7 +61,6 @@ const SingleProduct = ({
               >
                 <a>
                   {/*<div style={{ width: '100%' }}>*/}
-
                   <Image
                       className='default-img'
                       src={product.images[0].img}
@@ -72,8 +71,8 @@ const SingleProduct = ({
                       // height={product.images[0].height}
                     />
                   {/*</div>*/}
-                  <div style={{ width: '100%' }}>
 
+                  <div style={{ width: '100%' }}>
                   <Image
                       className='hover-img'
                       src={product.images[1].img}
