@@ -227,8 +227,8 @@ const Products = ({ products, productFilters, fetchProduct }) => {
                 </div>
               </div>
               <div className="col-lg-9">
-                <div className="shop-product-fillter">
-                  <div className="totall-product">
+                <div className="shop-product-filter">
+                  <div className="total-product">
                     <p>
 
                       We found

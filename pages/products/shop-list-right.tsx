@@ -23,7 +23,7 @@ export interface IProductsList {
 }
 
 const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList) => {
-    console.log(products);
+    // console.log(products);
 
     let Router = useRouter(),
         searchTerm = Router.query.search,
@@ -81,6 +81,7 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
         <section className="mt-50 mb-50">
           <div className="container">
             <div className="row flex-row-reverse">
+              {/* Right-Hand Sidebar */}
               <div className="col-lg-3 primary-sidebar sticky-sidebar">
                 <div className="widget-category mb-30">
                   <h5 className="section-title style-1 mb-30 wow fadeIn animated">
@@ -229,9 +230,11 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                   </div>
                 </div>
               </div>
+
+              {/* Left-Hand Section */}
               <div className="col-lg-9">
-                <div className="shop-product-fillter">
-                  <div className="totall-product">
+                <div className="shop-product-filter">
+                  <div className="total-product">
                     <p>
                       We found
                       <strong className="text-brand">
@@ -257,6 +260,7 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
                     <h3>No Products Found </h3>
                   )}
 
+                  {/* Products */}
                   {getPaginatedProducts.map((item, i) => (
                     <div className="" key={i}>
                       {/* <SingleProduct product={item} /> */}

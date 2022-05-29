@@ -71,8 +71,8 @@ const ProductsFullWidth = ({ products, productFilters, fetchProduct }) => {
                     <div className="container">
                         <div className="row flex-row-reverse">
                             <div className="col-lg-12">
-                                <div className="shop-product-fillter">
-                                    <div className="totall-product">
+                                <div className="shop-product-filter">
+                                    <div className="total-product">
                                         <p>
                                             
                                             We found

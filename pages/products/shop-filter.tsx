@@ -75,8 +75,8 @@ const ProductsFullWidth = ({ products, productFilters, fetchProduct }) => {
                                 <ShopFilter />
                             </div>
                             <div className="col-lg-12">
-                                <div className="shop-product-fillter">
-                                    <div className="totall-product">
+                                <div className="shop-product-filter">
+                                    <div className="total-product">
                                         <p>
                                             We found
                                             <strong className="text-brand">

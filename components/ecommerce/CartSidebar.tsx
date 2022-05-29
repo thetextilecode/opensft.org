@@ -10,7 +10,6 @@ import {
   increaseQuantity,
   openCart,
 } from '../../redux/action/cart';
-import Image from 'next/image';
 
 export interface ICartSidebar {
   activeCart?: any;
@@ -24,7 +23,6 @@ export interface ICartSidebar {
 }
 
 const CartSidebar = ({
-                       openCart,
                        cartItems,
                        activeCart,
                        closeCart,
@@ -85,7 +83,7 @@ const CartSidebar = ({
                     </p>
                     <div className='quantity-switch'>
                       <span
-                        onClick={(e) =>
+                        onClick={() =>
                           decreaseQuantity(
                             item.id,
                           )
@@ -95,7 +93,7 @@ const CartSidebar = ({
                       </span>
                       {/* {item.quantity} */}
                       <span
-                        onClick={(e) =>
+                        onClick={() =>
                           increaseQuantity(
                             item.id,
                           )

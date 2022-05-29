@@ -18,7 +18,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const ProductsList = ({ products, productFilters, fetchProduct }) => {
-    console.log(products);
+    // console.log(products);
 
     let Router = useRouter(),
         searchTerm = Router.query.search,
@@ -76,11 +76,11 @@ const ProductsList = ({ products, productFilters, fetchProduct }) => {
         <section className="mt-50 mb-50">
           <div className="container">
             <div className="row flex-row-reverse">
+              {/* Left-Hand Section */}
               <div className="col-lg-9">
-                <div className="shop-product-fillter">
-                  <div className="totall-product">
+                <div className="shop-product-filter">
+                  <div className="total-product">
                     <p>
-
                       We found
                       <strong className="text-brand">
                         {products.items.length}
@@ -105,6 +105,7 @@ const ProductsList = ({ products, productFilters, fetchProduct }) => {
                     <h3>No Products Found </h3>
                   )}
 
+                  {/* Products */}
                   {getPaginatedProducts.map((item, i) => (
                     <div
                       className=""
@@ -132,6 +133,7 @@ const ProductsList = ({ products, productFilters, fetchProduct }) => {
                 </div>
               </div>
 
+              {/* Right-Hand Sidebar */}
               <div className="col-lg-3 primary-sidebar sticky-sidebar">
                 <div className="widget-category mb-30">
                   <h5 className="section-title style-1 mb-30 wow fadeIn animated">
@@ -152,7 +154,6 @@ const ProductsList = ({ products, productFilters, fetchProduct }) => {
                     <div className="price-filter-inner">
                       <br />
                       <PriceRangeSlider />
-
                       <br />
                     </div>
                   </div>

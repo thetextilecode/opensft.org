@@ -389,7 +389,7 @@
     ------------------------- */
     $('.shop-filter-toogle').on('click', function(e) {
         e.preventDefault();
-        $('.shop-product-fillter-header').slideToggle();
+        $('.shop-product-filter-header').slideToggle();
     })
     var shopFiltericon = $('.shop-filter-toogle');
     shopFiltericon.on('click', function() {

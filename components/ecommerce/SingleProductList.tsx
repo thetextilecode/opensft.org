@@ -44,6 +44,7 @@ const SingleProductList = ({
   return (
     <div className='product-list mb-30'>
       <div className='product-cart-wrap'>
+        {/* Left Column Product Thumbnail */}
         <div className='product-img-action-wrap'>
           <div className='product-img product-img-zoom'>
             <div className='product-img-inner'>
@@ -51,26 +52,19 @@ const SingleProductList = ({
                 href='/products/[slug]'
                 as={`/products/${product.slug}`}
               >
-                <div style={{ width: '100%' }}>
                 <a>
-                  <Image
+                  <img
                     className='default-img'
                     src={product.images[0].img}
                     alt=''
-                    width={product.images[0].width}
-                    height={product.images[0].height}
-                    layout={'responsive'}
                   />
-                  <Image
+
+                  <img
                     className='hover-img'
                     src={product.images[1].img}
                     alt=''
-                    width={product.images[1].width}
-                    height={product.images[1].height}
-                    layout={'responsive'}
                   />
                 </a>
-                </div>
               </Link>
             </div>
           </div>
@@ -120,6 +114,8 @@ const SingleProductList = ({
             )}
           </div>
         </div>
+
+        {/* Right Column Product Description */}
         <div className='product-content-wrap'>
           <div className='product-category'>
             <Link href='/index'>

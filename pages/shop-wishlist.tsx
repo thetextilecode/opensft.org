@@ -56,8 +56,6 @@ const Wishlist = ({
                       (product, i) => (
                         <tr key={i}>
                           <td className='image product-thumbnail'>
-                            {/*<div style={{ width: '100%' }}>*/}
-                            {/*  <Image*/}
                               <img
                                 src={
                                   product
@@ -66,12 +64,7 @@ const Wishlist = ({
                                 }
                                 alt=''
                                 className='img-fluid'
-                                // height={1100}
-                                // width={1100}
-                                // layout={'responsive'}
-                                // layout={'fill'}
                               />
-                            {/*</div>*/}
                           </td>
 
                           <td className='product-des product-name'>

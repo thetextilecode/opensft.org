@@ -8,7 +8,7 @@ import Rating from './Rating';
 
 const ShopFilter = () => {
     return (
-      <div className="shop-product-fillter-header">
+      <div className="shop-product-filter-header">
         <div className="row">
           <div className="col-lg-2 col-md-4 mb-lg-0 mb-md-5 mb-sm-5">
             <h5 className="mb-20">Categories</h5>
