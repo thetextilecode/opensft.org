@@ -32,7 +32,7 @@ const SizeFilter = ({ updateProductFilters }) => {
     <ul className='list-filter size-filter font-small'>
       {sizes.map((tag, i) => (
         <li
-          className={active == i && 'active'}
+          className={active == i ? 'active' : null}
           onClick={() => handleClick(i, tag.value)}
           key={i}
         >
