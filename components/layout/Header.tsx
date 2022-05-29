@@ -25,12 +25,18 @@ const Header = ({
   const [scroll, setScroll] = useState<boolean>(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     document.addEventListener('scroll', () => {
       const scrollCheck = window.scrollY >= 100;
-      if (scrollCheck !== scroll) {
+      if (isMounted && scrollCheck !== scroll) {
         setScroll(scrollCheck);
       }
     });
+
+    return () => {
+      isMounted = false;
+    };
   });
 
   const handleToggle = () => setToggled(!isToggled);
