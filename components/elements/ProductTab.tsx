@@ -257,10 +257,15 @@ const ProductTab = () => {
                     <div className='single-comment justify-content-between d-flex'>
                       <div className='user justify-content-between d-flex'>
                         <div className='thumb text-center'>
-                          <Image
-                            src='/assets/imgs/page/avatar-6.jpg'
-                            alt=''
-                          />
+                          <div style={{ width: '100%' }}>
+                            <Image
+                              src='/assets/imgs/page/avatar-6.jpg'
+                              alt=''
+                              layout={'responsive'}
+                              width={850}
+                              height={850}
+                            />
+                          </div>
                           <h6>
                             <a href='#'>
                               Jacky Chan
@@ -306,10 +311,15 @@ const ProductTab = () => {
                     <div className='single-comment justify-content-between d-flex'>
                       <div className='user justify-content-between d-flex'>
                         <div className='thumb text-center'>
+                          <div style={{ width: '100%' }}>
                           <Image
                             src='/assets/imgs/page/avatar-7.jpg'
                             alt=''
+                            layout={'responsive'}
+                            width={850}
+                            height={850}
                           />
+                          </div>
                           <h6>
                             <a href='#'>
                               Ana Rosie
@@ -354,10 +364,15 @@ const ProductTab = () => {
                     <div className='single-comment justify-content-between d-flex'>
                       <div className='user justify-content-between d-flex'>
                         <div className='thumb text-center'>
+                          <div style={{ width: '100%' }}>
                           <Image
                             src='/assets/imgs/page/avatar-8.jpg'
                             alt=''
+                            layout={'responsive'}
+                            width={850}
+                            height={850}
                           />
+                          </div>
                           <h6>
                             <a href='#'>
                               Steven Keny

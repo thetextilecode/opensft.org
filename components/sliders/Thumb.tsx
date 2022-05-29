@@ -30,7 +30,7 @@ const ThumbSlider = ({ product }: IThumbSlider) => {
         {product.gallery.map((item, i: number) => (
           <SwiperSlide key={i}>
             <div style={{ width: '100%' }}>
-            <Image src={item.thumb} alt='evara' layout='responsive' height={600} width={600} />
+              <Image src={item.thumb} alt='evara' layout='responsive' height={600} width={600} priority={true} />
             </div>
             {/* <Zoom
                 img={item.thumb}
@@ -53,7 +53,9 @@ const ThumbSlider = ({ product }: IThumbSlider) => {
       >
         {product.gallery.map((item, i: number) => (
           <SwiperSlide key={i}>
-            <Image src={item.thumb} alt='evara' layout='responsive' height={600} width={600} />
+            <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
+              <Image src={item.thumb} alt='evara' layout='responsive' height={600} width={600} />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

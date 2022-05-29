@@ -10,13 +10,15 @@ const CommentsArea = () => {
             <div className='single-comment justify-content-between d-flex'>
               <div className='user justify-content-between d-flex'>
                 <div className='thumb text-center'>
-                  <Image
-                    src='/assets/imgs/page/avatar-6.jpg'
-                    alt=''
-                    layout={'responsive'}
-                    width={564}
-                    height={702}
-                  />
+                  <div style={{ width: '100%' }}>
+                    <Image
+                      src='/assets/imgs/page/avatar-6.jpg'
+                      alt=''
+                      layout={'responsive'}
+                      width={564}
+                      height={702}
+                    />
+                  </div>
                   <h6>
                     <a href='#'>Jacky Chan</a>
                   </h6>
@@ -55,13 +57,15 @@ const CommentsArea = () => {
             <div className='single-comment justify-content-between d-flex'>
               <div className='user justify-content-between d-flex'>
                 <div className='thumb text-center'>
-                  <Image
-                    src='/assets/imgs/page/avatar-7.jpg'
-                    alt=''
-                    layout={'responsive'}
-                    width={564}
-                    height={702}
-                  />
+                  <div style={{ width: '100%' }}>
+                    <Image
+                      src='/assets/imgs/page/avatar-7.jpg'
+                      alt=''
+                      layout={'responsive'}
+                      width={564}
+                      height={702}
+                    />
+                  </div>
                   <h6>
                     <a href='#'>Ana Rosie</a>
                   </h6>
@@ -100,13 +104,15 @@ const CommentsArea = () => {
             <div className='single-comment justify-content-between d-flex'>
               <div className='user justify-content-between d-flex'>
                 <div className='thumb text-center'>
-                  <Image
-                    src='/assets/imgs/page/avatar-8.jpg'
-                    alt=''
-                    layout={'responsive'}
-                    width={564}
-                    height={702}
-                  />
+                  <div style={{ width: '100%' }}>
+                    <Image
+                      src='/assets/imgs/page/avatar-8.jpg'
+                      alt=''
+                      layout={'responsive'}
+                      width={564}
+                      height={702}
+                    />
+                  </div>
                   <h6>
                     <a href='#'>Steven Keny</a>
                   </h6>
