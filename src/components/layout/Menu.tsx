@@ -3,7 +3,7 @@ import { menuItems } from '../../../opensft.config';
 
 const Menu = () => {
   return (
-    <div className='main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block'>
+    <div className='main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block end-0'>
       <nav>
         <ul>
           {menuItems.map((item, index) => {

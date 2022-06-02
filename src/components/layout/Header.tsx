@@ -241,7 +241,7 @@ const Header = ({
               </div>
 
 
-              <div className='header-nav d-none d-lg-flex'>
+              <div className='header-nav d-none d-lg-flex flex-fill'>
 
                 {/* Logo */}
                 <div className='main-category-wrap d-none d-lg-block logo logo-width-1'>
