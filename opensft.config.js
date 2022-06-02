@@ -23,7 +23,27 @@ export const siteConfig = {
 };
 
 export const homeConfig = {
-  showBlahBlah: true
+  showBanner2: false,
+  showBanner4: false,
+  showBanner5: false,
+  showBlogPosts: true,
+  showBottom: true,
+  showDeals: false,
+  showFeaturedBrands: false,
+  showFeaturesBanner: false,
+  showFetchTab2: false,
+  showHeaderTop: true,
+  showHeaderMiddle: true,
+  showHeaderBottom: true,
+  showHomeSlider: true,
+  showLanguages: true,
+  showPopupModal: false,
+  showNewArrivals: false,
+  showNewsletter: true,
+  showPopularBrands: false,
+  showPopularCategories: false,
+  showProductTabs: false,
+  showQuickView: true
 };
 
 export const infoConfig = {
@@ -37,6 +57,7 @@ export const infoConfig = {
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
   logo: '/assets/images/theme/osft.jpg',
+  // logo: '/assets/images/theme/logo.svg',
   logoWidth: 256,
   logoHeight: 92,
   phone: '+44 20 8036 4986',

@@ -21,6 +21,7 @@ import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import { getAllPosts } from '../lib/api';
+import { homeConfig } from '../../opensft.config';
 
 type IndexProps = {
   posts: IBlogPost[];
@@ -30,36 +31,36 @@ export default function Home({ posts }: IndexProps) {
   // @ts-ignore
   return (
     <>
-      <IntroPopup />
+      {homeConfig.showPopupModal && (<IntroPopup />)}
 
       <Layout noBreadcrumb='d-none' headerStyle='header-style-1'>
-        <section className='home-slider position-relative pt-50'>
+        {homeConfig.showHomeSlider && (<section className='home-slider position-relative pt-50'>
           <Intro1 />
-        </section>
+        </section>)}
 
-        <section className='featured section-padding position-relative'>
+        {homeConfig.showFeaturesBanner && (<section className='featured section-padding position-relative'>
           <div className='container'>
             <div className='row'>
               <BannerFeatures />
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='product-tabs section-padding position-relative wow fadeIn animated'>
+        {homeConfig.showProductTabs && (<section className='product-tabs section-padding position-relative wow fadeIn animated'>
           <div className='container'>
             <div className='col-lg-12'>
               <FetchTab />
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='banner-2 section-padding pb-0'>
+        {homeConfig.showBanner2 && (<section className='banner-2 section-padding pb-0'>
           <div className='container'>
             <Banner2 />
           </div>
-        </section>
+        </section>)}
 
-        <section className='popular-categories section-padding mt-15 mb-25'>
+        {homeConfig.showPopularCategories && (<section className='popular-categories section-padding mt-15 mb-25'>
           <div className='container wow fadeIn animated'>
             <h3 className='section-title mb-20'>
               <span>Popular</span> Categories
@@ -73,17 +74,17 @@ export default function Home({ posts }: IndexProps) {
               </div>
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='banners mb-15'>
+        {homeConfig.showBanner5 && (<section className='banners mb-15'>
           <div className='container'>
             <div className='row'>
               <Banner5 />
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='section-padding'>
+        {homeConfig.showNewArrivals && (<section className='section-padding'>
           <div className='container wow fadeIn animated'>
             <h3 className='section-title mb-20'>
               <span>New</span> Arrivals
@@ -92,9 +93,9 @@ export default function Home({ posts }: IndexProps) {
               <NewArrival />
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='deals section-padding'>
+        {homeConfig.showDeals && (<section className='deals section-padding'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-6 deal-co'>
@@ -105,9 +106,9 @@ export default function Home({ posts }: IndexProps) {
               </div>
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='section-padding'>
+        {homeConfig.showFeaturedBrands && (<section className='section-padding'>
           <div className='container'>
             <h3 className='section-title mb-20 wow fadeIn animated'>
               <span>Featured</span> Brands
@@ -116,15 +117,15 @@ export default function Home({ posts }: IndexProps) {
               <BrandSlider />
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='bg-grey-9 section-padding'>
+        {homeConfig.showFetchTab2 && (<section className='bg-grey-9 section-padding'>
           <div className='container pt-25 pb-25'>
             <FetchTab2 />
           </div>
-        </section>
+        </section>)}
 
-        <section className='section-padding'>
+        {homeConfig.showBlogPosts && (<section className='section-padding'>
           <div className='container pt-25 pb-20'>
             <div className='row'>
               <div className='col-lg-6'>
@@ -140,9 +141,9 @@ export default function Home({ posts }: IndexProps) {
               </div>
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <section className='mb-50'>
+        {homeConfig.showBanner4 && (<section className='mb-50'>
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
@@ -150,34 +151,11 @@ export default function Home({ posts }: IndexProps) {
               </div>
             </div>
           </div>
-        </section>
+        </section>)}
 
-        <Bottom />
+        {homeConfig.showBottom && (<Bottom />)}
 
-        <QuickView />
-
-        <section className={'mb-50'}>
-          {posts.map((post) => (
-            <article key={post.slug} className="mt-12">
-              <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                {format(parseISO(post.date), 'MMMM dd, yyyy')}
-              </p>
-              <h1 className="mb-2 text-xl">
-                <Link as={`/${post.slug}`} href={`/[slug]`}>
-                  <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
-                    {post.title}
-                  </a>
-                </Link>
-              </h1>
-              <p className="mb-3">{post.description}</p>
-              <p>
-                <Link as={`/${post.slug}`} href={`/[slug]`}>
-                  <a>Read More</a>
-                </Link>
-              </p>
-            </article>
-          ))}
-        </section>
+        {homeConfig.showQuickView && (<QuickView />)}
       </Layout>
     </>
   );

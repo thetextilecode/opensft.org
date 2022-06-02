@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { infoConfig, socialConfig } from '../../../opensft.config';
+import { homeConfig, infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
 
 const Footer = () => {
   return (
     <footer className='main'>
-      <section className='newsletter p-30 mt-30 text-white wow fadeIn animated'>
+      {homeConfig.showNewsletter && (<section className='newsletter p-30 mt-30 text-white wow fadeIn animated'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-lg-7 mb-md-3 mb-lg-0'>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
       <section className='section-padding footer-mid'>
         <div className='container pt-15 pb-20'>
           <div className='row'>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
-import { infoConfig } from '../../../opensft.config';
+import { homeConfig, infoConfig } from '../../../opensft.config';
 
 export interface IHeader {
   headerStyle?: any,
@@ -83,7 +83,7 @@ const Header = ({
 
   return (
     <header className={`header-area ${headerStyle} header-height-2`}>
-      <div className='header-top header-top-ptb-1 d-none d-lg-block'>
+      {homeConfig.showHeaderTop && (<div className='header-top header-top-ptb-1 d-none d-lg-block'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-xl-3 col-lg-4'>
@@ -125,7 +125,7 @@ const Header = ({
 
               {/* Languages */}
 
-              <div className='header-info header-info-right'>
+              {homeConfig.showLanguages && (<div className='header-info header-info-right'>
                 <ul>
                   <li>
                     <Link href='/#'>
@@ -157,12 +157,12 @@ const Header = ({
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div>)}
             </div>
           </div>
         </div>
-      </div>
-      <div className='header-middle header-middle-ptb-1 d-none d-lg-block'>
+      </div>)}
+      {homeConfig.showHeaderMiddle && (<div className='header-middle header-middle-ptb-1 d-none d-lg-block'>
         <div className='container'>
           <div className='header-wrap'>
 
@@ -244,8 +244,8 @@ const Header = ({
             </div>
           </div>
         </div>
-      </div>
-      <div
+      </div>)}
+      {homeConfig.showHeaderBottom && (<div
         className={
           scroll
             ? 'header-bottom header-bottom-bg-color sticky-bar stick'
@@ -1641,7 +1641,7 @@ const Header = ({
             </div>
           </div>
         </div>
-      </div>
+      </div>)}
     </header>
   );
 };
