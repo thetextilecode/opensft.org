@@ -18,8 +18,8 @@ const BlogList = ({ posts, show }: IBlogList) => {
             }}
           >
             <div className='entry-meta'>
-              <Link href='/blog-category-grid'>
-                <a className='entry-meta meta-2'>{post.category ?? 'Technology'}</a>
+              <Link href='/blog-category-grid' className='entry-meta meta-2'>
+                {post.category ?? 'Technology'}
               </Link>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
 import { headerConfig, infoConfig, languages } from '../../../opensft.config';
+import Menu from './Menu';
 
 export interface IHeader {
   headerStyle?: any,
@@ -88,9 +89,7 @@ const Header = ({
 
 
               <div className='col-xl-3 col-lg-4'>
-
                 {/* Languages */}
-
                 {headerConfig.showLanguages && (
                   <div className='header-info header-info-right'>
                     <ul>
@@ -138,9 +137,8 @@ const Header = ({
             <div className='header-wrap'>
 
               {/* Logo */}
-
               <div className='logo logo-width-1'>
-                <Link href='/#'>
+                <Link href='/'>
                   <a>
                     <Image
                       src={infoConfig.logo}
@@ -152,12 +150,12 @@ const Header = ({
                 </Link>
               </div>
               <div className='header-right'>
+                {/* Search */}
                 <div className='search-style-2'>
                   <Search />
                 </div>
 
                 {/* Compare, Cart & Saved Icons */}
-
                 <div className='header-action-right'>
                   <div className='header-action-2'>
                     <div className='header-action-icon-2'>
@@ -229,22 +227,21 @@ const Header = ({
             <div className='header-wrap header-space-between position-relative'>
               {/* Logo */}
               <div className='logo logo-width-1 d-block d-lg-none'>
-                <Link href='/#'>
-                  <a>
-                    <Image
-                      src='/assets/images/theme/logo.svg'
-                      alt={`${infoConfig.companyName} Logo`}
-                      layout={'responsive'}
-                      width={120}
-                      height={33}
-                    />
-                  </a>
+                <Link href='/'>
+                  <Image
+                    src='/assets/images/theme/logo.svg'
+                    alt={`${infoConfig.companyName} Logo`}
+                    layout={'responsive'}
+                    width={120}
+                    height={33}
+                  />
                 </Link>
               </div>
+
+
               <div className='header-nav d-none d-lg-flex'>
 
                 {/* Browse Categories */}
-
                 {headerConfig.bottom.showBrowseCategories && (
                   <div className='main-category-wrap d-none d-lg-block'>
                     <a
@@ -974,482 +971,8 @@ const Header = ({
                   </div>
                 )}
 
-                <div className='main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block'>
-                  <nav>
-                    <ul>
-                      <li>
-                        <Link href='/#'>
-                          <a className='active'>
-                            Home
-                            <i className='fi-rs-angle-down'></i>
-                          </a>
-                        </Link>
-                        <ul className='sub-menu'>
-                          <li>
-                            <Link href='/#'>
-                              <a>Home 1</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/index-2'>
-                              <a>Home 2</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/index-3'>
-                              <a>Home 3</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/index-4'>
-                              <a>Home 4</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href='/about'>
-                          <a>About</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/products/shop-grid-right'>
-                          <a>
-                            Shop
-                            <i className='fi-rs-angle-down'></i>
-                          </a>
-                        </Link>
-                        <ul className='sub-menu'>
-                          <li>
-                            <Link href='/products/shop-grid-right'>
-                              <a>
-                                Shop Grid –
-                                Right Sidebar
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/products/'>
-                              <a>
-                                Shop Grid – Left
-                                Sidebar
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/products/shop-list-right'>
-                              <a>
-                                Shop List –
-                                Right Sidebar
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/products/shop-list-left'>
-                              <a>
-                                Shop List – Left
-                                Sidebar
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/products/shop-fullwidth'>
-                              <a>Shop - Wide</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/products/shop-filter'>
-                              <a>Shop - Filter</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/saved'>
-                              <a>
-                                Shop – Saved
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/cart'>
-                              <a>Shop – Cart</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/checkout'>
-                              <a>
-                                Shop – Checkout
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/compare'>
-                              <a>
-                                Shop – Compare
-                              </a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className='position-static'>
-                        <Link href='/#'>
-                          <a>
-                            Mega menu
-                            <i className='fi-rs-angle-down'></i>
-                          </a>
-                        </Link>
-                        <ul className='mega-menu'>
-                          <li className='sub-mega-menu sub-mega-menu-width-22'>
-                            <Link href='/#'>
-                              <a className='menu-title'>
-                                Women's Fashion
-                              </a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Dresses
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Blouses
-                                    & Shirts
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Hoodies
-                                    &
-                                    Sweatshirts
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Wedding
-                                    Dresses
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Prom
-                                    Dresses
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Cosplay
-                                    Costumes
-                                  </a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className='sub-mega-menu sub-mega-menu-width-22'>
-                            <Link href='/#'>
-                              <a className='menu-title'>
-                                Men's Fashion
-                              </a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Jackets
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Casual
-                                    Faux
-                                    Leather
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Genuine
-                                    Leather
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Casual
-                                    Pants
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Sweatpants
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Harem
-                                    Pants
-                                  </a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className='sub-mega-menu sub-mega-menu-width-22'>
-                            <Link href='/#'>
-                              <a className='menu-title'>
-                                Technology
-                              </a>
-                            </Link>
-                            <ul>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Gaming
-                                    Laptops
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Ultraslim
-                                    Laptops
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Tablets
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Laptop
-                                    Accessories
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/products/shop-grid-right'>
-                                  <a>
-                                    Tablet
-                                    Accessories
-                                  </a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className='sub-mega-menu sub-mega-menu-width-34'>
-                            <div className='menu-banner-wrap'>
-                              <Link href='/products/shop-grid-right'>
-                                <a>
-                                  <Image
-                                    src='/assets/images/banner/menu-banner.jpg'
-                                    alt='Evara'
-                                    layout={'responsive'}
-                                    width={453}
-                                    height={350}
-                                  />
-                                </a>
-                              </Link>
-                              <div className='menu-banner-content'>
-                                <h4>
-                                  Hot deals
-                                </h4>
-                                <h3>
-                                  Don't miss
-                                  <br />
-                                  Trending
-                                </h3>
-                                <div className='menu-banner-price'>
-                                  <span className='new-price text-success'>
-                                    Save to
-                                    50%
-                                  </span>
-                                </div>
-                                <div className='menu-banner-btn'>
-                                  <Link href='/products/shop-grid-right'>
-                                    <a>
-                                      Shop
-                                      now
-                                    </a>
-                                  </Link>
-                                </div>
-                              </div>
-                              <div className='menu-banner-discount'>
-                                <h3>
-                                  <span>
-                                    35%
-                                  </span>
-                                  off
-                                </h3>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href='/blog-category-grid'>
-                          <a>
-                            Blog
-                            <i className='fi-rs-angle-down'></i>
-                          </a>
-                        </Link>
-                        <ul className='sub-menu'>
-                          <li>
-                            <Link href='/blog-category-grid'>
-                              <a>
-                                Blog Category
-                                Grid
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/blog'>
-                              <a>
-                                Blog Category
-                                List
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/blog-category-big'>
-                              <a>
-                                Blog Category
-                                Big
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/blog-category-fullwidth'>
-                              <a>
-                                Blog Category
-                                Wide
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/#'>
-                              <a>
-                                Single Post
-                                <i className='fi-rs-angle-right'></i>
-                              </a>
-                            </Link>
-                            <ul className='level-menu level-menu-modify'>
-                              <li>
-                                <Link href='/blog-post-left'>
-                                  <a>
-                                    Left
-                                    Sidebar
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/blog-post-right'>
-                                  <a>
-                                    Right
-                                    Sidebar
-                                  </a>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link href='/blog-post-fullwidth'>
-                                  <a>
-                                    No
-                                    Sidebar
-                                  </a>
-                                </Link>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href='/#'>
-                          <a>
-                            Pages
-                            <i className='fi-rs-angle-down'></i>
-                          </a>
-                        </Link>
-                        <ul className='sub-menu'>
-                          <li>
-                            <Link href='/about'>
-                              <a>About Us</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/contact'>
-                              <a>Contact</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/page-account'>
-                              <a>My Account</a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/login-register'>
-                              <a>
-                                login/register
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/page-purchase-guide'>
-                              <a>
-                                Purchase Guide
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/privacy-policy'>
-                              <a>
-                                Privacy Policy
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/terms'>
-                              <a>
-                                Terms of Service
-                              </a>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/404'>
-                              <a>404 Page</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <Link href='/contact'>
-                          <a>Contact</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+                {/* Menu/Navbar Items */}
+                <Menu />
               </div>
               {headerConfig.bottom.showHotline && (
                 <div className='hotline d-none d-lg-block'>

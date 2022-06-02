@@ -18,7 +18,6 @@ export const siteConfig = {
   title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
   description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
-  // shareImage: 'https://nextjs-mdx-blog-starter.vercel.app/img/screenshot.png',
   shareImage: '/assets/images/theme/screenshot.png',
   shareImageAlt: 'Open Source Fashion & Textiles',
 };
@@ -61,13 +60,11 @@ export const headerConfig = {
     showNewsflash: true,
     newsflash: {
       callToAction: '',
-      href: '/products/shop-grid-right',
+      href: '/#',
       text: '',
     }
   }
 };
-
-export const menuConfig = {};
 
 export const infoConfig = {
   addressCity: 'London',
@@ -85,6 +82,21 @@ export const infoConfig = {
   logoHeight: 92,
   phone: '+44 20 8036 4986',
 };
+
+export const menuItems = [
+  {
+    title: 'About',
+    href: '/about'
+  },
+  {
+    title: 'Blog',
+    href: '/blog'
+  },
+  {
+    title: 'Contact',
+    href: '/contact'
+  }
+];
 
 export const seoConfig = {
   googleAnalytics: '',
