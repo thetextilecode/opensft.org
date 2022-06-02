@@ -43,7 +43,20 @@ function PageBlogList({ posts }: IPageBlogList) {
 export default PageBlogList;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts(['date', 'description', 'draft', 'slug', 'title']);
+  const posts = getAllPosts([
+    'category',
+    'date',
+    'description',
+    'draft',
+    'featured',
+    'image',
+    'imageAlt',
+    'imageOriginalWidth',
+    'imageOriginalHeight',
+    'slug',
+    'tags',
+    'title',
+  ]);
 
   return {
     props: { posts },

@@ -15,7 +15,10 @@ export interface IBlogPost {
   // tags?: string[];
   date?: string;
   description?: string;
+  draft?: boolean;
+  featured?: boolean;
   image?: string;
+  imageAlt?: string;
   imageOriginalHeight?: number;
   imageOriginalWidth?: number;
   lastUpdated?: string;

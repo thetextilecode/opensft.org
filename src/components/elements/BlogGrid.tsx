@@ -39,7 +39,7 @@ const BlogGrid = ({ show, col }: IBlogGrid) => {
                   <a>{item.title}</a>
                 </Link>
               </h3>
-              <p className='post-exerpt mb-30'>
+              <p className='post-excerpt mb-30'>
                 These people envy me for having a lifestyle they
                 don’t have, but the truth is, sometimes I envy
                 their lifestyle instead. Struggling to sell one

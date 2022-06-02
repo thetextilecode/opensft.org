@@ -86,12 +86,12 @@ export const blogPosts: IBlogPost[] = [
 const BlogList = ({ posts, show }: IBlogList) => {
   return (
     <>
-      {blogPosts.slice(0, show).map((item, i) => (
+      {posts.slice(0, show).map((post, i) => (
         <article className='wow fadeIn animated hover-up mb-30' key={i}>
           <div
             className='post-thumb'
             style={{
-              backgroundImage: `url(/assets/images/blog/${item.image})`,
+              backgroundImage: `url(${post.image})`,
             }}
           >
             <div className='entry-meta'>
@@ -104,13 +104,11 @@ const BlogList = ({ posts, show }: IBlogList) => {
             <h3 className='post-title mb-15'>
               <Link href='/blog-post-right'>
                 <a>
-                  Ettitude — Beautifully Designed Bamboo
-                  Sheets & Sleep Wear-Home Décor Holiday Gift
-                  Guide
+                  {post.title}
                 </a>
               </Link>
             </h3>
-            <p className='post-exerpt mb-30'>
+            <p className='post-excerpt mb-30'>
               These people envy me for having a lifestyle they
               don’t have, but the truth is, sometimes I envy their
               lifestyle instead. Struggling to sell one

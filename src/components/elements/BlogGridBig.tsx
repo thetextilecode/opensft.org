@@ -67,7 +67,7 @@ const BlogGridBig = ({ show }: IBlogGridBig) => {
                   <a>{item.title}</a>
                 </Link>
               </h2>
-              <p className='post-exerpt font-medium text-muted mb-30'>
+              <p className='post-excerpt font-medium text-muted mb-30'>
                 {item.description}
               </p>
               <div className='mb-20 entry-meta meta-2'>
