@@ -10,7 +10,7 @@ import BannerFeatures from '../components/elements/BannerFeatures';
 import Deals1 from '../components/elements/Deals1';
 import Deals2 from '../components/elements/Deals2';
 import HomeBlog from '../components/elements/HomeBlog';
-import IntroPopup from '../components/elements/IntroPopup';
+// import IntroPopup from '../components/elements/IntroPopup';
 import Layout from '../components/layout/Layout';
 import BrandSlider from '../components/sliders/Brand';
 import CategorySlider from '../components/sliders/Category';
@@ -28,7 +28,7 @@ type IndexProps = {
 export default function Home({ posts }: IndexProps) {
   return (
     <>
-      {homeConfig.showPopupModal && (<IntroPopup />)}
+      {/*{homeConfig.showPopupModal && (<IntroPopup />)}*/}
 
       <Layout noBreadcrumb='d-none' headerStyle='header-style-1'>
         {homeConfig.showHomeSlider && (

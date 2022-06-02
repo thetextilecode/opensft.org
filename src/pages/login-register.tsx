@@ -43,7 +43,7 @@ function Login() {
                                   type="checkbox"
                                   name="checkbox"
                                   id="exampleCheckbox1"
-                                  value=""
+                                  placeholder=""
                                 />
                                 <label
                                   className="form-check-label"
@@ -53,12 +53,12 @@ function Login() {
                                 </label>
                               </div>
                             </div>
-                            <a
+                            <Link
                               className="text-muted"
-                              href="src/pages/page-login-register#login-register.tsx"
+                              href="/login-register"
                             >
                               Forgot password?
-                            </a>
+                            </Link>
                           </div>
                           <div className="form-group">
                             <button
@@ -132,7 +132,7 @@ function Login() {
                                   type="checkbox"
                                   name="checkbox"
                                   id="exampleCheckbox12"
-                                  value=""
+                                  placeholder=""
                                 />
                                 <label
                                   className="form-check-label"
@@ -147,7 +147,7 @@ function Login() {
                                 </label>
                               </div>
                             </div>
-                            <Link href="/src/pages/privacy-policy">
+                            <Link href="/privacy-policy">
                               <a>
                                 <i className="fi-rs-book-alt mr-5 text-muted"></i>
                                 Lean more
@@ -170,16 +170,16 @@ function Login() {
                         </div>
                         <ul className="btn-login list_none text-center mb-15">
                           <li>
-                            <a
-                              href="src/pages/page-login-register#login-register.tsx"
+                            <Link
+                              href="/login-register"
                               className="btn btn-facebook hover-up mb-lg-0 mb-sm-4"
                             >
                               Login With Facebook
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <a
-                              href="src/pages/page-login-register#login-register.tsx"
+                              href="/login-register"
                               className="btn btn-google hover-up"
                             >
                               Login With Google
@@ -188,7 +188,7 @@ function Login() {
                         </ul>
                         <div className="text-muted text-center">
                           Already have an account?{" "}
-                          <a href="src/pages/page-login-register#login-register.tsx">Sign in now</a>
+                          <a href="/login-register">Sign in now</a>
                         </div>
                       </div>
                     </div>

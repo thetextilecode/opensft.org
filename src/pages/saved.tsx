@@ -18,12 +18,12 @@ export interface IWishlist {
 }
 
 const Saved = ({
-                    wishlist,
-                    clearWishlist,
-                    closeWishlistModal,
-                    deleteFromWishlist,
-                    addToCart,
-                  }: IWishlist) => {
+                 wishlist,
+                 clearWishlist,
+                 closeWishlistModal,
+                 deleteFromWishlist,
+                 addToCart,
+               }: IWishlist) => {
 
   const handleCart = (product) => {
     addToCart(product);
@@ -37,7 +37,7 @@ const Saved = ({
             <div className='col-12'>
               {wishlist.items.length > 0 ? (
                 <div className='table-responsive'>
-                  <table className='table shopping-summery text-center'>
+                  <table className='table shopping-summary text-center'>
                     <thead>
                     <tr className='main-heading'>
                       <th scope='col' colSpan={2}>
@@ -56,15 +56,15 @@ const Saved = ({
                       (product, i) => (
                         <tr key={i}>
                           <td className='image product-thumbnail'>
-                              <img
-                                src={
-                                  product
-                                    .images[0]
-                                    .img
-                                }
-                                alt=''
-                                className='img-fluid'
-                              />
+                            <img
+                              src={
+                                product
+                                  .images[0]
+                                  .img
+                              }
+                              alt=''
+                              className='img-fluid'
+                            />
                           </td>
 
                           <td className='product-des product-name'>

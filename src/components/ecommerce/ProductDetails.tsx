@@ -178,7 +178,7 @@ const ProductDetails = ({
                           {/* {product.sizes.map(
                             (size, i) => (
                                 <li>
-                                    <a href="#">
+                                    <a href="/#">
                                         {size}
                                     </a>
                                 </li>

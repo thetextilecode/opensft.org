@@ -32,7 +32,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
               <div className="col-12">
                 <div className="table-responsive">
                   {cartItems.length <= 0 && "No Products"}
-                  <table className={cartItems.length > 0 ? "table shopping-summery text-center clean" : "d-none"}>
+                  <table className={cartItems.length > 0 ? "table shopping-summary text-center clean" : "d-none"}>
                     <thead>
                     <tr className="main-heading">
                       <th scope="col">Image</th>
@@ -445,7 +445,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                           </tbody>
                         </table>
                       </div>
-                      <a href="src/pages/shop-cart#cart.tsx" className="btn ">
+                      <a href="/cart" className="btn ">
                         <i className="fi-rs-box-alt mr-10"></i>
                         Proceed To CheckOut
                       </a>

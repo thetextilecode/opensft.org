@@ -138,7 +138,7 @@ const Header = ({
 
               {/* Logo */}
               <div className='logo logo-width-1'>
-                <Link href='/'>
+                <Link href=''>
                   <a>
                     <Image
                       src={infoConfig.logo}
@@ -227,7 +227,7 @@ const Header = ({
             <div className='header-wrap header-space-between position-relative'>
               {/* Logo */}
               <div className='logo logo-width-1 d-block d-lg-none'>
-                <Link href='/'>
+                <a href='/'>
                   <Image
                     src='/assets/images/theme/logo.svg'
                     alt={`${infoConfig.companyName} Logo`}
@@ -235,7 +235,7 @@ const Header = ({
                     width={120}
                     height={33}
                   />
-                </Link>
+                </a>
               </div>
 
 
@@ -1053,7 +1053,7 @@ const Header = ({
                               <Link href='/products/shop-grid-right'>
                                 <a>
                                   <Image
-                                    alt='Evara'
+                                    alt='Cart'
                                     src='/assets/images/shop/thumbnail-3.jpg'
                                     layout={'responsive'}
                                     width={600}

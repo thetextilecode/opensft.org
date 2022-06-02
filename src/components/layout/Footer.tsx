@@ -17,12 +17,14 @@ const Footer = () => {
               <div className='widget-about font-md mb-md-5 mb-lg-0'>
                 <div className='logo logo-width-1 wow fadeIn animated'>
                   <Link href='/'>
+                    <a>
                     <Image
                       src={infoConfig.logo}
                       alt={infoConfig.companyName + ' logo'}
                       width={infoConfig.logoWidth}
                       height={infoConfig.logoHeight}
                     />
+                    </a>
                   </Link>
                 </div>
                 <h5 className='mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated'>
@@ -84,25 +86,25 @@ const Footer = () => {
                 <div className='col-md-8 col-lg-12'>
                   {/* }<!-- Begin Mailchimp Signup Form -->{*/}
 
-                  <div id="mc_embed_signup" className='download-app wow fadeIn animated'>
-                    <form action="https://spoolbox.us7.list-manage.com/subscribe/post?u=871c25f5e6e64d7c20422cfe4&amp;id=54202e9780"
-                          method="post"
-                          id="mc-embedded-subscribe-form"
-                          name="mc-embedded-subscribe-form"
-                          className="form-subscriber d-flex wow fadeIn animated validate"
-                          target="_blank" noValidate={true}>
-                      <div id="mc_embed_signup_scroll call">
-                        <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>
-                        {/*}<!-- real people should not fill this in and expect good things - do not remove this or risk
-                     form bot signups-->{*/}
-                        <div style={{position: 'absolute', left: '-5000px', ariahidden: true }}>
-                          <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1" value=""/>
-                        </div>
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
+                  {/*<div id="mc_embed_signup" className='download-app wow fadeIn animated'>*/}
+                  {/*  <form action="https://spoolbox.us7.list-manage.com/subscribe/post?u=871c25f5e6e64d7c20422cfe4&amp;id=54202e9780"*/}
+                  {/*        method="post"*/}
+                  {/*        id="mc-embedded-subscribe-form"*/}
+                  {/*        name="mc-embedded-subscribe-form"*/}
+                  {/*        className="form-subscriber d-flex wow fadeIn animated validate"*/}
+                  {/*        target="_blank" noValidate={true}>*/}
+                  {/*    <div id="mc_embed_signup_scroll call">*/}
+                  {/*      <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>*/}
+                  {/*      /!*}<!-- real people should not fill this in and expect good things - do not remove this or risk*/}
+                  {/*   form bot signups-->{*!/*/}
+                  {/*      <div style={{position: 'absolute', left: '-5000px', ariahidden: true }}>*/}
+                  {/*        <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1"/>*/}
+                  {/*      </div>*/}
+                  {/*      <input type="submit" placeholder="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn"/>*/}
 
-                      </div>
-                    </form>
-                  </div>
+                  {/*    </div>*/}
+                  {/*  </form>*/}
+                  {/*</div>*/}
                 </div>
               </div>
             </div>

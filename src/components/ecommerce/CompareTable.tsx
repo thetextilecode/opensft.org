@@ -79,7 +79,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
                 <ul className='list-filter color-filter'>
                   {product.variations.map((item, i) => (
                     <li key={i}>
-                      <a href='src/components/ecommerce/CompareTable#'>
+                      <a href='/#'>
                         <span
                           className={`product-color-${item}`}
                         ></span>

@@ -21,7 +21,7 @@ function Account() {
                                                         className="nav-link active"
                                                         id="dashboard-tab"
                                                         data-bs-toggle="tab"
-                                                        href="src/pages/page-account#dashboard"
+                                                        href="/account#dashboard"
                                                         role="tab"
                                                         aria-controls="dashboard"
                                                         aria-selected="false"
@@ -35,7 +35,7 @@ function Account() {
                                                         className="nav-link"
                                                         id="orders-tab"
                                                         data-bs-toggle="tab"
-                                                        href="src/pages/page-account#orders"
+                                                        href="/account#orders"
                                                         role="tab"
                                                         aria-controls="orders"
                                                         aria-selected="false"
@@ -49,7 +49,7 @@ function Account() {
                                                         className="nav-link"
                                                         id="track-orders-tab"
                                                         data-bs-toggle="tab"
-                                                        href="src/pages/page-account#track-orders"
+                                                        href="/account#track-orders"
                                                         role="tab"
                                                         aria-controls="track-orders"
                                                         aria-selected="false"
@@ -63,7 +63,7 @@ function Account() {
                                                         className="nav-link"
                                                         id="address-tab"
                                                         data-bs-toggle="tab"
-                                                        href="src/pages/page-account#address"
+                                                        href="/page-account#address"
                                                         role="tab"
                                                         aria-controls="address"
                                                         aria-selected="true"
@@ -77,7 +77,7 @@ function Account() {
                                                         className="nav-link"
                                                         id="account-detail-tab"
                                                         data-bs-toggle="tab"
-                                                        href="src/pages/page-account#account-detail"
+                                                        href="/page-account#account-detail"
                                                         role="tab"
                                                         aria-controls="account-detail"
                                                         aria-selected="true"
@@ -120,17 +120,17 @@ function Account() {
                                                             dashboard. you can
                                                             easily check &amp;
                                                             view your
-                                                            <a href="src/pages/page-account#">
+                                                            <a href="/page-account#">
                                                                 recent orders
                                                             </a>
                                                             , manage your
-                                                            <a href="src/pages/page-account#">
+                                                            <a href="/page-account#">
                                                                 shipping and
                                                                 billing
                                                                 addresses
                                                             </a>
                                                             and
-                                                            <a href="src/pages/page-account#">
+                                                            <a href="/page-account#">
                                                                 edit your
                                                                 password and
                                                                 account details.
@@ -194,7 +194,7 @@ function Account() {
                                                                         </td>
                                                                         <td>
                                                                             <a
-                                                                                href="src/pages/page-account#"
+                                                                                href="/page-account#"
                                                                                 className="btn-small d-block"
                                                                             >
                                                                                 View
@@ -221,7 +221,7 @@ function Account() {
                                                                         </td>
                                                                         <td>
                                                                             <a
-                                                                                href="src/pages/page-account#"
+                                                                                href="/page-account#"
                                                                                 className="btn-small d-block"
                                                                             >
                                                                                 View
@@ -248,7 +248,7 @@ function Account() {
                                                                         </td>
                                                                         <td>
                                                                             <a
-                                                                                href="src/pages/page-account#"
+                                                                                href="/page-account#"
                                                                                 className="btn-small d-block"
                                                                             >
                                                                                 View
@@ -290,7 +290,7 @@ function Account() {
                                                             <div className="col-lg-8">
                                                                 <form
                                                                     className="contact-form-style mt-30 mb-50"
-                                                                    action="src/pages/page-account#"
+                                                                    action="/page-account#"
                                                                     method="post"
                                                                 >
                                                                     <div className="input-style mb-20">
@@ -358,7 +358,7 @@ function Account() {
                                                                 </address>
                                                                 <p>New York</p>
                                                                 <a
-                                                                    href="src/pages/page-account#"
+                                                                    href="/page-account#"
                                                                     className="btn-small"
                                                                 >
                                                                     Edit
@@ -388,7 +388,7 @@ function Account() {
                                                                 </address>
                                                                 <p>Sarasota</p>
                                                                 <a
-                                                                    href="src/pages/page-account#"
+                                                                    href="/page-account#"
                                                                     className="btn-small"
                                                                 >
                                                                     Edit
@@ -532,7 +532,7 @@ function Account() {
                                                                         type="submit"
                                                                         className="btn btn-fill-out submit"
                                                                         name="submit"
-                                                                        value="Submit"
+                                                                        placeholder="Submit"
                                                                     >
                                                                         Save
                                                                     </button>
