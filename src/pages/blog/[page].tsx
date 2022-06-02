@@ -1,72 +1,95 @@
-import { blogConfig } from '../../../opensft.config';
-// import Wrapper from '../../components/layout/Wrapper';
-// import Posts from '../../src/views/Posts';
-import { getAllPosts } from '../../lib/api';
+import { format, parseISO } from 'date-fns';
+import fs from 'fs';
+import matter from 'gray-matter';
+// import mdxPrism from 'mdx-prism';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import path from 'path';
+import React from 'react';
+// import { PostType } from '../../types/post';
+import { postFilePaths, POSTS_PATH } from '../../lib/mdxUtils';
+import { IBlogPost, IMetaProps } from '../../../types';
+import Layout from '../../components/layout/Layout';
+import { siteConfig } from '../../../opensft.config';
 
-// const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => {
-//   return (
-//     <Wrapper url = { config.url + 'blog/' + (pageIndex + 1) }
-// }
-// title = { config.title + ' | Blog - ' + (pageIndex + 1) + ' of ' + numPages };
-// description = { config.description };
-// imageUrl = { config.shareImage };
-// imageAlt = { config.shareImageAlt }
-// >
-// <Posts posts = { posts };
-// prevPosts = { prevPosts };
-// nextPosts = { nextPosts };
-// />
-// < /Wrapper>;
-// )};
-
-const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => {
-  return (<></>);
+// Custom components/renderers to pass to MDX.
+// Since the MDX files aren't loaded by webpack, they have no knowledge of how
+// to handle import statements. Instead, you must include components in scope
+// here.
+const components = {
+  Head,
+  Image,
+  Link,
 };
 
-export async function getStaticProps({ params }) {
-  const posts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'coverImageAlt',
-    'coverImageHeight',
-    'coverImageWidth',
-    'excerpt',
-    'draft',
-  ]);
+type PostPageProps = {
+  source: MDXRemoteSerializeResult;
+  frontMatter: IBlogPost;
+};
 
-  const pageIndex = parseInt(params.page) - 1;
-  const startIndex = pageIndex * blogConfig.postsPerPage;
-  const endIndex = (pageIndex + 1) * blogConfig.postsPerPage;
+const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
+  const customMeta: IMetaProps = {
+    title: `${frontMatter.title} | ${siteConfig.title}`,
+    description: frontMatter.description,
+    image: `${siteConfig.url}${frontMatter.image}`,
+    date: frontMatter.date,
+    type: 'article',
+  };
+  return (
+    <Layout customMeta={customMeta}>
+      <article>
+        <h1 className="mb-3 text-gray-900 dark:text-white">
+          {frontMatter.title}
+        </h1>
+        <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
+          {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
+        </p>
+        <div className="prose dark:prose-dark">
+          <MDXRemote {...source} components={components} />
+        </div>
+      </article>
+    </Layout>
+  );
+};
 
-  const prevPosts = pageIndex > 0 ? pageIndex : null;
-  const nextPosts = endIndex >= posts.length ? null : pageIndex + 2;
-  const numPages = (blogConfig.postsPerPage % getAllPosts().length) + 1;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
+  const source = fs.readFileSync(postFilePath);
+
+  const { content, data } = matter(source);
+
+  const mdxSource = await serialize(content, {
+    // Optionally pass remark/rehype plugins
+    // mdxOptions: {
+      // remarkPlugins: [require('remark-code-titles')],
+      // rehypePlugins: [mdxPrism, rehypeSlug, rehypeAutolinkHeadings],
+    // },
+    scope: data,
+  });
 
   return {
     props: {
-      posts: posts.slice(startIndex, endIndex),
-      prevPosts,
-      nextPosts,
-      pageIndex,
-      numPages,
+      source: mdxSource,
+      frontMatter: data,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
-  const numPages = (blogConfig.postsPerPage % getAllPosts().length) + 1;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = postFilePaths
+  // Remove file extensions for page paths
+  .map((path) => path.replace(/\.mdx?$/, ''))
+  // Map the path into the static paths object required by Next.js
+  .map((slug) => ({ params: { slug } }));
 
   return {
-    paths: [...Array(numPages)].map((v, i) => {
-      return {
-        params: { page: (i + 1).toString() },
-      };
-    }),
+    paths,
     fallback: false,
   };
-}
+};
 
-export default PostsPage;
+export default PostPage;

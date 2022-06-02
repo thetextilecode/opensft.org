@@ -10,15 +10,24 @@ declare global {
 }
 
 export interface IBlogPost {
-  id: number;
-  category?: string;
+  // id: number;
+  // category?: string;
   date?: string;
-  desc?: string;
-  img?: string;
-  imgOriginalHeight?: number;
-  imgOriginalWidth?: number;
+  description?: string;
+  image?: string;
+  imageOriginalHeight?: number;
+  imageOriginalWidth?: number;
+  slug: string;
   title: string;
   views?: number;
+}
+
+export interface IMetaProps
+  extends Pick<PostType, 'date' | 'description' | 'image' | 'title'> {
+  /**
+   * For the meta tag `og:type`
+   */
+  type?: string;
 }
 
 export interface IProduct {

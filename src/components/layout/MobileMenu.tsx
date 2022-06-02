@@ -399,7 +399,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/page-contact'>
+                      <Link href='/contact'>
                         <a>Contact</a>
                       </Link>
                     </li>
@@ -470,7 +470,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
           </div>
           <div className='mobile-header-info-wrap mobile-header-border'>
             <div className='single-mobile-header-info mt-30'>
-              <Link href='/page-contact'>
+              <Link href='/contact'>
                 <a> Our location </a>
               </Link>
             </div>

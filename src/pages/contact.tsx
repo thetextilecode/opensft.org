@@ -108,7 +108,7 @@ function Contact() {
                                     <form
                                         className="contact-form-style text-center"
                                         id="contact-form"
-                                        action="src/pages/page-contact#"
+                                        action="src/pages/page-contact#contact.tsx"
                                         method="post"
                                     >
                                         <div className="row">

@@ -4,24 +4,24 @@
 
 ## Installation
 
-`npm install`
+`yarn`
 
 ## Build & Run
 
-`npm run build`
-`npm run start`
+`yarn build`
+`yarn start`
 
 ## Development
 
-`npm run dev`
+`yarn dev`
 
 Please do not modify the `next-env.d.ts` file. It ensures Next.js types are picked up by the TypeScript compiler. If you need to add an interface please add it to `types.d.ts`.
 
 ## Etc
 
 Lint:
-`npm run lint`
+`yarn lint`
 
 Sass:
-`npm run sass`
+`yarn sass`
 

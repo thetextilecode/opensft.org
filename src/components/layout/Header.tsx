@@ -16,7 +16,43 @@ export interface IHeader {
 
 const headerItems = [];
 
-const languages = [];
+const languages = [
+  // {
+  //   flag: '',
+  //   flagWidth: 0,
+  //   flagHeight: 0,
+  //   href: '',
+  //   label: 'English',
+  // },
+  {
+    flag: '/assets/imgs/theme/flag-dt.png',
+    flagWidth: 50,
+    flagHeight: 30,
+    href: '',
+    label: 'Deutsch'
+  },
+  // {
+  //   flag: '/assets/imgs/theme/flag-es.png',
+  //   flagWidth: 0,
+  //   flagHeight: 0,
+  //   href: '',
+  //   label: 'Español'
+  // },
+  {
+    flag: '/assets/imgs/theme/flag-fr.png',
+    flagWidth: 50,
+    flagHeight: 33,
+    href: '',
+    label: 'Français'
+  },
+  {
+    flag: '/assets/imgs/theme/flag-ru.png',
+    flagWidth: 50,
+    flagHeight: 33,
+    href: '',
+    label: 'Pусский'
+  }
+];
 
 const Header = ({
                   totalCartItems,
@@ -56,13 +92,12 @@ const Header = ({
                   <li>
                     <i className='fi-rs-smartphone'></i>
                     <Link href='/#'>
-                      {/*<a>(+01) - 2345 - 6789</a>*/}
                       <a>{ infoConfig.phone }</a>
                     </Link>
                   </li>
                   <li>
                     <i className='fi-rs-marker'></i>
-                    <Link href='/page-contact'>
+                    <Link href='/contact'>
                       <a>Our location</a>
                     </Link>
                   </li>
@@ -101,48 +136,18 @@ const Header = ({
                       </a>
                     </Link>
                     <ul className='language-dropdown'>
-                      <li>
-                        <Link href='/#'>
-                          <a>
-                            <Image
-                              src='/assets/imgs/theme/flag-fr.png'
-                              alt=''
-                              layout={'responsive'}
-                              width={50}
-                              height={33}
-                            />
-                            Français
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/#'>
-                          <a>
-                            <Image
-                              src='/assets/imgs/theme/flag-dt.png'
-                              alt=''
-                              layout={'responsive'}
-                              width={50}
-                              height={30}
-                            />
-                            Deutsch
-                          </a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/#'>
-                          <a>
-                            <Image
-                              src='/assets/imgs/theme/flag-ru.png'
-                              alt=''
-                              width={50}
-                              height={33}
-                              layout={'responsive'}
-                            />
-                            Pусский
-                          </a>
-                        </Link>
-                      </li>
+                      { languages.map((language, idx) => {
+                        return (
+                          <li key={idx}>
+                            <Link href={ language.href ?? '/#' }>
+                              <a>
+                                <Image src={language.flag} alt={language.label} layout={'responsive'} width={language.flagWidth} height={language.flagHeight} />
+                                { language.label }
+                              </a>
+                            </Link>
+                          </li>
+                        );
+                      }) }
                     </ul>
                   </li>
                   <li>
@@ -1415,7 +1420,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/page-contact'>
+                          <Link href='/contact'>
                             <a>Contact</a>
                           </Link>
                         </li>
@@ -1453,14 +1458,14 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/page-404'>
+                          <Link href='/404'>
                             <a>404 Page</a>
                           </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link href='/page-contact'>
+                      <Link href='/contact'>
                         <a>Contact</a>
                       </Link>
                     </li>

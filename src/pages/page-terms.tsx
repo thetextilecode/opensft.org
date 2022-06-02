@@ -53,7 +53,7 @@ function Terms() {
                     <h4>Contact Us</h4>
                     <p>
                       If you have any questions about these Terms, please{" "}
-                      <Link href="/src/pages/page-contact">
+                      <Link href="/src/pages/contact">
                         <a>contact us</a>
                       </Link>
                       .

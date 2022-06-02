@@ -11,7 +11,13 @@ export const blogConfig = {
 };
 
 export const siteConfig = {
-  url: 'https://www.opensft.org'
+  favicon: '/favicon.ico',
+  url: 'https://www.opensft.org',
+  title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
+  description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
+    ' resources and training.',
+  shareImage: 'https://nextjs-mdx-blog-starter.vercel.app/img/screenshot.png',
+  shareImageAlt: 'Open Source Fashion & Textiles',
 };
 
 export const infoConfig = {
@@ -34,16 +40,14 @@ export const seoConfig = {
   googleAnalytics: '',
   meta_og_title: 'Open Source Fashion & Textiles',
   meta_og_type: 'website',
+  // meta_twitter_card: 'summary',
   meta_og_url: 'https://www.opensft.org',
-  meta_og_image: '',
   meta_og_description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
-  meta_twitter_card: 'summary',
+  meta_og_image: '',
+  meta_twitter_card: 'summary_large_image',
   meta_twitter_site: '@opensourceft',
   meta_twitter_creator: '@opensourceft',
-  title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
-  shareImage: 'https://nextjs-mdx-blog-starter.vercel.app/img/screenshot.png',
-  shareImageAlt: 'Next.js MDX Blog Starter Screenshot',
 };
 
 export const socialConfig = {
