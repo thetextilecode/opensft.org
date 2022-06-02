@@ -65,19 +65,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className='col-lg-2  col-md-3'>
-              <h5 className='widget-title wow fadeIn animated'>
-                My Account
-              </h5>
-              <ul className='footer-list wow fadeIn animated'>
-                <li>
-                  <Link href='/login-register'>Sign In</Link>
-                </li>
-                <li>
-                  <Link href='/saved'>My Saved Items</Link>
-                </li>
-              </ul>
-            </div>
             <div className='col-lg-4'>
               <h5 className='widget-title wow fadeIn animated'>
                 Subscribe

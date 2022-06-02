@@ -53,6 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
     'imageAlt',
     'imageOriginalWidth',
     'imageOriginalHeight',
+    'lastUpdated',
     'slug',
     'tags',
     'title',
