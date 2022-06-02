@@ -229,13 +229,13 @@ const Header = ({
               <div className='logo logo-width-1 d-block d-lg-none'>
                 <Link href='/'>
                   <a>
-                    <Image
-                      src='/assets/images/theme/logo.svg'
-                      alt={`${infoConfig.companyName} Logo`}
-                      layout={'responsive'}
-                      width={120}
-                      height={33}
-                    />
+                  <Image
+                    src='/assets/images/theme/logo.svg'
+                    alt={`${infoConfig.companyName} Logo`}
+                    layout={'responsive'}
+                    width={120}
+                    height={33}
+                  />
                   </a>
                 </Link>
               </div>
