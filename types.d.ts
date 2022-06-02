@@ -12,11 +12,13 @@ declare global {
 export interface IBlogPost {
   // id: number;
   // category?: string;
+  // tags?: string[];
   date?: string;
   description?: string;
   image?: string;
   imageOriginalHeight?: number;
   imageOriginalWidth?: number;
+  lastUpdated?: string;
   slug: string;
   title: string;
   views?: number;
