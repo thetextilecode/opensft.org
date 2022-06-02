@@ -1,8 +1,16 @@
 import BlogList from '../components/elements/BlogList';
 import BlogSidebar from '../components/elements/BlogSidebar';
 import Layout from '../components/layout/Layout';
+import { GetStaticProps } from 'next';
+import { getAllPosts } from '../lib/api';
+import { IBlogPost } from '../../types';
+import { blogConfig } from '../../opensft.config';
 
-function PageBlogList() {
+export interface IPageBlogList {
+  posts: IBlogPost[];
+}
+
+function PageBlogList({ posts }: IPageBlogList) {
   return (
     <Layout parent='Home' sub='Blog' subChild='List'>
       <section className='mt-50 mb-50'>
@@ -19,11 +27,11 @@ function PageBlogList() {
                 </div>
               </div>
               <div className='loop-grid loop-list pr-30'>
-                <BlogList show={6} />
+                <BlogList posts={posts} show={blogConfig.postsPerPage} />
               </div>
             </div>
             <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar />
+              <BlogSidebar posts={posts} show={blogConfig.postsPerSidebar} />
             </div>
           </div>
         </div>
@@ -33,3 +41,11 @@ function PageBlogList() {
 }
 
 export default PageBlogList;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts(['date', 'description', 'draft', 'slug', 'title']);
+
+  return {
+    props: { posts },
+  };
+};

@@ -6,6 +6,7 @@ export const server = dev
 
 export const blogConfig = {
   author: 'Rachel Yordán',
+  postsPerSidebar: 5,
   postsPerPage: 8,
   showDate: true,
 };

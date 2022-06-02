@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { IBlogPost } from '../../../types';
 
-const BlogSidebar = () => {
+interface IBlogSidebar {
+  posts: IBlogPost[];
+  show?: number;
+}
+
+const BlogSidebar = ({posts, show}: IBlogSidebar) => {
   return (
     <div className='widget-area'>
       <div className='sidebar-widget widget_search mb-50'>

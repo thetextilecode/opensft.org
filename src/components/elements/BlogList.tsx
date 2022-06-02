@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { IBlogPost } from '../../../types';
 
 export interface IBlogList {
+  posts?: any[];
   show?: any;
 }
 
@@ -82,7 +83,7 @@ export const blogPosts: IBlogPost[] = [
   },
 ];
 
-const BlogList = ({ show }: IBlogList) => {
+const BlogList = ({ posts, show }: IBlogList) => {
   return (
     <>
       {blogPosts.slice(0, show).map((item, i) => (
