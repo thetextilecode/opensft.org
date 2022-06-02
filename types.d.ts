@@ -22,8 +22,11 @@ export interface IBlogPost {
   views?: number;
 }
 
-export interface IMetaProps
-  extends Pick<PostType, 'date' | 'description' | 'image' | 'title'> {
+export interface IMetaProps {
+  date?: string;
+  description?: string;
+  image?: string;
+  title?: string;
   /**
    * For the meta tag `og:type`
    */

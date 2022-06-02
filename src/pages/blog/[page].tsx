@@ -10,7 +10,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
 import React from 'react';
-// import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../lib/mdxUtils';
 import { IBlogPost, IMetaProps } from '../../../types';
 import Layout from '../../components/layout/Layout';
