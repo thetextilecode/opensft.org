@@ -46,7 +46,7 @@ const Newsletter = () => {
                     <div style={{position: 'absolute', left: '-5000px', ariaHidden: true }}>
                       <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1" value=""/>
                     </div>
-                  <input type="submit" value="Join the Movement" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
+                  <input type="submit" placeholder="Join the Movement" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
 
                 </div>
               </form>
