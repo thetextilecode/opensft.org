@@ -72,7 +72,7 @@ const Footer = () => {
                   <Link href='/login-register'>Sign In</Link>
                 </li>
                 <li>
-                  <Link href='/saved'>My Wishlist</Link>
+                  <Link href='/saved'>My Saved Items</Link>
                 </li>
               </ul>
             </div>
