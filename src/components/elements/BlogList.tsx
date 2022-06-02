@@ -25,7 +25,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
           </div>
           <div className='entry-content-2'>
             <h3 className='post-title mb-15'>
-              <Link href='/blog-post-right'>
+              <Link href={`/${post.slug}`}>
                 <a>
                   {post.title}
                 </a>
@@ -44,7 +44,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
                 {/*  126k Views*/}
                 {/*</span>*/}
               </div>
-              <Link href='/blog-post-right'>
+              <Link href={`/${post.slug}`}>
                 <a className='text-brand'>
                   Read more{' '}
                   <i className='fi-rs-arrow-right'></i>
