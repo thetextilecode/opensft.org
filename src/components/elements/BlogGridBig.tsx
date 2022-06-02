@@ -21,10 +21,10 @@ const BlogGridBig = ({ show }: IBlogGridBig) => {
                   <div style={{ width: '100%' }}>
                     <a>
                       <Image
-                        src={`/assets/images/blog/${item.img}`}
+                        src={`/assets/images/blog/${item.image}`}
                         layout={'responsive'}
-                        height={item.imgOriginalHeight}
-                        width={item.imgOriginalWidth}
+                        height={item.imageOriginalHeight}
+                        width={item.imageOriginalWidth}
                         alt=''
                       />
                     </a>
@@ -68,15 +68,15 @@ const BlogGridBig = ({ show }: IBlogGridBig) => {
                 </Link>
               </h2>
               <p className='post-exerpt font-medium text-muted mb-30'>
-                {item.desc}
+                {item.description}
               </p>
               <div className='mb-20 entry-meta meta-2'>
                 <div className='font-xs '>
                   <span className='post-by'>
                     By{' '}
-                    <Link href='/blog-category-grid'>
-                      <a>{item.category}</a>
-                    </Link>
+                    {/*<Link href='/blog-category-grid'>*/}
+                    {/*  <a>{item.category}</a>*/}
+                    {/*</Link>*/}
                   </span>
                   <span className='post-on'>{item.date}</span>
                   <span className='time-reading'>
