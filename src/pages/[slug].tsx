@@ -14,7 +14,6 @@ import { postFilePaths, POSTS_PATH } from '../lib/mdxUtils';
 import { IBlogPost, IMetaProps } from '../../types';
 import Layout from '../components/layout/Layout';
 import { blogConfig, siteConfig } from '../../opensft.config';
-import BlogSingle from '../components/elements/BlogSingle';
 import BlogSidebar from '../components/elements/BlogSidebar';
 import ShareIcons from '../components/elements/ShareIcons';
 import CommentsArea from '../components/elements/CommentsArea';
@@ -111,7 +110,7 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                     </div>
                     <ShareIcons />
                   </div>
-                  
+
                   {blogConfig.showComments && (
                     <>
                       <CommentsArea />

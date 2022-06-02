@@ -21,7 +21,7 @@ const BlogSingle = ({ post }: IBlogSingle) => {
         <div className='single-header-meta'>
           <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
             <span className='post-by'>
-              By <a href='src/components/elements/BlogSingle#'>{blogConfig.author}</a>
+              By <Link href='/#'>{blogConfig.author}</Link>
             </span>
             <span className='post-on has-dot'>{post.date}</span>
             <span className='time-reading has-dot'>
