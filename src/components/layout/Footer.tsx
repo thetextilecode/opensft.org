@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className='col flex-horizontal-center'>
                   <Image
                     className='icon-email'
-                    src='/assets/imgs/theme/icons/icon-email.svg'
+                    src='/assets/images/theme/icons/icon-email.svg'
                     alt=''
                     width={40}
                     height={40}
@@ -151,7 +151,7 @@ const Footer = () => {
                     >
                       <Image
                         className='active'
-                        src='/assets/imgs/theme/app-store.jpg'
+                        src='/assets/images/theme/app-store.jpg'
                         alt=''
                         width={166}
                         height={47}
@@ -159,7 +159,7 @@ const Footer = () => {
                     </a>
                     <a href='src/components/layout/Footer#' className='hover-up'>
                       <Image
-                        src='/assets/imgs/theme/google-play.jpg'
+                        src='/assets/images/theme/google-play.jpg'
                         alt=''
                         width={166}
                         height={47}
@@ -173,7 +173,7 @@ const Footer = () => {
                   </p>
                   <Image
                     className='wow fadeIn animated'
-                    src='/assets/imgs/theme/payment-method.png'
+                    src='/assets/images/theme/payment-method.png'
                     alt=''
                     height={32}
                     width={224}

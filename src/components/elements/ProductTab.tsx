@@ -259,7 +259,7 @@ const ProductTab = () => {
                         <div className='thumb text-center'>
                           <div style={{ width: '100%' }}>
                             <Image
-                              src='/assets/imgs/page/avatar-6.jpg'
+                              src='/assets/images/page/avatar-6.jpg'
                               alt=''
                               layout={'responsive'}
                               width={850}
@@ -313,7 +313,7 @@ const ProductTab = () => {
                         <div className='thumb text-center'>
                           <div style={{ width: '100%' }}>
                           <Image
-                            src='/assets/imgs/page/avatar-7.jpg'
+                            src='/assets/images/page/avatar-7.jpg'
                             alt=''
                             layout={'responsive'}
                             width={850}
@@ -366,7 +366,7 @@ const ProductTab = () => {
                         <div className='thumb text-center'>
                           <div style={{ width: '100%' }}>
                           <Image
-                            src='/assets/imgs/page/avatar-8.jpg'
+                            src='/assets/images/page/avatar-8.jpg'
                             alt=''
                             layout={'responsive'}
                             width={850}

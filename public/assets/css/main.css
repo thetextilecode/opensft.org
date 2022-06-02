@@ -1058,15 +1058,15 @@ button.submit:hover, button[type='submit']:hover {
 }
 
 .btn.btn-brush.btn-brush-1, .button.btn-brush.btn-brush-1 {
-  background-image: url(../imgs/theme/btn-brush-bg-1.png);
+  background-image: url(../images/theme/btn-brush-bg-1.png);
 }
 
 .btn.btn-brush.btn-brush-2, .button.btn-brush.btn-brush-2 {
-  background-image: url(../imgs/theme/btn-brush-bg-2.png);
+  background-image: url(../images/theme/btn-brush-bg-2.png);
 }
 
 .btn.btn-brush.btn-brush-3, .button.btn-brush.btn-brush-3 {
-  background-image: url(../imgs/theme/btn-brush-bg-3.png);
+  background-image: url(../images/theme/btn-brush-bg-3.png);
 }
 
 .comments-area .btn-reply {
@@ -4365,7 +4365,7 @@ table .product-thumbnail img {
 }
 
 .product-rate {
-  background-image: url("../imgs/theme/rating-stars.png");
+  background-image: url("../images/theme/rating-stars.png");
   background-position: 0 -12px;
   background-repeat: repeat-x;
   height: 12px;
@@ -4377,7 +4377,7 @@ table .product-thumbnail img {
 .product-rating {
   height: 12px;
   background-repeat: repeat-x;
-  background-image: url("../imgs/theme/rating-stars.png");
+  background-image: url("../images/theme/rating-stars.png");
   background-position: 0 0;
 }
 
@@ -5278,7 +5278,7 @@ h6.post-title {
   border-bottom: 1px solid #e2e9e1;
   background-color: #f2f3f8;
   font-size: 14px;
-  background-image: url(../imgs/theme/topbar-bg.jpg);
+  background-image: url(../images/theme/topbar-bg.jpg);
   line-height: 1;
 }
 
@@ -5974,7 +5974,7 @@ h6.post-title {
   border-width: 0 0 3px 0;
   border-style: solid;
   font-size: 16px;
-  background-image: url(../imgs/theme/icons/search.png);
+  background-image: url(../images/theme/icons/search.png);
   background-repeat: no-repeat;
   background-position: center left;
   padding-left: 35px;

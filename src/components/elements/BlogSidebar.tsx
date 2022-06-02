@@ -72,7 +72,7 @@ const BlogSidebar = () => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src='/assets/imgs/blog/blog-1.jpg'
+                      src='/assets/images/blog/blog-1.jpg'
                       alt=''
                       layout={'responsive'}
                       width={1200}
@@ -102,7 +102,7 @@ const BlogSidebar = () => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src='/assets/imgs/blog/blog-3.jpg'
+                      src='/assets/images/blog/blog-3.jpg'
                       alt=''
                       layout={'responsive'}
                       width={1200}
@@ -133,7 +133,7 @@ const BlogSidebar = () => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src='/assets/imgs/blog/blog-4.jpg'
+                      src='/assets/images/blog/blog-4.jpg'
                       alt=''
                       layout={'responsive'}
                       width={1200}
@@ -163,7 +163,7 @@ const BlogSidebar = () => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src='/assets/imgs/blog/blog-5.jpg'
+                      src='/assets/images/blog/blog-5.jpg'
                       alt=''
                       layout={'responsive'}
                       width={1200}
@@ -194,7 +194,7 @@ const BlogSidebar = () => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src='/assets/imgs/blog/blog-6.jpg'
+                      src='/assets/images/blog/blog-6.jpg'
                       alt=''
                       layout={'responsive'}
                       width={1200}
@@ -223,7 +223,7 @@ const BlogSidebar = () => {
 
       <div className='banner-img wow fadeIn mb-45 animated d-lg-block d-none animated'>
         <div style={{ width: '100%' }}>
-          <Image src='/assets/imgs/banner/banner-11.jpg' alt='' layout={'responsive'} width={600} height={687} />
+          <Image src='/assets/images/banner/banner-11.jpg' alt='' layout={'responsive'} width={600} height={687} />
         </div>
         <div className='banner-text'>
           <span>Women Zone</span>

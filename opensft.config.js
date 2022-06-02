@@ -30,7 +30,7 @@ export const infoConfig = {
   copyright: 'Copyright 2022 © Open Source Fashion & Textiles',
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
-  logo: '/assets/imgs/theme/osft.jpg',
+  logo: '/assets/images/theme/osft.jpg',
   logoWidth: 256,
   logoHeight: 92,
   phone: '+44 20 8036 4986',

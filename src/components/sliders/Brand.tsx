@@ -49,7 +49,7 @@ const BrandSlider = () => {
             <div className='brand-logo'>
               <Image
                 className='img-grey-hover'
-                src={`/assets/imgs/banner/${item.img}`}
+                src={`/assets/images/banner/${item.img}`}
                 alt=''
                 width={203}
                 height={79}

@@ -13,7 +13,7 @@ const ShareIcons = ({ to, url }: IShareIcons) => {
         <li className='social-facebook'>
           <a href='src/components/elements/ShareIcons#'>
             <img
-              src='/assets/imgs/theme/icons/icon-facebook.svg'
+              src='/assets/images/theme/icons/icon-facebook.svg'
               alt='Facebook'
             />
           </a>
@@ -22,7 +22,7 @@ const ShareIcons = ({ to, url }: IShareIcons) => {
 
           <a href='src/components/elements/ShareIcons#'>
             <img
-              src='/assets/imgs/theme/icons/icon-twitter.svg'
+              src='/assets/images/theme/icons/icon-twitter.svg'
               alt='Twitter'
             />
           </a>
@@ -30,7 +30,7 @@ const ShareIcons = ({ to, url }: IShareIcons) => {
         <li className='social-instagram'>
           <a href='src/components/elements/ShareIcons#'>
             <img
-              src='/assets/imgs/theme/icons/icon-instagram.svg'
+              src='/assets/images/theme/icons/icon-instagram.svg'
               alt='Instagram'
             />
           </a>
@@ -38,7 +38,7 @@ const ShareIcons = ({ to, url }: IShareIcons) => {
         <li className='social-linkedin'>
           <a href='src/components/elements/ShareIcons#'>
             <img
-              src='/assets/imgs/theme/icons/icon-pinterest.svg'
+              src='/assets/images/theme/icons/icon-pinterest.svg'
               alt='Pinterest'
             />
           </a>

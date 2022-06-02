@@ -9,12 +9,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-1-1.jpg",
+        "img": "/assets/images/shop/product-1-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-1-2.jpg",
+        "img": "/assets/images/shop/product-1-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -22,17 +22,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-1-1.jpg",
+        "thumb": "/assets/images/shop/product-1-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-1-1.jpg",
+        "thumb": "/assets/images/shop/product-1-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-1-1.jpg",
+        "thumb": "/assets/images/shop/product-1-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -75,12 +75,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-2-1.jpg",
+        "img": "/assets/images/shop/product-2-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-2-2.jpg",
+        "img": "/assets/images/shop/product-2-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -88,17 +88,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-2-1.jpg",
+        "thumb": "/assets/images/shop/product-2-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-2-2.jpg",
+        "thumb": "/assets/images/shop/product-2-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-2-1.jpg",
+        "thumb": "/assets/images/shop/product-2-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -140,12 +140,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-3-1.jpg",
+        "img": "/assets/images/shop/product-3-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-3-2.jpg",
+        "img": "/assets/images/shop/product-3-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -153,17 +153,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-3-1.jpg",
+        "thumb": "/assets/images/shop/product-3-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-3-2.jpg",
+        "thumb": "/assets/images/shop/product-3-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-3-1.jpg",
+        "thumb": "/assets/images/shop/product-3-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -205,12 +205,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-4-1.jpg",
+        "img": "/assets/images/shop/product-4-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-4-2.jpg",
+        "img": "/assets/images/shop/product-4-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -218,17 +218,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-4-1.jpg",
+        "thumb": "/assets/images/shop/product-4-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-4-2.jpg",
+        "thumb": "/assets/images/shop/product-4-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-4-1.jpg",
+        "thumb": "/assets/images/shop/product-4-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -270,12 +270,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-5-1.jpg",
+        "img": "/assets/images/shop/product-5-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-5-2.jpg",
+        "img": "/assets/images/shop/product-5-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -283,17 +283,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-5-1.jpg",
+        "thumb": "/assets/images/shop/product-5-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-5-2.jpg",
+        "thumb": "/assets/images/shop/product-5-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-5-1.jpg",
+        "thumb": "/assets/images/shop/product-5-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -335,12 +335,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-6-1.jpg",
+        "img": "/assets/images/shop/product-6-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-6-2.jpg",
+        "img": "/assets/images/shop/product-6-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -348,17 +348,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-6-2.jpg",
+        "thumb": "/assets/images/shop/product-6-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-6-1.jpg",
+        "thumb": "/assets/images/shop/product-6-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-6-2.jpg",
+        "thumb": "/assets/images/shop/product-6-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -399,12 +399,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-7-1.jpg",
+        "img": "/assets/images/shop/product-7-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-7-2.jpg",
+        "img": "/assets/images/shop/product-7-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -412,17 +412,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-7-1.jpg",
+        "thumb": "/assets/images/shop/product-7-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-7-2.jpg",
+        "thumb": "/assets/images/shop/product-7-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-7-1.jpg",
+        "thumb": "/assets/images/shop/product-7-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -464,12 +464,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-8-1.jpg",
+        "img": "/assets/images/shop/product-8-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-8-2.jpg",
+        "img": "/assets/images/shop/product-8-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -477,17 +477,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-8-1.jpg",
+        "thumb": "/assets/images/shop/product-8-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-8-2.jpg",
+        "thumb": "/assets/images/shop/product-8-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-8-1.jpg",
+        "thumb": "/assets/images/shop/product-8-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -529,12 +529,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-9-1.jpg",
+        "img": "/assets/images/shop/product-9-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-9-2.jpg",
+        "img": "/assets/images/shop/product-9-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -542,17 +542,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-9-1.jpg",
+        "thumb": "/assets/images/shop/product-9-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-9-2.jpg",
+        "thumb": "/assets/images/shop/product-9-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-9-1.jpg",
+        "thumb": "/assets/images/shop/product-9-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -594,12 +594,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-10-1.jpg",
+        "img": "/assets/images/shop/product-10-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-10-2.jpg",
+        "img": "/assets/images/shop/product-10-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -607,17 +607,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-10-1.jpg",
+        "thumb": "/assets/images/shop/product-10-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-10-2.jpg",
+        "thumb": "/assets/images/shop/product-10-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-10-1.jpg",
+        "thumb": "/assets/images/shop/product-10-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -659,12 +659,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-11-1.jpg",
+        "img": "/assets/images/shop/product-11-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-11-2.jpg",
+        "img": "/assets/images/shop/product-11-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -672,17 +672,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-11-1.jpg",
+        "thumb": "/assets/images/shop/product-11-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-11-2.jpg",
+        "thumb": "/assets/images/shop/product-11-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-11-1.jpg",
+        "thumb": "/assets/images/shop/product-11-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -724,12 +724,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-12-1.jpg",
+        "img": "/assets/images/shop/product-12-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-12-2.jpg",
+        "img": "/assets/images/shop/product-12-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -737,17 +737,17 @@
     "totalSell": 1227,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-12-1.jpg",
+        "thumb": "/assets/images/shop/product-12-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-12-2.jpg",
+        "thumb": "/assets/images/shop/product-12-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-12-1.jpg",
+        "thumb": "/assets/images/shop/product-12-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -790,12 +790,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-13-1.jpg",
+        "img": "/assets/images/shop/product-13-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-13-2.jpg",
+        "img": "/assets/images/shop/product-13-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -803,17 +803,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-13-1.jpg",
+        "thumb": "/assets/images/shop/product-13-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-13-2.jpg",
+        "thumb": "/assets/images/shop/product-13-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-13-1.jpg",
+        "thumb": "/assets/images/shop/product-13-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -857,12 +857,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-14-1.jpg",
+        "img": "/assets/images/shop/product-14-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-14-2.jpg",
+        "img": "/assets/images/shop/product-14-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -870,17 +870,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-14-1.jpg",
+        "thumb": "/assets/images/shop/product-14-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-14-2.jpg",
+        "thumb": "/assets/images/shop/product-14-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-14-1.jpg",
+        "thumb": "/assets/images/shop/product-14-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -924,12 +924,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-15-1.jpg",
+        "img": "/assets/images/shop/product-15-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-15-2.jpg",
+        "img": "/assets/images/shop/product-15-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -937,17 +937,17 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-15-1.jpg",
+        "thumb": "/assets/images/shop/product-15-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-15-2.jpg",
+        "thumb": "/assets/images/shop/product-15-2.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "thumb": "/assets/imgs/shop/product-15-1.jpg",
+        "thumb": "/assets/images/shop/product-15-1.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -991,12 +991,12 @@
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "images": [
       {
-        "img": "/assets/imgs/shop/product-1-1.jpg",
+        "img": "/assets/images/shop/product-1-1.jpg",
         "width": 1100,
         "height": 1100
       },
       {
-        "img": "/assets/imgs/shop/product-1-2.jpg",
+        "img": "/assets/images/shop/product-1-2.jpg",
         "width": 1100,
         "height": 1100
       }
@@ -1004,37 +1004,37 @@
     "totalSell": 27,
     "gallery": [
       {
-        "thumb": "/assets/imgs/shop/product-16-1.jpg",
+        "thumb": "/assets/images/shop/product-16-1.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-2.jpg",
+        "thumb": "/assets/images/shop/product-16-2.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-3.jpg",
+        "thumb": "/assets/images/shop/product-16-3.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-4.jpg",
+        "thumb": "/assets/images/shop/product-16-4.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-5.jpg",
+        "thumb": "/assets/images/shop/product-16-5.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-6.jpg",
+        "thumb": "/assets/images/shop/product-16-6.jpg",
         "width": 1100,
         "height": 1286
       },
       {
-        "thumb": "/assets/imgs/shop/product-16-7.jpg",
+        "thumb": "/assets/images/shop/product-16-7.jpg",
         "width": 1100,
         "height": 1286
       }

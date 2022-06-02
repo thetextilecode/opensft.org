@@ -25,28 +25,28 @@ const languages = [
   //   label: 'English',
   // },
   {
-    flag: '/assets/imgs/theme/flag-dt.png',
+    flag: '/assets/images/theme/flag-dt.png',
     flagWidth: 50,
     flagHeight: 30,
     href: '',
     label: 'Deutsch'
   },
   // {
-  //   flag: '/assets/imgs/theme/flag-es.png',
+  //   flag: '/assets/images/theme/flag-es.png',
   //   flagWidth: 0,
   //   flagHeight: 0,
   //   href: '',
   //   label: 'Español'
   // },
   {
-    flag: '/assets/imgs/theme/flag-fr.png',
+    flag: '/assets/images/theme/flag-fr.png',
     flagWidth: 50,
     flagHeight: 33,
     href: '',
     label: 'Français'
   },
   {
-    flag: '/assets/imgs/theme/flag-ru.png',
+    flag: '/assets/images/theme/flag-ru.png',
     flagWidth: 50,
     flagHeight: 33,
     href: '',
@@ -195,7 +195,7 @@ const Header = ({
                         <Image
                           className='svgInject'
                           alt='Compare'
-                          src='/assets/imgs/theme/icons/icon-compare.svg'
+                          src='/assets/images/theme/icons/icon-compare.svg'
                           layout={'responsive'}
                           width={25}
                           height={25}
@@ -212,7 +212,7 @@ const Header = ({
                         <Image
                           className='svgInject'
                           alt='Wishlist'
-                          src='/assets/imgs/theme/icons/icon-heart.svg'
+                          src='/assets/images/theme/icons/icon-heart.svg'
                           layout={'responsive'}
                           width={25}
                           height={25}
@@ -228,7 +228,7 @@ const Header = ({
                       <a className='mini-cart-icon'>
                         <Image
                           alt='Cart'
-                          src='/assets/imgs/theme/icons/icon-cart.svg'
+                          src='/assets/images/theme/icons/icon-cart.svg'
                           layout={'responsive'}
                           width={25}
                           height={25}
@@ -259,7 +259,7 @@ const Header = ({
               <Link href='/#'>
                 <a>
                   <Image
-                    src='/assets/imgs/theme/logo.svg'
+                    src='/assets/images/theme/logo.svg'
                     alt='logo'
                     layout={'responsive'}
                     width={120}
@@ -449,7 +449,7 @@ const Header = ({
                           <li className='mega-menu-col col-lg-5'>
                             <div className='header-banner2'>
                               <Image
-                                src='/assets/imgs/banner/menu-banner-2.jpg'
+                                src='/assets/images/banner/menu-banner-2.jpg'
                                 alt='menu_banner1'
                                 layout={'responsive'}
                                 width={370}
@@ -473,7 +473,7 @@ const Header = ({
                             </div>
                             <div className='header-banner2'>
                               <Image
-                                src='/assets/imgs/banner/menu-banner-3.jpg'
+                                src='/assets/images/banner/menu-banner-3.jpg'
                                 alt='menu_banner2'
                                 layout={'responsive'}
                                 width={370}
@@ -653,7 +653,7 @@ const Header = ({
                           <li className='mega-menu-col col-lg-5'>
                             <div className='header-banner2' style={{ width: '100%' }}>
                               <Image
-                                src='/assets/imgs/banner/menu-banner-4.jpg'
+                                src='/assets/images/banner/menu-banner-4.jpg'
                                 alt='menu_banner1'
                                 layout={'responsive'}
                                 width={1320}
@@ -843,7 +843,7 @@ const Header = ({
                           <li className='mega-menu-col col-lg-5'>
                             <div className='header-banner2'>
                               <Image
-                                src='/assets/imgs/banner/menu-banner-5.jpg'
+                                src='/assets/images/banner/menu-banner-5.jpg'
                                 alt='menu_banner1'
                                 layout={'responsive'}
                                 width={370}
@@ -867,7 +867,7 @@ const Header = ({
                             </div>
                             <div className='header-banner2'>
                               <Image
-                                src='/assets/imgs/banner/menu-banner-6.jpg'
+                                src='/assets/images/banner/menu-banner-6.jpg'
                                 alt='menu_banner2'
                                 layout={'responsive'}
                                 width={370}
@@ -1286,7 +1286,7 @@ const Header = ({
                             <Link href='/products/shop-grid-right'>
                               <a>
                                 <Image
-                                  src='/assets/imgs/banner/menu-banner.jpg'
+                                  src='/assets/images/banner/menu-banner.jpg'
                                   alt='Evara'
                                   layout={'responsive'}
                                   width={453}
@@ -1491,7 +1491,7 @@ const Header = ({
                     <a>
                       <Image
                         alt='Evara'
-                        src='/assets/imgs/theme/icons/icon-compare.svg'
+                        src='/assets/images/theme/icons/icon-compare.svg'
                         layout='responsive'
                         width={25}
                         height={25}
@@ -1507,7 +1507,7 @@ const Header = ({
                     <a>
                       <Image
                         alt='Evara'
-                        src='/assets/imgs/theme/icons/icon-heart.svg'
+                        src='/assets/images/theme/icons/icon-heart.svg'
                         layout='responsive'
                         width={25}
                         height={25}
@@ -1523,7 +1523,7 @@ const Header = ({
                     <a className='mini-cart-icon'>
                       <Image
                         alt='Evara'
-                        src='/assets/imgs/theme/icons/icon-cart.svg'
+                        src='/assets/images/theme/icons/icon-cart.svg'
                         layout='responsive'
                         width={25}
                         height={25}
@@ -1541,7 +1541,7 @@ const Header = ({
                             <a>
                               <Image
                                 alt='Evara'
-                                src='/assets/imgs/shop/thumbnail-3.jpg'
+                                src='/assets/images/shop/thumbnail-3.jpg'
                                 layout={'responsive'}
                                 width={600}
                                 height={600}
@@ -1578,7 +1578,7 @@ const Header = ({
                             <a>
                               <Image
                                 alt='Evara'
-                                src='/assets/imgs/shop/thumbnail-4.jpg'
+                                src='/assets/images/shop/thumbnail-4.jpg'
                                 layout={'responsive'}
                                 width={600}
                                 height={600}

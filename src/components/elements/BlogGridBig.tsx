@@ -21,7 +21,7 @@ const BlogGridBig = ({ show }: IBlogGridBig) => {
                   <div style={{ width: '100%' }}>
                     <a>
                       <Image
-                        src={`/assets/imgs/blog/${item.img}`}
+                        src={`/assets/images/blog/${item.img}`}
                         layout={'responsive'}
                         height={item.imgOriginalHeight}
                         width={item.imgOriginalWidth}

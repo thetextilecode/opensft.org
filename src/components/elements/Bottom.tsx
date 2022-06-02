@@ -10,7 +10,7 @@ const Bottom = () => {
             <div className='banner-img wow fadeIn animated mb-md-4 mb-lg-0'>
               <div style={{ width: '100%' }}>
               <Image
-                src='/assets/imgs/banner/banner-10.jpg'
+                src='/assets/images/banner/banner-10.jpg'
                 alt=''
                 layout={'responsive'}
                 width={306}
@@ -42,7 +42,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-3.jpg'
+                        src='/assets/images/shop/thumbnail-3.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -72,7 +72,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-4.jpg'
+                        src='/assets/images/shop/thumbnail-4.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -102,7 +102,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-5.jpg'
+                        src='/assets/images/shop/thumbnail-5.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -140,7 +140,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-6.jpg'
+                        src='/assets/images/shop/thumbnail-6.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -171,7 +171,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-7.jpg'
+                        src='/assets/images/shop/thumbnail-7.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -201,7 +201,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-8.jpg'
+                        src='/assets/images/shop/thumbnail-8.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -239,7 +239,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-9.jpg'
+                        src='/assets/images/shop/thumbnail-9.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -270,7 +270,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-1.jpg'
+                        src='/assets/images/shop/thumbnail-1.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}
@@ -301,7 +301,7 @@ const Bottom = () => {
                   <Link href='/products/shop-grid-right'>
                     <a>
                       <Image
-                        src='/assets/imgs/shop/thumbnail-2.jpg'
+                        src='/assets/images/shop/thumbnail-2.jpg'
                         alt=''
                         layout={'responsive'}
                         width={600}

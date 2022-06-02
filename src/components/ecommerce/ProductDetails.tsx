@@ -305,7 +305,7 @@ const ProductDetails = ({
                       <div style={{ width: '100%' }}>
                       <Image
                         className='border-radius-10'
-                        src='/assets/imgs/banner/banner-4.png'
+                        src='/assets/images/banner/banner-4.png'
                         alt=''
                         layout={'responsive'}
                         width={1320}

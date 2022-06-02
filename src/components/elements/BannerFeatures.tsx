@@ -46,7 +46,7 @@ const BannerFeatures = () => {
         <div className='col-lg-2 col-md-4 mb-md-3 mb-lg-0' key={i}>
           <div className='banner-features wow fadeIn animated hover-up'>
             <Image
-              src={`/assets/imgs/theme/icons/${item.img}`}
+              src={`/assets/images/theme/icons/${item.img}`}
               alt=''
               width={152}
               height={105}

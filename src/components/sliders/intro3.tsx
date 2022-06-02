@@ -50,7 +50,7 @@ const Intro3 = () => {
                                 </div>
                                 <div className="slider-img">
                                     <Image
-                                        src="/assets/imgs/slider/slider-4.png"
+                                        src="/assets/images/slider/slider-4.png"
                                         alt=""
                                     />
                                 </div>
@@ -83,7 +83,7 @@ const Intro3 = () => {
                                 </div>
                                 <div className="slider-img">
                                     <Image
-                                        src="/assets/imgs/slider/slider-5.png"
+                                        src="/assets/images/slider/slider-5.png"
                                         alt=""
                                     />
                                 </div>

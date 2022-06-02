@@ -88,7 +88,7 @@ const CategorySlider = () => {
                   <div style={{ width: '100%' }}>
                     <a>
                       <Image
-                        src={`/assets/imgs/shop/${item.img}`}
+                        src={`/assets/images/shop/${item.img}`}
                         alt=''
                         layout={'responsive'}
                         width={item.imgOriginalWidth}

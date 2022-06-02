@@ -36,7 +36,7 @@ function Test() {
                                   <div style={{ width: '100%' }}>
                                   <Image
                                         className="border-radius-10"
-                                        src="/assets/imgs/banner/banner-5.jpg"
+                                        src="/assets/images/banner/banner-5.jpg"
                                         alt=""
                                         layout={'responsive'}
                                         width={600}
@@ -60,7 +60,7 @@ function Test() {
                                   <div style={{ width: '100%' }}>
                                   <Image
                                         className="border-radius-10"
-                                        src="/assets/imgs/banner/banner-7.jpg"
+                                        src="/assets/images/banner/banner-7.jpg"
                                         alt=""
                                         layout={'responsive'}
                                         width={600}

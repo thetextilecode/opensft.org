@@ -3,7 +3,7 @@ const Banner4 = () => {
     <div
       className='banner-bg wow fadeIn animated'
       style={{
-        backgroundImage: 'url(\'/assets/imgs/banner/banner-8.jpg\')',
+        backgroundImage: 'url(\'/assets/images/banner/banner-8.jpg\')',
       }}
     >
       <div className='banner-content'>

@@ -30,7 +30,7 @@ function About() {
             </div>
             <div className='col-lg-6'>
               <Image
-                src='/assets/imgs/page/about-1.png'
+                src='/assets/images/page/about-1.png'
                 alt=''
                 layout={'responsive'}
                 width={1000}
@@ -69,7 +69,7 @@ function About() {
               <div className='col-lg-3 col-md-6'>
                 <div className='blog-card border-radius-10 overflow-hidden text-center'>
                   <Image
-                    src='/assets/imgs/page/avatar-1.jpg'
+                    src='/assets/images/page/avatar-1.jpg'
                     layout={'responsive'}
                     width={564}
                     height={702}
@@ -89,7 +89,7 @@ function About() {
               <div className='col-lg-3 col-md-6'>
                 <div className='blog-card border-radius-10 overflow-hidden text-center'>
                   <Image
-                    src='/assets/imgs/page/avatar-2.jpg'
+                    src='/assets/images/page/avatar-2.jpg'
                     alt=''
                     layout={'responsive'}
                     width={564}
@@ -109,7 +109,7 @@ function About() {
               <div className='col-lg-3 col-md-6'>
                 <div className='blog-card border-radius-10 overflow-hidden text-center'>
                   <Image
-                    src='/assets/imgs/page/avatar-3.jpg'
+                    src='/assets/images/page/avatar-3.jpg'
                     alt=''
                     className='border-radius-10 mb-30 hover-up'
                     layout={'responsive'}
@@ -127,7 +127,7 @@ function About() {
               <div className='col-lg-3 col-md-6'>
                 <div className='blog-card border-radius-10 overflow-hidden text-center'>
                   <Image
-                    src='/assets/imgs/page/avatar-4.jpg'
+                    src='/assets/images/page/avatar-4.jpg'
                     alt=''
                     className='border-radius-10 mb-30 hover-up'
                     layout={'responsive'}
@@ -170,7 +170,7 @@ function About() {
             <div className='col-md-4 text-center mb-md-0 mb-4'>
               <Image
                 className='btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated'
-                src='/assets/imgs/page/company-1.jpg'
+                src='/assets/images/page/company-1.jpg'
                 alt=''
                 layout={'responsive'}
                 width={720}
@@ -188,7 +188,7 @@ function About() {
             <div className='col-md-4 text-center mb-md-0 mb-4'>
               <Image
                 className='btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated'
-                src='/assets/imgs/page/company-2.jpg'
+                src='/assets/images/page/company-2.jpg'
                 alt=''
                 layout={'responsive'}
                 width={720}
@@ -205,7 +205,7 @@ function About() {
             <div className='col-md-4 text-center'>
               <Image
                 className='btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated'
-                src='/assets/imgs/page/company-3.jpg'
+                src='/assets/images/page/company-3.jpg'
                 alt=''
                 layout={'responsive'}
                 width={720}
@@ -249,7 +249,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-1.jpg'
+                      src='/assets/images/page/avatar-1.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}
@@ -278,7 +278,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-3.jpg'
+                      src='/assets/images/page/avatar-3.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}
@@ -307,7 +307,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-2.jpg'
+                      src='/assets/images/page/avatar-2.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}
@@ -336,7 +336,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-4.jpg'
+                      src='/assets/images/page/avatar-4.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}
@@ -365,7 +365,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-5.jpg'
+                      src='/assets/images/page/avatar-5.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}
@@ -394,7 +394,7 @@ function About() {
                   <div style={{ width: '100%' }}>
                     <Image
                       className='btn-shadow-brand hover-up border-radius-5 bg-brand-muted'
-                      src='/assets/imgs/page/avatar-1.jpg'
+                      src='/assets/images/page/avatar-1.jpg'
                       layout={'responsive'}
                       width={564}
                       height={702}

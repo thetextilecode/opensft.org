@@ -51,7 +51,7 @@ const Intro2 = () => {
                                 <div className="single-slider-img single-slider-img-1">
                                     <Image
                                         className="animated"
-                                        src="/assets/imgs/slider/slider-3.png"
+                                        src="/assets/images/slider/slider-3.png"
                                         alt=""
                                         layout={'fill'}
                                     />
@@ -86,7 +86,7 @@ const Intro2 = () => {
                                 <div className="single-slider-img single-slider-img-1">
                                     <Image
                                         className="animated"
-                                        src="/assets/imgs/slider/slider-1.png"
+                                        src="/assets/images/slider/slider-1.png"
                                         alt=""
                                         layout={'fill'}
                                     />
@@ -119,7 +119,7 @@ const Intro2 = () => {
                                 <div className="single-slider-img single-slider-img-1">
                                     <Image
                                         className="animated"
-                                        src="/assets/imgs/slider/slider-2.png"
+                                        src="/assets/images/slider/slider-2.png"
                                         alt=""
                                         layout={'fill'}
                                     />

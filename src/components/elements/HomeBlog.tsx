@@ -10,7 +10,7 @@ const HomeBlog = () => {
             <Link href='/blog-post-fullwidth'>
               <a className='color-white'>
                   <img
-                    src='/assets/imgs/blog/blog-2.jpg'
+                    src='/assets/images/blog/blog-2.jpg'
                     alt=''
                   />
               </a>
@@ -56,7 +56,7 @@ const HomeBlog = () => {
             <Link href='/blog-post-fullwidth'>
               <a className='color-white'>
                   <img
-                    src='/assets/imgs/blog/blog-1.jpg'
+                    src='/assets/images/blog/blog-1.jpg'
                     alt=''
                   />
               </a>

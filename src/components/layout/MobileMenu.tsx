@@ -41,7 +41,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
           <div className='mobile-header-logo'>
             <Link href='/index'>
               <a>
-                <Image src='/assets/imgs/theme/logo.svg' alt='logo' width={120} height={33} />
+                <Image src='/assets/images/theme/logo.svg' alt='logo' width={120} height={33} />
               </a>
             </Link>
           </div>
@@ -489,27 +489,27 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
             <h5 className='mb-15 text-grey-4'>Follow Us</h5>
             <Link href='src/components/layout/MobileMenu#'>
               <a>
-                <Image src='/assets/imgs/theme/icons/icon-facebook.svg' alt='Facebook' width={20} height={20} />
+                <Image src='/assets/images/theme/icons/icon-facebook.svg' alt='Facebook' width={20} height={20} />
               </a>
             </Link>
             <Link href='src/components/layout/MobileMenu#'>
               <a>
-                <Image src='/assets/imgs/theme/icons/icon-twitter.svg' alt='Twitter' width={20} height={20} />
+                <Image src='/assets/images/theme/icons/icon-twitter.svg' alt='Twitter' width={20} height={20} />
               </a>
             </Link>
             <Link href='src/components/layout/MobileMenu#'>
               <a>
-                <Image src='/assets/imgs/theme/icons/icon-instagram.svg' alt='Instagram' width={20} height={20} />
+                <Image src='/assets/images/theme/icons/icon-instagram.svg' alt='Instagram' width={20} height={20} />
               </a>
             </Link>
             <Link href='src/components/layout/MobileMenu#'>
               <a>
-                <Image src='/assets/imgs/theme/icons/icon-pinterest.svg' alt='Pinterest' width={20} height={20} />
+                <Image src='/assets/images/theme/icons/icon-pinterest.svg' alt='Pinterest' width={20} height={20} />
               </a>
             </Link>
             <Link href='src/components/layout/MobileMenu#'>
               <a>
-                <Image src='/assets/imgs/theme/icons/icon-youtube.svg' alt='YouTube' width={20} height={20} />
+                <Image src='/assets/images/theme/icons/icon-youtube.svg' alt='YouTube' width={20} height={20} />
               </a>
             </Link>
           </div>

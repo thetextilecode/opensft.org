@@ -8,7 +8,7 @@ function Custom404() {
           <div className='col-lg-8 m-auto'>
             <p className='mb-50'>
                 <img
-                  src='/assets/imgs/theme/404.png'
+                  src='/assets/images/theme/404.png'
                   alt=''
                   className='hover-up'
                 />

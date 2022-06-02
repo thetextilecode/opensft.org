@@ -130,7 +130,7 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                   <div className="single-post clearfix">
                     <div className="image">
                       <Image
-                        src="/assets/imgs/shop/thumbnail-3.jpg"
+                        src="/assets/images/shop/thumbnail-3.jpg"
                         alt="#"
                         layout={'responsive'}
                         width={600}
@@ -155,7 +155,7 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                   <div className="single-post clearfix">
                     <div className="image">
                       <Image
-                        src="/assets/imgs/shop/thumbnail-4.jpg"
+                        src="/assets/images/shop/thumbnail-4.jpg"
                         alt="#"
                         layout={'responsive'}
                         width={600}
@@ -180,7 +180,7 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                   <div className="single-post clearfix">
                     <div className="image">
                       <Image
-                        src="/assets/imgs/shop/thumbnail-5.jpg"
+                        src="/assets/images/shop/thumbnail-5.jpg"
                         alt="#"
                         layout={'responsive'}
                         width={600}
@@ -206,7 +206,7 @@ const Products = ({ products, productFilters, fetchProduct }: IProducts) => {
                 <div className="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
                   <div style={{ width: '100%' }}>
                   <Image
-                    src="/assets/imgs/banner/banner-11.jpg"
+                    src="/assets/images/banner/banner-11.jpg"
                     alt=""
                     layout={'responsive'}
                     width={600}

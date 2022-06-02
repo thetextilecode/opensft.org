@@ -28,7 +28,7 @@ const BlogSingle = () => {
       </div>
       <figure className='single-thumbnail'>
         <div style={{ width: '100%' }}>
-        <Image src='/assets/imgs/blog/blog-6.jpg'
+        <Image src='/assets/images/blog/blog-6.jpg'
                alt=''
                layout={'responsive'}
                width={1200}
@@ -154,7 +154,7 @@ const BlogSingle = () => {
           <div style={{ position: 'relative', width: '100%' }}>
             <Image
               className='border-radius-10'
-              src='/assets/imgs/banner/banner-4.png'
+              src='/assets/images/banner/banner-4.png'
               alt=''
               layout={'responsive'}
               width={1320}

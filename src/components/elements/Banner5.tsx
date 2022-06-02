@@ -8,7 +8,7 @@ const Banner5 = () => {
       <div className='col-lg-4 col-md-6'>
         <div className='banner-img wow fadeIn animated'>
           <div style={{ width: '100%' }}>
-            <Image src='/assets/imgs/banner/banner-1.png' alt='' layout={'responsive'} width={600} height={255} />
+            <Image src='/assets/images/banner/banner-1.png' alt='' layout={'responsive'} width={600} height={255} />
           </div>
           <div className='banner-text'>
             <span>Smart Offer</span>
@@ -27,7 +27,7 @@ const Banner5 = () => {
       <div className='col-lg-4 col-md-6'>
         <div className='banner-img wow fadeIn animated'>
           <div style={{ width: '100%' }}>
-            <Image src='/assets/imgs/banner/banner-2.png' alt='' layout={'responsive'} width={600} height={255} />
+            <Image src='/assets/images/banner/banner-2.png' alt='' layout={'responsive'} width={600} height={255} />
           </div>
           <div className='banner-text'>
             <span>Sale off</span>
@@ -46,9 +46,9 @@ const Banner5 = () => {
       <div className='col-lg-4 d-md-none d-lg-flex'>
         <div className='banner-img wow fadeIn animated mb-sm-0'>
           {/*<div style={{ width: '100%' }}>*/}
-            {/*<Image src='/assets/imgs/banner/banner-3.png' alt='' layout={'responsive'} width={600} height={255} />*/}
-            {/*<Image src='/assets/imgs/banner/banner-3.png' alt='' layout={'fill'} objectFit={'contain'} />*/}
-            <img src='/assets/imgs/banner/banner-3.png' alt='' />
+            {/*<Image src='/assets/images/banner/banner-3.png' alt='' layout={'responsive'} width={600} height={255} />*/}
+            {/*<Image src='/assets/images/banner/banner-3.png' alt='' layout={'fill'} objectFit={'contain'} />*/}
+            <img src='/assets/images/banner/banner-3.png' alt='' />
           {/*</div>*/}
           <div className='banner-text'>
             <span>New Arrivals</span>

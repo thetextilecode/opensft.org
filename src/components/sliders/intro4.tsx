@@ -57,7 +57,7 @@ const Intro4 = () => {
                                     <div className="single-slider-img single-slider-img-1">
                                         <Image
                                             className="animated"
-                                            src="/assets/imgs/slider/slider-6.png"
+                                            src="/assets/images/slider/slider-6.png"
                                             alt=""
                                         />
                                     </div>
@@ -96,7 +96,7 @@ const Intro4 = () => {
                                     <div className="single-slider-img single-slider-img-1">
                                         <Image
                                             className="animated"
-                                            src="/assets/imgs/slider/slider-7.png"
+                                            src="/assets/images/slider/slider-7.png"
                                             alt=""
                                         />
                                     </div>
