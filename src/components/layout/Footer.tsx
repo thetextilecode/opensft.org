@@ -95,10 +95,10 @@ const Footer = () => {
                         <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>
                         {/*}<!-- real people should not fill this in and expect good things - do not remove this or risk
                      form bot signups-->{*/}
-                        <div style={{position: 'absolute', left: '-5000px', ariaHidden: true }}>
+                        <div style={{position: 'absolute', left: '-5000px', ariahidden: true }}>
                           <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1" value=""/>
                         </div>
-                        <input type="submit" value="Join the Movement" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
 
                       </div>
                     </form>
