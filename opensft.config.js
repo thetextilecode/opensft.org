@@ -56,7 +56,14 @@ export const headerConfig = {
     showMobilePromo: false
   },
   middle: {},
-  top: {}
+  top: {
+    showNewsflash: true,
+    newsflash: {
+      callToAction: ' View details',
+      href: '/products/shop-grid-right',
+      text: 'Get great devices up to 50% off',
+    }
+  }
 };
 
 export const menuConfig = {};
@@ -100,3 +107,41 @@ export const socialConfig = {
   twitter: 'opensourceft',
   // youtube: ''
 };
+
+export const languages = [
+  // {
+  //   flag: '',
+  //   flagWidth: 0,
+  //   flagHeight: 0,
+  //   href: '',
+  //   label: 'English',
+  // },
+  {
+    flag: '/assets/images/theme/flag-dt.png',
+    flagWidth: 50,
+    flagHeight: 30,
+    href: '',
+    label: 'Deutsch',
+  },
+  // {
+  //   flag: '/assets/images/theme/flag-es.png',
+  //   flagWidth: 0,
+  //   flagHeight: 0,
+  //   href: '',
+  //   label: 'Español'
+  // },
+  {
+    flag: '/assets/images/theme/flag-fr.png',
+    flagWidth: 50,
+    flagHeight: 33,
+    href: '',
+    label: 'Français',
+  },
+  {
+    flag: '/assets/images/theme/flag-ru.png',
+    flagWidth: 50,
+    flagHeight: 33,
+    href: '',
+    label: 'Pусский',
+  },
+];
