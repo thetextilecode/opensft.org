@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
-import { Info } from '../../../opensft.config';
+import { infoConfig } from '../../../opensft.config';
 
 export interface IHeader {
   headerStyle?: any,
@@ -14,6 +13,10 @@ export interface IHeader {
   totalCompareItems?: any,
   totalWishlistItems?: any,
 }
+
+const headerItems = [];
+
+const languages = [];
 
 const Header = ({
                   totalCartItems,
@@ -52,8 +55,9 @@ const Header = ({
                 <ul>
                   <li>
                     <i className='fi-rs-smartphone'></i>
-                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
-                      <a>(+01) - 2345 - 6789</a>
+                    <Link href='/#'>
+                      {/*<a>(+01) - 2345 - 6789</a>*/}
+                      <a>{ infoConfig.phone }</a>
                     </Link>
                   </li>
                   <li>
@@ -83,10 +87,13 @@ const Header = ({
               </div>
             </div>
             <div className='col-xl-3 col-lg-4'>
+
+              {/* Languages */}
+
               <div className='header-info header-info-right'>
                 <ul>
                   <li>
-                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                    <Link href='/#'>
                       <a className='language-dropdown-active'>
                         <i className='fi-rs-world'></i>
                         English
@@ -95,7 +102,7 @@ const Header = ({
                     </Link>
                     <ul className='language-dropdown'>
                       <li>
-                        <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                        <Link href='/#'>
                           <a>
                             <Image
                               src='/assets/imgs/theme/flag-fr.png'
@@ -109,7 +116,7 @@ const Header = ({
                         </Link>
                       </li>
                       <li>
-                        <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                        <Link href='/#'>
                           <a>
                             <Image
                               src='/assets/imgs/theme/flag-dt.png'
@@ -123,7 +130,7 @@ const Header = ({
                         </Link>
                       </li>
                       <li>
-                        <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                        <Link href='/#'>
                           <a>
                             <Image
                               src='/assets/imgs/theme/flag-ru.png'
@@ -153,14 +160,17 @@ const Header = ({
       <div className='header-middle header-middle-ptb-1 d-none d-lg-block'>
         <div className='container'>
           <div className='header-wrap'>
+
+            {/* Logo */}
+
             <div className='logo logo-width-1'>
-              <Link href='/Users/kahboom/Projects/opensft.org/public'>
+              <Link href='/#'>
                 <a>
                   <Image
-                    src={Info.logo}
-                    alt={Info.companyName + ' Logo'}
-                    width={Info.logoWidth}
-                    height={Info.logoHeight}
+                    src={infoConfig.logo}
+                    alt={infoConfig.companyName + ' Logo'}
+                    width={infoConfig.logoWidth}
+                    height={infoConfig.logoHeight}
                   />
                 </a>
               </Link>
@@ -169,6 +179,9 @@ const Header = ({
               <div className='search-style-2'>
                 <Search />
               </div>
+
+              {/* Compare, Cart & Wishlist Icons */}
+
               <div className='header-action-right'>
                 <div className='header-action-2'>
                   <div className='header-action-icon-2'>
@@ -236,8 +249,9 @@ const Header = ({
       >
         <div className='container'>
           <div className='header-wrap header-space-between position-relative'>
+            {/* Logo */}
             <div className='logo logo-width-1 d-block d-lg-none'>
-              <Link href='/Users/kahboom/Projects/opensft.org/public'>
+              <Link href='/#'>
                 <a>
                   <Image
                     src='/assets/imgs/theme/logo.svg'
@@ -249,6 +263,7 @@ const Header = ({
                 </a>
               </Link>
             </div>
+            {/* Browse Categories */}
             <div className='header-nav d-none d-lg-flex'>
               <div className='main-category-wrap d-none d-lg-block'>
                 <a
@@ -288,14 +303,14 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Dresses
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Blouses
                                         &
@@ -304,7 +319,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Hoodies
                                         &
@@ -313,7 +328,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Women's
                                         Sets
@@ -321,7 +336,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Suits
                                         &
@@ -330,14 +345,14 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Bodysuits
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Tanks
                                         &
@@ -346,7 +361,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Coats
                                         &
@@ -364,35 +379,35 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Leggings
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Skirts
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Shorts
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Jeans
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Pants
                                         &
@@ -401,7 +416,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Bikini
                                         Sets
@@ -409,14 +424,14 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Cover-Ups
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Swimwear
                                       </a>
@@ -435,7 +450,7 @@ const Header = ({
                                 width={370}
                                 height={200}
                               />
-                              <div className='banner_info'>
+                              <div className='banner_infoConfig'>
                                 <h6>
                                   10% Off
                                 </h6>
@@ -443,7 +458,7 @@ const Header = ({
                                   New
                                   Arrival
                                 </h4>
-                                <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                <Link href='/#'>
                                   <a>
                                     Shop
                                     now
@@ -459,7 +474,7 @@ const Header = ({
                                 width={370}
                                 height={200}
                               />
-                              <div className='banner_info'>
+                              <div className='banner_infoConfig'>
                                 <h6>
                                   15% Off
                                 </h6>
@@ -467,7 +482,7 @@ const Header = ({
                                   Hot
                                   Deals
                                 </h4>
-                                <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                <Link href='/#'>
                                   <a>
                                     Shop
                                     now
@@ -500,7 +515,7 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Down
                                         Jackets
@@ -508,21 +523,21 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Jackets
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Parkas
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Faux
                                         Leather
@@ -531,14 +546,14 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Trench
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Wool
                                         &
@@ -547,7 +562,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Vests
                                         &
@@ -556,7 +571,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Leather
                                         Coats
@@ -575,14 +590,14 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Blazers
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Suit
                                         Jackets
@@ -590,7 +605,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Suit
                                         Pants
@@ -598,21 +613,21 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Suits
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Vests
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Tailor-made
                                         Suits
@@ -620,7 +635,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Cover-Ups
                                       </a>
@@ -639,7 +654,7 @@ const Header = ({
                                 width={1320}
                                 height={300}
                               />
-                              <div className='banner_info'>
+                              <div className='banner_infoConfig'>
                                 <h6>
                                   10% Off
                                 </h6>
@@ -647,7 +662,7 @@ const Header = ({
                                   New
                                   Arrival
                                 </h4>
-                                <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                <Link href='/#'>
                                   <a>
                                     Shop
                                     now
@@ -680,21 +695,21 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Cellphones
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         iPhones
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Refurbished
                                         Phones
@@ -702,7 +717,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Mobile
                                         Phone
@@ -710,7 +725,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Mobile
                                         Phone
@@ -719,7 +734,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Phone
                                         Bags
@@ -729,7 +744,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Communication
                                         Equipments
@@ -737,7 +752,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Walkie
                                         Talkie
@@ -754,7 +769,7 @@ const Header = ({
                                     </span>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Screen
                                         Protectors
@@ -762,7 +777,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Wire
                                         Chargers
@@ -770,7 +785,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Wireless
                                         Chargers
@@ -778,7 +793,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Car
                                         Chargers
@@ -786,7 +801,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Power
                                         Bank
@@ -794,14 +809,14 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Armbands
                                       </a>
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Dust
                                         Plug
@@ -809,7 +824,7 @@ const Header = ({
                                     </Link>
                                   </li>
                                   <li>
-                                    <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                    <Link href='/#'>
                                       <a className='dropdown-item nav-link nav_item'>
                                         Signal
                                         Boosters
@@ -829,7 +844,7 @@ const Header = ({
                                 width={370}
                                 height={200}
                               />
-                              <div className='banner_info'>
+                              <div className='banner_infoConfig'>
                                 <h6>
                                   10% Off
                                 </h6>
@@ -837,7 +852,7 @@ const Header = ({
                                   New
                                   Arrival
                                 </h4>
-                                <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                <Link href='/#'>
                                   <a>
                                     Shop
                                     now
@@ -853,7 +868,7 @@ const Header = ({
                                 width={370}
                                 height={200}
                               />
-                              <div className='banner_info'>
+                              <div className='banner_infoConfig'>
                                 <h6>
                                   15% Off
                                 </h6>
@@ -861,7 +876,7 @@ const Header = ({
                                   Hot
                                   Deals
                                 </h4>
-                                <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                                <Link href='/#'>
                                   <a>
                                     Shop
                                     now
@@ -980,7 +995,7 @@ const Header = ({
                 <nav>
                   <ul>
                     <li>
-                      <Link href='/Users/kahboom/Projects/opensft.org/public'>
+                      <Link href='/#'>
                         <a className='active'>
                           Home
                           <i className='fi-rs-angle-down'></i>
@@ -988,7 +1003,7 @@ const Header = ({
                       </Link>
                       <ul className='sub-menu'>
                         <li>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public'>
+                          <Link href='/#'>
                             <a>Home 1</a>
                           </Link>
                         </li>
@@ -1093,7 +1108,7 @@ const Header = ({
                       </ul>
                     </li>
                     <li className='position-static'>
-                      <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                      <Link href='/#'>
                         <a>
                           Mega menu
                           <i className='fi-rs-angle-down'></i>
@@ -1101,7 +1116,7 @@ const Header = ({
                       </Link>
                       <ul className='mega-menu'>
                         <li className='sub-mega-menu sub-mega-menu-width-22'>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a className='menu-title'>
                               Women's Fashion
                             </a>
@@ -1158,7 +1173,7 @@ const Header = ({
                           </ul>
                         </li>
                         <li className='sub-mega-menu sub-mega-menu-width-22'>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a className='menu-title'>
                               Men's Fashion
                             </a>
@@ -1214,7 +1229,7 @@ const Header = ({
                           </ul>
                         </li>
                         <li className='sub-mega-menu sub-mega-menu-width-22'>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a className='menu-title'>
                               Technology
                             </a>
@@ -1351,7 +1366,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a>
                               Single Post
                               <i className='fi-rs-angle-right'></i>
@@ -1387,7 +1402,7 @@ const Header = ({
                       </ul>
                     </li>
                     <li>
-                      <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                      <Link href='/#'>
                         <a>
                           Pages
                           <i className='fi-rs-angle-down'></i>
@@ -1545,7 +1560,7 @@ const Header = ({
                           </h3>
                         </div>
                         <div className='shopping-cart-delete'>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a>
                               <i className='fi-rs-cross-small'></i>
                             </a>
@@ -1581,7 +1596,7 @@ const Header = ({
                           </h3>
                         </div>
                         <div className='shopping-cart-delete'>
-                          <Link href='/Users/kahboom/Projects/opensft.org/public#'>
+                          <Link href='/#'>
                             <a>
                               <i className='fi-rs-cross-small'></i>
                             </a>

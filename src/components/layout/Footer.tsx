@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Info, Social } from '../../../opensft.config';
+import { infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
 
 const Footer = () => {
@@ -59,10 +59,10 @@ const Footer = () => {
                 <div className='logo logo-width-1 wow fadeIn animated'>
                   <Link href='/Users/kahboom/Projects/opensft.org/public'><a>
                     <Image
-                      src={Info.logo}
-                      alt={Info.companyName + ' logo'}
-                      width={Info.logoWidth}
-                      height={Info.logoHeight}
+                      src={infoConfig.logo}
+                      alt={infoConfig.companyName + ' logo'}
+                      width={infoConfig.logoWidth}
+                      height={infoConfig.logoHeight}
                     />
                   </a>
                   </Link>
@@ -71,18 +71,18 @@ const Footer = () => {
                   Contact
                 </h5>
                 <p className='wow fadeIn animated'>
-                  <strong>Address: </strong>{Info.addressLine1} {Info.addressLine2} {Info.addressCity} {Info.addressPostcode}
+                  <strong>Address: </strong>{infoConfig.addressLine1} {infoConfig.addressLine2} {infoConfig.addressCity} {infoConfig.addressPostcode}
                 </p>
                 <p className='wow fadeIn animated'>
-                  <strong>Phone: </strong>{Info.phone}
+                  <strong>Phone: </strong>{infoConfig.phone}
                 </p>
                 <p className='wow fadeIn animated'>
-                  <strong>Hours: </strong>{Info.hours}
+                  <strong>Hours: </strong>{infoConfig.hours}
                 </p>
                 <h5 className='mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated'>
                   Follow Us
                 </h5>
-                <SocialIcons facebook={Social.facebook} instagram={Social.instagram} twitter={Social.twitter} />
+                <SocialIcons facebook={socialConfig.facebook} instagram={socialConfig.instagram} twitter={socialConfig.twitter} />
               </div>
             </div>
             <div className='col-lg-2 col-md-3'>
@@ -94,7 +94,7 @@ const Footer = () => {
                   <a href='src/components/layout/Footer#'>About Us</a>
                 </li>
                 <li>
-                  <a href='src/components/layout/Footer#'>Delivery Information</a>
+                  <a href='src/components/layout/Footer#'>Delivery infoConfigrmation</a>
                 </li>
                 <li>
                   <a href='src/components/layout/Footer#'>Privacy Policy</a>
@@ -192,12 +192,12 @@ const Footer = () => {
           <div className='col-lg-6'>
             <p className='float-md-left font-sm text-muted mb-0'>
               &copy; {new Date().getFullYear()},
-              <strong className='text-brand'>{Info.companyName}</strong>
+              <strong className='text-brand'>{infoConfig.companyName}</strong>
             </p>
           </div>
           <div className='col-lg-6'>
             <p className='text-lg-end text-start font-sm text-muted mb-0'>
-              {Info.copyright}
+              {infoConfig.copyright}
             </p>
           </div>
         </div>
