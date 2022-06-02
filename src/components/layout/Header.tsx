@@ -229,19 +229,33 @@ const Header = ({
               <div className='logo logo-width-1 d-block d-lg-none'>
                 <Link href='/'>
                   <a>
-                  <Image
-                    src='/assets/images/theme/logo.svg'
-                    alt={`${infoConfig.companyName} Logo`}
-                    layout={'responsive'}
-                    width={120}
-                    height={33}
-                  />
+                    <Image
+                      src='/assets/images/theme/logo.svg'
+                      alt={`${infoConfig.companyName} Logo`}
+                      layout={'responsive'}
+                      width={120}
+                      height={33}
+                    />
                   </a>
                 </Link>
               </div>
 
 
               <div className='header-nav d-none d-lg-flex'>
+
+                {/* Logo */}
+                <div className='main-category-wrap d-none d-lg-block logo logo-width-1'>
+                  <Link href='/'>
+                    <a>
+                      <Image
+                        src={infoConfig.logo}
+                        alt={infoConfig.companyName + ' Logo'}
+                        width={infoConfig.logoWidth}
+                        height={infoConfig.logoHeight}
+                      />
+                    </a>
+                  </Link>
+                </div>
 
                 {/* Browse Categories */}
                 {headerConfig.bottom.showBrowseCategories && (
