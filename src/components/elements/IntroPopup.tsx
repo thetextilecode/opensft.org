@@ -33,7 +33,7 @@ const IntroPopup = ({}: IIntroPopup) => {
                                 className="deal"
                                 style={{
                                     backgroundImage:
-                                        "url('assets/imgs/banner/menu-banner-7.png')",
+                                        "url('assets/images/banner/menu-banner-7.png')",
                                 }}
                             >
                                 <div className="deal-top">
