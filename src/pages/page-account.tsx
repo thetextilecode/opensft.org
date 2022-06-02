@@ -87,7 +87,7 @@ function Account() {
                                                     </a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/src/pages/page-login-register">
+                                                    <Link href="/src/pages/login-register">
                                                     <a
                                                         className="nav-link"
                                                         
@@ -412,7 +412,7 @@ function Account() {
                                                         <p>
                                                             Already have an
                                                             account?
-                                                            <Link href="/src/pages/page-login-register">
+                                                            <Link href="/src/pages/login-register">
                                                             <a>
                                                                 Log in instead!
                                                             </a>

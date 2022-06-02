@@ -395,7 +395,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                       <div className="total-amount">
                         <div className="left">
                           <div className="coupon">
-                            <form action="src/pages/shop-cart#" target="_blank">
+                            <form action="src/pages/shop-cart#cart.tsx" target="_blank">
                               <div className="form-row row justify-content-center">
                                 <div className="form-group col-lg-6">
                                   <input className="font-medium" name="Coupon" placeholder="Enter Your Coupon" />
@@ -445,7 +445,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                           </tbody>
                         </table>
                       </div>
-                      <a href="src/pages/shop-cart#" className="btn ">
+                      <a href="src/pages/shop-cart#cart.tsx" className="btn ">
                         <i className="fi-rs-box-alt mr-10"></i>
                         Proceed To CheckOut
                       </a>

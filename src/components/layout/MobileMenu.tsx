@@ -217,22 +217,22 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop-wishlist'>
+                      <Link href='/wishlist'>
                         <a>Shop – Wishlist</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop-cart'>
+                      <Link href='/cart'>
                         <a>Shop – Cart</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop-checkout'>
+                      <Link href='/checkout'>
                         <a>Shop – Checkout</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href='/shop-compare'>
+                      <Link href='/compare'>
                         <a>Shop – Compare</a>
                       </Link>
                     </li>
@@ -394,7 +394,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                   </Link>
                   <ul className={isActive.key == 5 ? 'dropdown' : 'd-none'}>
                     <li>
-                      <Link href='/page-about'>
+                      <Link href='/about'>
                         <a>About Us</a>
                       </Link>
                     </li>
@@ -409,7 +409,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/page-login-register'>
+                      <Link href='/login-register'>
                         <a>login/register</a>
                       </Link>
                     </li>
@@ -419,12 +419,12 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/page-privacy-policy'>
+                      <Link href='/privacy-policy'>
                         <a>Privacy Policy</a>
                       </Link>
                     </li>
                     <li>
-                      <Link href='/page-terms'>
+                      <Link href='/terms'>
                         <a>Terms of Service</a>
                       </Link>
                     </li>
@@ -475,7 +475,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
               </Link>
             </div>
             <div className='single-mobile-header-info'>
-              <Link href='/page-login-register'>
+              <Link href='/login-register'>
                 <a>Log In / Sign Up </a>
               </Link>
             </div>

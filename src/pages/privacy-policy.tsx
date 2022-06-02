@@ -13,7 +13,7 @@ function Privacy() {
                   <h2>Privacy Policy</h2>
                   <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
                     <span className='post-by'>
-                      By <a href='src/pages/page-privacy-policy#'>John</a>
+                      By <a href='src/pages/page-privacy-policy#privacy-policy.tsx'>John</a>
                     </span>
                     <span className='post-on has-dot'>9 April 2020</span>
                     <span className='time-reading has-dot'>8 mins read</span>
@@ -269,9 +269,9 @@ function Privacy() {
                     <li>
                       For more information about how we use cookies, web beacons and similar technologies see our
                       cookie policy
-                      <a href='src/pages/page-privacy-policy'>here</a>
+                      <a href='src/pages/privacy-policy.tsx'>here</a>
                       and for more general information on cookies, see
-                      <a href='src/pages/page-privacy-policy' rel='noopener noreferrer'>
+                      <a href='src/pages/privacy-policy.tsx' rel='noopener noreferrer'>
                         http://www.allaboutcookies.org
                       </a>
                       .
@@ -301,7 +301,7 @@ function Privacy() {
                       Occasionally, we will use third party advertising companies to serve ads based on prior visits
                       to our Sites. For example, if you visit our Sites, you may later see an add for our products and
                       services when you visit a different Site. Read more about your options in our
-                      <a href='src/pages/page-privacy-policy'>cookie policy</a>.
+                      <a href='src/pages/privacy-policy.tsx'>cookie policy</a>.
                     </li>
                   </ol>
                   <h4>Information about children</h4>

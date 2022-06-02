@@ -16,8 +16,13 @@ export const siteConfig = {
   title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
   description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
-  shareImage: 'https://nextjs-mdx-blog-starter.vercel.app/img/screenshot.png',
+  // shareImage: 'https://nextjs-mdx-blog-starter.vercel.app/img/screenshot.png',
+  shareImage: '/assets/images/theme/screenshot.png',
   shareImageAlt: 'Open Source Fashion & Textiles',
+};
+
+export const homeConfig = {
+  showBlahBlah: true
 };
 
 export const infoConfig = {

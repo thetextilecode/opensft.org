@@ -55,7 +55,7 @@ function Login() {
                             </div>
                             <a
                               className="text-muted"
-                              href="src/pages/page-login-register#"
+                              href="src/pages/page-login-register#login-register.tsx"
                             >
                               Forgot password?
                             </a>
@@ -147,7 +147,7 @@ function Login() {
                                 </label>
                               </div>
                             </div>
-                            <Link href="/src/pages/page-privacy-policy">
+                            <Link href="/src/pages/privacy-policy">
                               <a>
                                 <i className="fi-rs-book-alt mr-5 text-muted"></i>
                                 Lean more
@@ -171,7 +171,7 @@ function Login() {
                         <ul className="btn-login list_none text-center mb-15">
                           <li>
                             <a
-                              href="src/pages/page-login-register#"
+                              href="src/pages/page-login-register#login-register.tsx"
                               className="btn btn-facebook hover-up mb-lg-0 mb-sm-4"
                             >
                               Login With Facebook
@@ -179,7 +179,7 @@ function Login() {
                           </li>
                           <li>
                             <a
-                              href="src/pages/page-login-register#"
+                              href="src/pages/page-login-register#login-register.tsx"
                               className="btn btn-google hover-up"
                             >
                               Login With Google
@@ -188,7 +188,7 @@ function Login() {
                         </ul>
                         <div className="text-muted text-center">
                           Already have an account?{" "}
-                          <a href="src/pages/page-login-register#">Sign in now</a>
+                          <a href="src/pages/page-login-register#login-register.tsx">Sign in now</a>
                         </div>
                       </div>
                     </div>

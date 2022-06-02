@@ -26,7 +26,7 @@ function Contact() {
                                     magnam sequi.
                                 </p>
                                 <p className="wow fadeIn animated">
-                                    <Link href="/src/pages/page-about">
+                                    <Link href="/src/pages/about">
                                         <a className="btn btn-brand btn-lg font-weight-bold text-white border-radius-5 btn-shadow-brand hover-up">
                                             About Us
                                         </a>

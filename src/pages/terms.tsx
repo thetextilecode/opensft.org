@@ -15,7 +15,7 @@ function Terms() {
                     <h2>Terms of Service</h2>
                     <div className="entry-meta meta-1 font-xs mt-15 mb-15">
                                             <span className="post-by">
-                                                By <a href="src/pages/page-terms#">Jonh</a>
+                                                By <a href="src/pages/page-terms#terms.tsx">Jonh</a>
                                             </span>
                       <span className="post-on has-dot">9 April 2020</span>
                       <span className="time-reading has-dot">8 mins read</span>

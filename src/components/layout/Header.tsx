@@ -152,7 +152,7 @@ const Header = ({
                   </li>
                   <li>
                     <i className='fi-rs-user'></i>
-                    <Link href='/page-login-register'>
+                    <Link href='/login-register'>
                       <a>Log In / Sign Up</a>
                     </Link>
                   </li>
@@ -190,7 +190,7 @@ const Header = ({
               <div className='header-action-right'>
                 <div className='header-action-2'>
                   <div className='header-action-icon-2'>
-                    <Link href='/shop-compare'>
+                    <Link href='/compare'>
                       <a>
                         <Image
                           className='svgInject'
@@ -207,7 +207,7 @@ const Header = ({
                     </Link>
                   </div>
                   <div className='header-action-icon-2'>
-                    <Link href='/shop-wishlist'>
+                    <Link href='/wishlist'>
                       <a>
                         <Image
                           className='svgInject'
@@ -224,7 +224,7 @@ const Header = ({
                     </Link>
                   </div>
                   <div className='header-action-icon-2'>
-                    <Link href='/shop-cart'>
+                    <Link href='/cart'>
                       <a className='mini-cart-icon'>
                         <Image
                           alt='Cart'
@@ -1030,7 +1030,7 @@ const Header = ({
                       </ul>
                     </li>
                     <li>
-                      <Link href='/page-about'>
+                      <Link href='/about'>
                         <a>About</a>
                       </Link>
                     </li>
@@ -1085,26 +1085,26 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/shop-wishlist'>
+                          <Link href='/wishlist'>
                             <a>
                               Shop – Wishlist
                             </a>
                           </Link>
                         </li>
                         <li>
-                          <Link href='/shop-cart'>
+                          <Link href='/cart'>
                             <a>Shop – Cart</a>
                           </Link>
                         </li>
                         <li>
-                          <Link href='/shop-checkout'>
+                          <Link href='/checkout'>
                             <a>
                               Shop – Checkout
                             </a>
                           </Link>
                         </li>
                         <li>
-                          <Link href='/shop-compare'>
+                          <Link href='/compare'>
                             <a>
                               Shop – Compare
                             </a>
@@ -1415,7 +1415,7 @@ const Header = ({
                       </Link>
                       <ul className='sub-menu'>
                         <li>
-                          <Link href='/page-about'>
+                          <Link href='/about'>
                             <a>About Us</a>
                           </Link>
                         </li>
@@ -1430,7 +1430,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/page-login-register'>
+                          <Link href='/login-register'>
                             <a>
                               login/register
                             </a>
@@ -1444,14 +1444,14 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href='/page-privacy-policy'>
+                          <Link href='/privacy-policy'>
                             <a>
                               Privacy Policy
                             </a>
                           </Link>
                         </li>
                         <li>
-                          <Link href='/page-terms'>
+                          <Link href='/terms'>
                             <a>
                               Terms of Service
                             </a>
@@ -1487,7 +1487,7 @@ const Header = ({
             <div className='header-action-right d-block d-lg-none'>
               <div className='header-action-2'>
                 <div className='header-action-icon-2'>
-                  <Link href='/shop-wishlist'>
+                  <Link href='/wishlist'>
                     <a>
                       <Image
                         alt='Evara'
@@ -1503,7 +1503,7 @@ const Header = ({
                   </Link>
                 </div>
                 <div className='header-action-icon-2'>
-                  <Link href='/shop-wishlist'>
+                  <Link href='/wishlist'>
                     <a>
                       <Image
                         alt='Evara'
@@ -1519,7 +1519,7 @@ const Header = ({
                   </Link>
                 </div>
                 <div className='header-action-icon-2'>
-                  <Link href='/shop-cart'>
+                  <Link href='/cart'>
                     <a className='mini-cart-icon'>
                       <Image
                         alt='Evara'
@@ -1617,10 +1617,10 @@ const Header = ({
                         </h4>
                       </div>
                       <div className='shopping-cart-button'>
-                        <Link href='/shop-cart'>
+                        <Link href='/cart'>
                           <a>View cart</a>
                         </Link>
-                        <Link href='/shop-checkout'>
+                        <Link href='/checkout'>
                           <a>Checkout</a>
                         </Link>
                       </div>

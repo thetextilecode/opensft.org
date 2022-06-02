@@ -9,7 +9,7 @@ import {
   increaseQuantity,
   openCart,
 } from '../redux/action/cart';
-import { ICart } from './shop-cart';
+import { ICart } from './cart';
 
 const Cart = ({
                 openCart,
@@ -729,7 +729,7 @@ const Cart = ({
                     </div>
                   </div>
                 </div>
-                <a href='src/pages/shop-checkout#' className='btn btn-fill-out btn-block mt-30'>
+                <a href='src/pages/shop-checkout#checkout.tsx' className='btn btn-fill-out btn-block mt-30'>
                   Place Order
                 </a>
               </div>
