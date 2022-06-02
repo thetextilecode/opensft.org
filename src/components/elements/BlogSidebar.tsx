@@ -28,37 +28,37 @@ const BlogSidebar = ({posts, show}: IBlogSidebar) => {
         <div className='post-block-list post-module-1 post-module-5'>
           <ul>
             <li className='cat-item cat-item-2'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Beauty</a>
               </Link>{' '}
               (3)
             </li>
             <li className='cat-item cat-item-3'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Book</a>
               </Link>{' '}
               (6)
             </li>
             <li className='cat-item cat-item-4'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Design</a>
               </Link>{' '}
               (4)
             </li>
             <li className='cat-item cat-item-5'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Fashion</a>
               </Link>
               (3)
             </li>
             <li className='cat-item cat-item-6'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Lifestyle</a>
               </Link>
               (6)
             </li>
             <li className='cat-item cat-item-7'>
-              <Link href='/blog-category-list'>
+              <Link href='/blog'>
                 <a>Travel</a>
               </Link>{' '}
               (2)

@@ -346,7 +346,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/blog-category-list'>
+                      <Link href='/blog'>
                         <a>Blog Category List</a>
                       </Link>
                     </li>

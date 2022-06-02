@@ -3,36 +3,41 @@ import Image from 'next/image';
 import ShareIcons from './ShareIcons';
 import CommentsForm from './CommentsForm';
 import CommentsArea from './CommentsArea';
+import { IBlogPost } from '../../../types';
+import { blogConfig } from '../../../opensft.config';
 
-const BlogSingle = () => {
+interface IBlogSingle {
+  post: IBlogPost;
+}
+
+const BlogSingle = ({post}: IBlogSingle) => {
   return (
     <div className='single-page pl-30'>
       <div className='single-header style-2'>
         <h1 className='mb-30'>
-          Best smartwatch 2021: the top wearables you can buy
-          today
+          {post.title}
         </h1>
         <div className='single-header-meta'>
           <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
             <span className='post-by'>
-              By <a href='src/components/elements/BlogSingle#'>John</a>
+              By <a href='src/components/elements/BlogSingle#'>{blogConfig.author}</a>
             </span>
-            <span className='post-on has-dot'>9 April 2020</span>
+            <span className='post-on has-dot'>{post.date}</span>
             <span className='time-reading has-dot'>
               8 mins read
             </span>
-            <span className='hit-count  has-dot'>29k Views</span>
+            {/*<span className='hit-count  has-dot'>29k Views</span>*/}
           </div>
           <ShareIcons />
         </div>
       </div>
       <figure className='single-thumbnail'>
         <div style={{ width: '100%' }}>
-        <Image src='/assets/images/blog/blog-6.jpg'
-               alt=''
+        <Image src={post.image}
+               alt={post.imageAlt}
                layout={'responsive'}
-               width={1200}
-               height={800} />
+               width={post.imageOriginalWidth}
+               height={post.imageOriginalHeight} />
         </div>
       </figure>
       <div className='single-content'>

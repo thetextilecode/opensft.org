@@ -2,86 +2,9 @@ import Link from 'next/link';
 import { IBlogPost } from '../../../types';
 
 export interface IBlogList {
-  posts?: any[];
+  posts?: IBlogPost[];
   show?: any;
 }
-
-export const blogPosts: IBlogPost[] = [
-  {
-    // id: 1,
-    title: 'The litigants on the screen are not actors',
-    // category: 'Politic',
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    image: 'blog-6.jpg',
-    imageOriginalWidth: 1200,
-    imageOriginalHeight: 800,
-    slug: '',
-    views: 126,
-  },
-  {
-    // id: 2,
-    // category: 'Global',
-    title: 'Essential Qualities of Highly Successful Music',
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    image: 'blog-3.jpg',
-    imageOriginalHeight: 800,
-    imageOriginalWidth: 1200,
-    slug: '',
-    views: 126,
-  },
-  {
-    // id: 2,
-    // category: 'Global',
-    title: 'Essential Qualities of Highly Successful Music',
-    image: 'blog-3.jpg',
-    imageOriginalWidth: 1200,
-    imageOriginalHeight: 800,
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    slug: '',
-    // views: 126,
-  },
-  {
-    // id: 2,
-    // category: 'Global',
-    title: 'Essential Qualities of Highly Successful Music',
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    image: 'blog-3.jpg',
-    imageOriginalWidth: 1200,
-    imageOriginalHeight: 800,
-    slug: '',
-    // views: 126,
-  },
-  {
-    // id: 2,
-    title: 'Essential Qualities of Highly Successful Music',
-    image: 'blog-3.jpg',
-    imageOriginalWidth: 1200,
-    imageOriginalHeight: 800,
-    // category: 'Global',
-    views: 126,
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    slug: '',
-
-  },
-  {
-    // id: 2,
-    date: '25 April 2021',
-    description: 'These people envy me for having a lifestyle they don’t have, but the truth is, sometimes I envy their lifestyle instead. Struggling to sell one multi.',
-    title: 'Essential Qualities of Highly Successful Music',
-    image: 'blog-3.jpg',
-    imageOriginalWidth: 1200,
-    imageOriginalHeight: 800,
-    // category: 'Global',
-    views: 126,
-    slug: '',
-
-  },
-];
 
 const BlogList = ({ posts, show }: IBlogList) => {
   return (
@@ -96,7 +19,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
           >
             <div className='entry-meta'>
               <Link href='/blog-category-grid'>
-                <a className='entry-meta meta-2'>Technology</a>
+                <a className='entry-meta meta-2'>{post.category ?? 'Technology'}</a>
               </Link>
             </div>
           </div>
@@ -109,21 +32,17 @@ const BlogList = ({ posts, show }: IBlogList) => {
               </Link>
             </h3>
             <p className='post-excerpt mb-30'>
-              These people envy me for having a lifestyle they
-              don’t have, but the truth is, sometimes I envy their
-              lifestyle instead. Struggling to sell one
-              multi-million dollar home currently.
+              {post.description}
             </p>
             <div className='entry-meta meta-1 font-xs color-grey mt-10 pb-10'>
               <div>
                 <span className='post-on'>
                   {' '}
-                  <i className='fi-rs-clock'></i> 25 April
-                  2021
+                  <i className='fi-rs-clock'></i> {post.date}
                 </span>
-                <span className='hit-count has-dot'>
-                  126k Views
-                </span>
+                {/*<span className='hit-count has-dot'>*/}
+                {/*  126k Views*/}
+                {/*</span>*/}
               </div>
               <Link href='/blog-post-right'>
                 <a className='text-brand'>

@@ -78,47 +78,31 @@ const Footer = () => {
             </div>
             <div className='col-lg-4'>
               <h5 className='widget-title wow fadeIn animated'>
-                Install App
+                Subscribe
               </h5>
               <div className='row'>
                 <div className='col-md-8 col-lg-12'>
-                  <p className='wow fadeIn animated'>
-                    From App Store or Google Play
-                  </p>
-                  <div className='download-app wow fadeIn animated'>
-                    <a
-                      href='src/components/layout/Footer#'
-                      className='hover-up mb-sm-4 mb-lg-0'
-                    >
-                      <Image
-                        className='active'
-                        src='/assets/images/theme/app-store.jpg'
-                        alt=''
-                        width={166}
-                        height={47}
-                      />
-                    </a>
-                    <a href='src/components/layout/Footer#' className='hover-up'>
-                      <Image
-                        src='/assets/images/theme/google-play.jpg'
-                        alt=''
-                        width={166}
-                        height={47}
-                      />
-                    </a>
+                  {/* }<!-- Begin Mailchimp Signup Form -->{*/}
+
+                  <div id="mc_embed_signup" className='download-app wow fadeIn animated'>
+                    <form action="https://spoolbox.us7.list-manage.com/subscribe/post?u=871c25f5e6e64d7c20422cfe4&amp;id=54202e9780"
+                          method="post"
+                          id="mc-embedded-subscribe-form"
+                          name="mc-embedded-subscribe-form"
+                          className="form-subscriber d-flex wow fadeIn animated validate"
+                          target="_blank" noValidate={true}>
+                      <div id="mc_embed_signup_scroll call">
+                        <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>
+                        {/*}<!-- real people should not fill this in and expect good things - do not remove this or risk
+                     form bot signups-->{*/}
+                        <div style={{position: 'absolute', left: '-5000px', ariaHidden: true }}>
+                          <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1" value=""/>
+                        </div>
+                        <input type="submit" value="Join the Movement" name="subscribe" id="mc-embedded-subscribe" className="btn"/>
+
+                      </div>
+                    </form>
                   </div>
-                </div>
-                <div className='col-md-4 col-lg-12 mt-md-3 mt-lg-0'>
-                  <p className='mb-20 wow fadeIn animated'>
-                    Secured Payment Gateways
-                  </p>
-                  <Image
-                    className='wow fadeIn animated'
-                    src='/assets/images/theme/payment-method.png'
-                    alt=''
-                    height={32}
-                    width={224}
-                  />
                 </div>
               </div>
             </div>

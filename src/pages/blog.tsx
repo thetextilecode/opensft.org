@@ -18,13 +18,13 @@ function PageBlogList({ posts }: IPageBlogList) {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='single-header mb-50'>
-                <h1 className='font-xxl text-brand'>Our Blog</h1>
-                <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                  <span className='post-by'>32 Sub Categories</span>
-                  <span className='post-on has-dot'>1020k Article</span>
-                  <span className='time-reading has-dot'>480 Authors</span>
-                  <span className='hit-count  has-dot'>29M Views</span>
-                </div>
+                <h1 className='font-xxl text-brand'>Latest Articles</h1>
+                {/*<div className='entry-meta meta-1 font-xs mt-15 mb-15'>*/}
+                {/*  <span className='post-by'>32 Sub Categories</span>*/}
+                {/*  <span className='post-on has-dot'>1020k Article</span>*/}
+                {/*  <span className='time-reading has-dot'>480 Authors</span>*/}
+                {/*  <span className='hit-count  has-dot'>29M Views</span>*/}
+                {/*</div>*/}
               </div>
               <div className='loop-grid loop-list pr-30'>
                 <BlogList posts={posts} show={blogConfig.postsPerPage} />

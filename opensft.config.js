@@ -27,7 +27,7 @@ export const homeConfig = {
   showBanner4: false,
   showBanner5: false,
   showBlogPosts: true,
-  showBottom: true,
+  showBottom: false,
   showDeals: false,
   showFeaturedBrands: false,
   showFeaturesBanner: false,
@@ -59,9 +59,9 @@ export const headerConfig = {
   top: {
     showNewsflash: true,
     newsflash: {
-      callToAction: ' View details',
+      callToAction: '',
       href: '/products/shop-grid-right',
-      text: 'Get great devices up to 50% off',
+      text: '',
     }
   }
 };

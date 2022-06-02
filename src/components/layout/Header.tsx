@@ -1325,7 +1325,7 @@ const Header = ({
                             </Link>
                           </li>
                           <li>
-                            <Link href='/blog-category-list'>
+                            <Link href='/blog'>
                               <a>
                                 Blog Category
                                 List

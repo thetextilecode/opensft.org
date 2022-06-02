@@ -11,8 +11,7 @@ declare global {
 
 export interface IBlogPost {
   // id: number;
-  // category?: string;
-  // tags?: string[];
+  category?: string;
   date?: string;
   description?: string;
   draft?: boolean;
@@ -23,6 +22,7 @@ export interface IBlogPost {
   imageOriginalWidth?: number;
   lastUpdated?: string;
   slug: string;
+  tags?: string[];
   title: string;
   views?: number;
 }
