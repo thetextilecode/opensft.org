@@ -8,7 +8,7 @@ const SideBarIcons = ({
     openCart,
     totalCartItems,
     totalCompareItems,
-    totalWishlistItems,
+    totalSavedItems,
     openWishlistModal,
 }) => {
     return (
@@ -22,7 +22,7 @@ const SideBarIcons = ({
                 <div className="popup-btn wishlist" onClick={openWishlistModal}>
                     {/* <i className="icofont-heart"></i> */}
                     Wishlist
-                    <span> {totalWishlistItems}</span>
+                    <span> {totalSavedItems}</span>
                 </div>
 
                 <div
@@ -42,7 +42,7 @@ const SideBarIcons = ({
 const mapStateToProps = (state) => ({
     totalCartItems: state.cart.length,
     totalCompareItems: state.compare.items.length,
-    totalWishlistItems: state.wishlist.items.length,
+    totalSavedItems: state.wishlist.items.length,
 });
 
 const mapDispatchToProps = {

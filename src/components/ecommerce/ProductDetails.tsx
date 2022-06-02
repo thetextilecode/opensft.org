@@ -51,7 +51,7 @@ const ProductDetails = ({
 
   const handleWishlist = (product) => {
     addToWishlist(product);
-    toast.success('Add to Wishlist !');
+    toast.success('Add to Saved !');
   };
 
   const inCart = cartItems.find((cartItem) => cartItem.id === product.id);
@@ -241,7 +241,7 @@ const ProductDetails = ({
                             Add to cart
                           </button>
                           <a
-                            aria-label='Add To Wishlist'
+                            aria-label='Add To Saved'
                             className='action-btn hover-up'
                             onClick={(e) =>
                               handleWishlist(product)

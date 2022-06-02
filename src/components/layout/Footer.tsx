@@ -2,69 +2,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { homeConfig, infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
+import Newsletter from '../elements/Newsletter';
 
 const Footer = () => {
   return (
     <footer className='main'>
-      {homeConfig.showNewsletter && (<section className='newsletter p-30 mt-30 text-white wow fadeIn animated'>
-        <div className='container'>
-          <div className='row align-items-center'>
-            <div className='col-lg-7 mb-md-3 mb-lg-0'>
-              <div className='row align-items-center'>
-                <div className='col flex-horizontal-center'>
-                  <Image
-                    className='icon-email'
-                    src='/assets/images/theme/icons/icon-email.svg'
-                    alt=''
-                    width={40}
-                    height={40}
-                  />
-                  <h4 className='font-size-20 mb-0 ml-3'>
-                    Sign up to Newsletter
-                  </h4>
-                </div>
-                <div className='col my-4 my-md-0 des'>
-                  <h5 className='font-size-15 ml-4 mb-0'>
-                    ...and receive
-                    <strong>
-                      $25 coupon for first shopping.
-                    </strong>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-5'>
-              <form className='form-subscriber d-flex wow fadeIn animated'>
-                <input
-                  type='email'
-                  className='form-control bg-white font-small'
-                  placeholder='Enter your email'
-                />
-                <button
-                  className='btn bg-dark text-white'
-                  type='submit'
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>)}
+      {homeConfig.showNewsletter && (
+        <Newsletter />
+      )}
       <section className='section-padding footer-mid'>
         <div className='container pt-15 pb-20'>
           <div className='row'>
             <div className='col-lg-4 col-md-6'>
               <div className='widget-about font-md mb-md-5 mb-lg-0'>
                 <div className='logo logo-width-1 wow fadeIn animated'>
-                  <Link href='/Users/kahboom/Projects/opensft.org/public'><a>
+                  <Link href='/'>
                     <Image
                       src={infoConfig.logo}
                       alt={infoConfig.companyName + ' logo'}
                       width={infoConfig.logoWidth}
                       height={infoConfig.logoHeight}
                     />
-                  </a>
                   </Link>
                 </div>
                 <h5 className='mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated'>
@@ -82,7 +40,8 @@ const Footer = () => {
                 <h5 className='mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated'>
                   Follow Us
                 </h5>
-                <SocialIcons facebook={socialConfig.facebook} instagram={socialConfig.instagram} twitter={socialConfig.twitter} />
+                <SocialIcons facebook={socialConfig.facebook} instagram={socialConfig.instagram}
+                             twitter={socialConfig.twitter} />
               </div>
             </div>
             <div className='col-lg-2 col-md-3'>
@@ -91,22 +50,16 @@ const Footer = () => {
               </h5>
               <ul className='footer-list wow fadeIn animated mb-sm-5 mb-md-0'>
                 <li>
-                  <a href='src/components/layout/Footer#'>About Us</a>
+                  <Link href='/about'>About Us</Link>
                 </li>
                 <li>
-                  <a href='src/components/layout/Footer#'>Delivery infoConfigrmation</a>
+                  <Link href='/privacy-policy'>Privacy Policy</Link>
                 </li>
                 <li>
-                  <a href='src/components/layout/Footer#'>Privacy Policy</a>
+                  <Link href='/terms'>Terms &amp; Conditions</Link>
                 </li>
                 <li>
-                  <a href='src/components/layout/Footer#'>Terms &amp; Conditions</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>Contact Us</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>Support Center</a>
+                  <Link href='/contact'>Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -116,22 +69,10 @@ const Footer = () => {
               </h5>
               <ul className='footer-list wow fadeIn animated'>
                 <li>
-                  <a href='src/components/layout/Footer#'>Sign In</a>
+                  <Link href='/login-register'>Sign In</Link>
                 </li>
                 <li>
-                  <a href='src/components/layout/Footer#'>View Cart</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>My Wishlist</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>Track My Order</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>Help</a>
-                </li>
-                <li>
-                  <a href='src/components/layout/Footer#'>Order</a>
+                  <Link href='/saved'>My Wishlist</Link>
                 </li>
               </ul>
             </div>

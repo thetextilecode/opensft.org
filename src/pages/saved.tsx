@@ -17,7 +17,7 @@ export interface IWishlist {
   wishlist?: any;
 }
 
-const Wishlist = ({
+const Saved = ({
                     wishlist,
                     clearWishlist,
                     closeWishlistModal,
@@ -30,7 +30,7 @@ const Wishlist = ({
     toast.success('Add to Cart !');
   };
   return (
-    <Layout parent='Home' sub='Shop' subChild='Wishlist'>
+    <Layout parent='Home' sub='Shop' subChild='Saved'>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>
@@ -182,4 +182,4 @@ const mapDispatchToProps = {
   addToCart,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Wishlist);
+export default connect(mapStateToProps, mapDispatchToProps)(Saved);

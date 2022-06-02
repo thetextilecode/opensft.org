@@ -38,7 +38,7 @@ const SingleProductList = ({
 
   const handleWishlist = (product: IProduct) => {
     addToWishlist(product);
-    toast.success('Add to Wishlist !');
+    toast.success('Add to Saved !');
   };
 
   return (
@@ -79,7 +79,7 @@ const SingleProductList = ({
               <i className='fi-rs-eye'></i>
             </a>
             <a
-              aria-label='Add To Wishlist'
+              aria-label='Add To Saved'
               className='action-btn hover-up'
               onClick={(e) => handleWishlist(product)}
             >

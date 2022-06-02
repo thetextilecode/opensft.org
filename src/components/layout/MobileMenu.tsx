@@ -217,7 +217,7 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/wishlist'>
+                      <Link href='/saved'>
                         <a>Shop – Wishlist</a>
                       </Link>
                     </li>

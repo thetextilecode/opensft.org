@@ -32,11 +32,7 @@ export const homeConfig = {
   showFeaturedBrands: false,
   showFeaturesBanner: false,
   showFetchTab2: false,
-  showHeaderTop: true,
-  showHeaderMiddle: true,
-  showHeaderBottom: true,
   showHomeSlider: true,
-  showLanguages: true,
   showPopupModal: false,
   showNewArrivals: false,
   showNewsletter: true,
@@ -45,6 +41,25 @@ export const homeConfig = {
   showProductTabs: false,
   showQuickView: true
 };
+
+export const headerConfig = {
+  showHeaderTop: true,
+  showHeaderMiddle: true,
+  showHeaderBottom: true,
+  showLanguages: true,
+  bottom: {
+    showBrowseCategories: false,
+    showHotline: false,
+    showIconCompare: true,
+    showIconCart: false,
+    showIconSaved: true,
+    showMobilePromo: false
+  },
+  middle: {},
+  top: {}
+};
+
+export const menuConfig = {};
 
 export const infoConfig = {
   addressCity: 'London',
