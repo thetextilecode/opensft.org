@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { IBlogPost, ICategory, ITag } from '../../../types';
+import { format, parseISO } from 'date-fns';
 
 interface IBlogSidebar {
   categories?: ICategory[];
@@ -48,158 +49,40 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
           <h5 className='widget-title'>Trending Now</h5>
         </div>
         <div className='row'>
-          <div className='col-12 sm-grid-content mb-30'>
-            <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/'>
-                <div style={{ width: '100%' }}>
-                  <a>
-                    <Image
-                      src='/assets/images/blog/blog-1.jpg'
-                      alt=''
-                      layout={'responsive'}
-                      width={1200}
-                      height={800}
-                    />
-                  </a>
+          {trendingPosts.map((post, idx) => {
+            return (
+              <div className={idx === 0 ? 'col-12 sm-grid-content mb-30' : 'col-md-6 col-sm-6 sm-grid-content mb-30'} key={idx}>
+                <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
+                  <Link href={`/${post.slug}`}>
+                    <div style={{ width: '100%' }}>
+                      <a>
+                        <Image
+                          src={post.image}
+                          alt={post.imageAlt ?? ''}
+                          layout={'responsive'}
+                          width={post.imageOriginalWidth ?? 600}
+                          height={post.imageOriginalHeight ?? 400}
+                        />
+                      </a>
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-            <div className='post-content media-body'>
-              <h4 className='post-title mb-10 text-limit-2-row'>
-                The litigants on the screen are not actors
-              </h4>
-              <div className='entry-meta meta-13 font-xxs color-grey'>
-                <span className='post-on mr-10'>
-                  25 April
-                </span>
-                <span className='hit-count has-dot '>
-                  126k Views
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
-            <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/'>
-                <div style={{ width: '100%' }}>
-                  <a>
-                    <Image
-                      src='/assets/images/blog/blog-3.jpg'
-                      alt=''
-                      layout={'responsive'}
-                      width={1200}
-                      height={800}
-                    />
-                  </a>
+                <div className='post-content media-body'>
+                  <h4 className='post-title mb-10 text-limit-2-row'>
+                    {post.title}
+                  </h4>
+                  {/*<div className='entry-meta meta-13 font-xxs color-grey'>*/}
+                  {/*  <span className='post-on mr-10'>*/}
+                  {/*    {format(parseISO(post.date), 'MMMM dd, yyyy')}*/}
+                  {/*  </span>*/}
+                  {/*  <span className='hit-count has-dot '>*/}
+                  {/*    {post.readTime} min{post.readTime < 0 ?? 's'} read*/}
+                  {/*  </span>*/}
+                  {/*</div>*/}
                 </div>
-              </Link>
-            </div>
-            <div className='post-content media-body'>
-              <h6 className='post-title mb-10 text-limit-2-row'>
-                Water Partners With Rag &amp; Bone To
-                Consume
-              </h6>
-              <div className='entry-meta meta-13 font-xxs color-grey'>
-                <span className='post-on mr-10'>
-                  25 April
-                </span>
-                <span className='hit-count has-dot '>
-                  126k Views
-                </span>
               </div>
-            </div>
-          </div>
-          <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
-            <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/'>
-                <div style={{ width: '100%' }}>
-                  <a>
-                    <Image
-                      src='/assets/images/blog/blog-4.jpg'
-                      alt=''
-                      layout={'responsive'}
-                      width={1200}
-                      height={800}
-                    />
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div className='post-content media-body'>
-              <h6 className='post-title mb-10 text-limit-2-row'>
-                The loss is not all that surprising
-              </h6>
-              <div className='entry-meta meta-13 font-xxs color-grey'>
-                <span className='post-on mr-10'>
-                  25 April
-                </span>
-                <span className='hit-count has-dot '>
-                  126k Views
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
-            <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/'>
-                <div style={{ width: '100%' }}>
-                  <a>
-                    <Image
-                      src='/assets/images/blog/blog-5.jpg'
-                      alt=''
-                      layout={'responsive'}
-                      width={1200}
-                      height={800}
-                    />
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div className='post-content media-body'>
-              <h6 className='post-title mb-10 text-limit-2-row'>
-                We got a right to pick a little fight,
-                Bonanza
-              </h6>
-              <div className='entry-meta meta-13 font-xxs color-grey'>
-                <span className='post-on mr-10'>
-                  25 April
-                </span>
-                <span className='hit-count has-dot '>
-                  126k Views
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
-            <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/'>
-                <div style={{ width: '100%' }}>
-                  <a>
-                    <Image
-                      src='/assets/images/blog/blog-6.jpg'
-                      alt=''
-                      layout={'responsive'}
-                      width={1200}
-                      height={800}
-                    />
-                  </a>
-                </div>
-              </Link>
-            </div>
-            <div className='post-content media-body'>
-              <h6 className='post-title mb-10 text-limit-2-row'>
-                My entrance exam was on a book of matches
-              </h6>
-              <div className='entry-meta meta-13 font-xxs color-grey'>
-                <span className='post-on mr-10'>
-                  25 April
-                </span>
-                <span className='hit-count has-dot '>
-                  126k Views
-                </span>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
 

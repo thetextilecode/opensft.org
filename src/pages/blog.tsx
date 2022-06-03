@@ -33,7 +33,11 @@ function PageBlogList({ categories, posts, tags }: IPageBlogList) {
               </div>
             </div>
             <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar categories={categories} trendingPosts={posts} show={blogConfig.postsPerSidebar} tags={tags} />
+              <BlogSidebar categories={categories}
+                           show={blogConfig.postsPerSidebar}
+                           tags={tags}
+                           trendingPosts={posts.filter((post) => post.trending)}
+              />
             </div>
           </div>
         </div>
@@ -67,7 +71,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const tags = getAllTags([
     'label',
-    'value'
+    'value',
   ]);
 
   return {

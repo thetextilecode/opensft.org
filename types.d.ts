@@ -15,9 +15,10 @@ export interface IBlogPost {
   date?: string;
   description?: string;
   draft?: boolean;
-  featured?: boolean;
   image?: string;
   imageAlt?: string;
+  imageCredit?: string;
+  imageCreditUrl?: string;
   imageOriginalHeight?: number;
   imageOriginalWidth?: number;
   lastUpdated?: string;
@@ -25,6 +26,7 @@ export interface IBlogPost {
   slug: string;
   tags?: string[];
   title: string;
+  trending?: boolean;
   views?: number;
 }
 

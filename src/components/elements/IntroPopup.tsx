@@ -2,10 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Timer from './Timer';
 
-export interface IIntroPopup {
-}
-
-const IntroPopup = ({}: IIntroPopup) => {
+const IntroPopup = () => {
   const [openClass, setOpenClass] = useState<boolean>(false);
 
   const handleRemove = () => {
