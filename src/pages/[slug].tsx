@@ -44,7 +44,7 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
   };
   return (
     <>
-      {!post.draft ? (
+      {post.draft ? (
         <>This post has not yet been published. Please try again later.</>
       ) : (
         <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details'>
@@ -68,7 +68,7 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                             </span>
                             {post.readTime && (
                               <span className='time-reading has-dot'>
-                                {post.readTime}&nsbp;mins read
+                                {post.readTime} min{post.readTime < 0 ?? 's'} read
                               </span>
                             )}
                             {/*<span className='hit-count  has-dot'>29k Views</span>*/}
