@@ -43,91 +43,98 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
     type: 'article',
   };
   return (
-    <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details'>
-      <section className='mt-50 mb-50'>
-        <div className='container custom'>
-          <div className='row'>
-            <div className='col-lg-9'>
-              <article>
-                <div className='single-page pl-30'>
-                  <div className='single-header style-2'>
-                    <h1 className='mb-30'>
-                      {post.title}
-                    </h1>
-                    <div className='single-header-meta'>
-                      <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                        <span className='post-by'>
-                          By <Link href='/#'>{blogConfig.author}</Link>
-                        </span>
-                        <span className='post-on has-dot'>
-                          {format(parseISO(post.date), 'MMMM dd, yyyy')}
-                        </span>
-                        <span className='time-reading has-dot'>
-                          8 mins read
-                        </span>
-                        {/*<span className='hit-count  has-dot'>29k Views</span>*/}
+    <>
+      {!post.draft ? (
+        <>This post has not yet been published. Please try again later.</>
+      ) : (
+        <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details'>
+          <section className='mt-50 mb-50'>
+            <div className='container custom'>
+              <div className='row'>
+                <div className='col-lg-9'>
+                  <article>
+                    <div className='single-page pl-30'>
+                      <div className='single-header style-2'>
+                        <h1 className='mb-30'>
+                          {post.title}
+                        </h1>
+                        <div className='single-header-meta'>
+                          <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
+                            <span className='post-by'>
+                              By <Link href='/#'>{blogConfig.author}</Link>
+                            </span>
+                            <span className='post-on has-dot'>
+                              {format(parseISO(post.date), 'MMMM dd, yyyy')}
+                            </span>
+                            <span className='time-reading has-dot'>
+                              {post.read}&nsbp;mins read
+                            </span>
+                            {/*<span className='hit-count  has-dot'>29k Views</span>*/}
+                          </div>
+                          <ShareIcons />
+                        </div>
                       </div>
-                      <ShareIcons />
-                    </div>
-                  </div>
-                  {post.image && (
-                    <figure className='single-thumbnail'>
-                      <div style={{ width: '100%' }}>
-                        <Image src={post.image}
-                               alt={post?.imageAlt}
-                               layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
-                               width={post?.imageOriginalWidth}
-                               height={post?.imageOriginalHeight} />
+                      {post.image && (
+                        <figure className='single-thumbnail'>
+                          <div style={{ width: '100%' }}>
+                            <Image src={post.image}
+                                   alt={post?.imageAlt}
+                                   layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+                                   width={post?.imageOriginalWidth}
+                                   height={post?.imageOriginalHeight} />
+                          </div>
+                        </figure>
+                      )}
+                      <div className='single-content'>
+                        <MDXRemote {...source} components={components} />
                       </div>
-                    </figure>
-                  )}
-                  <div className='single-content'>
-                    <MDXRemote {...source} components={components} />
-                  </div>
 
-                  <div
-                    className='entry-bottom mt-50 mb-30 wow fadeIn  animated'
-                    style={{ 'visibility': 'visible', 'animationName': 'fadeIn' }}
-                  >
-                    <div className='tags w-50 w-sm-100'>
-                      <Link href='/blog-category-big'>
-                        <a
-                          rel='tag'
-                          className='hover-up btn btn-sm btn-rounded mr-10'
-                        >
-                          deer
-                        </a>
-                      </Link>
-                      <Link href='/blog-category-big'>
-                        <a
-                          rel='tag'
-                          className='hover-up btn btn-sm btn-rounded mr-10'
-                        >
-                          nature
-                        </a>
-                      </Link>
+                      <div
+                        className='entry-bottom mt-50 mb-30 wow fadeIn  animated'
+                        style={{ 'visibility': 'visible', 'animationName': 'fadeIn' }}
+                      >
+                        <div className='tags w-50 w-sm-100'>
+                          <Link href='/blog-category-big'>
+                            <a
+                              rel='tag'
+                              className='hover-up btn btn-sm btn-rounded mr-10'
+                            >
+                              deer
+                            </a>
+                          </Link>
+                          <Link href='/blog-category-big'>
+                            <a
+                              rel='tag'
+                              className='hover-up btn btn-sm btn-rounded mr-10'
+                            >
+                              nature
+                            </a>
+                          </Link>
+                        </div>
+                        <ShareIcons />
+                      </div>
+
+                      {blogConfig.showComments && (
+                        <>
+                          <CommentsArea />
+                          <CommentsForm />
+                        </>
+                      )}
+
                     </div>
-                    <ShareIcons />
-                  </div>
-
-                  {blogConfig.showComments && (
-                    <>
-                      <CommentsArea />
-                      <CommentsForm />
-                    </>
-                  )}
-
+                  </article>
                 </div>
-              </article>
+                <div className='col-lg-3 primary-sidebar sticky-sidebar'>
+                  <BlogSidebar posts={posts} />
+                </div>
+              </div>
             </div>
-            <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar posts={posts} />
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
+          </section>
+        </Layout>
+      )}
+    </>
+  )
+    ;
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

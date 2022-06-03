@@ -21,6 +21,7 @@ export interface IBlogPost {
   imageOriginalHeight?: number;
   imageOriginalWidth?: number;
   lastUpdated?: string;
+  readTime?: number;
   slug: string;
   tags?: string[];
   title: string;

@@ -9,7 +9,12 @@ export interface IBlogList {
 const BlogList = ({ posts, show }: IBlogList) => {
   return (
     <>
-      {posts.slice(0, show).map((post, i) => (
+      {posts
+      .slice(0, show)
+      .filter((post) => {
+        return !post.draft;
+      })
+      .map((post, i) => (
         <article className='wow fadeIn animated hover-up mb-30' key={i}>
           <div
             className='post-thumb'
