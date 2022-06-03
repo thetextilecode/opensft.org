@@ -28,6 +28,19 @@ export interface IBlogPost {
   views?: number;
 }
 
+export interface ICategory {
+  label: string;
+  quantity?: number;
+  value: string;
+}
+
+export interface ITag {
+  description?: string;
+  label: string;
+  value: string;
+  featured?: boolean;
+}
+
 export interface IMetaProps {
   date?: string;
   description?: string;

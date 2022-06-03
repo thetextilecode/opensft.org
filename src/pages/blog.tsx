@@ -2,15 +2,17 @@ import BlogList from '../components/elements/BlogList';
 import BlogSidebar from '../components/elements/BlogSidebar';
 import Layout from '../components/layout/Layout';
 import { GetStaticProps } from 'next';
-import { getAllPosts } from '../lib/api';
-import { IBlogPost } from '../../types';
+import { getAllCategories, getAllPosts, getAllTags } from '../lib/api';
+import { IBlogPost, ICategory, ITag } from '../../types';
 import { blogConfig } from '../../opensft.config';
 
 export interface IPageBlogList {
+  categories: ICategory[];
   posts: IBlogPost[];
+  tags: ITag[];
 }
 
-function PageBlogList({ posts }: IPageBlogList) {
+function PageBlogList({ categories, posts, tags }: IPageBlogList) {
   return (
     <Layout parent='Home' sub='Blog' subChild='List'>
       <section className='mt-50 mb-50'>
@@ -31,7 +33,7 @@ function PageBlogList({ posts }: IPageBlogList) {
               </div>
             </div>
             <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar posts={posts} show={blogConfig.postsPerSidebar} />
+              <BlogSidebar categories={categories} posts={posts} show={blogConfig.postsPerSidebar} tags={tags} />
             </div>
           </div>
         </div>
@@ -58,9 +60,17 @@ export const getStaticProps: GetStaticProps = async () => {
     'slug',
     'tags',
     'title',
+    'trending',
+  ]);
+
+  const categories = getAllCategories();
+
+  const tags = getAllTags([
+    'label',
+    'value'
   ]);
 
   return {
-    props: { posts },
+    props: { posts, categories, tags },
   };
 };

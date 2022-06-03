@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IBlogPost } from '../../../types';
+import { IBlogPost, ICategory, ITag } from '../../../types';
 
 interface IBlogSidebar {
+  categories?: ICategory[];
   posts: IBlogPost[];
   show?: number;
+  tags?: ITag[];
 }
 
-const BlogSidebar = ({posts, show}: IBlogSidebar) => {
+const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
   return (
     <div className='widget-area'>
       <div className='sidebar-widget widget_search mb-50'>
@@ -27,42 +29,18 @@ const BlogSidebar = ({posts, show}: IBlogSidebar) => {
         </div>
         <div className='post-block-list post-module-1 post-module-5'>
           <ul>
-            <li className='cat-item cat-item-2'>
-              <Link href='/blog'>
-                <a>Beauty</a>
-              </Link>{' '}
-              (3)
-            </li>
-            <li className='cat-item cat-item-3'>
-              <Link href='/blog'>
-                <a>Book</a>
-              </Link>{' '}
-              (6)
-            </li>
-            <li className='cat-item cat-item-4'>
-              <Link href='/blog'>
-                <a>Design</a>
-              </Link>{' '}
-              (4)
-            </li>
-            <li className='cat-item cat-item-5'>
-              <Link href='/blog'>
-                <a>Fashion</a>
-              </Link>
-              (3)
-            </li>
-            <li className='cat-item cat-item-6'>
-              <Link href='/blog'>
-                <a>Lifestyle</a>
-              </Link>
-              (6)
-            </li>
-            <li className='cat-item cat-item-7'>
-              <Link href='/blog'>
-                <a>Travel</a>
-              </Link>{' '}
-              (2)
-            </li>
+            {categories.map((category, idx) => {
+              return (
+                <>
+                  <li className={'cat-item cat-item-' + idx} key={idx}>
+                    <Link href={`/${category.value}`}>
+                      <a>{category.label}</a>
+                    </Link>{' '}
+                    (3)
+                  </li>
+                </>
+              );
+            })}
           </ul>
         </div>
       </div>
