@@ -62,12 +62,12 @@ const ArticlePage = ({ categories, post, posts, source, tags }: ArticlePageProps
                   <article>
                     <div className='single-page pl-30'>
                       <div className='single-header style-2'>
-                        <div className="d-flex">
+                        <div className='d-flex'>
                           <h1>
                             {post.title}
                           </h1>
                           {post.draft && (
-                            <div style={{marginLeft: '20px'}}>
+                            <div style={{ marginLeft: '20px' }}>
                               <h3><DraftBadge /></h3>
                             </div>
                           )}
@@ -111,22 +111,13 @@ const ArticlePage = ({ categories, post, posts, source, tags }: ArticlePageProps
                         style={{ 'visibility': 'visible', 'animationName': 'fadeIn' }}
                       >
                         <div className='tags w-50 w-sm-100'>
-                          <Link href='/blog-category-big'>
-                            <a
-                              rel='tag'
-                              className='hover-up btn btn-sm btn-rounded mr-10'
-                            >
-                              deer
-                            </a>
-                          </Link>
-                          <Link href='/blog-category-big'>
-                            <a
-                              rel='tag'
-                              className='hover-up btn btn-sm btn-rounded mr-10'
-                            >
-                              nature
-                            </a>
-                          </Link>
+                          {post.tags && post.tags.map((tag, idx) => {
+                            return (
+                              <Link href={`/tag/${tag}`} key={idx}>
+                                <a rel={'tag'} className={'hover-up btn btn-sm btn-rounded mr-10'}>{tag}</a>
+                              </Link>
+                            );
+                          })}
                         </div>
                         <ShareIcons />
                       </div>
@@ -174,18 +165,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   });
 
   const posts = getAllPosts([
-    // 'category',
-    // 'date',
-    // 'description',
-    // 'draft',
     'image',
     'imageAlt',
     'imageOriginalWidth',
     'imageOriginalHeight',
-    // 'lastUpdated',
-    // 'readTime',
     'slug',
-    // 'tags',
     'title',
     'trending',
   ]);
@@ -203,7 +187,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       posts,
       post: data,
       categories,
-      tags
+      tags,
     },
   };
 };
