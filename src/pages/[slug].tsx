@@ -66,9 +66,11 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                             <span className='post-on has-dot'>
                               {format(parseISO(post.date), 'MMMM dd, yyyy')}
                             </span>
-                            <span className='time-reading has-dot'>
-                              {post.read}&nsbp;mins read
-                            </span>
+                            {post.readTime && (
+                              <span className='time-reading has-dot'>
+                                {post.readTime}&nsbp;mins read
+                              </span>
+                            )}
                             {/*<span className='hit-count  has-dot'>29k Views</span>*/}
                           </div>
                           <ShareIcons />
