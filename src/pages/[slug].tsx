@@ -65,7 +65,7 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                           </h1>
                           {post.draft && (
                             <div style={{marginLeft: '20px'}}>
-                              <h4><DraftBadge /></h4>
+                              <h3><DraftBadge /></h3>
                             </div>
                           )}
                         </div>
