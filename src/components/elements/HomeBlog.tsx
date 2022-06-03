@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { IBlogPost } from '../../../types';
 import { format, parseISO } from 'date-fns';
 import DraftBadge from './DraftBadge';
-import { Badge } from 'react-bootstrap';
 
 interface IHomeBlog {
   latestPosts: IBlogPost[];

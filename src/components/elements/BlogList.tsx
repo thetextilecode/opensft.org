@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { IBlogPost } from '../../../types';
 import DraftBadge from './DraftBadge';
+import { format, parseISO } from 'date-fns';
 
 export interface IBlogList {
   posts?: IBlogPost[];
@@ -51,11 +52,11 @@ const BlogList = ({ posts, show }: IBlogList) => {
               <div>
                 <span className='post-on'>
                   {' '}
-                  <i className='fi-rs-clock'></i> {post.date}
+                  <i className='fi-rs-clock'></i>&nbsp;{format(parseISO(post.date), 'MMMM dd, yyyy')}
                 </span>
-                {/*<span className='hit-count has-dot'>*/}
-                {/*  126k Views*/}
-                {/*</span>*/}
+                <span className='hit-count has-dot'>
+                  {post.readTime} min{post.readTime < 0 ?? 's'} read
+                </span>
               </div>
               <Link href={`/${post.slug}`}>
                 <a className='text-brand'>
