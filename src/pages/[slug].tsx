@@ -10,7 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
 import { postFilePaths, POSTS_PATH } from '../lib/mdxUtils';
-import { IBlogPost, IMetaProps } from '../../types';
+import { IBlogPost, ICategory, IMetaProps, ITag } from '../../types';
 import Layout from '../components/layout/Layout';
 import { blogConfig, siteConfig } from '../../opensft.config';
 import BlogSidebar from '../components/elements/BlogSidebar';
@@ -18,6 +18,7 @@ import ShareIcons from '../components/elements/ShareIcons';
 import CommentsArea from '../components/elements/CommentsArea';
 import CommentsForm from '../components/elements/CommentsForm';
 import DraftBadge from '../components/elements/DraftBadge';
+import { getAllCategories, getAllPosts, getAllTags } from '../lib/api';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -30,12 +31,14 @@ const components = {
 };
 
 type ArticlePageProps = {
+  categories: ICategory[];
   post: IBlogPost;
   posts: IBlogPost[];
   source: MDXRemoteSerializeResult;
+  tags: ITag[];
 };
 
-const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => {
+const ArticlePage = ({ categories, post, posts, source, tags }: ArticlePageProps): JSX.Element => {
   const customMeta: IMetaProps = {
     title: `${post.title} | ${siteConfig.title}`,
     description: post.description,
@@ -139,7 +142,11 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                   </article>
                 </div>
                 <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-                  <BlogSidebar trendingPosts={posts} />
+                  <BlogSidebar categories={categories}
+                               show={blogConfig.postsPerSidebar}
+                               tags={tags}
+                               trendingPosts={posts.filter((post) => post.trending)}
+                  />
                 </div>
               </div>
             </div>
@@ -166,10 +173,37 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     scope: data,
   });
 
+  const posts = getAllPosts([
+    // 'category',
+    // 'date',
+    // 'description',
+    // 'draft',
+    'image',
+    'imageAlt',
+    'imageOriginalWidth',
+    'imageOriginalHeight',
+    // 'lastUpdated',
+    // 'readTime',
+    'slug',
+    // 'tags',
+    'title',
+    'trending',
+  ]);
+
+  const categories = getAllCategories();
+
+  const tags = getAllTags([
+    'label',
+    'value',
+  ]);
+
   return {
     props: {
       source: mdxSource,
+      posts,
       post: data,
+      categories,
+      tags
     },
   };
 };

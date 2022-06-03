@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { IBlogPost, ICategory, ITag } from '../../../types';
-import { format, parseISO } from 'date-fns';
 
 interface IBlogSidebar {
-  categories?: ICategory[];
+  categories: ICategory[];
   show?: number;
-  tags?: ITag[];
+  tags: ITag[];
   trendingPosts: IBlogPost[];
 }
 
@@ -36,7 +35,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
                   <Link href={`/category/${category.value}`}>
                     <a>{category.label}</a>
                   </Link>{' '}
-                  (3)
+                  {/*(3)*/}
                 </li>
               );
             })}

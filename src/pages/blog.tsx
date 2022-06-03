@@ -54,7 +54,6 @@ export const getStaticProps: GetStaticProps = async () => {
     'date',
     'description',
     'draft',
-    'featured',
     'image',
     'imageAlt',
     'imageOriginalWidth',
