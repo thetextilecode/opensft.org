@@ -17,6 +17,7 @@ import BlogSidebar from '../components/elements/BlogSidebar';
 import ShareIcons from '../components/elements/ShareIcons';
 import CommentsArea from '../components/elements/CommentsArea';
 import CommentsForm from '../components/elements/CommentsForm';
+import DraftBadge from '../components/elements/DraftBadge';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -42,9 +43,12 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
     date: post.date,
     type: 'article',
   };
+
+  const isLocal = process.env.NODE_ENV === 'development';
+
   return (
     <>
-      {post.draft ? (
+      {!isLocal && post.draft ? (
         <>This post has not yet been published. Please try again later.</>
       ) : (
         <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details'>
@@ -55,16 +59,24 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                   <article>
                     <div className='single-page pl-30'>
                       <div className='single-header style-2'>
-                        <h1 className='mb-30'>
-                          {post.title}
-                        </h1>
+                        <div className="d-flex">
+                          <h1>
+                            {post.title}
+                          </h1>
+                          {post.draft && (
+                            <div style={{marginLeft: '20px'}}>
+                              <h4><DraftBadge /></h4>
+                            </div>
+                          )}
+                        </div>
+
                         <div className='single-header-meta'>
                           <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
                             <span className='post-by'>
                               By <Link href='/#'>{blogConfig.author}</Link>
                             </span>
                             <span className='post-on has-dot'>
-                              {format(parseISO(post.date), 'MMMM dd, yyyy')}
+                              Published on{'  '}{format(parseISO(post.date), 'MMMM dd, yyyy')}
                             </span>
                             {post.readTime && (
                               <span className='time-reading has-dot'>

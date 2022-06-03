@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { IBlogPost } from '../../../types';
+import DraftBadge from './DraftBadge';
 
 export interface IBlogList {
   posts?: IBlogPost[];
@@ -7,12 +8,14 @@ export interface IBlogList {
 }
 
 const BlogList = ({ posts, show }: IBlogList) => {
+  const isLocal = process.env.NODE_ENV === 'development';
+
   return (
     <>
       {posts
       .slice(0, show)
       .filter((post) => {
-        return !post.draft;
+        return isLocal || !post.draft;
       })
       .map((post, i) => (
         <article className='wow fadeIn animated hover-up mb-30' key={i}>
@@ -26,6 +29,11 @@ const BlogList = ({ posts, show }: IBlogList) => {
               <Link href='/blog-category-grid' className='entry-meta meta-2'>
                 {post.category ?? 'Technology'}
               </Link>
+              {post.draft && (
+                <div style={{marginTop: '10px'}}>
+                  <h3><DraftBadge /></h3>
+                </div>
+              )}
             </div>
           </div>
           <div className='entry-content-2'>
