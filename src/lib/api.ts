@@ -67,7 +67,6 @@ export function getAllCategories(): ICategory[] {
 }
 
 export function getAllTags(fields: string[] = []): ITag[] {
-  // need to create proper tags
   const tags = [
     {
       label: 'AI',
@@ -132,16 +131,12 @@ export function getAllTags(fields: string[] = []): ITag[] {
     let minimalTag = {};
 
     fields.forEach((field) => {
-      // minimalTagtag[field]
       if(tag[field]) {
-        minimalTag[field] = tag[field]
+        minimalTag[field] = tag[field];
       }
     })
-    console.log('minimal tag: ', minimalTag);
     filteredTags.push(minimalTag);
   })
-
-  console.log('filtered tags: ', filteredTags);
 
   return filteredTags;
 }

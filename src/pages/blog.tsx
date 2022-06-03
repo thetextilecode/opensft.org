@@ -33,7 +33,7 @@ function PageBlogList({ categories, posts, tags }: IPageBlogList) {
               </div>
             </div>
             <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar categories={categories} posts={posts} show={blogConfig.postsPerSidebar} tags={tags} />
+              <BlogSidebar categories={categories} trendingPosts={posts} show={blogConfig.postsPerSidebar} tags={tags} />
             </div>
           </div>
         </div>

@@ -4,12 +4,12 @@ import { IBlogPost, ICategory, ITag } from '../../../types';
 
 interface IBlogSidebar {
   categories?: ICategory[];
-  posts: IBlogPost[];
   show?: number;
   tags?: ITag[];
+  trendingPosts: IBlogPost[];
 }
 
-const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
+const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) => {
   return (
     <div className='widget-area'>
       <div className='sidebar-widget widget_search mb-50'>
@@ -31,14 +31,12 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           <ul>
             {categories.map((category, idx) => {
               return (
-                <>
-                  <li className={'cat-item cat-item-' + idx} key={idx}>
-                    <Link href={`/${category.value}`}>
-                      <a>{category.label}</a>
-                    </Link>{' '}
-                    (3)
-                  </li>
-                </>
+                <li className={'cat-item cat-item-' + idx} key={idx}>
+                  <Link href={`/${category.value}`}>
+                    <a>{category.label}</a>
+                  </Link>{' '}
+                  (3)
+                </li>
               );
             })}
           </ul>
@@ -52,7 +50,7 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
         <div className='row'>
           <div className='col-12 sm-grid-content mb-30'>
             <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/blog-post-fullwidth'>
+              <Link href='/'>
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
@@ -82,7 +80,7 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           </div>
           <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
             <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/blog-post-fullwidth'>
+              <Link href='/'>
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
@@ -113,7 +111,7 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           </div>
           <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
             <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/blog-post-fullwidth'>
+              <Link href='/'>
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
@@ -143,7 +141,7 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           </div>
           <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
             <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/blog-post-fullwidth'>
+              <Link href='/'>
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
@@ -174,7 +172,7 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           </div>
           <div className='col-md-6 col-sm-6 sm-grid-content mb-30'>
             <div className='post-thumb d-flex border-radius-5 img-hover-scale mb-15'>
-              <Link href='/blog-post-fullwidth'>
+              <Link href='/'>
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
@@ -210,14 +208,14 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           <Image src='/assets/images/banner/banner-11.jpg' alt='' layout={'responsive'} width={600} height={687} />
         </div>
         <div className='banner-text'>
-          <span>Women Zone</span>
+          <span>Fashion Business?</span>
           <h4>
-            Save 17% on <br />
-            Office Dress
+            Take Our Latest <br />
+            Survey
           </h4>
-          <Link href='/products/shop-grid-right'>
+          <Link href='/'>
             <a>
-              Shop Now <i className='fi-rs-arrow-right'></i>
+              Take Survey <i className='fi-rs-arrow-right'></i>
             </a>
           </Link>
         </div>
@@ -228,27 +226,13 @@ const BlogSidebar = ({ categories, posts, show, tags }: IBlogSidebar) => {
           <h5 className='widget-title'>Popular tags </h5>
         </div>
         <div className='tagcloud'>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>beautiful</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>New York</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>droll</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>intimate</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>loving</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>travel</a>
-          </Link>
-          <Link href='/blog-category-grid'>
-            <a className='tag-cloud-link'>fighting</a>
-          </Link>
+          {tags.map((tag, idx) => {
+            return (
+              <Link href={`/tag/${tag.value}`} key={idx}>
+                <a className={'tag-cloud-link'}>{tag.value}</a>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

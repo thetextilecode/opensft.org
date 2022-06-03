@@ -139,7 +139,7 @@ const ArticlePage = ({ post, posts, source }: ArticlePageProps): JSX.Element => 
                   </article>
                 </div>
                 <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-                  <BlogSidebar posts={posts} />
+                  <BlogSidebar trendingPosts={posts} />
                 </div>
               </div>
             </div>
