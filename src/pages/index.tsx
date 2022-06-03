@@ -150,7 +150,7 @@ export default function Home({ posts }: IndexProps) {
                   <h3 className='section-title mb-20'>
                     <span>Latest</span> Articles
                   </h3>
-                  <HomeBlog />
+                  <HomeBlog latestPosts={posts.slice(0, 2)} />
                 </div>
                 <div className='col-lg-6'>
                   <div className='row'>
@@ -193,6 +193,7 @@ export const getStaticProps: GetStaticProps = async () => {
     'imageAlt',
     'imageOriginalWidth',
     'imageOriginalHeight',
+    'readTime',
     'slug',
     'tags',
     'title',
