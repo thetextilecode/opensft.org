@@ -13,16 +13,16 @@ interface IBlogSidebar {
 const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) => {
   return (
     <div className='widget-area'>
-      <div className='sidebar-widget widget_search mb-50'>
-        <div className='search-form'>
-          <form action='src/components/elements/BlogSidebar#'>
-            <input type='text' placeholder='Search…' />
-            <button type='submit'>
-              <i className='fi-rs-search'></i>
-            </button>
-          </form>
-        </div>
-      </div>
+      {/*<div className='sidebar-widget widget_search mb-50'>*/}
+      {/*  <div className='search-form'>*/}
+      {/*    <form action='src/components/elements/BlogSidebar#'>*/}
+      {/*      <input type='text' placeholder='Search…' />*/}
+      {/*      <button type='submit'>*/}
+      {/*        <i className='fi-rs-search'></i>*/}
+      {/*      </button>*/}
+      {/*    </form>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
 
       <div className='sidebar-widget widget_categories mb-40'>
         <div className='widget-header position-relative mb-20 pb-10'>
@@ -33,7 +33,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
             {categories.map((category, idx) => {
               return (
                 <li className={'cat-item cat-item-' + idx} key={idx}>
-                  <Link href={`/${category.value}`}>
+                  <Link href={`/category/${category.value}`}>
                     <a>{category.label}</a>
                   </Link>{' '}
                   (3)
