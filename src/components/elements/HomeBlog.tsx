@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { IBlogPost } from '../../../types';
 import { format, parseISO } from 'date-fns';
+import DraftBadge from './DraftBadge';
+import { Badge } from 'react-bootstrap';
 
 interface IHomeBlog {
   latestPosts: IBlogPost[];
@@ -14,18 +16,19 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
           <article className='wow fadeIn animated' key={idx}>
             <div className='d-md-flex d-block'>
               <div className='post-thumb d-flex mr-15'>
-                <Link href={post.slug}>
+                <Link href={`/${post.slug}`}>
                   <a className='color-white'>
                     <img
                       src={post.image}
                       alt={post.imageAlt ?? 'Post thumbnail'}
                     />
+                    {post.draft && (<h4 className={'entry-meta meta-2'}><DraftBadge /></h4>)}
                   </a>
                 </Link>
               </div>
               <div className='post-content'>
                 <div className='entry-meta mb-10 mt-10'>
-                  <Link href={post.slug}>
+                  <Link href={`/${post.slug}`}>
                     <a className='entry-meta meta-2'>
                       <span className='post-in font-x-small'>
                         {post.category ?? 'Fashion'}
@@ -34,7 +37,7 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
                   </Link>
                 </div>
                 <h4 className='post-title mb-25 text-limit-2-row'>
-                  <Link href={post.slug}>
+                  <Link href={`/${post.slug}`}>
                     <a>
                       {post.title}
                     </a>
@@ -49,7 +52,7 @@ const HomeBlog = ({ latestPosts }: IHomeBlog) => {
                       {post.readTime} min{post.readTime < 0 ?? 's'} read
                     </span>
                   </div>
-                  <Link href={post.slug}>
+                  <Link href={`/${post.slug}`}>
                     <a>Read More</a>
                   </Link>
                 </div>

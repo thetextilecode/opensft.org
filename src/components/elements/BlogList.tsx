@@ -26,7 +26,7 @@ const BlogList = ({ posts, show }: IBlogList) => {
             }}
           >
             <div className='entry-meta'>
-              <Link href='/blog-category-grid' className='entry-meta meta-2'>
+              <Link href={`/${post.slug}`} className='entry-meta meta-2'>
                 {post.category ?? 'Technology'}
               </Link>
               {post.draft && (
