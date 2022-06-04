@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://opensft.org
+
+# Sitemaps
+Sitemap: https://opensft.org/sitemap.xml

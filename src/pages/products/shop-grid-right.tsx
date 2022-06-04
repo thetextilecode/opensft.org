@@ -38,7 +38,9 @@ const Products = ({ products, productFilters, fetchProduct }) => {
     const cratePagination = () => {
         // set pagination
         let arr = new Array(Math.ceil(products.items.length / limit))
-            .fill()
+            // .fill()
+        // using .fill(0) for now to get past the type checker, not using this component yet
+        .fill(0)
             .map((_, idx) => idx + 1);
 
         setPagination(arr);

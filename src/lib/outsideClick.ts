@@ -5,6 +5,7 @@ const useClickOutside = (handler) => {
 
   useEffect(() => {
     let maybeHandler = (event) => {
+      // @ts-ignore
       if (!domNode.current.contains(event.target)) {
         handler();
       }

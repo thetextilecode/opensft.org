@@ -42,7 +42,7 @@ const CompareTable = ({ data, features, deleteFromCompare, addToCart }: ICompare
               <td className='product_name' key={i}>
                 <h5>
                   <Link href={'/compare'}>
-                  <a href='/compare'>{product.title}</a>
+                    <a>{product.title}</a>
                   </Link>
                 </h5>
               </td>

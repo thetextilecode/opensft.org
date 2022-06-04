@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import SwiperCore, { Navigation, Thumbs } from 'swiper';
 import 'swiper/css/thumbs';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,7 +20,7 @@ const ThumbSlider = ({ product }: IThumbSlider) => {
         style={{
           '--swiper-navigation-color': '#fff',
           '--swiper-pagination-color': '#fff',
-        }}
+        } as CSSProperties}
         loop={true}
         spaceBetween={10}
         navigation={true}

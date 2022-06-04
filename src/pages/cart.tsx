@@ -48,7 +48,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                       <tr key={i}>
                         <td className="image product-thumbnail">
                           {/*<Image src={item.images[0].img} layout={'fill'} alt={''} />*/}
-                          <img src={item.images[0].img} />
+                          <img src={item.images[0].img}  alt={item.images[0].imageAlt ?? ''}/>
                         </td>
 
                         <td className="product-des product-name">
@@ -445,7 +445,7 @@ const Cart = ({ openCart, cartItems, activeCart, closeCart, increaseQuantity, de
                           </tbody>
                         </table>
                       </div>
-                      <a href="/cart" className="btn ">
+                      <a className="btn ">
                         <i className="fi-rs-box-alt mr-10"></i>
                         Proceed To CheckOut
                       </a>

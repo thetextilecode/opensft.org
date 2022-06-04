@@ -179,7 +179,7 @@ function Login() {
                           </li>
                           <li>
                             <a
-                              href="/login-register"
+                              // href="/login-register"
                               className="btn btn-google hover-up"
                             >
                               Login With Google
@@ -188,7 +188,7 @@ function Login() {
                         </ul>
                         <div className="text-muted text-center">
                           Already have an account?{" "}
-                          <a href="/login-register">Sign in now</a>
+                          <a>Sign in now</a>
                         </div>
                       </div>
                     </div>

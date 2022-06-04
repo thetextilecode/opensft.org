@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { blogPosts } from './BlogList';
+import { IBlogPost } from '../../../types';
 
 export interface IBlogGridBig {
+  posts: IBlogPost[];
   show?: any;
 }
 
-const BlogGridBig = ({ show }: IBlogGridBig) => {
+const BlogGridBig = ({ posts, show }: IBlogGridBig) => {
   return (
     <>
-      {blogPosts.slice(0, show).map((item, i) => (
+      {posts.slice(0, show).map((item, i) => (
         <div className='col-12' key={i}>
           <article className='first-post mb-30 wow fadeIn animated hover-up'>
             <div className='img-hover-slide position-relative overflow-hidden'>

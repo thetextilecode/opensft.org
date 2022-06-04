@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { blogPosts } from './BlogList';
+import { IBlogPost } from '../../../types';
 
 export interface IBlogGrid {
+  blogPosts: IBlogPost[];
   col?: any,
   show?: any
 }
 
-const BlogGrid = ({ show, col }: IBlogGrid) => {
+const BlogGrid = ({ blogPosts, show, col }: IBlogGrid) => {
   return (
     <>
       {blogPosts.slice(0, show).map((item, i) => (
@@ -18,18 +19,18 @@ const BlogGrid = ({ show, col }: IBlogGrid) => {
                 <div style={{ width: '100%' }}>
                   <a>
                     <Image
-                      src={`/assets/images/blog/${item.img}`}
+                      src={`/assets/images/blog/${item.image}`}
                       alt=''
                       layout={'responsive'}
-                      height={item.imgOriginalHeight ?? 1200}
-                      width={item.imgOriginalWidth ?? 800}
+                      height={item.imageOriginalHeight ?? 600}
+                      width={item.imageOriginalWidth ?? 400}
                     />
                   </a>
                 </div>
               </Link>
               <div className='entry-meta'>
                 <Link href='/blog-category-grid'>
-                  <a className='entry-meta meta-2'>Politic</a>
+                  <a className='entry-meta meta-2'>Politics</a>
                 </Link>
               </div>
             </div>

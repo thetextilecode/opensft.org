@@ -11,10 +11,12 @@
     "lint": "next lint",
     "lint:fix": "yarn lint --fix",
     "lint-staged": "yarn lint:fix && yarn format:fix",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "sass": "node-sass --watch public/assets/sass/main.scss public/assets/css/main.css --source-map public/assets/css/main.css.map",
     "typecheck": "tsc"
   },
+  "type": "module",
   "dependencies": {
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
@@ -22,6 +24,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "next": "12.1.6",
     "next-mdx-remote": "^4.0.3",
+    "next-sitemap": "^3.0.5",
     "react": "17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-content-loader": "^6.0.3",

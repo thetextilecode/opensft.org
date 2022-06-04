@@ -20,7 +20,7 @@ function Account() {
                           className='nav-link active'
                           id='dashboard-tab'
                           data-bs-toggle='tab'
-                          href='/account#dashboard'
+                          // href='/account#dashboard'
                           role='tab'
                           aria-controls='dashboard'
                           aria-selected='false'
@@ -30,25 +30,27 @@ function Account() {
                         </a>
                       </li>
                       <li className='nav-item'>
-                        <a
-                          className='nav-link'
-                          id='orders-tab'
-                          data-bs-toggle='tab'
-                          href='/account#orders'
-                          role='tab'
-                          aria-controls='orders'
-                          aria-selected='false'
-                        >
-                          <i className='fi-rs-shopping-bag mr-10'></i>
-                          Orders
-                        </a>
+                        <Link href={'/orders'}>
+                          <a
+                            className='nav-link'
+                            id='orders-tab'
+                            data-bs-toggle='tab'
+                            // href='/account#orders'
+                            role='tab'
+                            aria-controls='orders'
+                            aria-selected='false'
+                          >
+                            <i className='fi-rs-shopping-bag mr-10'></i>
+                            Orders
+                          </a>
+                        </Link>
                       </li>
                       <li className='nav-item'>
                         <a
                           className='nav-link'
                           id='track-orders-tab'
                           data-bs-toggle='tab'
-                          href='/account#track-orders'
+                          // href='/account#track-orders'
                           role='tab'
                           aria-controls='track-orders'
                           aria-selected='false'
@@ -62,7 +64,7 @@ function Account() {
                           className='nav-link'
                           id='address-tab'
                           data-bs-toggle='tab'
-                          href='/account.tsx'
+                          // href='/account.tsx'
                           role='tab'
                           aria-controls='address'
                           aria-selected='true'
@@ -76,7 +78,7 @@ function Account() {
                           className='nav-link'
                           id='account-detail-tab'
                           data-bs-toggle='tab'
-                          href='/account.tsx'
+                          // href='/account.tsx'
                           role='tab'
                           aria-controls='account-detail'
                           aria-selected='true'
@@ -119,17 +121,18 @@ function Account() {
                             dashboard. you can
                             easily check &amp;
                             view your
-                            <a href='/page-account#account.tsx'>
-                              recent orders
-                            </a>
-                            , manage your
-                            <a href='/page-account#account.tsx'>
+                            <Link href={'/'}>
+                              <a>
+                                recent orders
+                              </a>
+                            </Link>, manage your
+                            <a>
                               shipping and
                               billing
                               addresses
                             </a>
                             and
-                            <a href='/page-account#account.tsx'>
+                            <a>
                               edit your
                               password and
                               account details.
@@ -193,7 +196,6 @@ function Account() {
                                 </td>
                                 <td>
                                   <a
-                                    href='/page-account#account.tsx'
                                     className='btn-small d-block'
                                   >
                                     View
@@ -220,7 +222,6 @@ function Account() {
                                 </td>
                                 <td>
                                   <a
-                                    href='/page-account#account.tsx'
                                     className='btn-small d-block'
                                   >
                                     View
@@ -247,7 +248,6 @@ function Account() {
                                 </td>
                                 <td>
                                   <a
-                                    href='/page-account#account.tsx'
                                     className='btn-small d-block'
                                   >
                                     View
@@ -357,7 +357,6 @@ function Account() {
                               </address>
                               <p>New York</p>
                               <a
-                                href='/page-account#account.tsx'
                                 className='btn-small'
                               >
                                 Edit
@@ -387,7 +386,6 @@ function Account() {
                               </address>
                               <p>Sarasota</p>
                               <a
-                                href='/page-account#account.tsx'
                                 className='btn-small'
                               >
                                 Edit
@@ -431,7 +429,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='name'
                                   type='text'
@@ -446,7 +444,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='phone'
                                 />
@@ -460,7 +458,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='dname'
                                   type='text'
@@ -475,7 +473,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='email'
                                   type='email'
@@ -490,7 +488,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='password'
                                   type='password'
@@ -505,7 +503,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='npassword'
                                   type='password'
@@ -520,7 +518,7 @@ function Account() {
                                   </span>
                                 </label>
                                 <input
-                                  required=''
+                                  required={true}
                                   className='form-control square'
                                   name='cpassword'
                                   type='password'
