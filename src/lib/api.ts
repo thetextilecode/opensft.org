@@ -45,9 +45,6 @@ export function getAllPosts(fields: string[] = [], filterByTag?: string, filterB
 
   if(filterByTag) {
     posts = posts.filter((post) => {
-      console.log('post.tags: ', post.tags);
-      console.log('filterByTag: ', filterByTag);
-      console.log('post.tags?.includes(filterByTag): ', post.tags?.includes(filterByTag));
       return post.tags?.includes(filterByTag);
     });
   } else if(filterByCategory) {

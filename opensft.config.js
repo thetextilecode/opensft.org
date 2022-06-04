@@ -121,6 +121,14 @@ export const socialConfig = {
   // youtube: ''
 };
 
+export const sidebarConfig = {
+  showBanner: false,
+  showCategories: true,
+  showPopularTags: false,
+  showSearch: false,
+  showTrendingPosts: true
+};
+
 export const languages = [
   // {
   //   flag: '',
