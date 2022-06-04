@@ -31,10 +31,13 @@ export default function Home({ posts }: IndexProps) {
       {/*{homeConfig.showPopupModal && (<IntroPopup />)}*/}
 
       <Layout noBreadcrumb='d-none' headerStyle='header-style-1'>
+
         {homeConfig.showHomeSlider && (
+          <>
           <section className='home-slider position-relative pt-50'>
             <Intro1 />
           </section>
+          </>
         )}
 
         {homeConfig.showFeaturesBanner && (

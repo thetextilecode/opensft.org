@@ -13,7 +13,7 @@
     "lint-staged": "yarn lint:fix && yarn format:fix",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "sass": "node-sass --watch public/assets/sass/main.scss public/assets/css/main.css --source-map public/assets/css/main.css.map",
+    "sass": "sass -w public/assets/sass/main.scss:public/assets/css/main.css",
     "typecheck": "tsc"
   },
   "type": "module",
@@ -57,6 +57,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "gray-matter": "^4.0.3",
     "prettier": "^2.6.2",
-    "typescript": "^4.7.2"
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "typescript": "^4.7.2",
+    "webpack": "^5.73.0"
   }
 }

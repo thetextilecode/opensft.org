@@ -177,12 +177,14 @@
 	h1 {
 		font-size:58px;
 		line-height: 64px;
-		margin: 0 0 0px;
+		margin: 0 0 0;
 	}
 	h2 {
-		font-size:46px;
+		//font-size:46px;
+		font-size:64px;
+		font-weight: lighter;
 		line-height: 54px;
-		margin: 0 0 10px 0px;
+		margin: 0 0 10px 0;
 	}
 	h3 {
 		font-size: 34px;

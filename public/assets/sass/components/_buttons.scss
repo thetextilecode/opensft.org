@@ -129,7 +129,7 @@ button.submit, button[type='submit'] {
 	}
 	&.btn-brush {
 		background-color: transparent;
-		color: $color-brand;
+		color: $color-brand-dark;
 		border: 0;
 		padding: 14px 80px 14px 65px;
 		background-repeat: no-repeat;
@@ -138,15 +138,18 @@ button.submit, button[type='submit'] {
 			margin: 3px 0 0 5px;
 		}
 		&.btn-brush-1 {
-			background-image: url(../imgs/theme/btn-brush-bg-1.png);			
+			background-image: url(../images/theme/btn-brush-bg-1.png);
 		}
 		&.btn-brush-2 {
-			background-image: url(../imgs/theme/btn-brush-bg-2.png);			
+			background-image: url(../images/theme/btn-brush-bg-2.png);
 		}
 		&.btn-brush-3 {
-			background-image: url(../imgs/theme/btn-brush-bg-3.png);			
+			background-image: url(../images/theme/btn-brush-bg-3.png);
 		}
 	}
+}
+.italicized {
+  font-family: $font-heading-italicized;
 }
 .comments-area .btn-reply {
 	display: flex !important;

@@ -10,14 +10,14 @@ const Banner3 = () => {
           <Image src='/assets/images/banner/banner-5.jpg' alt='' layout={'responsive'} width={306} height={363} />
           </div>
           <div className='banner-text'>
-            <span>Accessories</span>
+            <span>News</span>
             <h4>
-              Save 17% on <br />
-              Autumn Hat
+              Do You Own a <br />
+              Fashion Brand?
             </h4>
             <Link href='/index'>
               <a>
-                Shop Now <i className='fi-rs-arrow-right'></i>
+                We Want to Hear<br/> From You <i className='fi-rs-arrow-right'></i>
               </a>
             </Link>
           </div>
@@ -29,14 +29,14 @@ const Banner3 = () => {
           <Image src='/assets/images/banner/banner-6.jpg' alt='' layout={'responsive'} width={306} height={170} />
           </div>
           <div className='banner-text'>
-            <span>Big Offer</span>
+            <span>Get Involved</span>
             <h4>
-              Save 20% on <br />
-              Women's socks
+              Learn How <br />
+              You Can Help
             </h4>
             <Link href='/index'>
               <a>
-                Shop Now <i className='fi-rs-arrow-right'></i>
+                Start Now <i className='fi-rs-arrow-right'></i>
               </a>
             </Link>
           </div>
@@ -46,14 +46,14 @@ const Banner3 = () => {
           <Image src='/assets/images/banner/banner-7.jpg' alt='' width={306} height={170} layout={'responsive'} />
           </div>
           <div className='banner-text'>
-            <span>Smart Offer</span>
+            <span>Fashion's</span>
             <h4>
-              Save 20% on <br />
-              Eardrop
+              State of <br />
+              Technology
             </h4>
             <Link href='/index'>
               <a>
-                Shop Now <i className='fi-rs-arrow-right'></i>
+                Learn <i className='fi-rs-arrow-right'></i>
               </a>
             </Link>
           </div>

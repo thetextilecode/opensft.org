@@ -1,8 +1,13 @@
 //1.FONT
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cormorant+Infant:wght@400;700&family=Quando&display=swap');
 
-$font-heading: 'Spartan', sans-serif;
+//$font-heading: 'Spartan', sans-serif;
+//$font-heading: 'Cormorant Infant', serif;
+$font-heading: 'Quando', serif;
+$font-heading-italicized: 'Cedarville Cursive', cursive;
 $font-text: 'Lato', sans-serif;
 
 $font-xxs: 12px;
@@ -14,16 +19,17 @@ $font-xl: 19px;
 $font-xxl: 58px;
 
 //2.COLOR
-$color-brand: #088178;
-$color-brand-dark: #046963;
-$color-primary: #3f81eb;
-$color-secondary: #41506b;
+//$color-brand: #B6D0D2;
+$color-brand: #6FB1B6;
+$color-brand-dark: #4A8489;
+$color-primary: #EC848B;
+$color-secondary: #DDBEA9;
 $color-warning: #ffb300;
 $color-danger: #ff3551;
 $color-success: #3ed092;
 $color-info: #18a1b7;
 $color-text: #4f5d77;
-$color-heading: #222222;
+$color-heading: #5D5A59;
 $color-grey-1: #1a1a1a;
 $color-grey-2: #242424;
 $color-grey-4: #90908e;
