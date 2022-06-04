@@ -12,14 +12,6 @@ function Privacy() {
             <div className='single-page pr-30'>
               <div className='single-header style-2'>
                 <h2>Privacy Policy</h2>
-                <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                  <span className='post-by'>
-                    By <Link href='/contact'>OpenSFT</Link>
-                  </span>
-                  <span className='post-on has-dot'>2 June 2022</span>
-                  <span className='time-reading has-dot'>8 mins read</span>
-                  <span className='hit-count has-dot'>69k Views</span>
-                </div>
               </div>
               <div className='single-content'>
                 <h4>Welcome to Open Source Fashion & Textiles CIC’s Privacy Policy</h4>

@@ -9,22 +9,11 @@ function Terms() {
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-9'>
+            <div className='col-lg-12'>
               <div className='single-page pr-30 mb-lg-0 mb-sm-5'>
                 <div className='single-header style-2'>
                   <h2>Terms of Service</h2>
-                  <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                    <span className='post-by'>
-                      By <Link href='/terms'>John</Link>
-                    </span>
-                    <span className='post-on has-dot'>9 April 2020</span>
-                    <span className='time-reading has-dot'>8 mins read</span>
-                    <span className='hit-count has-dot'>69k Views</span>
-                  </div>
                 </div>
-                <figure className='single-thumbnail'>
-                  <Image src='/assets/images/blog/blog-10.jpg' alt='' layout={'responsive'} width={1200} height={567} />
-                </figure>
                 <div className='single-content'>
                   <p> Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the
                     https://opensft.org website (the “Service”) operated by Open Source Fashion & Textiles CIC (“us”, “we”, or “our”).</p>
@@ -87,9 +76,6 @@ function Terms() {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-              <BlogSidebar />
             </div>
           </div>
         </div>
