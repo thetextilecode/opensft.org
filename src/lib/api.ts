@@ -81,21 +81,26 @@ export function getAllCategories(): ICategory[] {
   ];
 }
 
-export function getAllTags(fields: string[] = []): ITag[] {
-  const tags = [
+export function getAllTags(fields?: string[]): ITag[] {
+  let tags = [
     {
       label: 'AI',
       value: 'ai',
       description: ''
     },
     {
-      label: 'Business Intelligence',
-      value: 'business-intelligence',
+      label: 'Automation',
+      value: 'automation',
       description: ''
     },
     {
-      label: 'Automation',
-      value: 'automation',
+      label: 'Blockchain',
+      value: 'blockchain',
+      description: ''
+    },
+    {
+      label: 'Business Intelligence',
+      value: 'business-intelligence',
       description: ''
     },
     {
@@ -140,19 +145,35 @@ export function getAllTags(fields: string[] = []): ITag[] {
     }
   ];
 
-  const filteredTags = [];
+  // if fields are not provided, just return them all
+  if(fields) {
+    const filteredTags = [];
 
-  tags.map((tag) => {
-    let minimalTag = {};
+    tags.map((tag) => {
+      let minimalTag = {};
 
-    fields.forEach((field) => {
-      if(tag[field]) {
-        minimalTag[field] = tag[field];
-      }
+      fields.forEach((field) => {
+        if(tag[field]) {
+          minimalTag[field] = tag[field];
+        }
+      })
+      filteredTags.push(minimalTag);
     })
-    filteredTags.push(minimalTag);
-  })
 
-  return filteredTags;
+    tags = filteredTags;
+  }
+
+  return tags;
 }
+
+export function getTagByValue(value: string | string[]) {
+  let tag = {};
+  const tagTemp = getAllTags().filter((tagData) => {
+    return tagData.value === value;
+  });
+  
+  if(tagTemp.length === 1) { tag = tagTemp[0] }
+  return tag;
+}
+
 
