@@ -38,20 +38,23 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostItems {
 
 export function getAllPosts(fields: string[] = [], filterByTag?: string, filterByCategory?: string | string[]): PostItems[] {
   const slugs = getPostSlugs();
-  let posts = slugs
+  const posts = slugs
   .map((slug) => getPostBySlug(slug, fields))
   // sort posts by date in descending order
   .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  let tempPosts = posts;
 
   if(filterByTag) {
-    posts = posts.filter((post) => {
+    tempPosts = posts.filter((post) => {
       return post.tags?.includes(filterByTag);
     });
   } else if(filterByCategory) {
-    posts = posts.filter((post) => post.category?.toLowerCase() === filterByCategory);
+    tempPosts = posts.filter((post) => {
+      return post.category?.toLowerCase() === filterByCategory;
+    });
   }
 
-  return posts;
+  return tempPosts;
 }
 
 export function getCategoryByValue(value: string | string[]) {

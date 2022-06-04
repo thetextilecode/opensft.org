@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'readTime',
     'slug',
     'title',
-  ], null, params.category[0]);
+  ], null, params.category);
 
   const category = getCategoryByValue(params.category);
 
