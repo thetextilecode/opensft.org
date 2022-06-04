@@ -1,14 +1,10 @@
-import { format, parseISO } from 'date-fns';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import { GetStaticProps } from 'next';
 import { IBlogPost, ICategory } from '../../../types';
 import Layout from '../../components/layout/Layout';
-import { getAllCategories, getAllPosts, getAllTags } from '../../lib/api';
+import { getAllCategories, getAllPosts, getCategoryByValue } from '../../lib/api';
 import category from '../../components/sliders/Category';
+import BlogList from '../../components/elements/BlogList';
+import { blogConfig } from '../../../opensft.config';
 
 type CategoryPageProps = {
   category: ICategory;
@@ -21,25 +17,21 @@ const CategoryPage = ({ category, posts }: CategoryPageProps): JSX.Element => {
       <section className='mt-50 mb-50'>
         <div className='container custom'>
           <div className='row'>
-            <div className='single-page pl-30'>
-              <div className='single-header style-2'>
-                <div className='d-flex'>
-                  <h1>
-                    {category.label}
-                  </h1>
-                </div>
+            <div className={'col-lg-12'}>
+            <div className='single-header mb-50'>
+              <h1 className='font-xxl text-brand'>{category.label}</h1>
+              <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
+                {/*<span className='post-by'>32 Sub Categories</span>*/}
+                <span className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+                {/*<span className='time-reading has-dot'>480 Authors</span>*/}
+                {/*<span className='hit-count  has-dot'>29M Views</span>*/}
               </div>
-              <p>An image for the category.</p>
-              <div className='single-content'>
-                <p>A list of posts for this category.</p>
-                <ul>
-                  {posts.map((post, idx) => {
-                    return (
-                      <li key={idx}>{post.title}</li>
-                    );
-                  })}
-                </ul>
+            </div>
+            <div className='loop-grid loop-list pr-30'>
+              <div className='row'>
+              <BlogList posts={posts} show={blogConfig.postsPerPage} />
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -58,17 +50,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'imageAlt',
     'imageOriginalWidth',
     'imageOriginalHeight',
-    // 'lastUpdated',
     'readTime',
     'slug',
-    // 'tags',
     'title',
-  ]);
+  ], null, params.category);
 
-  const categoryPosts = posts.filter((post) => post.category === params.category);
+  const category = getCategoryByValue(params.category);
 
   return {
-    props: { category, posts: categoryPosts },
+    props: { category, posts },
   };
 };
 
@@ -76,21 +66,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export async function getStaticPaths() {
   const categories = getAllCategories();
 
-  // const paths = categories.map((category: ICategory) => category.value).map((value) => ({ params: { category: value } }));
-
+  // Get the paths we want to pre-render based on posts
   const tempPaths = [];
 
-  // Get the paths we want to pre-render based on posts
-  // const paths = categories.map((category) => ({
-  //   params: { category: category.value },
-  // }));
-
-  const paths = categories.map((category) => {
-    tempPaths.push({ params: {category: category.value.toString()} });
+  categories.map((category) => {
+    tempPaths.push({ params: { category: category.value } });
   });
-
-  // console.log('paths: ', paths);
-  console.log('tempPaths: ', tempPaths);
 
   return {
     paths: tempPaths,

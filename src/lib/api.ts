@@ -36,12 +36,27 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostItems {
   return items;
 }
 
-export function getAllPosts(fields: string[] = []): PostItems[] {
+export function getAllPosts(fields: string[] = [], filterByTag?: string, filterByCategory?: string | string[]): PostItems[] {
   const slugs = getPostSlugs();
-  return slugs
+  let posts = slugs
   .map((slug) => getPostBySlug(slug, fields))
   // sort posts by date in descending order
   .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+  if(filterByTag) {
+    posts = posts.filter((post) => post.tags.includes(filterByTag));
+  } else if(filterByCategory) {
+    posts = posts.filter((post) => post.category?.toLowerCase() === filterByCategory);
+  }
+
+  return posts;
+}
+
+export function getCategoryByValue(value: string | string[]) {
+  let category = {};
+  const cat = getAllCategories().filter((category) => category.value === value);
+  if(cat.length === 1) { category = cat[0] }
+  return category;
 }
 
 export function getAllCategories(): ICategory[] {
