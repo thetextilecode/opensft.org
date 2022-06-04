@@ -51,18 +51,23 @@ const Header = ({
               <div className='col-xl-3 col-lg-4'>
                 <div className='header-info'>
                   <ul>
-                    <li>
-                      <i className='fi-rs-smartphone'></i>
-                      <Link href='/#'>
-                        <a>{infoConfig.phone}</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <i className='fi-rs-marker'></i>
-                      <Link href='/contact'>
-                        <a>Our location</a>
-                      </Link>
-                    </li>
+
+                    {headerConfig.top.showPhone && (
+                      <li>
+                        <i className='fi-rs-smartphone'></i>
+                        <Link href='/#'>
+                          <a>{infoConfig.phone}</a>
+                        </Link>
+                      </li>
+                    )}
+                    {headerConfig.top.showLocation && (
+                      <li>
+                        <i className='fi-rs-marker'></i>
+                        <Link href='/contact'>
+                          <a>Our location</a>
+                        </Link>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -89,10 +94,11 @@ const Header = ({
 
 
               <div className='col-xl-3 col-lg-4'>
-                {/* Languages */}
-                {headerConfig.showLanguages && (
-                  <div className='header-info header-info-right'>
-                    <ul>
+
+                <div className='header-info header-info-right'>
+                  <ul>
+                    {/* Languages */}
+                    {headerConfig.top.showLanguages && (
                       <li>
                         <Link href='/#'>
                           <a className='language-dropdown-active'>
@@ -117,15 +123,18 @@ const Header = ({
                           })}
                         </ul>
                       </li>
+                    )}
+
+                    {headerConfig.top.showLoginRegister && (
                       <li>
                         <i className='fi-rs-user'></i>
                         <Link href='/login-register'>
                           <a>Log In / Sign Up</a>
                         </Link>
                       </li>
-                    </ul>
-                  </div>
-                )}
+                    )}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

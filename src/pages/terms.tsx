@@ -1,7 +1,5 @@
-import BlogSidebar from '../components/elements/BlogSidebar';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
-import Image from 'next/image';
 
 function Terms() {
   return (

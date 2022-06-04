@@ -46,7 +46,6 @@ export const headerConfig = {
   showHeaderTop: true,
   showHeaderMiddle: false,
   showHeaderBottom: true,
-  showLanguages: true,
   bottom: {
     showBrowseCategories: false,
     showHotline: false,
@@ -57,7 +56,11 @@ export const headerConfig = {
   },
   middle: {},
   top: {
+    showLanguages: false,
+    showLocation: false,
+    showLoginSignup: false,
     showNewsflash: true,
+    showPhone: false,
     newsflash: {
       callToAction: '',
       href: '/#',
