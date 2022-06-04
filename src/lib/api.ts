@@ -44,7 +44,12 @@ export function getAllPosts(fields: string[] = [], filterByTag?: string, filterB
   .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
   if(filterByTag) {
-    posts = posts.filter((post) => post.tags.includes(filterByTag));
+    posts = posts.filter((post) => {
+      console.log('post.tags: ', post.tags);
+      console.log('filterByTag: ', filterByTag);
+      console.log('post.tags?.includes(filterByTag): ', post.tags?.includes(filterByTag));
+      return post.tags?.includes(filterByTag);
+    });
   } else if(filterByCategory) {
     posts = posts.filter((post) => post.category?.toLowerCase() === filterByCategory);
   }
@@ -166,12 +171,12 @@ export function getAllTags(fields?: string[]): ITag[] {
   return tags;
 }
 
-export function getTagByValue(value: string | string[]) {
+export function getTagByValue(value: string) {
   let tag = {};
   const tagTemp = getAllTags().filter((tagData) => {
     return tagData.value === value;
   });
-  
+
   if(tagTemp.length === 1) { tag = tagTemp[0] }
   return tag;
 }

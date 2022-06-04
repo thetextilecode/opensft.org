@@ -49,12 +49,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'imageOriginalHeight',
     'readTime',
     'slug',
+    'tags',
     'title',
-  ], null, params.tag);
+  ], params.tag.toString());
 
-  const tag = getTagByValue(params.tag);
-  console.log('tag: ', tag);
-  console.log('params.tag: ', params.tag);
+  const tag = getTagByValue(params.tag.toString());
 
   return {
     props: { posts, tag },
