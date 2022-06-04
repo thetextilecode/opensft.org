@@ -7,13 +7,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IBlogPost, ICategory } from '../../../types';
 import Layout from '../../components/layout/Layout';
-import { getAllCategories } from '../../lib/api';
+import { getAllCategories, getAllPosts, getAllTags } from '../../lib/api';
+import category from '../../components/sliders/Category';
 
 type CategoryPageProps = {
   category: ICategory;
+  posts: IBlogPost[];
 };
 
-const CategoryPage = ({ category }: CategoryPageProps): JSX.Element => {
+const CategoryPage = ({ category, posts }: CategoryPageProps): JSX.Element => {
   return (
     <Layout parent='Home' sub='Categories' subChild={category.label}>
       <section className='mt-50 mb-50'>
@@ -30,6 +32,13 @@ const CategoryPage = ({ category }: CategoryPageProps): JSX.Element => {
               <p>An image for the category.</p>
               <div className='single-content'>
                 <p>A list of posts for this category.</p>
+                <ul>
+                  {posts.map((post, idx) => {
+                    return (
+                      <li key={idx}>{post.title}</li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           </div>
@@ -40,27 +49,51 @@ const CategoryPage = ({ category }: CategoryPageProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const categories = getAllCategories();
-  const category = categories.some((category) => category.value === params.category);
+  const posts = getAllPosts([
+    'category',
+    'date',
+    'description',
+    'draft',
+    'image',
+    'imageAlt',
+    'imageOriginalWidth',
+    'imageOriginalHeight',
+    // 'lastUpdated',
+    'readTime',
+    'slug',
+    // 'tags',
+    'title',
+  ]);
+
+  const categoryPosts = posts.filter((post) => post.category === params.category);
 
   return {
-    props: {
-      category,
-    },
+    props: { category, posts: categoryPosts },
   };
 };
 
-export async function getStaticPaths() {
-  const categories = await getCategories('blog');
 
-  const paths = categories.map((category: string) => ({
-    params: {
-      category,
-    },
-  }));
+export async function getStaticPaths() {
+  const categories = getAllCategories();
+
+  // const paths = categories.map((category: ICategory) => category.value).map((value) => ({ params: { category: value } }));
+
+  const tempPaths = [];
+
+  // Get the paths we want to pre-render based on posts
+  // const paths = categories.map((category) => ({
+  //   params: { category: category.value },
+  // }));
+
+  const paths = categories.map((category) => {
+    tempPaths.push({ params: {category: category.value.toString()} });
+  });
+
+  // console.log('paths: ', paths);
+  console.log('tempPaths: ', tempPaths);
 
   return {
-    paths,
+    paths: tempPaths,
     fallback: false,
   };
 }
