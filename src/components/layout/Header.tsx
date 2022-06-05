@@ -43,7 +43,8 @@ const Header = ({
   const handleToggle = () => setToggled(!isToggled);
 
   return (
-    <header className={`header-area ${headerStyle} header-height-2`}>
+    // <header className={`header-area ${headerStyle} header-height-2`}>
+    <header className={`header-area header-height-2`}>
       {headerConfig.showHeaderTop && (
         <div className='header-top header-top-ptb-1 d-none d-lg-block'>
           <div className='container'>
@@ -51,7 +52,6 @@ const Header = ({
               <div className='col-xl-3 col-lg-4'>
                 <div className='header-info'>
                   <ul>
-
                     {headerConfig.top.showPhone && (
                       <li>
                         <i className='fi-rs-smartphone'></i>
@@ -60,6 +60,7 @@ const Header = ({
                         </Link>
                       </li>
                     )}
+
                     {headerConfig.top.showLocation && (
                       <li>
                         <i className='fi-rs-marker'></i>

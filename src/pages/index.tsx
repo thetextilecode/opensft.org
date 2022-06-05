@@ -32,15 +32,15 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
     <>
       {homeConfig.showPopupModal && (<IntroPopup />)}
 
-      <Layout noBreadcrumb='d-none' headerStyle='header-style-1' newsletterId={newsletterId}
+      <Layout noBreadcrumb='d-none'
+              headerStyle='header-style-1'
+              newsletterId={newsletterId}
               newsletterUser={newsletterUser}>
 
         {homeConfig.showHomeSlider && (
-          <>
-            <section className='home-slider position-relative pt-50'>
-              <Intro1 />
-            </section>
-          </>
+          <section className='home-slider position-relative pt-50'>
+            <Intro1 />
+          </section>
         )}
 
         {homeConfig.showFeaturesBanner && (

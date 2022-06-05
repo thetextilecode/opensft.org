@@ -42,7 +42,7 @@ export const homeConfig = {
 };
 
 export const headerConfig = {
-  showHeaderTop: false,
+  showHeaderTop: true,
   showHeaderMiddle: false,
   showHeaderBottom: true,
   bottom: {
