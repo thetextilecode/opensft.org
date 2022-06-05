@@ -48,16 +48,11 @@ const Intro1 = () => {
                 </div>
                 <div className='col-lg-7 col-md-6'>
                   <div className='single-slider-img single-slider-img-1'>
-                    {/*<Image*/}
-                    {/*  className='animated slider-1-1'*/}
-                    {/*  src='/assets/images/slider/slider-1.png'*/}
-                    {/*  alt=''*/}
-                    {/*  layout={'fill'}*/}
-                    {/*/>*/}
                     <Image
                       className='animated slider-1-1'
                       src='/assets/images/slider/laptop.png'
-                      alt=''
+                      alt={'photo of woman holding fabric, displayed in a laptop frame'}
+                      priority={true}
                       layout={'responsive'}
                       width={1200}
                       height={736}

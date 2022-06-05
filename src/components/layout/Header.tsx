@@ -152,6 +152,7 @@ const Header = ({
                     <Image
                       src={infoConfig.logo}
                       alt={infoConfig.companyName + ' Logo'}
+                      layout={'responsive'}
                       width={infoConfig.logoWidth}
                       height={infoConfig.logoHeight}
                     />

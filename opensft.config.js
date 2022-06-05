@@ -18,7 +18,7 @@ export const siteConfig = {
   title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
   description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
-  shareImage: '/assets/images/blog/screenshot.png',
+  shareImage: '/assets/images/logo/screenshot.png',
   shareImageAlt: 'Open Source Fashion & Textiles',
 };
 
@@ -79,10 +79,13 @@ export const infoConfig = {
   copyright: 'Copyright 2022 © Open Source Fashion & Textiles',
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
-  logo: '/assets/images/theme/osft.jpg',
+  // logo: '/assets/images/theme/osft.jpg',
   // logo: '/assets/images/theme/logo.svg',
-  logoWidth: 256,
-  logoHeight: 92,
+  // logoWidth: 256,
+  // logoHeight: 92,
+  logoWidth: 4509,
+  logoHeight: 1317,
+  logo: '/assets/images/logo/logo-text-clear.png',
   phone: '+44 20 8036 4986',
 };
 

@@ -80,8 +80,6 @@ export async function getStaticPaths() {
   });
 
   return {
-    newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
-    newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
     paths: tempPaths,
     fallback: false,
   };

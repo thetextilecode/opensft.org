@@ -8,21 +8,27 @@ import {
   deleteFromWishlist,
 } from '../redux/action/wishlistAction';
 import Image from 'next/image';
+import { GetStaticProps } from 'next';
+import { getAllPosts } from '../lib/api';
 
 export interface IWishlist {
   addToCart?: any;
   clearWishlist?: any;
   closeWishlistModal?: any;
   deleteFromWishlist?: any;
+  newsletterId: string;
+  newsletterUser: string;
   wishlist?: any;
 }
 
 const Saved = ({
-                 wishlist,
+                 addToCart,
                  clearWishlist,
                  closeWishlistModal,
                  deleteFromWishlist,
-                 addToCart,
+                 newsletterId,
+                 newsletterUser,
+                 wishlist,
                }: IWishlist) => {
 
   const handleCart = (product) => {
@@ -31,7 +37,7 @@ const Saved = ({
   };
 
   return (
-    <Layout parent='Home' sub='Shop' subChild='Saved'>
+    <Layout parent='Home' sub='Shop' subChild='Saved' newsletterId={newsletterId} newsletterUser={newsletterUser}>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>
@@ -184,3 +190,13 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Saved);
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+    },
+  };
+};
+

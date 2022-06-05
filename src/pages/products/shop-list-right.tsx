@@ -315,7 +315,10 @@ export default connect(mapStateToProps, mapDidpatchToProps)(ProductsList);
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
-    props: { newsletterId: process.env.REACT_APP_MAILCHIMP_ID, newsletterUser: process.env.REACT_APP_MAILCHIMP_U },
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U
+    },
   };
 };
 

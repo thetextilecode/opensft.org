@@ -189,10 +189,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      source: mdxSource,
-      posts,
-      post: data,
       categories,
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      post: data,
+      posts,
+      source: mdxSource,
       tags,
     },
   };
@@ -206,8 +208,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   .map((slug) => ({ params: { slug } }));
 
   return {
-    newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
-    newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
     paths,
     fallback: false,
   };

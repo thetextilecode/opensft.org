@@ -20,19 +20,20 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
           <div className='row'>
             <div className='col-lg-4 col-md-6'>
               <div className='widget-about font-md mb-md-5 mb-lg-0'>
-                <div className='logo logo-width-1 wow fadeIn animated'>
-                  <Link href='/'>
-                    <a>
-                    <Image
-                      src={infoConfig.logo}
-                      alt={infoConfig.companyName + ' logo'}
-                      width={infoConfig.logoWidth}
-                      height={infoConfig.logoHeight}
-                    />
-                    </a>
-                  </Link>
-                </div>
-                <h5 className='mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated'>
+                {/*<div className='logo logo-width-1 wow fadeIn animated'>*/}
+                {/*  <Link href='/'>*/}
+                {/*    <a>*/}
+                {/*    <Image*/}
+                {/*      src={infoConfig.logo}*/}
+                {/*      alt={infoConfig.companyName + ' logo'}*/}
+                {/*      width={infoConfig.logoWidth}*/}
+                {/*      height={infoConfig.logoHeight}*/}
+                {/*    />*/}
+                {/*    </a>*/}
+                {/*  </Link>*/}
+                {/*</div>*/}
+                {/*<h5 className='mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated'>*/}
+                <h5 className='widget-title wow fadeIn animated'>
                   Contact
                 </h5>
                 <p className='wow fadeIn animated'>
@@ -71,12 +72,21 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
               </ul>
             </div>
             <div className='col-lg-4'>
-              <h5 className='widget-title wow fadeIn animated'>
-                Subscribe
-              </h5>
               <div className='row'>
                 <div className='col-md-8 col-lg-12'>
-                  <Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser}/>
+                  <div className='logo logo-width-1 wow fadeIn animated mx-auto'>
+                    <Link href='/'>
+                      <a>
+                        <Image
+                          src={infoConfig.logo}
+                          alt={infoConfig.companyName + ' logo'}
+                          width={infoConfig.logoWidth}
+                          height={infoConfig.logoHeight}
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                  {/*<Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser}/>*/}
                 </div>
               </div>
             </div>
