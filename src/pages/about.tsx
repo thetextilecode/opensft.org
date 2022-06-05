@@ -35,11 +35,15 @@ function About({ newsletterId, newsletterUser }: IAbout) {
             </div>
             <div className='col-lg-6'>
               <Image
-                src='/assets/images/page/about-1.png'
+                // src='/assets/images/page/about-1.png'
+                // src='/assets/images/page/sewing.jpg'
+                src='/assets/images/page/cristofer-maximilian-t-shirt-unsplash.jpg'
                 alt=''
                 layout={'responsive'}
-                width={1000}
-                height={406}
+                // width={1000}
+                // height={406}
+                width={1500}
+                height={1000}
               />
             </div>
           </div>
