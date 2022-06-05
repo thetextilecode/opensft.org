@@ -78,12 +78,9 @@ export const infoConfig = {
   copyright: 'Copyright 2022 © Open Source Fashion & Textiles',
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
-  // logo: '/assets/images/logo/osft.jpg',
-  // logoWidth: 256,
-  // logoHeight: 92,
   logo: '/assets/images/logo/logo-combined-clear-sm.png',
-  logoWidth: 245,
-  logoHeight: 88,
+  logoWidth: 250,
+  logoHeight: 68,
   // logo: '/assets/images/logo/logo-text-clear-sm.png',
   // logoWidth: 245,
   // logoHeight: 72,
@@ -142,7 +139,7 @@ export const socialConfig = {
   github: 'opensft',
   instagram: 'opensft',
   pinterest: 'opensft',
-  twitter: 'opensourceft',
+  twitter: 'opensft',
   // youtube: ''
 };
 

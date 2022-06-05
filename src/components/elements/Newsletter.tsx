@@ -93,7 +93,7 @@ const Newsletter = ({ newsletterUser, newsletterId }: INewsletter) => {
                 <h5 className='font-size-15 ml-4 mb-0'>
                   Research, blog posts, and news.<br />
                   <strong>
-                    Never spam. We promise.
+                    No spam. We promise.
                   </strong>
                 </h5>
               </div>
