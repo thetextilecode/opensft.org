@@ -1,4 +1,3 @@
-
 import { connect } from 'react-redux';
 import CompareTable from '../components/ecommerce/CompareTable';
 import Layout from '../components/layout/Layout';
@@ -6,16 +5,19 @@ import {
   clearCompare,
   deleteFromCompare,
 } from '../redux/action/compareAction';
+import { GetStaticProps } from 'next';
 
 export interface ICompare {
   clearCompare?: any;
   compare?: any;
   deleteFromCompare?: any;
+  newsletterId: string;
+  newsletterUser: string;
 }
 
-const Compare = ({ compare, clearCompare, deleteFromCompare }: ICompare) => {
+const Compare = ({ compare, clearCompare, deleteFromCompare, newsletterUser, newsletterId }: ICompare) => {
   return (
-    <Layout parent='Home' sub='Shop' subChild='Compare'>
+    <Layout parent='Home' sub='Shop' subChild='Compare' newsletterUser={newsletterUser} newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>
@@ -74,3 +76,13 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Compare);
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+    },
+  };
+};
+

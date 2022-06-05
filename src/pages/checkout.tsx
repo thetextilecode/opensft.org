@@ -10,16 +10,19 @@ import {
   openCart,
 } from '../redux/action/cart';
 import { ICart } from './cart';
+import { GetStaticProps } from 'next';
 
 const Cart = ({
-                openCart,
-                cartItems,
                 activeCart,
+                cartItems,
+                clearCart,
                 closeCart,
-                increaseQuantity,
                 decreaseQuantity,
                 deleteFromCart,
-                clearCart,
+                increaseQuantity,
+                newsletterId,
+                newsletterUser,
+                openCart,
               }: ICart) => {
   const price = () => {
     let price = 0;
@@ -29,7 +32,7 @@ const Cart = ({
   };
 
   return (
-    <Layout parent='Home' sub='Shop' subChild='Checkout'>
+    <Layout parent='Home' sub='Shop' subChild='Checkout' newsletterUser={newsletterUser} newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>
@@ -756,3 +759,13 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U
+    },
+  };
+};
+

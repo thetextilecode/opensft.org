@@ -32,13 +32,23 @@ const components = {
 
 type ArticlePageProps = {
   categories: ICategory[];
+  newsletterId: string;
+  newsletterUser: string;
   post: IBlogPost;
   posts: IBlogPost[];
   source: MDXRemoteSerializeResult;
   tags: ITag[];
 };
 
-const ArticlePage = ({ categories, post, posts, source, tags }: ArticlePageProps): JSX.Element => {
+const ArticlePage = ({
+                       categories,
+                       newsletterUser,
+                       newsletterId,
+                       post,
+                       posts,
+                       source,
+                       tags,
+                     }: ArticlePageProps): JSX.Element => {
   const customMeta: IMetaProps = {
     title: `${post.title} | ${siteConfig.title}`,
     description: post.description,
@@ -54,7 +64,8 @@ const ArticlePage = ({ categories, post, posts, source, tags }: ArticlePageProps
       {!isLocal && post.draft ? (
         <>This post has not yet been published. Please try again later.</>
       ) : (
-        <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details'>
+        <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details' newsletterUser={newsletterUser}
+                newsletterId={newsletterId}>
           <section className='mt-50 mb-50'>
             <div className='container custom'>
               <div className='row'>
@@ -156,11 +167,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { content, data } = matter(source);
 
   const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    // mdxOptions: {
-    // remarkPlugins: [require('remark-code-titles')],
-    // rehypePlugins: [mdxPrism, rehypeSlug, rehypeAutolinkHeadings],
-    // },
     scope: data,
   });
 
@@ -200,6 +206,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   .map((slug) => ({ params: { slug } }));
 
   return {
+    newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+    newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
     paths,
     fallback: false,
   };

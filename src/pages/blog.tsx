@@ -8,13 +8,15 @@ import { blogConfig } from '../../opensft.config';
 
 export interface IPageBlogList {
   categories: ICategory[];
+  newsletterId: string;
+  newsletterUser: string;
   posts: IBlogPost[];
   tags: ITag[];
 }
 
-function PageBlogList({ categories, posts, tags }: IPageBlogList) {
+function PageBlogList({ categories, newsletterId, newsletterUser, posts, tags }: IPageBlogList) {
   return (
-    <Layout parent='Home' sub='Blog' subChild='List'>
+    <Layout parent='Home' sub='Blog' subChild='List' newsletterUser={newsletterUser} newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container custom'>
           <div className='row'>
@@ -74,6 +76,12 @@ export const getStaticProps: GetStaticProps = async () => {
   ]);
 
   return {
-    props: { posts, categories, tags },
+    props: {
+      categories,
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      posts,
+      tags
+    },
   };
 };

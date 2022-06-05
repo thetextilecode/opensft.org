@@ -15,14 +15,17 @@ import Layout from "../../components/layout/Layout";
 import { fetchProduct } from "../../redux/action/product";
 import Image from "next/image";
 import Link from "next/link";
+import { GetStaticProps } from 'next';
 
 export interface IProductsList {
   fetchProduct?: any;
+  newsletterUser: string;
+  newsletterId: string;
   productFilters?: any;
   products?: any;
 }
 
-const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList) => {
+const ProductsList = ({ newsletterId, newsletterUser, products, productFilters, fetchProduct }: IProductsList) => {
     // console.log(products);
 
     let Router = useRouter(),
@@ -79,7 +82,7 @@ const ProductsList = ({ products, productFilters, fetchProduct }: IProductsList)
     };
 
     return (
-      <Layout parent="Home" sub="Shop" subChild="List">
+      <Layout parent="Home" sub="Shop" subChild="List" newsletterUser={newsletterUser} newsletterId={newsletterId}>
         <section className="mt-50 mb-50">
           <div className="container">
             <div className="row flex-row-reverse">
@@ -309,3 +312,10 @@ const mapDidpatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDidpatchToProps)(ProductsList);
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: { newsletterId: process.env.REACT_APP_MAILCHIMP_ID, newsletterUser: process.env.REACT_APP_MAILCHIMP_U },
+  };
+};
+

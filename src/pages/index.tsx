@@ -10,7 +10,7 @@ import BannerFeatures from '../components/elements/BannerFeatures';
 import Deals1 from '../components/elements/Deals1';
 import Deals2 from '../components/elements/Deals2';
 import HomeBlog from '../components/elements/HomeBlog';
-// import IntroPopup from '../components/elements/IntroPopup';
+import IntroPopup from '../components/elements/IntroPopup';
 import Layout from '../components/layout/Layout';
 import BrandSlider from '../components/sliders/Brand';
 import CategorySlider from '../components/sliders/Category';
@@ -22,21 +22,24 @@ import { getAllPosts } from '../lib/api';
 import { homeConfig } from '../../opensft.config';
 
 type IndexProps = {
+  newsletterId: string;
+  newsletterUser: string;
   posts: IBlogPost[];
 };
 
-export default function Home({ posts }: IndexProps) {
+export default function Home({ newsletterId, newsletterUser, posts }: IndexProps) {
   return (
     <>
-      {/*{homeConfig.showPopupModal && (<IntroPopup />)}*/}
+      {homeConfig.showPopupModal && (<IntroPopup />)}
 
-      <Layout noBreadcrumb='d-none' headerStyle='header-style-1'>
+      <Layout noBreadcrumb='d-none' headerStyle='header-style-1' newsletterId={newsletterId}
+              newsletterUser={newsletterUser}>
 
         {homeConfig.showHomeSlider && (
           <>
-          <section className='home-slider position-relative pt-50'>
-            <Intro1 />
-          </section>
+            <section className='home-slider position-relative pt-50'>
+              <Intro1 />
+            </section>
           </>
         )}
 
@@ -203,7 +206,11 @@ export const getStaticProps: GetStaticProps = async () => {
   ]);
 
   return {
-    props: { posts },
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      posts,
+    },
   };
 };
 

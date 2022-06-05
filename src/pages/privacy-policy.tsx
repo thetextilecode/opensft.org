@@ -1,5 +1,4 @@
 import Layout from '../components/layout/Layout';
-import BlogSidebar from '../components/elements/BlogSidebar';
 import Link from 'next/link';
 import { infoConfig } from '../../opensft.config';
 

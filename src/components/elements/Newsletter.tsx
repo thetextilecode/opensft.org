@@ -1,6 +1,76 @@
 import Image from 'next/image';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import { useState } from 'react';
 
-const Newsletter = () => {
+const CustomForm = ({ status, message, onValidated }) => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    email &&
+    // firstName &&
+    // lastName &&
+    email.indexOf('@') > -1 &&
+    onValidated({
+      EMAIL: email,
+      // MERGE1: firstName,
+      // MERGE2: lastName,
+    });
+  };
+
+  return (
+    <form className='mc__form form-subscriber d-flex wow fadeIn animated'
+          onSubmit={(e) => handleSubmit(e)}>
+      {status === 'sending' && (
+        <div className='mc__alert mc__alert--sending'>
+          sending...
+        </div>
+      )}
+      {status === 'error' && (
+        <div
+          className='mc__alert mc__alert--error'
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === 'success' && (
+        <div
+          className='mc__alert mc__alert--success'
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status !== 'success' ? (
+        <div className='mc__field-container'>
+          <input
+            type='email'
+            className='form-control bg-white font-small'
+            placeholder='Enter your email'
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required={true}
+          />
+        </div>
+      ) : null}
+
+      {status !== 'success' && (
+        <button
+          className='btn bg-dark text-white'
+          type='submit'
+        >
+          Subscribe
+        </button>
+      )}
+    </form>
+  );
+};
+
+export interface INewsletter {
+  newsletterId: string;
+  newsletterUser: string;
+}
+
+const Newsletter = ({ newsletterUser, newsletterId }: INewsletter) => {
+  const url = `//opensft.us14.list-manage.com/subscribe/post?u=${newsletterUser}&id=${newsletterId}`;
+
   return (
     <section className='newsletter p-30 mt-30 text-white wow fadeIn animated'>
       <div className='container'>
@@ -21,7 +91,7 @@ const Newsletter = () => {
               </div>
               <div className='col my-4 my-md-0 des'>
                 <h5 className='font-size-15 ml-4 mb-0'>
-                  Research, blog posts, and news.<br/>
+                  Research, blog posts, and news.<br />
                   <strong>
                     Never spam. We promise.
                   </strong>
@@ -30,41 +100,18 @@ const Newsletter = () => {
             </div>
           </div>
           <div className='col-lg-5'>
-            {/* }<!-- Begin Mailchimp Signup Form -->{*/}
-
-            {/*<div id="mc_embed_signup">*/}
-            {/*  <form action="https://spoolbox.us7.list-manage.com/subscribe/post?u=871c25f5e6e64d7c20422cfe4&amp;id=54202e9780"*/}
-            {/*        method="post"*/}
-            {/*        id="mc-embedded-subscribe-form"*/}
-            {/*        name="mc-embedded-subscribe-form"*/}
-            {/*        className="form-subscriber d-flex wow fadeIn animated validate"*/}
-            {/*        target="_blank" noValidate={true}>*/}
-            {/*    <div id="mc_embed_signup_scroll call">*/}
-            {/*      <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>*/}
-            {/*        /!*}<!-- real people should not fill this in and expect good things - do not remove this or risk*/}
-            {/*         form bot signups-->{*!/*/}
-            {/*        <div style={{position: 'absolute', left: '-5000px', ariaHidden: true }}>*/}
-            {/*          <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1" value=""/>*/}
-            {/*        </div>*/}
-            {/*      <input type="submit" placeholder="Join the Movement" name="subscribe" id="mc-embedded-subscribe" className="btn"/>*/}
-            {/*    </div>*/}
-            {/*  </form>*/}
-            {/*</div>*/}
-            {/*}
-            <form className='form-subscriber d-flex wow fadeIn animated'>
-              <input
-                type='email'
-                className='form-control bg-white font-small'
-                placeholder='Enter your email'
+            <div className='mc__form-container'>
+              <MailchimpSubscribe
+                url={url}
+                render={({ subscribe, status, message }) => (
+                  <CustomForm
+                    status={status}
+                    message={message}
+                    onValidated={formData => subscribe(formData)}
+                  />
+                )}
               />
-              <button
-                className='btn bg-dark text-white'
-                type='submit'
-              >
-                Subscribe
-              </button>
-            </form>
-            {*/}
+            </div>
           </div>
         </div>
       </div>

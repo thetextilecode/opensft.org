@@ -1,10 +1,16 @@
 import Layout from '../components/layout/Layout';
 import Image from 'next/image';
 import SocialIcons from '../components/elements/SocialIcons';
+import { GetStaticProps } from 'next';
 
-function About() {
+export interface IAbout {
+  newsletterId: string;
+  newsletterUser: string;
+}
+
+function About({newsletterId, newsletterUser}: IAbout) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='About'>
+    <Layout parent='Home' sub='Pages' subChild='About' newsletterId={newsletterId} newsletterUser={newsletterUser}>
       <section className='section-padding'>
         <div className='container pt-25'>
           <div className='row'>
@@ -434,3 +440,9 @@ function About() {
 }
 
 export default About;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: { newsletterId: process.env.REACT_APP_MAILCHIMP_ID, newsletterUser: process.env.REACT_APP_MAILCHIMP_U },
+  };
+};

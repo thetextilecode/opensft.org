@@ -3,10 +3,17 @@ import ProductDetails from '../../components/ecommerce/ProductDetails';
 import Layout from '../../components/layout/Layout';
 import { server } from '../../../opensft.config';
 import { findProductIndex } from '../../lib/util';
+import { GetStaticProps } from 'next';
 
-const ProductId = ({ product }) => {
+export interface IProductId {
+  newsletterId: string;
+  newsletterUser: string;
+  product: any;
+}
+
+const ProductId = ({ newsletterId, newsletterUser, product }: IProductId) => {
   return (
-    <Layout parent='Home' sub='Shop' subChild={product.title}>
+    <Layout parent='Home' sub='Shop' subChild={product.title} newsletterId={newsletterId} newsletterUser={newsletterUser}>
       <div className='container'>
         <ProductDetails product={product} />
       </div>
@@ -26,3 +33,11 @@ ProductId.getInitialProps = async (params) => {
 };
 
 export default ProductId;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: { newsletterId: process.env.REACT_APP_MAILCHIMP_ID, newsletterUser: process.env.REACT_APP_MAILCHIMP_U },
+  };
+};
+
+

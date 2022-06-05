@@ -29,6 +29,7 @@ const Saved = ({
     addToCart(product);
     toast.success('Add to Cart !');
   };
+
   return (
     <Layout parent='Home' sub='Shop' subChild='Saved'>
       <section className='mt-50 mb-50'>

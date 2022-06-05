@@ -1,9 +1,15 @@
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 
-function Account() {
+export interface IAccount {
+  newsletterId: string;
+  newsletterUser: string;
+}
+
+function Account({ newsletterUser, newsletterId }: IAccount) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Account'>
+    <Layout parent='Home' sub='Pages' subChild='Account' newsletterId={newsletterId} newsletterUser={newsletterUser}>
       <section className='pt-150 pb-150'>
         <div className='container'>
           <div className='row'>
@@ -551,3 +557,13 @@ function Account() {
 }
 
 export default Account;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+    },
+  };
+};
+

@@ -8,27 +8,31 @@ import { blogConfig } from '../../../opensft.config';
 
 type CategoryPageProps = {
   category: ICategory;
+  newsletterId: string;
+  newsletterUser: string;
   posts: IBlogPost[];
 };
 
-const CategoryPage = ({ category, posts }: CategoryPageProps): JSX.Element => {
+const CategoryPage = ({ category, newsletterUser, newsletterId, posts }: CategoryPageProps): JSX.Element => {
   return (
-    <Layout parent='Home' sub='Categories' subChild={category.label}>
+    <Layout parent='Home' sub='Categories' subChild={category.label} newsletterUser={newsletterUser}
+            newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container custom'>
           <div className='row'>
             <div className={'col-lg-12'}>
-            <div className='single-header mb-50'>
-              <h1 className='font-xxl text-brand'>{category.label}</h1>
-              <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                <span className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+              <div className='single-header mb-50'>
+                <h1 className='font-xxl text-brand'>{category.label}</h1>
+                <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
+                  <span
+                    className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+                </div>
               </div>
-            </div>
-            <div className='loop-grid loop-list pr-30'>
-              <div className='row'>
-              <BlogList posts={posts} show={blogConfig.postsPerPage} />
+              <div className='loop-grid loop-list pr-30'>
+                <div className='row'>
+                  <BlogList posts={posts} show={blogConfig.postsPerPage} />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -55,7 +59,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const category = getCategoryByValue(params.category);
 
   return {
-    props: { category, posts },
+    props: {
+      category,
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      posts,
+    },
   };
 };
 
@@ -71,6 +80,8 @@ export async function getStaticPaths() {
   });
 
   return {
+    newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+    newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
     paths: tempPaths,
     fallback: false,
   };

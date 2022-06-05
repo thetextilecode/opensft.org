@@ -4,11 +4,16 @@ import { homeConfig, infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
 import Newsletter from '../elements/Newsletter';
 
-const Footer = () => {
+export interface IFooter {
+  newsletterId?: string;
+  newsletterUser?: string;
+}
+
+const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
   return (
     <footer className='main'>
-      {homeConfig.showNewsletter && (
-        <Newsletter />
+      {homeConfig.showNewsletter && newsletterUser && newsletterId && (
+        <Newsletter  newsletterId={newsletterId} newsletterUser={newsletterUser} />
       )}
       <section className='section-padding footer-mid'>
         <div className='container pt-15 pb-20'>
@@ -71,27 +76,7 @@ const Footer = () => {
               </h5>
               <div className='row'>
                 <div className='col-md-8 col-lg-12'>
-                  {/* }<!-- Begin Mailchimp Signup Form -->{*/}
-
-                  {/*<div id="mc_embed_signup" className='download-app wow fadeIn animated'>*/}
-                  {/*  <form action="https://spoolbox.us7.list-manage.com/subscribe/post?u=871c25f5e6e64d7c20422cfe4&amp;id=54202e9780"*/}
-                  {/*        method="post"*/}
-                  {/*        id="mc-embedded-subscribe-form"*/}
-                  {/*        name="mc-embedded-subscribe-form"*/}
-                  {/*        className="form-subscriber d-flex wow fadeIn animated validate"*/}
-                  {/*        target="_blank" noValidate={true}>*/}
-                  {/*    <div id="mc_embed_signup_scroll call">*/}
-                  {/*      <input type="email" name="EMAIL" className="email form-control bg-white font-small" id="mce-EMAIL" placeholder="email address" required/>*/}
-                  {/*      /!*}<!-- real people should not fill this in and expect good things - do not remove this or risk*/}
-                  {/*   form bot signups-->{*!/*/}
-                  {/*      <div style={{position: 'absolute', left: '-5000px', ariahidden: true }}>*/}
-                  {/*        <input type="text" name="b_871c25f5e6e64d7c20422cfe4_54202e9780" tabIndex="-1"/>*/}
-                  {/*      </div>*/}
-                  {/*      <input type="submit" placeholder="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="btn"/>*/}
-
-                  {/*    </div>*/}
-                  {/*  </form>*/}
-                  {/*</div>*/}
+                  <Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser}/>
                 </div>
               </div>
             </div>

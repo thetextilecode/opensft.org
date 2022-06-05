@@ -7,28 +7,31 @@ import BlogList from '../../components/elements/BlogList';
 import { blogConfig } from '../../../opensft.config';
 
 type TagPageProps = {
+  newsletterUser: string;
+  newsletterId: string;
   posts: IBlogPost[];
   tag: ITag;
 };
 
-const TagPage = ({ posts, tag }: TagPageProps): JSX.Element => {
+const TagPage = ({ newsletterUser, newsletterId, posts, tag }: TagPageProps): JSX.Element => {
   return (
-    <Layout parent='Home' sub='Tags' subChild={tag.label}>
+    <Layout parent='Home' sub='Tags' subChild={tag.label} newsletterUser={newsletterUser} newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container custom'>
           <div className='row'>
             <div className={'col-lg-12'}>
-            <div className='single-header mb-50'>
-              <h1 className='font-xxl text-brand'>{tag.label}</h1>
-              <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                <span className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+              <div className='single-header mb-50'>
+                <h1 className='font-xxl text-brand'>{tag.label}</h1>
+                <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
+                  <span
+                    className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+                </div>
               </div>
-            </div>
-            <div className='loop-grid loop-list pr-30'>
-              <div className='row'>
-              <BlogList posts={posts} show={blogConfig.postsPerPage} />
+              <div className='loop-grid loop-list pr-30'>
+                <div className='row'>
+                  <BlogList posts={posts} show={blogConfig.postsPerPage} />
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -56,7 +59,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const tag = getTagByValue(params.tag.toString());
 
   return {
-    props: { posts, tag },
+    props: {
+      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
+      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      posts,
+      tag,
+    },
   };
 };
 
