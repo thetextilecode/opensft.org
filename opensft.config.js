@@ -35,7 +35,6 @@ export const homeConfig = {
   showHomeSlider: true,
   showPopupModal: false,
   showNewArrivals: false,
-  showNewsletter: true,
   showPopularBrands: false,
   showPopularCategories: false,
   showProductTabs: false,
@@ -92,6 +91,21 @@ export const infoConfig = {
   logoIllustrationWidth: 200,
   logoIllustrationHeight: 202,
   phone: '+44 20 8036 4986',
+};
+
+// Needs to remain below `infoConfig`
+export const footerConfig = {
+  showFooterBottom: true,
+  showFooterMid: true,
+  showFooterTop: true,
+  footerBottom: {
+    leftCopy: infoConfig.copyright,
+    rightCopy: 'All rights reserved.'
+  },
+  footerMid: {},
+  footerTop: {
+    showNewsletter: true,
+  }
 };
 
 export const menuItems = [
