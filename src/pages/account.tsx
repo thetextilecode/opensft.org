@@ -9,7 +9,8 @@ export interface IAccount {
 
 function Account({ newsletterUser, newsletterId }: IAccount) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Account' newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    // <Layout parent='Home' sub='Pages' subChild='Account' newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    <Layout parent='Home' sub='Account' newsletterId={newsletterId} newsletterUser={newsletterUser}>
       <section className='pt-150 pb-150'>
         <div className='container'>
           <div className='row'>

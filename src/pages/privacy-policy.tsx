@@ -4,7 +4,7 @@ import { infoConfig } from '../../opensft.config';
 
 function Privacy() {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Privacy'>
+    <Layout parent='Home' sub='Privacy'>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>

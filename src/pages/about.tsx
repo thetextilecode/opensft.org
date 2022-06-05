@@ -10,7 +10,11 @@ export interface IAbout {
 
 function About({newsletterId, newsletterUser}: IAbout) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='About' newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    <Layout parent='Home'
+            sub='About'
+            // subChild='About'
+            newsletterId={newsletterId}
+            newsletterUser={newsletterUser} >
       <section className='section-padding'>
         <div className='container pt-25'>
           <div className='row'>

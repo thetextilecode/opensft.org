@@ -44,7 +44,6 @@ const Layout = ({ children, customMeta, newsletterId, newsletterUser, parent, su
 
         <link rel='canonical' href={`${siteConfig.url}${router.asPath}`} />
 
-        {/*<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />*/}
         <meta property='og:description' content={customMeta?.description ?? seoConfig.meta_og_description} />
         <meta property='og:image' content={customMeta?.image ?? seoConfig.meta_og_image} />
         <meta property='og:site_name' content={siteConfig.title} />

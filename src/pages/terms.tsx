@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Terms() {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Terms'>
+    <Layout parent='Home' sub='Terms'>
       <section className='mt-50 mb-50'>
         <div className='container'>
           <div className='row'>

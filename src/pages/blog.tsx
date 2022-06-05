@@ -16,7 +16,7 @@ export interface IPageBlogList {
 
 function PageBlogList({ categories, newsletterId, newsletterUser, posts, tags }: IPageBlogList) {
   return (
-    <Layout parent='Home' sub='Blog' subChild='List' newsletterUser={newsletterUser} newsletterId={newsletterId}>
+    <Layout parent='Home' sub='Blog' newsletterUser={newsletterUser} newsletterId={newsletterId}>
       <section className='mt-50 mb-50'>
         <div className='container custom'>
           <div className='row'>

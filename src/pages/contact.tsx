@@ -4,7 +4,12 @@ import { GetStaticProps } from 'next';
 
 function Contact({ newsletterId, newsletterUser }) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Contact' newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    <Layout parent='Home'
+      // sub='Pages'
+      // subChild={'Contact'}
+            subChild='Contact'
+            newsletterId={newsletterId}
+            newsletterUser={newsletterUser}>
       <section className='hero-2 bg-green'>
         <div className='hero-content'>
           <div className='container'>
@@ -13,16 +18,14 @@ function Contact({ newsletterId, newsletterUser }) {
                 Get in touch
               </h4>
               <h1 className='mb-20 wow fadeIn animated font-xxl fw-900'>
-                Let's Talk About <br />
-                Your{' '}
-                <span className='text-style-1'>Idea</span>
+                We Want to <br />
+                Hear From{' '}
+                <span className='text-style-1'>You</span>
               </h1>
               <p className='w-50 m-auto mb-50 wow fadeIn animated'>
-                Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Harum quam eius placeat, a
-                quidem mollitia at accusantium reprehenderit
-                pariatur provident nam ratione incidunt
-                magnam sequi.
+                If we want to collectively be a better industry that puts our values at the forefront of our decisions,
+                we need to work together to do it. We always want to hear from you. Whether it's an idea for an open
+                source project, advice, complaints--we want to hear it.
               </p>
               <p className='wow fadeIn animated'>
                 <Link href='/about'>
@@ -40,64 +43,6 @@ function Contact({ newsletterId, newsletterUser }) {
           </div>
         </div>
       </section>
-      <section className='section-border pt-50 pb-50'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-4 mb-4 mb-md-0'>
-              <h4 className='mb-15 text-brand'>Office</h4>
-              205 North Michigan Avenue, Suite 810
-              <br />
-              Chicago, 60601, USA
-              <br />
-              <abbr title='Phone'>Phone:</abbr> (123) 456-7890
-              <br />
-              <abbr title='Email'>Email: </abbr>
-              contact@Evara.com
-              <br />
-              <a
-                className='btn btn-outline btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up'>
-                <i className='fi-rs-marker mr-10'></i>View
-                map
-              </a>
-            </div>
-            <div className='col-md-4 mb-4 mb-md-0'>
-              <h4 className='mb-15 text-brand'>Studio</h4>
-              205 North Michigan Avenue, Suite 810
-              <br />
-              Chicago, 60601, USA
-              <br />
-              <abbr title='Phone'>Phone:</abbr> (123) 456-7890
-              <br />
-              <abbr title='Email'>Email: </abbr>
-              contact@Evara.com
-              <br />
-              <a
-                className='btn btn-outline btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up'>
-                <i className='fi-rs-marker mr-10'></i>View
-                map
-              </a>
-            </div>
-            <div className='col-md-4'>
-              <h4 className='mb-15 text-brand'>Shop</h4>
-              205 North Michigan Avenue, Suite 810
-              <br />
-              Chicago, 60601, USA
-              <br />
-              <abbr title='Phone'>Phone:</abbr> (123) 456-7890
-              <br />
-              <abbr title='Email'>Email: </abbr>
-              contact@Evara.com
-              <br />
-              <a
-                className='btn btn-outline btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up'>
-                {' '}
-                <i className='fi-rs-marker mr-10'></i> View
-                map
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className='pt-50 pb-50'>
         <div className='container'>
           <div className='row'>
@@ -107,21 +52,30 @@ function Contact({ newsletterId, newsletterUser }) {
                   Drop Us a Line
                 </h3>
                 <p className='text-muted mb-30 text-center font-sm'>
-                  Lorem ipsum dolor sit amet consectetur.
+                  We're a small team, so it might take a few days to get back to you, but we will as soon as we can.
                 </p>
                 <form
                   className='contact-form-style text-center'
                   id='contact-form'
-                  action='src/pages/page-contact#contact.tsx'
+                  action='/success'
+                  data-netlify='true'
+                  data-netlify-recaptcha='true'
                   method='post'
+                  name={'contact-opensft'}
+                  netlify-honeypot='dummy-field'
+                  hidden
                 >
+                  <input type='hidden'
+                         name='form-name'
+                         value='contact-opensft' />
                   <div className='row'>
                     <div className='col-lg-6 col-md-6'>
                       <div className='input-style mb-20'>
                         <input
                           name='name'
-                          placeholder='First Name'
+                          placeholder='Name'
                           type='text'
+                          required={true}
                         />
                       </div>
                     </div>
@@ -131,6 +85,7 @@ function Contact({ newsletterId, newsletterUser }) {
                           name='email'
                           placeholder='Your Email'
                           type='email'
+                          required={true}
                         />
                       </div>
                     </div>
@@ -140,6 +95,7 @@ function Contact({ newsletterId, newsletterUser }) {
                           name='telephone'
                           placeholder='Your Phone'
                           type='tel'
+                          required={true}
                         />
                       </div>
                     </div>
@@ -149,6 +105,7 @@ function Contact({ newsletterId, newsletterUser }) {
                           name='subject'
                           placeholder='Subject'
                           type='text'
+                          required={false}
                         />
                       </div>
                     </div>
@@ -157,6 +114,7 @@ function Contact({ newsletterId, newsletterUser }) {
                         <textarea
                           name='message'
                           placeholder='Message'
+                          required={true}
                         ></textarea>
                       </div>
                       <button
@@ -168,7 +126,7 @@ function Contact({ newsletterId, newsletterUser }) {
                     </div>
                   </div>
                 </form>
-                <p className='form-messege'></p>
+                <p className='form-message'></p>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ export interface ILogin {
 
 function Login({ newsletterId, newsletterUser }: ILogin) {
   return (
-    <Layout parent='Home' sub='Pages' subChild='Login & Register' newsletterUser={newsletterUser}
+    <Layout parent='Home' sub='Login & Register' newsletterUser={newsletterUser}
             newsletterId={newsletterId}>
       <section className='pt-150 pb-150'>
         <div className='container'>
