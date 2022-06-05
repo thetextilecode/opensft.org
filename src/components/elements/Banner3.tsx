@@ -12,9 +12,6 @@ const Banner3 = () => {
                    layout={'responsive'}
                    width={600}
                    height={712}
-              // src='/assets/images/banner/banner-5.jpg'
-              // width={306}
-              // height={363}
             />
           </div>
           <div className='banner-text'>
@@ -39,9 +36,6 @@ const Banner3 = () => {
                    layout={'responsive'}
                    width={600}
                    height={334}
-              // src='/assets/images/banner/banner-6.jpg'
-              // width={306}
-              // height={170}
             />
           </div>
           <div className='banner-text'>
@@ -64,9 +58,6 @@ const Banner3 = () => {
                    layout={'responsive'}
                    width={600}
                    height={334}
-              // src='/assets/images/banner/banner-7.jpg'
-              // width={306}
-              // height={170}
             />
           </div>
           <div className='banner-text'>

@@ -243,11 +243,13 @@ const Header = ({
                 <Link href='/'>
                   <a>
                     <Image
-                      src='/assets/images/theme/logo.svg'
+                      src='/assets/images/theme/logo-combined-clear-sm.png'
                       alt={`${infoConfig.companyName} Logo`}
                       layout={'responsive'}
-                      width={120}
-                      height={33}
+                      width={250}
+                      height={68}
+                      // width={120}
+                      // height={33}
                     />
                   </a>
                 </Link>

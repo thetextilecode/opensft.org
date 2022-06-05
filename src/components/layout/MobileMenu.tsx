@@ -41,7 +41,11 @@ const MobileMenu = ({ isToggled, toggleClick }: IMobileMenu) => {
           <div className='mobile-header-logo'>
             <Link href='/index'>
               <a>
-                <Image src='/assets/images/theme/logo.svg' alt='logo' width={120} height={33} />
+                <Image src='/assets/images/logo/logo-combined-clear-sm.png'
+                       alt='logo'
+                       width={250}
+                       height={68}
+                />
               </a>
             </Link>
           </div>
