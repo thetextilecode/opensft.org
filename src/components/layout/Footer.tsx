@@ -25,13 +25,13 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
         <section className='section-padding footer-mid'>
           <div className='container pt-15 pb-20'>
             <div className='row'>
-              <div className='col-lg-4 col-md-6'>
+              <div className='col-lg-5 col-md-6'>
                 <div className='widget-about font-md mb-md-5 mb-lg-0'>
                   <h5 className='widget-title wow fadeIn animated'>
                     Contact
                   </h5>
                   <p className='wow fadeIn animated'>
-                    <strong>Address: </strong>{infoConfig.addressLine1} {infoConfig.addressLine2} {infoConfig.addressCity} {infoConfig.addressPostcode}
+                    <strong>Address: </strong>{infoConfig.addressLine1}<br/>{infoConfig.addressLine2}, {infoConfig.addressCity} {infoConfig.addressPostcode}
                   </p>
                   <p className='wow fadeIn animated'>
                     <strong>Phone: </strong>{infoConfig.phone}
@@ -46,7 +46,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                                twitter={socialConfig.twitter} />
                 </div>
               </div>
-              <div className='col-lg-4 col-md-5'>
+              <div className='col-lg-5 col-md-5'>
                 <h5 className='widget-title wow fadeIn animated'>
                   About
                 </h5>
@@ -65,18 +65,14 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                   </li>
                 </ul>
               </div>
-              <div className='col-lg-2'>
-                <div className='row'>
-                  <div className='col-md-8 col-lg-12'>
-                    <div className='logo logo-width-1 wow fadeIn animated mx-auto'>
-                      <Image
-                        src={infoConfig.logoIllustration}
-                        alt={infoConfig.companyName + ' logo'}
-                        width={infoConfig.logoIllustrationWidth}
-                        height={infoConfig.logoIllustrationHeight}
-                      />
-                    </div>
-                  </div>
+              <div className='col-lg-2 col-md-1'>
+                <div className='logo logo-width-1 wow fadeIn animated mx-auto'>
+                  <Image
+                    src={infoConfig.logoIllustration}
+                    alt={infoConfig.companyName + ' logo'}
+                    width={infoConfig.logoIllustrationWidth}
+                    height={infoConfig.logoIllustrationHeight}
+                  />
                 </div>
               </div>
             </div>

@@ -70,8 +70,8 @@ export const headerConfig = {
 
 export const infoConfig = {
   addressCity: 'London',
-  addressLine1: '71-75, Shelton Street, Covent Garden',
-  addressLine2: '',
+  addressLine1: '71-75, Shelton Street',
+  addressLine2: 'Covent Garden',
   addressPostcode: 'WC2H 9JQ',
   companyName: 'Open Source Fashion & Textiles',
   companiesHouseNumber: '14083675',
@@ -88,7 +88,7 @@ export const infoConfig = {
   // logoWidth: 245,
   // logoHeight: 72,
   logoIllustration: '/assets/images/logo/logo-illustration-clear-sm.png',
-  logoIllustrationWidth: 200,
+  logoIllustrationWidth: 185,
   logoIllustrationHeight: 202,
   phone: '+44 20 8036 4986',
 };
@@ -100,7 +100,7 @@ export const footerConfig = {
   showFooterTop: true,
   footerBottom: {
     leftCopy: infoConfig.copyright,
-    rightCopy: 'All rights reserved.'
+    rightCopy: 'Registered in England and Wales. Company No: ' + infoConfig.companiesHouseNumber
   },
   footerMid: {},
   footerTop: {
