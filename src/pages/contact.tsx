@@ -24,8 +24,8 @@ function Contact({ newsletterId, newsletterUser }) {
               </h1>
               <p className='w-50 m-auto mb-50 wow fadeIn animated'>
                 If we want to collectively be a better industry that puts our values at the forefront of our decisions,
-                we need to work together to do it. We always want to hear from you. Whether it's an idea for an open
-                source project, advice, complaints--we want to hear it.
+                we need to work together to do it. Whether it's an idea for an open
+                source project, advice, or complaints⎯we want to hear it.
               </p>
               <p className='wow fadeIn animated'>
                 <Link href='/about'>
@@ -52,7 +52,8 @@ function Contact({ newsletterId, newsletterUser }) {
                   Drop Us a Line
                 </h3>
                 <p className='text-muted mb-30 text-center font-sm'>
-                  We're a small team, so it might take a few days to get back to you, but we will as soon as we can.
+                  We're a small team, so it might take a few days to get back to you, but we will as soon as we can.<br/>
+                  Alternatively, send us an email at hello[at]opensft.org (replace [at] with @).
                 </p>
                 <form
                   className='contact-form-style text-center'
