@@ -7,7 +7,15 @@ const Banner3 = () => {
       <div className='col-md-6'>
         <div className='banner-img banner-1 wow fadeIn animated'>
           <div style={{ width: '100%' }}>
-          <Image src='/assets/images/banner/banner-5.jpg' alt='' layout={'responsive'} width={306} height={363} />
+            <Image src='/assets/images/banner/banner-osft-left.png'
+                   alt=''
+                   layout={'responsive'}
+                   width={600}
+                   height={712}
+              // src='/assets/images/banner/banner-5.jpg'
+              // width={306}
+              // height={363}
+            />
           </div>
           <div className='banner-text'>
             <span>News</span>
@@ -17,7 +25,7 @@ const Banner3 = () => {
             </h4>
             <Link href='/index'>
               <a>
-                We Want to Hear<br/> From You <i className='fi-rs-arrow-right'></i>
+                We Want to Hear<br /> From You <i className='fi-rs-arrow-right'></i>
               </a>
             </Link>
           </div>
@@ -26,7 +34,15 @@ const Banner3 = () => {
       <div className='col-md-6'>
         <div className='banner-img mb-15 wow fadeIn animated'>
           <div style={{ width: '100%' }}>
-          <Image src='/assets/images/banner/banner-6.jpg' alt='' layout={'responsive'} width={306} height={170} />
+            <Image src='/assets/images/banner/banner-osft-sm-right.png'
+                   alt=''
+                   layout={'responsive'}
+                   width={600}
+                   height={334}
+              // src='/assets/images/banner/banner-6.jpg'
+              // width={306}
+              // height={170}
+            />
           </div>
           <div className='banner-text'>
             <span>Get Involved</span>
@@ -43,7 +59,15 @@ const Banner3 = () => {
         </div>
         <div className='banner-img banner-2 wow fadeIn animated'>
           <div style={{ width: '100%' }}>
-          <Image src='/assets/images/banner/banner-7.jpg' alt='' width={306} height={170} layout={'responsive'} />
+            <Image src='/assets/images/banner/banner-osft-sm-left.png'
+                   alt=''
+                   layout={'responsive'}
+                   width={600}
+                   height={334}
+              // src='/assets/images/banner/banner-7.jpg'
+              // width={306}
+              // height={170}
+            />
           </div>
           <div className='banner-text'>
             <span>Fashion's</span>

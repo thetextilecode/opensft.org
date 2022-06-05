@@ -148,6 +148,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
+        {/* Latest Articles & Side Banners */}
         {homeConfig.showBlogPosts && (
           <section className='section-padding'>
             <div className='container pt-25 pb-20'>
