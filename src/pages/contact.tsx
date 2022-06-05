@@ -63,7 +63,6 @@ function Contact({ newsletterId, newsletterUser }) {
                   method='post'
                   name={'contact-opensft'}
                   netlify-honeypot='dummy-field'
-                  hidden
                 >
                   <input type='hidden'
                          name='form-name'
