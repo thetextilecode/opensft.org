@@ -52,7 +52,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                              twitter={socialConfig.twitter} />
               </div>
             </div>
-            <div className='col-lg-2 col-md-3'>
+            <div className='col-lg-4 col-md-5'>
               <h5 className='widget-title wow fadeIn animated'>
                 About
               </h5>
@@ -71,20 +71,16 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                 </li>
               </ul>
             </div>
-            <div className='col-lg-4'>
+            <div className='col-lg-2'>
               <div className='row'>
                 <div className='col-md-8 col-lg-12'>
                   <div className='logo logo-width-1 wow fadeIn animated mx-auto'>
-                    <Link href='/'>
-                      <a>
-                        <Image
-                          src={infoConfig.logo}
-                          alt={infoConfig.companyName + ' logo'}
-                          width={infoConfig.logoWidth}
-                          height={infoConfig.logoHeight}
-                        />
-                      </a>
-                    </Link>
+                    <Image
+                      src={infoConfig.logoIllustration}
+                      alt={infoConfig.companyName + ' logo'}
+                      width={infoConfig.logoIllustrationWidth}
+                      height={infoConfig.logoIllustrationHeight}
+                    />
                   </div>
                   {/*<Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser}/>*/}
                 </div>

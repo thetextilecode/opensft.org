@@ -153,6 +153,8 @@ const Header = ({
                       src={infoConfig.logo}
                       alt={infoConfig.companyName + ' Logo'}
                       layout={'responsive'}
+                      // layout={'fill'}
+                      // objectFit={'unset'}
                       width={infoConfig.logoWidth}
                       height={infoConfig.logoHeight}
                     />
