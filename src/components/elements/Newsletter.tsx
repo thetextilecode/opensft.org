@@ -85,7 +85,7 @@ const Newsletter = ({ newsletterUser, newsletterId }: INewsletter) => {
                   width={40}
                   height={40}
                 />
-                <h4 className='font-size-20 mb-0 ml-3'>
+                <h4 className='font-size-20 mb-0 ml-3 subscribe-text'>
                   &nbsp;Subscribe
                 </h4>
               </div>
