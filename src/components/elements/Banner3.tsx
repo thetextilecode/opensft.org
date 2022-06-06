@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Banner3 = () => {
   return (
     <>
-      <div className='col-md-6'>
+      <div className='col-md-6 col-sm-12'>
         <div className='banner-img banner-1 wow fadeIn animated'>
           <div style={{ width: '100%' }}>
             <Image src='/assets/images/banner/banner-osft-left.png'
@@ -20,7 +20,7 @@ const Banner3 = () => {
               Do You Own a <br />
               Fashion Brand?
             </h4>
-            <Link href='/index'>
+            <Link href='/get-involved'>
               <a>
                 We Want to Hear<br /> From You <i className='fi-rs-arrow-right'></i>
               </a>
@@ -28,8 +28,8 @@ const Banner3 = () => {
           </div>
         </div>
       </div>
-      <div className='col-md-6'>
-        <div className='banner-img mb-15 wow fadeIn animated'>
+      <div className='col-md-6 col-xs-12'>
+        <div className='banner-img mb-15 wow fadeIn animated col-xs-6'>
           <div style={{ width: '100%' }}>
             <Image src='/assets/images/banner/banner-osft-sm-right.png'
                    alt=''
@@ -44,14 +44,14 @@ const Banner3 = () => {
               Learn How <br />
               You Can Help
             </h4>
-            <Link href='/index'>
+            <Link href='/get-involved'>
               <a>
-                Start Now <i className='fi-rs-arrow-right'></i>
+                Get Started <i className='fi-rs-arrow-right'></i>
               </a>
             </Link>
           </div>
         </div>
-        <div className='banner-img banner-2 wow fadeIn animated'>
+        <div className='banner-img banner-2 wow fadeIn animated col-xs-6'>
           <div style={{ width: '100%' }}>
             <Image src='/assets/images/banner/banner-osft-sm-left.png'
                    alt=''
@@ -66,7 +66,7 @@ const Banner3 = () => {
               State of <br />
               Technology
             </h4>
-            <Link href='/index'>
+            <Link href='/technology-trends-fashion'>
               <a>
                 Learn <i className='fi-rs-arrow-right'></i>
               </a>

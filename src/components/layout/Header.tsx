@@ -243,7 +243,7 @@ const Header = ({
                 <Link href='/'>
                   <a>
                     <Image
-                      src='/assets/images/theme/logo-combined-clear-sm.png'
+                      src='/assets/images/logo/logo-combined-clear-sm.png'
                       alt={`${infoConfig.companyName} Logo`}
                       layout={'responsive'}
                       width={250}
@@ -262,12 +262,13 @@ const Header = ({
                 <div className='main-category-wrap d-none d-lg-block logo logo-width-1'>
                   <Link href='/'>
                     <a>
-                      <Image
-                        src={infoConfig.logo}
-                        alt={infoConfig.companyName + ' Logo'}
-                        width={infoConfig.logoWidth}
-                        height={infoConfig.logoHeight}
-                      />
+                      {/*<Image*/}
+                      {/*  src={infoConfig.logo}*/}
+                      {/*  alt={infoConfig.companyName + ' Logo'}*/}
+                      {/*  width={infoConfig.logoWidth}*/}
+                      {/*  height={infoConfig.logoHeight}*/}
+                      {/*/>*/}
+                      <img src={'/assets/images/logo/logo.svg'}/>
                     </a>
                   </Link>
                 </div>
