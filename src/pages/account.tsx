@@ -562,8 +562,8 @@ export default Account;
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
-      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
+      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
+      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
     },
   };
 };

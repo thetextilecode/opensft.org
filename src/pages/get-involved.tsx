@@ -16,6 +16,7 @@ function Privacy() {
                 <h4>Businesses</h4>
                 <ol start={1}>
                   <li>
+                    We need help in areas ranging from marketing to product design.
                     Hi there, we’re Open Source Fashion & Textiles CIC (Companies House
                     number {infoConfig.companiesHouseNumber}) of 71-75, Shelton Street, Covent Garden London WC2H 9JQ
                     (“<strong>Open Source Fashion & Textiles CIC</strong>”) and welcome to our privacy policy which
