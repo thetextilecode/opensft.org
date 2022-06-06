@@ -78,15 +78,8 @@ export const infoConfig = {
   copyright: 'Copyright 2022 © Open Source Fashion & Textiles',
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
-  logo: '/assets/images/logo/logo-combined-clear-sm.png',
-  logoWidth: 250,
-  logoHeight: 68,
-  // logo: '/assets/images/logo/logo-text-clear-sm.png',
-  // logoWidth: 245,
-  // logoHeight: 72,
-  logoIllustration: '/assets/images/logo/logo-illustration-clear-sm.png',
-  logoIllustrationWidth: 185,
-  logoIllustrationHeight: 202,
+  logo: '/assets/images/logo/logo.svg',
+  logoIllustration: '/assets/images/logo/logo-illustration.svg',
   phone: '+44 20 8036 4986',
 };
 

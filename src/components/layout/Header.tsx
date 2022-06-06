@@ -154,8 +154,6 @@ const Header = ({
                       src={infoConfig.logo}
                       alt={infoConfig.companyName + ' Logo'}
                       layout={'responsive'}
-                      // layout={'fill'}
-                      // objectFit={'unset'}
                       width={infoConfig.logoWidth}
                       height={infoConfig.logoHeight}
                     />
@@ -242,15 +240,7 @@ const Header = ({
               <div className='logo logo-width-1 d-block d-lg-none'>
                 <Link href='/'>
                   <a>
-                    <Image
-                      src='/assets/images/logo/logo-combined-clear-sm.png'
-                      alt={`${infoConfig.companyName} Logo`}
-                      layout={'responsive'}
-                      width={250}
-                      height={68}
-                      // width={120}
-                      // height={33}
-                    />
+                    <img src={'/assets/images/logo/logo.svg'} alt={`${infoConfig.companyName} Logo`} />
                   </a>
                 </Link>
               </div>
@@ -262,13 +252,7 @@ const Header = ({
                 <div className='main-category-wrap d-none d-lg-block logo logo-width-1'>
                   <Link href='/'>
                     <a>
-                      {/*<Image*/}
-                      {/*  src={infoConfig.logo}*/}
-                      {/*  alt={infoConfig.companyName + ' Logo'}*/}
-                      {/*  width={infoConfig.logoWidth}*/}
-                      {/*  height={infoConfig.logoHeight}*/}
-                      {/*/>*/}
-                      <img src={'/assets/images/logo/logo.svg'}/>
+                      <img src={'/assets/images/logo/logo.svg'} alt={infoConfig.companyName + ' logo'}/>
                     </a>
                   </Link>
                 </div>
@@ -1122,7 +1106,7 @@ const Header = ({
                               <Link href='/products/shop-grid-right'>
                                 <a>
                                   <Image
-                                    alt='Evara'
+                                    alt='OpenSFT'
                                     src='/assets/images/shop/thumbnail-4.jpg'
                                     layout={'responsive'}
                                     width={600}

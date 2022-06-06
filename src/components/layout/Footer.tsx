@@ -67,12 +67,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
               </div>
               <div className='col-lg-2 col-md-1'>
                 <div className='logo logo-width-1 wow fadeIn animated mx-auto'>
-                  <Image
-                    src={infoConfig.logoIllustration}
-                    alt={infoConfig.companyName + ' logo'}
-                    width={infoConfig.logoIllustrationWidth}
-                    height={infoConfig.logoIllustrationHeight}
-                  />
+                  <img src={'/assets/images/logo/logo-illustration.svg'} alt={infoConfig.companyName + ' logo'} />
                 </div>
               </div>
             </div>
