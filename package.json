@@ -16,7 +16,6 @@
     "sass": "sass -w public/assets/sass/main.scss:public/assets/css/main.css",
     "typecheck": "tsc"
   },
-  "type": "module",
   "dependencies": {
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
