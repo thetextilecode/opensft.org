@@ -4365,17 +4365,20 @@ table .product-thumbnail img {
   text-rendering: optimizeLegibility;
 }
 .single-content h1 {
-  font-size: 56px;
+  /*font-size: 56px;*/
+  font-size: 45px;
   line-height: 72px;
   margin-bottom: 32px;
 }
 .single-content h2 {
-  font-size: 48px;
+  /*font-size: 48px;*/
+  font-size: 38px;
   line-height: 64px;
   margin-bottom: 30px;
 }
 .single-content h3 {
-  font-size: 36px;
+  /*font-size: 36px;*/
+  font-size: 28px;
   line-height: 48px;
   margin-bottom: 28px;
 }
