@@ -36,19 +36,28 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostItems {
   return items;
 }
 
-export function getAllPosts(fields: string[] = [], filterByTag?: string, filterByCategory?: string | string[]): PostItems[] {
+export function getAllPosts(
+  fields: string[] = [],
+  filterByTag?: string,
+  filterByCategory?: string | string[]
+): PostItems[] {
+  const isLocal = String(process.env.NODE_ENV) === 'development';
+
   const slugs = getPostSlugs();
   const posts = slugs
-  .map((slug) => getPostBySlug(slug, fields))
-  // sort posts by date in descending order
-  .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .map((slug) => getPostBySlug(slug, fields))
+    .filter((post) => {
+      return isLocal || !post.draft;
+    })
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   let tempPosts = posts;
 
-  if(filterByTag) {
+  if (filterByTag) {
     tempPosts = posts.filter((post) => {
       return post.tags?.includes(filterByTag);
     });
-  } else if(filterByCategory) {
+  } else if (filterByCategory) {
     tempPosts = posts.filter((post) => {
       return post.category?.toLowerCase() === filterByCategory;
     });
@@ -60,7 +69,9 @@ export function getAllPosts(fields: string[] = [], filterByTag?: string, filterB
 export function getCategoryByValue(value: string | string[]) {
   let category = {};
   const cat = getAllCategories().filter((category) => category.value === value);
-  if(cat.length === 1) { category = cat[0] }
+  if (cat.length === 1) {
+    category = cat[0];
+  }
   return category;
 }
 
@@ -69,20 +80,20 @@ export function getAllCategories(): ICategory[] {
   return [
     {
       label: 'Business',
-      value: 'business'
+      value: 'business',
     },
     {
       label: 'News',
-      value: 'news'
+      value: 'news',
     },
     {
       label: 'Supply Chain',
-      value: 'supply-chain'
+      value: 'supply-chain',
     },
     {
       label: 'Technology',
-      value: 'technology'
-    }
+      value: 'technology',
+    },
   ];
 }
 
@@ -91,79 +102,79 @@ export function getAllTags(fields?: string[]): ITag[] {
     {
       label: 'AI',
       value: 'ai',
-      description: ''
+      description: '',
     },
     {
       label: 'Automation',
       value: 'automation',
-      description: ''
+      description: '',
     },
     {
       label: 'Blockchain',
       value: 'blockchain',
-      description: ''
+      description: '',
     },
     {
       label: 'Business Intelligence',
       value: 'business-intelligence',
-      description: ''
+      description: '',
     },
     {
       label: 'ERP',
       value: 'erp',
-      description: ''
+      description: '',
     },
     {
       label: 'IoT',
       value: 'iot',
-      description: ''
+      description: '',
     },
     {
       label: 'Materials',
       value: 'materials',
-      description: ''
+      description: '',
     },
     {
       label: 'Open Source',
       value: 'open-source',
-      description: ''
+      description: '',
     },
     {
       label: 'PLM',
       value: 'plm',
-      description: ''
+      description: '',
     },
     {
       label: 'Retail',
       value: 'retail',
-      description: ''
+      description: '',
     },
     {
       label: 'SCM',
       value: 'scm',
-      description: ''
+      description: '',
     },
     {
       label: 'Transparency',
       value: 'transparency',
-      description: ''
-    }
+      description: '',
+    },
   ];
 
   // if fields are not provided, just return them all
-  if(fields) {
+  if (fields) {
     const filteredTags = [];
 
     tags.map((tag) => {
       let minimalTag = {};
 
       fields.forEach((field) => {
-        if(tag[field]) {
+        if (tag[field]) {
           minimalTag[field] = tag[field];
         }
-      })
+      });
       filteredTags.push(minimalTag);
-    })
+    });
 
     tags = filteredTags;
   }
@@ -177,8 +188,8 @@ export function getTagByValue(value: string) {
     return tagData.value === value;
   });
 
-  if(tagTemp.length === 1) { tag = tagTemp[0] }
+  if (tagTemp.length === 1) {
+    tag = tagTemp[0];
+  }
   return tag;
 }
-
-

@@ -74,13 +74,9 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                     <Link href="/credits">Credits</Link>
                   </li>
                   <li>
-                    <Link
-                      href="/sitemap.xml"
-                      target={'_blank'}
-                      rel={'noreferrer'}
-                    >
+                    <a href="/sitemap.xml" target={'_blank'} rel={'noreferrer'}>
                       Sitemap
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
