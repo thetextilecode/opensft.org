@@ -33,9 +33,6 @@ const Layout = ({ children, customMeta, newsletterId, newsletterUser, parent, su
     <>
       <Head>
         <title>{customMeta?.title ?? siteConfig.title}</title>
-        {/*<style>@import*/}
-        {/*  url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Spartan:wght@300;400;500;600;700&display=swap');*/}
-        {/*</style>*/}
         <style>@import
           url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Cedarville+Cursive&family=Quando&display=swap');
         </style>
