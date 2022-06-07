@@ -66,11 +66,11 @@ const Banner3 = () => {
               State of <br />
               Technology
             </h4>
-            <Link href='/technology-trends-fashion'>
+            {/*<Link href='/technology-trends-fashion'>*/}
               <a>
                 Learn <i className='fi-rs-arrow-right'></i>
               </a>
-            </Link>
+            {/*</Link>*/}
           </div>
         </div>
       </div>
