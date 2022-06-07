@@ -798,11 +798,11 @@ h5.widget-title {
 }
 
 .font-xl {
-  font-size: 19px;
+  font-size: 25px;
 }
 
 .font-xxl {
-  font-size: 58px;
+  font-size: 42px;
 }
 
 .text-style-1 {
@@ -5011,7 +5011,7 @@ h6.post-title {
   transform: translateY(-50%);
   right: 0;
   border: none;
-  font-size: 19px;
+  font-size: 25px;
   height: 100%;
   padding: 0 15px;
   background-color: transparent;
@@ -6250,7 +6250,7 @@ span.fi-rs-apps {
   width: 34%;
 }
 .main-menu > nav > ul > li ul.mega-menu li a.menu-title {
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 500;
   display: block;
 }
@@ -6300,7 +6300,7 @@ span.fi-rs-apps {
   margin: 5px 0 11px;
 }
 .main-menu > nav > ul > li ul.mega-menu li .menu-banner-wrap .menu-banner-content .menu-banner-price span.old-price {
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 400;
   color: #696969;
   text-decoration: line-through;
@@ -6445,7 +6445,7 @@ span.fi-rs-apps {
   color: #333;
   margin: 0;
   text-align: center;
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 1;
 }
@@ -6593,7 +6593,7 @@ span.fi-rs-apps {
   padding: 20px;
 }
 .category-dropdown-wrap ul li.has-children .dropdown-menu .submenu-title {
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 500;
   display: block;
   color: #6FB1B6;
