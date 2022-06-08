@@ -33,6 +33,7 @@ const components = {
 };
 
 type ArticlePageProps = {
+  baseUrl: string;
   categories: ICategory[];
   newsletterId: string;
   newsletterUser: string;
@@ -43,6 +44,7 @@ type ArticlePageProps = {
 };
 
 const ArticlePage = ({
+  baseUrl,
   categories,
   newsletterUser,
   newsletterId,
@@ -108,7 +110,7 @@ const ArticlePage = ({
                             )}
                             {/*<span className='hit-count  has-dot'>29k Views</span>*/}
                           </div>
-                          <ShareIcons />
+                          <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
                         </div>
                       </div>
                       {post.image && (
@@ -181,6 +183,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const source = fs.readFileSync(postFilePath);
 
   const { content, data } = matter(source);
+  data.slug = params.slug;
 
   const mdxSource = await serialize(content, {
     scope: data,
@@ -202,6 +205,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
+      baseUrl: String(process.env.APP_BASE_URL),
       categories,
       newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
       newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
