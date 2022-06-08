@@ -684,7 +684,7 @@ h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h2 {
@@ -1713,7 +1713,7 @@ label {
 }
 .hero-slider-content-2 p {
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2.25rem;
   margin: 7px 0 22px;
   width: 74%;
 }
@@ -4365,22 +4365,22 @@ table .product-thumbnail img {
   text-rendering: optimizeLegibility;
 }
 .single-content h1 {
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 72px;
   margin-bottom: 32px;
 }
 .single-content h2 {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 64px;
   margin-bottom: 30px;
 }
 .single-content h3 {
-  font-size: 36px;
-  line-height: 48px;
-  margin-bottom: 28px;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.75rem;
 }
 .single-content h4 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   margin-bottom: 26px;
 }
@@ -4390,15 +4390,15 @@ table .product-thumbnail img {
   margin-bottom: 1.5rem;
 }
 .single-content h6 {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 22px;
 }
 .single-content p {
   margin-bottom: 1.2em;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   font-weight: 350;
   line-height: 2.4rem;
 }
