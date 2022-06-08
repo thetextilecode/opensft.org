@@ -4365,20 +4365,17 @@ table .product-thumbnail img {
   text-rendering: optimizeLegibility;
 }
 .single-content h1 {
-  /*font-size: 56px;*/
-  font-size: 45px;
+  font-size: 56px;
   line-height: 72px;
   margin-bottom: 32px;
 }
 .single-content h2 {
-  /*font-size: 48px;*/
-  font-size: 38px;
+  font-size: 48px;
   line-height: 64px;
   margin-bottom: 30px;
 }
 .single-content h3 {
-  /*font-size: 36px;*/
-  font-size: 28px;
+  font-size: 36px;
   line-height: 48px;
   margin-bottom: 28px;
 }
@@ -4388,9 +4385,9 @@ table .product-thumbnail img {
   margin-bottom: 26px;
 }
 .single-content h5 {
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 24px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-bottom: 1.5rem;
 }
 .single-content h6 {
   font-size: 14px;
@@ -4401,7 +4398,9 @@ table .product-thumbnail img {
 }
 .single-content p {
   margin-bottom: 1.2em;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 350;
+  line-height: 2.4rem;
 }
 .single-content ul {
   list-style: circle;

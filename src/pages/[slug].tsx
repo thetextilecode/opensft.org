@@ -149,7 +149,7 @@ const ArticlePage = ({
                               );
                             })}
                         </div>
-                        <ShareIcons />
+                        <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
                       </div>
 
                       {blogConfig.showComments && (

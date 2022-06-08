@@ -1,10 +1,9 @@
 export interface IShareIcons {
-  image?: string;
   title?: string;
   url?: string;
 }
 
-const ShareIcons = ({ image, title, url }: IShareIcons) => {
+const ShareIcons = ({ title, url }: IShareIcons) => {
   return (
     <div className="social-icons single-share">
       <ul className="text-grey-5 d-inline-block">
