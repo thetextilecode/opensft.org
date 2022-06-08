@@ -19,12 +19,14 @@ import CommentsArea from '../components/elements/CommentsArea';
 import CommentsForm from '../components/elements/CommentsForm';
 import DraftBadge from '../components/elements/DraftBadge';
 import { getAllCategories, getAllPosts, getAllTags } from '../lib/api';
+import CustomLink from '../components/elements/CustomLink';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
 // to handle import statements. Instead, you must include components in scope
 // here.
 const components = {
+  a: CustomLink,
   Head,
   Image,
   Link,
@@ -41,14 +43,14 @@ type ArticlePageProps = {
 };
 
 const ArticlePage = ({
-                       categories,
-                       newsletterUser,
-                       newsletterId,
-                       post,
-                       posts,
-                       source,
-                       tags,
-                     }: ArticlePageProps): JSX.Element => {
+  categories,
+  newsletterUser,
+  newsletterId,
+  post,
+  posts,
+  source,
+  tags,
+}: ArticlePageProps): JSX.Element => {
   const customMeta: IMetaProps = {
     title: `${post.title} | ${siteConfig.title}`,
     description: post.description,
@@ -64,36 +66,43 @@ const ArticlePage = ({
       {!isLocal && post.draft ? (
         <>This post has not yet been published. Please try again later.</>
       ) : (
-        <Layout customMeta={customMeta} parent='Home' sub='Blog' subChild='Blog Details' newsletterUser={newsletterUser}
-                newsletterId={newsletterId}>
-          <section className='mt-50 mb-50'>
-            <div className='container custom'>
-              <div className='row'>
-                <div className='col-lg-9'>
+        <Layout
+          customMeta={customMeta}
+          parent="Home"
+          sub="Blog"
+          subChild="Blog Details"
+          newsletterUser={newsletterUser}
+          newsletterId={newsletterId}
+        >
+          <section className="mt-50 mb-50">
+            <div className="container custom">
+              <div className="row">
+                <div className="col-lg-9">
                   <article>
-                    <div className='single-page pl-30'>
-                      <div className='single-header style-2'>
-                        <div className='d-flex'>
-                          <h1>
-                            {post.title}
-                          </h1>
+                    <div className="single-page pl-30">
+                      <div className="single-header style-2">
+                        <div className="d-flex">
+                          <h1>{post.title}</h1>
                           {post.draft && (
                             <div style={{ marginLeft: '20px' }}>
-                              <h3><DraftBadge /></h3>
+                              <h3>
+                                <DraftBadge />
+                              </h3>
                             </div>
                           )}
                         </div>
 
-                        <div className='single-header-meta'>
-                          <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                            <span className='post-by'>
-                              By <Link href='/#'>{blogConfig.author}</Link>
+                        <div className="single-header-meta">
+                          <div className="entry-meta meta-1 font-xs mt-15 mb-15">
+                            <span className="post-by">
+                              By <Link href="/#">{blogConfig.author}</Link>
                             </span>
-                            <span className='post-on has-dot'>
-                              Published on{'  '}{format(parseISO(post.date), 'MMMM dd, yyyy')}
+                            <span className="post-on has-dot">
+                              Published on{'  '}
+                              {format(parseISO(post.date), 'MMMM dd, yyyy')}
                             </span>
                             {post.readTime && (
-                              <span className='time-reading has-dot'>
+                              <span className="time-reading has-dot">
                                 {post.readTime} min{post.readTime < 0 ?? 's'} read
                               </span>
                             )}
@@ -103,32 +112,40 @@ const ArticlePage = ({
                         </div>
                       </div>
                       {post.image && (
-                        <figure className='single-thumbnail'>
+                        <figure className="single-thumbnail">
                           <div style={{ width: '100%' }}>
-                            <Image src={post.image}
-                                   alt={post?.imageAlt}
-                                   layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
-                                   width={post?.imageOriginalWidth}
-                                   height={post?.imageOriginalHeight} />
+                            <Image
+                              src={post.image}
+                              alt={post?.imageAlt}
+                              layout={post.imageOriginalWidth ? 'responsive' : 'fill'}
+                              width={post?.imageOriginalWidth}
+                              height={post?.imageOriginalHeight}
+                            />
                           </div>
                         </figure>
                       )}
-                      <div className='single-content'>
+                      <div className="single-content">
                         <MDXRemote {...source} components={components} />
                       </div>
 
                       <div
-                        className='entry-bottom mt-50 mb-30 wow fadeIn  animated'
-                        style={{ 'visibility': 'visible', 'animationName': 'fadeIn' }}
+                        className="entry-bottom mt-50 mb-30 wow fadeIn  animated"
+                        style={{ visibility: 'visible', animationName: 'fadeIn' }}
                       >
-                        <div className='tags w-50 w-sm-100'>
-                          {post.tags && post.tags.map((tag, idx) => {
-                            return (
-                              <Link href={`/tag/${tag}`} key={idx}>
-                                <a rel={'tag'} className={'hover-up btn btn-sm btn-rounded mr-10'}>{tag}</a>
-                              </Link>
-                            );
-                          })}
+                        <div className="tags w-50 w-sm-100">
+                          {post.tags &&
+                            post.tags.map((tag, idx) => {
+                              return (
+                                <Link href={`/tag/${tag}`} key={idx}>
+                                  <a
+                                    rel={'tag'}
+                                    className={'hover-up btn btn-sm btn-rounded mr-10'}
+                                  >
+                                    {tag}
+                                  </a>
+                                </Link>
+                              );
+                            })}
                         </div>
                         <ShareIcons />
                       </div>
@@ -139,15 +156,15 @@ const ArticlePage = ({
                           <CommentsForm />
                         </>
                       )}
-
                     </div>
                   </article>
                 </div>
-                <div className='col-lg-3 primary-sidebar sticky-sidebar'>
-                  <BlogSidebar categories={categories}
-                               show={blogConfig.postsPerSidebar}
-                               tags={tags}
-                               trendingPosts={posts.filter((post) => post.trending)}
+                <div className="col-lg-3 primary-sidebar sticky-sidebar">
+                  <BlogSidebar
+                    categories={categories}
+                    show={blogConfig.postsPerSidebar}
+                    tags={tags}
+                    trendingPosts={posts.filter((post) => post.trending)}
                   />
                 </div>
               </div>
@@ -156,8 +173,7 @@ const ArticlePage = ({
         </Layout>
       )}
     </>
-  )
-    ;
+  );
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -182,10 +198,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const categories = getAllCategories();
 
-  const tags = getAllTags([
-    'label',
-    'value',
-  ]);
+  const tags = getAllTags(['label', 'value']);
 
   return {
     props: {
@@ -202,10 +215,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = postFilePaths
-  // Remove file extensions for page paths
-  .map((path) => path.replace(/\.mdx?$/, ''))
-  // Map the path into the static paths object required by Next.js
-  .map((slug) => ({ params: { slug } }));
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.mdx?$/, ''))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }));
 
   return {
     paths,
