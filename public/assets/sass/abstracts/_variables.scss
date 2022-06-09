@@ -1,5 +1,5 @@
 //1.FONT
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Cedarville+Cursive&family=Quando&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quando&display=swap');
 
 $font-heading: 'Quando', serif;
 $font-heading-italicized: 'Cedarville Cursive', cursive;
@@ -41,7 +41,7 @@ $color-4: #cdd4f8;
 $color-5: #f6dbf6;
 $color-6: #fff2e5;
 $color-7: #d77f7a;
-$color-8: #63a2c1 ;
+$color-8: #63a2c1;
 
 $color-hot: #ff75a0;
 $color-new: #99bbad;
@@ -49,7 +49,8 @@ $color-sale: #a1cae2;
 $color-best: #ffab73;
 
 //3.Boxshadow
-$box-shadown-1: 0 4px 8px rgba(0,0,0,.09);;
+$box-shadown-1: 0 4px 8px rgba(0, 0, 0, .09);
+;
 $box-shadown-2: 0 8px 16px rgba(0, 0, 0, 0.12);
 $box-shadown-3: 20px 20px 54px rgba(0, 0, 0, 0.03);
 $box-shadown-3-hover: 20px 20px 54px rgba(0, 0, 0, 0.05);

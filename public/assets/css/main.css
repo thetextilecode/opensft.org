@@ -29,7 +29,7 @@ TABLE CONTENT
  WP STYPE
  Custom amine
 ***/
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Cedarville+Cursive&family=Quando&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quando&display=swap");
 /*import vendors*/
 @import url(vendors/normalize.css);
 @import url(vendors/bootstrap.min.css);
@@ -6139,6 +6139,9 @@ span.fi-rs-apps {
 }
 
 /*LAYOUT -> NAVIGATION STYLE*/
+.main-menu {
+  font-family: "Quando", serif;
+}
 .main-menu.main-menu-mrg-1 {
   margin: 0 0 0 27px;
 }
@@ -6844,7 +6847,7 @@ span.fi-rs-apps {
 
 .widget_tags {
   position: relative;
-  border-radius: 0px;
+  border-radius: 0;
 }
 .widget_tags a {
   display: inline-block;
@@ -9193,6 +9196,18 @@ span.fi-rs-apps {
     padding: 30px;
   }
 }
+.font-cedarville, .font-cedarville h1, .font-cedarville h2, .font-cedarville h3, .font-cedarville h4, .font-cedarville h5, .font-cedarville p {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.font-lato, .font-lato h3 {
+  font-family: "Lato", sans-serif;
+}
+
+.font-quando, .font-quando h5, .font-quando h4, .font-quando h3, .font-quando h2, .font-quando h1, .font-quando p {
+  font-family: "Quando", serif;
+}
+
 .image-container {
   width: 100%;
 }
