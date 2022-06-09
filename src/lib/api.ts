@@ -136,7 +136,7 @@ export function getAllTags(fields?: string[]): ITag[] {
     },
     {
       label: 'Open Source',
-      value: 'open-source',
+      value: 'open source',
       description: '',
     },
     {

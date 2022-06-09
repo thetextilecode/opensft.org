@@ -61,24 +61,33 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-b {font-weight: 500;}
+
+b {
+  font-weight: 500;
+}
+
 strong,
 .fw-600 {
   font-weight: 600;
 }
+
 .fw-900 {
   font-weight: 900;
 }
+
 .fw-300 {
   font-weight: 300;
 }
+
 .section-title {
   font-weight: 600;
+
   &.style-1 {
     position: relative;
     border-bottom: 1px solid #e2e9e1;
     padding-bottom: 10px;
     font-size: 16px;
+
     &::after {
       content: "";
       width: 50px;
@@ -89,29 +98,57 @@ strong,
       background-color: $color-brand;
     }
   }
+
   span {
     color: $color-brand;
   }
 }
+
 h3.section-title {
   font-size: 22px;
 }
+
 h5.widget-title {
   font-size: 18px;
   font-weight: 600;
 }
-.text-body {color: $color-text !important;}
-.font-xxs{font-size:$font-xxs;}
-.font-xs{font-size:$font-xs;}
-.font-sm{font-size:$font-sm;}
-.font-md{font-size:$font-md;}
-.font-lg{font-size:$font-lg;}
-.font-xl{font-size:$font-xl;}
-.font-xxl{font-size:$font-xxl;}
+
+.text-body {
+  color: $color-text !important;
+}
+
+.font-xxs {
+  font-size: $font-xxs;
+}
+
+.font-xs {
+  font-size: $font-xs;
+}
+
+.font-sm {
+  font-size: $font-sm;
+}
+
+.font-md {
+  font-size: $font-md;
+}
+
+.font-lg {
+  font-size: $font-lg;
+}
+
+.font-xl {
+  font-size: $font-xl;
+}
+
+.font-xxl {
+  font-size: $font-xxl;
+}
 
 .text-style-1 {
   position: relative;
-  &::after {    
+
+  &::after {
     content: "";
     background-color: #ffdabf;
     height: 20%;
@@ -124,9 +161,25 @@ h5.widget-title {
     opacity: 0.8;
     @include transform-duration-5s;
   }
+
   &:hover::after {
     height: 30%;
     @include transform-duration-5s;
   }
 }
-.fw-700 {font-weight: 700;}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.italic {
+  font-style: italic;
+}

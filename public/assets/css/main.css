@@ -838,6 +838,18 @@ h5.widget-title {
   font-weight: 700;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.italic {
+  font-style: italic;
+}
+
 /*COMPONENTS -> BUTTONS*/
 .btn-default {
   color: #fff;
@@ -1009,8 +1021,12 @@ button.submit:hover, button[type=submit]:hover {
   font-size: 12px;
 }
 
+.tags {
+  font-family: "Quando", serif;
+}
 .tags .btn, .tags .button {
-  border-radius: 4px;
+  border: 0;
+  border-radius: 22px;
   float: left;
 }
 

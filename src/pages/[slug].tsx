@@ -138,7 +138,7 @@ const ArticlePage = ({
                           {post.tags &&
                             post.tags.map((tag, idx) => {
                               return (
-                                <Link href={`/tag/${tag}`} key={idx}>
+                                <Link href={`/tag/${encodeURI(tag)}`} key={idx}>
                                   <a
                                     rel={'tag'}
                                     className={'hover-up btn btn-sm btn-rounded mr-10'}
