@@ -27,18 +27,14 @@ const HomeSlider = () => {
                 <div className="col-lg-5 col-md-6">
                   <div className="hero-slider-content-2">
                     <h4 className="animated">helping fashion build a more</h4>
-                    <h2 className="animated fw-900 italicized font-xl">
-                      meaningful
-                    </h2>
+                    <h2 className="animated fw-900 italicized font-xl">meaningful</h2>
                     <h1 className="animated fw-900 text-brand">supply chain</h1>
                     <p />
                     {/*<p className='animated'>*/}
                     {/*  using open source*/}
                     {/*</p>*/}
                     <Link href="/open-source-fashion">
-                      <a className="animated btn btn-brush btn-brush-3">
-                        Learn How
-                      </a>
+                      <a className="animated btn btn-brush btn-brush-3">Learn How</a>
                     </Link>
                   </div>
                 </div>
@@ -47,13 +43,11 @@ const HomeSlider = () => {
                     <Image
                       className="animated slider-1-1"
                       src="/assets/images/slider/laptop.png"
-                      alt={
-                        'photo of woman holding fabric, displayed in a laptop frame'
-                      }
+                      alt={'photo of woman holding fabric, displayed in a laptop frame'}
                       priority={true}
                       layout={'responsive'}
-                      width={1200}
-                      height={736}
+                      width={1000}
+                      height={613}
                     />
                   </div>
                 </div>
