@@ -190,6 +190,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   });
 
   const posts = getAllPosts([
+    'draft',
     'image',
     'imageAlt',
     'imageOriginalWidth',
