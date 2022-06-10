@@ -1072,7 +1072,7 @@ input.square {
 select {
   width: 100%;
   background: transparent;
-  border: 0px solid #f4f5f9;
+  border: 0 solid #f4f5f9;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 13px;
@@ -1081,7 +1081,7 @@ select {
 
 option {
   background: #fff;
-  border: 0px solid #626262;
+  border: 0 solid #626262;
   padding-left: 10px;
   font-size: 13px;
 }
@@ -1223,17 +1223,17 @@ textarea:focus {
 }
 
 /*contact form*/
-.contact-from-area .contact-form-style button {
+.contact-form-area .contact-form-style button {
   font-size: 15px;
   font-weight: 500;
   padding: 12px 40px;
   color: #ffffff;
-  border: none;
+  border: 0;
   background-color: #6FB1B6;
   border: 1px solid #4A8489;
   border-radius: 5px;
 }
-.contact-from-area .contact-form-style button:hover {
+.contact-form-area .contact-form-style button:hover {
   background-color: #4A8489 !important;
 }
 
@@ -4414,7 +4414,7 @@ table .product-thumbnail img {
 }
 .single-content p {
   margin-bottom: 1.2em;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 350;
   line-height: 2.4rem;
 }

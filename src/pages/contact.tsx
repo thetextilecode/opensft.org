@@ -1,6 +1,7 @@
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
+import { NetlifyForm, Honeypot } from 'react-netlify-forms';
 
 function Contact({ newsletterId, newsletterUser }) {
   return (
@@ -20,10 +21,9 @@ function Contact({ newsletterId, newsletterUser }) {
                 Hear From <span className="text-style-1">You</span>
               </h1>
               <p className="w-50 m-auto mb-50 wow fadeIn animated">
-                If we want to collectively be a better industry that puts our
-                values at the forefront of our decisions, we need to work
-                together to do it. Whether it's an idea for an open source
-                project, advice, or complaints⎯we want to hear it.
+                If we want to collectively be a better industry that puts our values at the
+                forefront of our decisions, we need to work together to do it. Whether it's an idea
+                for an open source project, advice, or complaints⎯we want to hear it.
               </p>
               <p className="wow fadeIn animated">
                 <Link href="/about">
@@ -43,89 +43,90 @@ function Contact({ newsletterId, newsletterUser }) {
         <div className="container">
           <div className="row">
             <div className="col-xl-8 col-lg-10 m-auto">
-              <div className="contact-from-area padding-20-row-col wow FadeInUp">
+              <div className="contact-form-area padding-20-row-col wow FadeInUp">
                 <h3 className="mb-10 text-center">Drop Us a Line</h3>
                 <p className="text-muted mb-30 text-center font-sm">
-                  We're a small team, so it might take a few days to get back to
-                  you, but we will as soon as we can.
+                  We're a small team, so it might take a few days to get back to you, but we will as
+                  soon as we can.
                   <br />
-                  Alternatively, send us an email at hello[at]opensft.org
-                  (replace [at] with @).
+                  Alternatively, send us an email at hello[at]opensft.org (replace [at] with @).
                 </p>
-                <form
-                  className="contact-form-style text-center"
-                  id="contact-form"
-                  action="/success"
-                  data-netlify="true"
-                  data-netlify-recaptcha="true"
-                  method="post"
-                  name={'contact-opensft'}
-                  netlify-honeypot="dummy-field"
-                >
-                  <input
-                    type="hidden"
-                    name="form-name"
-                    value="contact-opensft"
-                  />
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6">
-                      <div className="input-style mb-20">
-                        <input
-                          name="name"
-                          placeholder="Name"
-                          type="text"
-                          required={true}
-                        />
+                <NetlifyForm name="Contact" action="/success" honeypotName="bot-field">
+                  {({ handleChange, success, error }) => (
+                    <div className={'contact-form-style text-center'}>
+                      <Honeypot />
+                      {success && (
+                        <p className="text-success mb-30 text-center font-sm">
+                          Thanks for contacting us!
+                        </p>
+                      )}
+                      {error && (
+                        <p className="text-danger mb-30 text-center font-sm">
+                          Sorry, we could not reach our servers. Please try again later.
+                        </p>
+                      )}
+                      <div className="row">
+                        <div className="col-lg-6 col-md-6">
+                          <div className="input-style mb-20">
+                            <input
+                              name="name"
+                              placeholder="Name (required)"
+                              onChange={handleChange}
+                              type="text"
+                              required={true}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-6 col-md-6">
+                          <div className="input-style mb-20">
+                            <input
+                              name="email"
+                              placeholder="Your Email (required)"
+                              onChange={handleChange}
+                              type="email"
+                              required={true}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-6 col-md-6">
+                          <div className="input-style mb-20">
+                            <input
+                              name="telephone"
+                              placeholder="Your Phone"
+                              onChange={handleChange}
+                              type="tel"
+                              required={false}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-6 col-md-6">
+                          <div className="input-style mb-20">
+                            <input
+                              name="subject"
+                              placeholder="Subject"
+                              onChange={handleChange}
+                              type="text"
+                              required={false}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-md-12">
+                          <div className="textarea-style mb-30">
+                            <textarea
+                              name="message"
+                              placeholder="Message"
+                              onChange={handleChange}
+                              required={true}
+                            ></textarea>
+                          </div>
+                          <button className="submit submit-auto-width" type="submit">
+                            Send message
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="input-style mb-20">
-                        <input
-                          name="email"
-                          placeholder="Your Email"
-                          type="email"
-                          required={true}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="input-style mb-20">
-                        <input
-                          name="telephone"
-                          placeholder="Your Phone"
-                          type="tel"
-                          required={true}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="input-style mb-20">
-                        <input
-                          name="subject"
-                          placeholder="Subject"
-                          type="text"
-                          required={false}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12 col-md-12">
-                      <div className="textarea-style mb-30">
-                        <textarea
-                          name="message"
-                          placeholder="Message"
-                          required={true}
-                        ></textarea>
-                      </div>
-                      <button
-                        className="submit submit-auto-width"
-                        type="submit"
-                      >
-                        Send message
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                <p className="form-message"></p>
+                  )}
+                </NetlifyForm>
               </div>
             </div>
           </div>
