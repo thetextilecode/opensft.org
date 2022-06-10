@@ -87,6 +87,18 @@ video {
     font-size     : 100%;
     font          : inherit;
     vertical-align: baseline;
+
+    &.font-cedarville {
+        font-family: 'Cedarville Cursive', cursive;
+    }
+
+    &.font-lato {
+        font-family: 'Lato', sans-serif;
+    }
+
+    &.font-quando {
+        font-family: 'Quando', serif;
+    }
 }
 
 thead {

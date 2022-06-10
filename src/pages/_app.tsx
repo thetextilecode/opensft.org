@@ -16,9 +16,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Preloader from '../components/elements/Preloader';
 import SSRProvider from 'react-bootstrap/SSRProvider';
+import Fonts from '../lib/fonts';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    Fonts();
+  }, []);
 
   useEffect(() => {
     setLoading(true);
