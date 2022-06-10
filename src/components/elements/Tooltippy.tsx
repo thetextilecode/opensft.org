@@ -1,5 +1,5 @@
-import { ReactNode, useRef } from 'react';
-import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { ReactNode } from 'react';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 export interface ITooltippy {
   placement?: 'top' | 'right' | 'bottom' | 'left';
@@ -8,9 +8,7 @@ export interface ITooltippy {
   triggerText: string;
 }
 
-const Tooltippy = ({ placement, tooltipText, triggerText, tooltipProps }) => {
-  const target = useRef(null);
-
+const Tooltippy = ({ placement, tooltipText, triggerText, tooltipProps }: ITooltippy) => {
   return (
     <OverlayTrigger
       placement={placement ?? 'top'}
@@ -20,7 +18,7 @@ const Tooltippy = ({ placement, tooltipText, triggerText, tooltipProps }) => {
         </Tooltip>
       }
     >
-      <a ref={target} className={'tooltippy'}>
+      <a className={'tooltippy'}>
         {triggerText}
         <sup>&#9432;</sup>
       </a>

@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "deploy": "git push origin main && vercel --prod",
-    "dev": "next-remote-watch",
-    "dev-bu": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "format": "prettier --write \"**/*.{mdx,tsx,ts,md,js,jsx,json}\"",
     "format-watch": "yarn format && onchange \"**/*.{mdx,tsx,ts,md,js,jsx,json}\" -- prettier --write {{changed}}",
