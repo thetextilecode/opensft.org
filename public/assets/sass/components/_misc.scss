@@ -43,7 +43,7 @@
             text-overflow: ellipsis;
         }
         &:not(:last-child)::after {
-            color: $color-grey-1;
+            color: $color-osft-grey-brown;
             content: ':';
             display: inline-block;
             font-weight: 400;

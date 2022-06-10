@@ -17,7 +17,7 @@
           display: inline-block;
           font-size: 16px;
           font-weight: 700;
-          color: #1a1a1a;
+          color: $color-osft-grey-brown;
 
           i {
             font-size: 8px;
@@ -691,7 +691,7 @@
         align-items: center;
         padding: 5px 34px;
         line-height: 1.5;
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         font-size: $font-md;
 
         &:hover {

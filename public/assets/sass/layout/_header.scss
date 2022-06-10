@@ -78,7 +78,7 @@
       }
 
       a {
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         font-weight: 500;
 
         i {
@@ -240,7 +240,7 @@
     input {
       font-size: $font-md;
       height: 48px;
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       border-radius: 26px;
       padding: 3px 50px 3px 20px;
       border: 1px solid #f5f5f5;
@@ -459,12 +459,12 @@
   form {
     input {
       &::-moz-input-placeholder {
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         opacity: 1;
       }
 
       &::-webkit-input-placeholder {
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         opacity: 1;
       }
 
@@ -677,7 +677,7 @@
             color: $color-brand;
 
             &:hover {
-              color: #1a1a1a;
+              color: $color-osft-grey-brown;
             }
 
           }
@@ -847,7 +847,7 @@
     position: relative;
 
     select {
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       font-size: 16px;
       font-weight: 700;
       min-height: 45px;
@@ -948,7 +948,7 @@
     input {
       font-size: $font-md;
       height: 40px;
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       border-radius: 4px;
       padding: 3px 50px 3px 20px;
       border: 1px solid $color-brand;
@@ -958,12 +958,12 @@
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
       &::-moz-input-placeholder {
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         opacity: 1;
       }
 
       &::-webkit-input-placeholder {
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         opacity: 1;
       }
 
@@ -1224,7 +1224,7 @@
 
 .burger-icon.burger-icon-white > span::before,
 .burger-icon.burger-icon-white > span::after {
-  background-color: $color-grey-1;
+  background-color: $color-osft-grey-brown;
 }
 
 
@@ -1342,7 +1342,7 @@
                   width: 30px;
                   height: 30px;
                   line-height: 35px;
-                  color: #1a1a1a;
+                  color: $color-osft-grey-brown;
 
                   i {
                     font-size: 14px;
@@ -1374,7 +1374,7 @@
                 font-weight: 700;
                 position: relative;
                 display: inline-block;
-                color: #1a1a1a;
+                color: $color-osft-grey-brown;
 
                 i {
                   margin-right: 5px;
@@ -1496,7 +1496,7 @@
 
           &:hover {
             & > a {
-              color: #1a1a1a;
+              color: $color-osft-grey-brown;
             }
 
           }
@@ -1578,14 +1578,14 @@
     span {
       margin-right: 10px;
       font-weight: 700;
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       font-size: 16px;
 
     }
 
     i {
       font-weight: 700;
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       font-size: 19px;
       margin-right: 5px;
     }
@@ -1653,7 +1653,7 @@
     max-width: 700px;
 
     input {
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       max-width: 600px;
       background-color: #fff;
       border-width: 0px;
@@ -1688,7 +1688,7 @@
     }
 
     .language-dropdown a {
-      color: $color-grey-1;
+      color: $color-osft-grey-brown;
     }
   }
 
@@ -1751,7 +1751,7 @@
     max-width: 700px;
 
     input {
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       max-width: 600px;
       background-color: #fff;
       border-width: 0px;
@@ -1776,7 +1776,7 @@
     border: 0;
 
     .language-dropdown a {
-      color: $color-grey-1;
+      color: $color-osft-grey-brown;
     }
   }
 
@@ -1810,7 +1810,7 @@
     max-width: 700px;
 
     input {
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       max-width: 600px;
       background-color: #fff;
       border-width: 0px;
@@ -1935,7 +1935,7 @@
     max-width: 700px;
 
     input {
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
       max-width: 600px;
       background-color: #fff;
       border-width: 0px;

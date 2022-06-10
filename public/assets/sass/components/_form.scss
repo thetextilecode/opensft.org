@@ -123,12 +123,12 @@ textarea {
       line-height: 45px;
       padding-left: 20px;
       font-size: 13px;
-      color: #1a1a1a;
+      color: $color-osft-grey-brown;
 
       .select2-selection__rendered {
         line-height: 45px;
         font-size: 13px;
-        color: #1a1a1a;
+        color: $color-osft-grey-brown;
         padding-left: 0;
       }
 
@@ -237,7 +237,7 @@ textarea {
     box-shadow: none;
     padding-left: 20px;
     font-size: 13px;
-    color: #1a1a1a;
+    color: $color-osft-grey-brown;
     width: 100%;
 
     &:focus {
@@ -484,7 +484,7 @@ label {
     padding: 15px 10px 10px 20px;
     width: 100%;
     font-size: 13px;
-    color: #1a1a1a;
+    color: $color-osft-grey-brown;
     min-height: 200px;
     border-radius: 4px;
 
@@ -505,7 +505,7 @@ label {
     box-shadow: none;
     padding-left: 20px;
     font-size: 13px;
-    color: #1a1a1a;
+    color: $color-osft-grey-brown;
     width: 100%;
 
     &:focus {
