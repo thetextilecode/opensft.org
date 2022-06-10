@@ -15,6 +15,7 @@ import { AppProps } from 'next/app';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Preloader from '../components/elements/Preloader';
+import SSRProvider from 'react-bootstrap/SSRProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState<boolean>(false);
@@ -36,10 +37,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       {!loading ? (
         <Provider store={store}>
-          <StorageWrapper>
-            <ToastContainer />
-            <Component {...pageProps} />
-          </StorageWrapper>
+          <SSRProvider>
+            <StorageWrapper>
+              <ToastContainer />
+              <Component {...pageProps} />
+            </StorageWrapper>
+          </SSRProvider>
         </Provider>
       ) : (
         <Preloader />

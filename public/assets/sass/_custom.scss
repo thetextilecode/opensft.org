@@ -49,3 +49,11 @@
   margin-left: 0.4em;
 }
 
+a.tooltippy {
+  sup {
+    color: $color-grey-4;
+    font-size: initial;
+    margin-left: 4px;
+  }
+}
+

@@ -9260,4 +9260,10 @@ span.fi-rs-apps {
   margin-left: 0.4em;
 }
 
+a.tooltippy sup {
+  color: #90908e;
+  font-size: initial;
+  margin-left: 4px;
+}
+
 /*# sourceMappingURL=main.css.map */

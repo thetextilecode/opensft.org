@@ -18,6 +18,7 @@ import ShareIcons from '../components/elements/ShareIcons';
 import CommentsArea from '../components/elements/CommentsArea';
 import CommentsForm from '../components/elements/CommentsForm';
 import DraftBadge from '../components/elements/DraftBadge';
+import Tooltippy from '../components/elements/Tooltippy';
 import { getAllCategories, getAllPosts, getAllTags } from '../lib/api';
 import CustomLink from '../components/elements/CustomLink';
 
@@ -30,6 +31,7 @@ const components = {
   Head,
   Image,
   Link,
+  Tooltippy,
 };
 
 type ArticlePageProps = {
@@ -126,6 +128,7 @@ const ArticlePage = ({
                           </div>
                         </figure>
                       )}
+
                       <div className="single-content">
                         <MDXRemote {...source} components={components} />
                       </div>
