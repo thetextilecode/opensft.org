@@ -80,8 +80,8 @@ const ArticlePage = ({
         >
           <section className="mt-50 mb-50">
             <div className="container custom">
-              <div className="row">
-                <div className="col-lg-9">
+              <div className="row justify-content-center">
+                <div className="col-lg-7">
                   <article>
                     <div className="single-page pl-30">
                       <div className="single-header style-2">
