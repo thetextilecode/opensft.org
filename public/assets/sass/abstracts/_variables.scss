@@ -13,24 +13,6 @@ $font-lg: 17px;
 $font-xl: 25px;
 $font-xxl: 42px;
 
-//2.COLOR
-$color-brand: #6FB1B6;
-$color-brand-dark: #4A8489;
-$color-primary: #EC848B;
-$color-secondary: #DDBEA9;
-$color-warning: #ffb300;
-$color-danger: #ff3551;
-$color-success: #3ed092;
-$color-info: #18a1b7;
-$color-text: #4f5d77;
-$color-heading: #5D5A59;
-$color-grey-1: #1a1a1a;
-$color-grey-2: #242424;
-$color-grey-4: #90908e;
-$color-grey-9: #f4f5f9;
-$color-muted: #8e8e90;
-$color-body: #161c27;
-
 // Custom OpenSFT colours
 $color-osft-beige-dark: #DDBEA9;
 $color-osft-beige-light: #F1E5E1;
@@ -41,6 +23,25 @@ $color-osft-grey-brown: #5D5A59;
 $color-osft-pink-light: #FFEEEE;
 $color-osft-pink-medium: #F8BBBC;
 $color-osft-pink-dark: #EC848B;
+
+//2.COLOR
+$color-brand: $color-osft-blue-medium;
+$color-brand-dark: $color-osft-blue-dark;
+$color-primary: $color-osft-pink-dark;
+$color-secondary: $color-osft-beige-dark;
+$color-warning: #ffb300;
+$color-danger: #ff3551;
+$color-success: $color-osft-blue-medium;
+$color-info: #18a1b7;
+$color-text: #4f5d77;
+$color-heading: #5D5A59;
+$color-grey-1: #1a1a1a;
+$color-grey-2: #242424;
+$color-grey-4: #90908e;
+$color-grey-9: #f4f5f9;
+$color-muted: #8e8e90;
+$color-body: #161c27;
+
 
 $color-1: #fddde4;
 $color-2: #cdebbc;

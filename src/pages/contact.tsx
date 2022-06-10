@@ -55,16 +55,6 @@ function Contact({ newsletterId, newsletterUser }) {
                   {({ handleChange, success, error }) => (
                     <div className={'contact-form-style text-center'}>
                       <Honeypot />
-                      {success && (
-                        <p className="text-success mb-30 text-center font-sm">
-                          Thanks for contacting us!
-                        </p>
-                      )}
-                      {error && (
-                        <p className="text-danger mb-30 text-center font-sm">
-                          Sorry, we could not reach our servers. Please try again later.
-                        </p>
-                      )}
                       <div className="row">
                         <div className="col-lg-6 col-md-6">
                           <div className="input-style mb-20">
@@ -119,6 +109,16 @@ function Contact({ newsletterId, newsletterUser }) {
                               required={true}
                             ></textarea>
                           </div>
+                          {success && (
+                            <p className="text-success mb-30 text-center font-sm">
+                              Thanks for contacting us!
+                            </p>
+                          )}
+                          {error && (
+                            <p className="text-danger mb-30 text-center font-sm">
+                              Sorry, we could not reach our servers. Please try again later.
+                            </p>
+                          )}
                           <button className="submit submit-auto-width" type="submit">
                             Send message
                           </button>
