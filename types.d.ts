@@ -79,6 +79,8 @@ export interface IProduct {
 
 export interface IResource {
   brand?: string;
+  category?: string;
+  categoryLabel?: string;
   created?: boolean;
   desc?: string;
   discount?: {

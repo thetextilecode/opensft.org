@@ -7,40 +7,12 @@
     "price": 238.85,
     "oldPrice": 245.8,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-1-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-1-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-1-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-1-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-1-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "clothing",
+    "category": "iot",
+    "categoryLabel": "IoT",
     "featured": false,
     "trending": true,
     "discount": {
@@ -107,6 +79,7 @@
     "color": "blue",
     "brand": "armani",
     "category": "customer-relations",
+    "categoryLabel": "Customer Relations",
     "featured": true,
     "trending": false,
     "discount": {
@@ -138,40 +111,12 @@
     "id": "3",
     "price": 35,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-3-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-3-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-3-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-3-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-3-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
     "category": "supply-chain",
+    "categoryLabel": "Supply Chain",
     "featured": true,
     "trending": true,
     "discount": {
@@ -203,40 +148,12 @@
     "id": "4",
     "price": 55,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-4-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-4-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-4-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-4-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-4-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "used",
     "color": "blue",
     "brand": "armani",
     "category": "ecommerce",
+    "categoryLabel": "E-Commerce",
     "featured": true,
     "trending": false,
     "discount": {
@@ -268,40 +185,12 @@
     "id": "5",
     "price": 110,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-5-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-5-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-5-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-5-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-5-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "refurbished",
     "color": "red",
     "brand": "adidas",
     "category": "resource-planning",
+    "categoryLabel": "Resource Planning",
     "featured": true,
     "trending": false,
     "discount": {
@@ -333,40 +222,12 @@
     "id": "6",
     "price": 150,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-6-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-6-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-6-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-6-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-6-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "refurbished",
     "color": "green",
     "brand": "helix",
     "category": "customer-relations",
+    "categoryLabel": "Customer Relations",
     "featured": true,
     "trending": false,
     "discount": {
@@ -396,41 +257,13 @@
     "moreLove": true,
     "id": "7",
     "price": 98,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-7-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-7-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
+    "desc": "Lorem ipsum dolor, sit ameteligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-7-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-7-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-7-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
     "category": "ecommerce",
+    "categoryLabel": "E-Commerce",
     "featured": false,
     "trending": true,
     "discount": {
@@ -461,41 +294,13 @@
     "moreLove": true,
     "id": "8",
     "price": 24,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-8-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-8-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
+    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem um eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-8-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-8-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-8-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "refurbished",
     "color": "blue",
     "brand": "armani",
     "category": "resource-planning",
+    "categoryLabel": "Resource Planning",
     "featured": true,
     "trending": true,
     "discount": {
@@ -526,41 +331,13 @@
     "moreLove": true,
     "id": "9",
     "price": 146,
-    "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-9-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-9-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
+    "desc": "It's a whole other world out there..",
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-9-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-9-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-9-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
     "category": "supply-chain",
+    "categoryLabel": "Supply Chain",
     "featured": false,
     "trending": true,
     "discount": {
@@ -592,40 +369,12 @@
     "id": "10",
     "price": 67,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-10-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-10-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-10-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-10-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-10-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "used",
     "color": "blue",
     "brand": "armani",
     "category": "product-lifecycle",
+    "categoryLabel": "Product Lifecycle",
     "featured": true,
     "trending": false,
     "discount": {
@@ -657,40 +406,12 @@
     "id": "11",
     "price": 116,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-11-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-11-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-11-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-11-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-11-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "refurbished",
     "color": "red",
     "brand": "adidas",
     "category": "product-lifecycle",
+    "categoryLabel": "Product Lifecycle",
     "featured": true,
     "trending": false,
     "discount": {
@@ -722,40 +443,12 @@
     "id": "12",
     "price": 73,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-12-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-12-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 1227,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-12-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-12-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-12-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "refurbished",
     "color": "green",
     "brand": "helix",
     "category": "customer-relations",
+    "categoryLabel": "Customer Relations",
     "featured": true,
     "trending": false,
     "discount": {
@@ -788,40 +481,12 @@
     "price": 238.85,
     "oldPrice": 245.8,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-13-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-13-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-13-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-13-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-13-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "clothing",
+    "category": "integration-automation",
+    "categoryLabel": "Integration & Automation",
     "featured": false,
     "trending": true,
     "discount": {
@@ -855,40 +520,12 @@
     "price": 238.85,
     "oldPrice": 245.8,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-14-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-14-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-14-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-14-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-14-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "clothing",
+    "category": "integration-automation",
+    "categoryLabel": "Integration & Automation",
     "featured": false,
     "trending": true,
     "discount": {
@@ -922,40 +559,12 @@
     "price": 238.85,
     "oldPrice": 245.8,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-15-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-15-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-15-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-15-2.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "thumb": "/assets/images/shop/product-15-1.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "clothing",
+    "category": "iot",
+    "categoryLabel": "IoT",
     "featured": false,
     "trending": true,
     "discount": {
@@ -989,60 +598,12 @@
     "price": 238.85,
     "oldPrice": 245.8,
     "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi, odio minus dolore impedit fuga eum eligendi? Officia doloremque facere quia. Voluptatum, accusantium!",
-    "images": [
-      {
-        "img": "/assets/images/shop/product-1-1.jpg",
-        "width": 1100,
-        "height": 1100
-      },
-      {
-        "img": "/assets/images/shop/product-1-2.jpg",
-        "width": 1100,
-        "height": 1100
-      }
-    ],
     "totalSell": 27,
-    "gallery": [
-      {
-        "thumb": "/assets/images/shop/product-16-1.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-2.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-3.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-4.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-5.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-6.jpg",
-        "width": 1100,
-        "height": 1286
-      },
-      {
-        "thumb": "/assets/images/shop/product-16-7.jpg",
-        "width": 1100,
-        "height": 1286
-      }
-    ],
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "clothing",
+    "category": "analytics",
+    "categoryLabel": "Analytics",
     "featured": false,
     "trending": true,
     "discount": {

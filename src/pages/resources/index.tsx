@@ -1,18 +1,15 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import BrandFilter from '../../components/resources/BrandFilter';
 import CategoryResource from '../../components/resources/CategoryResource';
 import Pagination from '../../components/resources/Pagination';
 import QuickView from '../../components/resources/QuickView';
 import ShowSelect from '../../components/resources/ShowSelect';
 import SingleResource from '../../components/resources/SingleResource';
-import SizeFilter from '../../components/resources/SizeFilter';
 import SortSelect from '../../components/resources/SortSelect';
 import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
-import Link from 'next/link';
 import Image from 'next/image';
 import { IResource } from '../../../types';
 import { GetStaticProps } from 'next';
@@ -32,8 +29,6 @@ const Resources = ({
   resourceFilters,
   fetchResource,
 }: IResources) => {
-  // console.log(resources);
-
   let Router = useRouter(),
     searchTerm = Router.query.search,
     showLimit = 12,
@@ -102,23 +97,6 @@ const Resources = ({
                 <CategoryResource />
               </div>
 
-              <div className="sidebar-widget price_range range mb-30">
-                <div className="widget-header position-relative mb-20 pb-10">
-                  <h5 className="widget-title mb-10">Filter</h5>
-                  <div className="bt-1 border-color-1"></div>
-                </div>
-
-                <div className="list-group">
-                  <div className="list-group-item mb-10 mt-10">
-                    <label className="fw-900">Brand</label>
-                    <BrandFilter />
-                    <label className="fw-900 mt-15">Item Condition</label>
-                    <SizeFilter />
-                  </div>
-                </div>
-                <br />
-              </div>
-
               <div className="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
                 <div className="widget-header position-relative mb-20 pb-10">
                   <h5 className="widget-title mb-10">New Resources</h5>
@@ -152,7 +130,7 @@ const Resources = ({
                   <p>
                     We found
                     <strong className="text-brand">{resources.items.length}</strong>
-                    items for you!
+                    resources
                   </p>
                 </div>
                 <div className="sort-by-product-area">
@@ -170,7 +148,6 @@ const Resources = ({
                 {getPaginatedResources.map((item, i) => (
                   <div className="col-lg-4 col-md-4 col-12 col-sm-6" key={i}>
                     <SingleResource resource={item} />
-                    {/* <SingleResourceList resource={item}/> */}
                   </div>
                 ))}
               </div>
@@ -192,8 +169,6 @@ const Resources = ({
         </div>
       </section>
       <WishlistModal />
-      {/* <CompareModal /> */}
-      {/* <CartSidebar /> */}
       <QuickView />
     </Layout>
   );
@@ -205,9 +180,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDidpatchToProps = {
-  // openCart,
   fetchResource,
-  // fetchMoreResource,
 };
 
 export default connect(mapStateToProps, mapDidpatchToProps)(Resources);

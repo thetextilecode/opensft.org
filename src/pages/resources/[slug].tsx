@@ -30,7 +30,6 @@ export async function getServerSideProps(params) {
   const data = await request.json();
 
   const index = findResourceIndex(data, params.query.slug);
-  // console.log(params);
 
   return {
     props: {

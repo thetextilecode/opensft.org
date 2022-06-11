@@ -5526,7 +5526,7 @@ h6.post-title {
   left: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  border-bottom: 2px solid #4A8489;
+  border-bottom: 2px solid #B6D0D2;
   background: #fff;
 }
 .sticky-bar.stick.sticky-white-bg {
@@ -9487,16 +9487,6 @@ span.fi-rs-apps {
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-}
-
-.logo.logo-width-1 a img {
-  min-width: 350px;
-}
-
-.logo.logo-width-1 {
-  margin-right: 123px;
-  margin-left: -30px;
-  margin-top: -15px;
 }
 
 .mc__alert {

@@ -1,8 +1,6 @@
 const dev = process.env.NODE_ENV !== 'production';
 
-export const server = dev
-  ? 'http://localhost:3000'
-  : 'https://opensft.org';
+export const server = dev ? 'http://localhost:3000' : 'https://opensft.org';
 
 export const blogConfig = {
   author: 'Rachel Yordán',
@@ -16,7 +14,8 @@ export const siteConfig = {
   favicon: '/favicon.ico',
   url: 'https://www.opensft.org',
   title: 'Open Source Fashion & Textiles | nonprofit for FOSS in fashion',
-  description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
+  description:
+    'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
   shareImage: '/assets/images/logo/screenshot.png',
   shareImageAlt: 'Open Source Fashion & Textiles',
@@ -38,7 +37,7 @@ export const homeConfig = {
   showPopularBrands: false,
   showPopularCategories: false,
   showProductTabs: false,
-  showQuickView: true
+  showQuickView: true,
 };
 
 export const headerConfig = {
@@ -51,7 +50,7 @@ export const headerConfig = {
     showIconCompare: true,
     showIconCart: false,
     showIconSaved: true,
-    showMobilePromo: false
+    showMobilePromo: false,
   },
   middle: {},
   top: {
@@ -64,8 +63,8 @@ export const headerConfig = {
       callToAction: '',
       href: '/#',
       text: '',
-    }
-  }
+    },
+  },
 };
 
 export const infoConfig = {
@@ -78,8 +77,11 @@ export const infoConfig = {
   copyright: 'Copyright 2022 © Open Source Fashion & Textiles',
   email: 'hello@opensft.org',
   hours: '10:00 - 18:00, Mon - Sat',
-  logo: '/assets/images/logo/logo.svg',
+  // logo: '/assets/images/logo/logo.svg',
+  logo: '/assets/images/logo/logo.png',
   logoIllustration: '/assets/images/logo/logo-illustration.svg',
+  logoWidth: 351,
+  logoHeight: 97,
   phone: '+44 20 8036 4986',
 };
 
@@ -90,27 +92,27 @@ export const footerConfig = {
   showFooterTop: true,
   footerBottom: {
     leftCopy: infoConfig.copyright,
-    rightCopy: 'Registered in England and Wales. Company No: ' + infoConfig.companiesHouseNumber
+    rightCopy: 'Registered in England and Wales. Company No: ' + infoConfig.companiesHouseNumber,
   },
   footerMid: {},
   footerTop: {
     showNewsletter: true,
-  }
+  },
 };
 
 export const menuItems = [
   {
     title: 'About',
-    href: '/about'
+    href: '/about',
   },
   {
     title: 'Blog',
-    href: '/blog'
+    href: '/blog',
   },
   {
     title: 'Contact',
-    href: '/contact'
-  }
+    href: '/contact',
+  },
 ];
 
 export const seoConfig = {
@@ -119,7 +121,8 @@ export const seoConfig = {
   meta_og_type: 'website',
   // meta_twitter_card: 'summary',
   meta_og_url: 'https://www.opensft.org',
-  meta_og_description: 'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
+  meta_og_description:
+    'Bridging the worlds of open source technology and fashion & textiles by providing you with' +
     ' resources and training.',
   meta_og_image: '',
   meta_twitter_card: 'summary_large_image',
@@ -141,7 +144,7 @@ export const sidebarConfig = {
   showCategories: true,
   showPopularTags: false,
   showSearch: false,
-  showTrendingPosts: true
+  showTrendingPosts: true,
 };
 
 export const languages = [
