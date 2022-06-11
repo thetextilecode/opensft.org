@@ -10,7 +10,7 @@ import SortSelect from '../../components/resources/SortSelect';
 import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
-import ShopFilter from '../../components/resources/Filter';
+import ResourcesFilter from '../../components/resources/ResourcesFilter';
 // import Link from 'next/link';
 import { GetStaticProps } from 'next';
 
@@ -86,7 +86,7 @@ const ResourcesFullWidth = ({
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <ShopFilter />
+                <ResourcesFilter />
               </div>
               <div className="col-lg-12">
                 <div className="shop-product-filter">

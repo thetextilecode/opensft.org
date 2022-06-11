@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import BrandFilter from '../../components/resources/BrandFilter';
 import CategoryResource from '../../components/resources/CategoryResource';
 import Pagination from '../../components/resources/Pagination';
-import PriceRangeSlider from '../../components/resources/PriceRangeSlider';
 import QuickView from '../../components/resources/QuickView';
 import ShowSelect from '../../components/resources/ShowSelect';
 import SingleResource from '../../components/resources/SingleResource';
@@ -105,21 +104,13 @@ const Resources = ({
 
               <div className="sidebar-widget price_range range mb-30">
                 <div className="widget-header position-relative mb-20 pb-10">
-                  <h5 className="widget-title mb-10">Filter by price</h5>
+                  <h5 className="widget-title mb-10">Filter</h5>
                   <div className="bt-1 border-color-1"></div>
-                </div>
-
-                <div className="price-filter">
-                  <div className="price-filter-inner">
-                    <br />
-                    <PriceRangeSlider />
-                    <br />
-                  </div>
                 </div>
 
                 <div className="list-group">
                   <div className="list-group-item mb-10 mt-10">
-                    <label className="fw-900">Color</label>
+                    <label className="fw-900">Brand</label>
                     <BrandFilter />
                     <label className="fw-900 mt-15">Item Condition</label>
                     <SizeFilter />
@@ -130,7 +121,7 @@ const Resources = ({
 
               <div className="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
                 <div className="widget-header position-relative mb-20 pb-10">
-                  <h5 className="widget-title mb-10">New resources</h5>
+                  <h5 className="widget-title mb-10">New Resources</h5>
                   <div className="bt-1 border-color-1"></div>
                 </div>
                 <div className="single-post clearfix">
@@ -152,30 +143,6 @@ const Resources = ({
                       <div className="product-rating" style={{ width: '60%' }}></div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
-                <div style={{ width: '100%' }}>
-                  <Image
-                    src="/assets/images/banner/banner-11.jpg"
-                    alt=""
-                    layout={'responsive'}
-                    width={600}
-                    height={600}
-                  />
-                </div>
-                <div className="banner-text">
-                  <span>Women Zone</span>
-                  <h4>
-                    Save 17% on <br />
-                    Office Dress
-                  </h4>
-                  <Link href="/src/pages">
-                    <a>
-                      Shop Now
-                      <i className="fi-rs-arrow-right"></i>
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
