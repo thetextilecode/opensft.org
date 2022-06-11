@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -8,7 +8,7 @@ const Search = () => {
   const handleSearch = () => {
     // console.log("click");
     router.push({
-      pathname: '/products',
+      pathname: '/resources',
       query: {
         search: searchTerm,
       },

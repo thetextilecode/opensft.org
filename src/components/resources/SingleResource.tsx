@@ -128,7 +128,7 @@ const SingleResource = ({
           </div>
           <div className="product-content-wrap">
             <div className="product-category">
-              <Link href="/index">
+              <Link href="/src/pages">
                 <a>{resource.brand}</a>
               </Link>
             </div>

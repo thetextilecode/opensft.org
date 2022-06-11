@@ -106,7 +106,7 @@
     "condition": "refurbished",
     "color": "blue",
     "brand": "armani",
-    "category": "jeans",
+    "category": "customer-relations",
     "featured": true,
     "trending": false,
     "discount": {
@@ -171,7 +171,7 @@
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "accessories",
+    "category": "supply-chain",
     "featured": true,
     "trending": true,
     "discount": {
@@ -236,7 +236,7 @@
     "condition": "used",
     "color": "blue",
     "brand": "armani",
-    "category": "trousers",
+    "category": "ecommerce",
     "featured": true,
     "trending": false,
     "discount": {
@@ -301,7 +301,7 @@
     "condition": "refurbished",
     "color": "red",
     "brand": "adidas",
-    "category": "shoe",
+    "category": "resource-planning",
     "featured": true,
     "trending": false,
     "discount": {
@@ -366,7 +366,7 @@
     "condition": "refurbished",
     "color": "green",
     "brand": "helix",
-    "category": "jeans",
+    "category": "customer-relations",
     "featured": true,
     "trending": false,
     "discount": {
@@ -430,7 +430,7 @@
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "trousers",
+    "category": "ecommerce",
     "featured": false,
     "trending": true,
     "discount": {
@@ -495,7 +495,7 @@
     "condition": "refurbished",
     "color": "blue",
     "brand": "armani",
-    "category": "shoe",
+    "category": "resource-planning",
     "featured": true,
     "trending": true,
     "discount": {
@@ -560,7 +560,7 @@
     "condition": "new",
     "color": "blue",
     "brand": "armani",
-    "category": "accessories",
+    "category": "supply-chain",
     "featured": false,
     "trending": true,
     "discount": {
@@ -625,7 +625,7 @@
     "condition": "used",
     "color": "blue",
     "brand": "armani",
-    "category": "jacket",
+    "category": "product-lifecycle",
     "featured": true,
     "trending": false,
     "discount": {
@@ -690,7 +690,7 @@
     "condition": "refurbished",
     "color": "red",
     "brand": "adidas",
-    "category": "jacket",
+    "category": "product-lifecycle",
     "featured": true,
     "trending": false,
     "discount": {
@@ -755,7 +755,7 @@
     "condition": "refurbished",
     "color": "green",
     "brand": "helix",
-    "category": "jeans",
+    "category": "customer-relations",
     "featured": true,
     "trending": false,
     "discount": {

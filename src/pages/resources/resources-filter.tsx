@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import CompareModal from '../../components/ecommerce/CompareModal';
-import Pagination from '../../components/ecommerce/Pagination';
-import QuickView from '../../components/ecommerce/QuickView';
-import ShowSelect from '../../components/ecommerce/ShowSelect';
-import SingleResource from '../../components/ecommerce/SingleResource';
-import SortSelect from '../../components/ecommerce/SortSelect';
-import WishlistModal from '../../components/ecommerce/WishlistModal';
+// import CompareModal from '../../components/resources/CompareModal';
+import Pagination from '../../components/resources/Pagination';
+import QuickView from '../../components/resources/QuickView';
+import ShowSelect from '../../components/resources/ShowSelect';
+import SingleResource from '../../components/resources/SingleResource';
+import SortSelect from '../../components/resources/SortSelect';
+import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
-import ShopFilter from '../../components/ecommerce/Filter';
-import Link from 'next/link';
+import ShopFilter from '../../components/resources/Filter';
+// import Link from 'next/link';
 import { GetStaticProps } from 'next';
 
 const ResourcesFullWidth = ({
@@ -77,7 +77,7 @@ const ResourcesFullWidth = ({
     <>
       <Layout
         parent="Home"
-        sub="Shop"
+        sub="Resources"
         subChild="Filter"
         newsletterId={newsletterId}
         newsletterUser={newsletterUser}
@@ -94,7 +94,7 @@ const ResourcesFullWidth = ({
                     <p>
                       We found
                       <strong className="text-brand">{resources.items.length}</strong>
-                      items for you!
+                      resources for you!
                     </p>
                   </div>
                   <div className="sort-by-product-area">

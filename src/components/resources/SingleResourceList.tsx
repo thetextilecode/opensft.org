@@ -97,7 +97,7 @@ const SingleResourceList = ({
         {/* Right Column Resource Description */}
         <div className="product-content-wrap">
           <div className="product-category">
-            <Link href="/index">
+            <Link href="/src/pages">
               <a>{resource.brand}</a>
             </Link>
           </div>

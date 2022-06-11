@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { addToCart, decreaseQuantity, increaseQuantity } from '../../redux/action/cart';
 import { addToCompare } from '../../redux/action/compareAction';
 import { addToWishlist } from '../../redux/action/wishlistAction';
-import ResourceTab from '../elements/ResourceTab';
+import ResourceTab from './ResourceTab';
 import RelatedSlider from '../sliders/Related';
 import ThumbSlider from '../sliders/Thumb';
 import ShareIcons from '../elements/ShareIcons';
@@ -82,7 +82,7 @@ const ResourceDetails = ({
                         <div className="pro-details-brand">
                           <span>
                             Brands:
-                            <Link href="/index">
+                            <Link href="/src/pages">
                               <a>{resource.brand}</a>
                             </Link>
                           </span>
@@ -136,7 +136,7 @@ const ResourceDetails = ({
                         <ul className="list-filter color-filter">
                           {resource.variations.map((clr, i) => (
                             <li key={i}>
-                              <a href="src/components/ecommerce/ResourceDetails#">
+                              <a href="src/components/resources/ResourceDetails#">
                                 <span className={`product-color-${clr}`}></span>
                               </a>
                             </li>
@@ -224,12 +224,12 @@ const ResourceDetails = ({
                       <ul className="product-meta font-xs color-grey mt-50">
                         <li className="mb-5">
                           SKU:
-                          <a href="src/components/ecommerce/ResourceDetails#">FWM15VKT</a>
+                          <a href="src/components/resources/ResourceDetails#">FWM15VKT</a>
                         </li>
                         <li className="mb-5">
                           Tags:
                           <a
-                            href="src/components/ecommerce/ResourceDetails#"
+                            href="src/components/resources/ResourceDetails#"
                             rel="tag"
                             className="me-1"
                           >

@@ -27,20 +27,29 @@ const CategoryResource = ({ updateResourceCategory }: ICategoryResource) => {
         <li onClick={(e) => selectCategory(e, '')}>
           <a>All</a>
         </li>
-        <li onClick={(e) => selectCategory(e, 'jeans')}>
-          <a>Jeans</a>
+        <li onClick={(e) => selectCategory(e, 'analytics')}>
+          <a>Analytics</a>
         </li>
-        <li onClick={(e) => selectCategory(e, 'shoe')}>
-          <a>Shoe</a>
+        <li onClick={(e) => selectCategory(e, 'customer-relations')}>
+          <a>Customer Relations</a>
         </li>
-        <li onClick={(e) => selectCategory(e, 'jacket')}>
-          <a>Jacket</a>
+        <li onClick={(e) => selectCategory(e, 'ecommerce')}>
+          <a>Ecommerce</a>
         </li>
-        <li onClick={(e) => selectCategory(e, 'trousers')}>
-          <a>Trousers</a>
+        <li onClick={(e) => selectCategory(e, 'integration-automation')}>
+          <a>Integration & Automation</a>
         </li>
-        <li onClick={(e) => selectCategory(e, 'accessories')}>
-          <a>Accessories</a>
+        <li onClick={(e) => selectCategory(e, 'iot')}>
+          <a>IoT</a>
+        </li>
+        <li onClick={(e) => selectCategory(e, 'product-lifecycle')}>
+          <a>Product Lifecycle</a>
+        </li>
+        <li onClick={(e) => selectCategory(e, 'resource-planning')}>
+          <a>Resource Planning</a>
+        </li>
+        <li onClick={(e) => selectCategory(e, 'supply-chain')}>
+          <a>Supply Chain</a>
         </li>
       </ul>
     </>

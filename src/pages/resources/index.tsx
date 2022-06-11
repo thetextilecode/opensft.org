@@ -1,16 +1,16 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import BrandFilter from '../../components/ecommerce/BrandFilter';
-import CategoryResource from '../../components/ecommerce/CategoryResource';
-import Pagination from '../../components/ecommerce/Pagination';
-import PriceRangeSlider from '../../components/ecommerce/PriceRangeSlider';
-import QuickView from '../../components/ecommerce/QuickView';
-import ShowSelect from '../../components/ecommerce/ShowSelect';
-import SingleResource from '../../components/ecommerce/SingleResource';
-import SizeFilter from '../../components/ecommerce/SizeFilter';
-import SortSelect from '../../components/ecommerce/SortSelect';
-import WishlistModal from '../../components/ecommerce/WishlistModal';
+import BrandFilter from '../../components/resources/BrandFilter';
+import CategoryResource from '../../components/resources/CategoryResource';
+import Pagination from '../../components/resources/Pagination';
+import PriceRangeSlider from '../../components/resources/PriceRangeSlider';
+import QuickView from '../../components/resources/QuickView';
+import ShowSelect from '../../components/resources/ShowSelect';
+import SingleResource from '../../components/resources/SingleResource';
+import SizeFilter from '../../components/resources/SizeFilter';
+import SortSelect from '../../components/resources/SortSelect';
+import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
 import Link from 'next/link';
@@ -90,8 +90,7 @@ const Resources = ({
   return (
     <Layout
       parent="Home"
-      sub="Shop"
-      subChild="Resources"
+      sub="Resources"
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
     >
@@ -106,7 +105,7 @@ const Resources = ({
 
               <div className="sidebar-widget price_range range mb-30">
                 <div className="widget-header position-relative mb-20 pb-10">
-                  <h5 className="widget-title mb-10">Fill by price</h5>
+                  <h5 className="widget-title mb-10">Filter by price</h5>
                   <div className="bt-1 border-color-1"></div>
                 </div>
 
@@ -137,46 +136,6 @@ const Resources = ({
                 <div className="single-post clearfix">
                   <div className="image">
                     <Image
-                      src="/assets/images/shop/thumbnail-3.jpg"
-                      alt="#"
-                      layout={'responsive'}
-                      width={600}
-                      height={600}
-                    />
-                  </div>
-                  <div className="content pt-10">
-                    <h5>
-                      <a>Chen Cardigan</a>
-                    </h5>
-                    <p className="price mb-0 mt-5">$99.50</p>
-                    <div className="product-rate">
-                      <div className="product-rating" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-post clearfix">
-                  <div className="image">
-                    <Image
-                      src="/assets/images/shop/thumbnail-4.jpg"
-                      alt="#"
-                      layout={'responsive'}
-                      width={600}
-                      height={600}
-                    />
-                  </div>
-                  <div className="content pt-10">
-                    <h6>
-                      <a>Chen Sweater</a>
-                    </h6>
-                    <p className="price mb-0 mt-5">$89.50</p>
-                    <div className="product-rate">
-                      <div className="product-rating" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-post clearfix">
-                  <div className="image">
-                    <Image
                       src="/assets/images/shop/thumbnail-5.jpg"
                       alt="#"
                       layout={'responsive'}
@@ -186,9 +145,9 @@ const Resources = ({
                   </div>
                   <div className="content pt-10">
                     <h6>
-                      <a>Colorful Jacket</a>
+                      <a>Example Project</a>
                     </h6>
-                    <p className="price mb-0 mt-5">$25</p>
+                    <p className="price mb-0 mt-5">CRM</p>
                     <div className="product-rate">
                       <div className="product-rating" style={{ width: '60%' }}></div>
                     </div>

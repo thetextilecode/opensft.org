@@ -1,8 +1,7 @@
-import ResourceDetails from '../../components/ecommerce/ResourceDetails';
+import ResourceDetails from '../../components/resources/ResourceDetails';
 import Layout from '../../components/layout/Layout';
 import { server } from '../../../opensft.config';
 import { findResourceIndex } from '../../lib/util';
-// import { GetStaticProps } from 'next';
 
 export interface IResourceId {
   newsletterId: string;
@@ -14,7 +13,7 @@ const ResourceId = (props: IResourceId) => {
   return (
     <Layout
       parent="Home"
-      sub="Shop"
+      sub="Resources"
       subChild={props.resource.title}
       newsletterId={props.newsletterId}
       newsletterUser={props.newsletterUser}
@@ -42,22 +41,4 @@ export async function getServerSideProps(params) {
   };
 }
 
-// ResourceId.getInitialProps = async (params) => {
-//   const request = await fetch(`${server}/static/resource.json`);
-//   const data = await request.json();
-//
-//   const index = findResourceIndex(data, params.query.slug);
-//   // console.log(params);
-//
-//   return { resource: data[index] };
-// };
-
 export default ResourceId;
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   return {
-//     props: {
-//
-//     },
-//   };
-// };

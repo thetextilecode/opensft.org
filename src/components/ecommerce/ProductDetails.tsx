@@ -4,11 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
-import {
-  addToCart,
-  decreaseQuantity,
-  increaseQuantity,
-} from '../../redux/action/cart';
+import { addToCart, decreaseQuantity, increaseQuantity } from '../../redux/action/cart';
 import { addToCompare } from '../../redux/action/compareAction';
 import { addToWishlist } from '../../redux/action/wishlistAction';
 import ProductTab from '../elements/ProductTab';
@@ -28,15 +24,15 @@ export interface IProductDetails {
 }
 
 const ProductDetails = ({
-                          product,
-                          cartItems,
-                          addToCompare,
-                          addToCart,
-                          addToWishlist,
-                          increaseQuantity,
-                          decreaseQuantity,
-                          quickView,
-                        }: IProductDetails) => {
+  product,
+  cartItems,
+  addToCompare,
+  addToCart,
+  addToWishlist,
+  increaseQuantity,
+  decreaseQuantity,
+  quickView,
+}: IProductDetails) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleCart = (product) => {
@@ -60,121 +56,96 @@ const ProductDetails = ({
 
   return (
     <>
-      <section className='mt-50 mb-50'>
-        <div className='container'>
-          <div className='row flex-row-reverse'>
-            <div className='col-lg-12'>
-              <div className='product-detail accordion-detail'>
-                <div className='row mb-50'>
-                  <div className='col-md-6 col-sm-12 col-xs-12'>
-                    <div className='detail-gallery'>
-                      <span className='zoom-icon'>
-                        <i className='fi-rs-search'></i>
+      <section className="mt-50 mb-50">
+        <div className="container">
+          <div className="row flex-row-reverse">
+            <div className="col-lg-12">
+              <div className="product-detail accordion-detail">
+                <div className="row mb-50">
+                  <div className="col-md-6 col-sm-12 col-xs-12">
+                    <div className="detail-gallery">
+                      <span className="zoom-icon">
+                        <i className="fi-rs-search"></i>
                       </span>
 
-                      <div className='product-image-slider'>
-                        <ThumbSlider
-                          product={product}
-                        />
+                      <div className="product-image-slider">
+                        <ThumbSlider product={product} />
                       </div>
                     </div>
 
-                    <ShareIcons/>
+                    <ShareIcons />
                   </div>
-                  <div className='col-md-6 col-sm-12 col-xs-12'>
-                    <div className='detail-info'>
-                      <h2 className='title-detail'>
-                        {product.title}
-                      </h2>
-                      <div className='product-detail-rating'>
-                        <div className='pro-details-brand'>
+                  <div className="col-md-6 col-sm-12 col-xs-12">
+                    <div className="detail-info">
+                      <h2 className="title-detail">{product.title}</h2>
+                      <div className="product-detail-rating">
+                        <div className="pro-details-brand">
                           <span>
                             Brands:
-                            <Link href='/index'>
-                              <a>
-                                {product.brand}
-                              </a>
+                            <Link href="/index">
+                              <a>{product.brand}</a>
                             </Link>
                           </span>
                         </div>
-                        <div className='product-rate-cover text-end'>
-                          <div className='product-rate d-inline-block'>
+                        <div className="product-rate-cover text-end">
+                          <div className="product-rate d-inline-block">
                             <div
-                              className='product-rating'
+                              className="product-rating"
                               style={{
                                 width: '90%',
                               }}
                             ></div>
                           </div>
-                          <span className='font-small ml-5 text-muted'>
-                            (25 reviews)
+                          <span className="font-small ml-5 text-muted">(25 reviews)</span>
+                        </div>
+                      </div>
+                      <div className="clearfix product-price-cover">
+                        <div className="product-price primary-color float-left">
+                          <ins>
+                            <span className="text-brand">${product.price}</span>
+                          </ins>
+                          <ins>
+                            <span className="old-price font-md ml-15">${product.oldPrice}</span>
+                          </ins>
+                          <span className="save-price  font-md color3 ml-15">
+                            {product.discount.percentage}% Off
                           </span>
                         </div>
                       </div>
-                      <div className='clearfix product-price-cover'>
-                        <div className='product-price primary-color float-left'>
-                          <ins>
-                            <span className='text-brand'>
-                              ${product.price}
-                            </span>
-                          </ins>
-                          <ins>
-                            <span className='old-price font-md ml-15'>
-                              ${product.oldPrice}
-                            </span>
-                          </ins>
-                          <span className='save-price  font-md color3 ml-15'>
-                            {
-                              product.discount
-                                .percentage
-                            }
-                            % Off
-                          </span>
-                        </div>
-                      </div>
-                      <div className='bt-1 border-color-1 mt-15 mb-15'></div>
-                      <div className='short-desc mb-30'>
+                      <div className="bt-1 border-color-1 mt-15 mb-15"></div>
+                      <div className="short-desc mb-30">
                         <p>{product.desc}</p>
                       </div>
-                      <div className='product_sort_info font-xs mb-30'>
+                      <div className="product_sort_info font-xs mb-30">
                         <ul>
-                          <li className='mb-10'>
-                            <i className='fi-rs-crown mr-5'></i>
-                            1 Year AL Jazeera Brand Warranty
+                          <li className="mb-10">
+                            <i className="fi-rs-crown mr-5"></i>1 Year AL Jazeera Brand Warranty
                           </li>
-                          <li className='mb-10'>
-                            <i className='fi-rs-refresh mr-5'></i>
+                          <li className="mb-10">
+                            <i className="fi-rs-refresh mr-5"></i>
                             30 Day Return Policy
                           </li>
                           <li>
-                            <i className='fi-rs-credit-card mr-5'></i>
+                            <i className="fi-rs-credit-card mr-5"></i>
                             Cash on Delivery available
                           </li>
                         </ul>
                       </div>
-                      <div className='attr-detail attr-color mb-15'>
-                        <strong className='mr-10'>
-                          Color
-                        </strong>
-                        <ul className='list-filter color-filter'>
-                          {product.variations.map(
-                            (clr, i) => (
-                              <li key={i}>
-                                <a href='src/components/ecommerce/ProductDetails#'>
-                                  <span
-                                    className={`product-color-${clr}`}
-                                  ></span>
-                                </a>
-                              </li>
-                            ),
-                          )}
+                      <div className="attr-detail attr-color mb-15">
+                        <strong className="mr-10">Color</strong>
+                        <ul className="list-filter color-filter">
+                          {product.variations.map((clr, i) => (
+                            <li key={i}>
+                              <a href="src/components/ecommerce/ProductDetails#">
+                                <span className={`product-color-${clr}`}></span>
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </div>
-                      <div className='attr-detail attr-size'>
-                        <strong className='mr-10'>
-                          Size
-                        </strong>
-                        <ul className='list-filter size-filter font-small'>
+                      <div className="attr-detail attr-size">
+                        <strong className="mr-10">Size</strong>
+                        <ul className="list-filter size-filter font-small">
                           {/* {product.sizes.map(
                             (size, i) => (
                                 <li>
@@ -185,7 +156,7 @@ const ProductDetails = ({
                             )
                         )} */}
 
-                          <li className='active'>
+                          <li className="active">
                             <a>M</a>
                           </li>
                           <li>
@@ -199,85 +170,75 @@ const ProductDetails = ({
                           </li>
                         </ul>
                       </div>
-                      <div className='bt-1 border-color-1 mt-30 mb-30'></div>
-                      <div className='detail-extralink'>
-                        <div className='detail-qty border radius'>
+                      <div className="bt-1 border-color-1 mt-30 mb-30"></div>
+                      <div className="detail-extralink">
+                        <div className="detail-qty border radius">
                           <a
                             onClick={(e) =>
                               !inCart
-                                ? setQuantity(quantity > 1 ? quantity - 1 : 1,
-                                ) : decreaseQuantity(product?.id)
+                                ? setQuantity(quantity > 1 ? quantity - 1 : 1)
+                                : decreaseQuantity(product?.id)
                             }
-                            className='qty-down'
+                            className="qty-down"
                           >
-                            <i className='fi-rs-angle-small-down'></i>
+                            <i className="fi-rs-angle-small-down"></i>
                           </a>
-                          <span className='qty-val'>
-                            {inCart?.quantity || quantity}
-                          </span>
+                          <span className="qty-val">{inCart?.quantity || quantity}</span>
                           <a
                             onClick={() =>
-                              !inCart
-                                ? setQuantity(quantity + 1)
-                                : increaseQuantity(product.id)
+                              !inCart ? setQuantity(quantity + 1) : increaseQuantity(product.id)
                             }
-                            className='qty-up'
+                            className="qty-up"
                           >
-                            <i className='fi-rs-angle-small-up'></i>
+                            <i className="fi-rs-angle-small-up"></i>
                           </a>
                         </div>
-                        <div className='product-extra-link2'>
+                        <div className="product-extra-link2">
                           <button
                             onClick={(e) =>
                               handleCart({
                                 ...product,
-                                quantity:
-                                  quantity ||
-                                  1,
+                                quantity: quantity || 1,
                               })
                             }
-                            className='button button-add-to-cart'
+                            className="button button-add-to-cart"
                           >
                             Add to cart
                           </button>
                           <a
-                            aria-label='Add To Saved'
-                            className='action-btn hover-up'
-                            onClick={(e) =>
-                              handleWishlist(product)
-                            }
+                            aria-label="Add To Saved"
+                            className="action-btn hover-up"
+                            onClick={(e) => handleWishlist(product)}
                           >
-                            <i className='fi-rs-heart'></i>
+                            <i className="fi-rs-heart"></i>
                           </a>
                           <a
-                            aria-label='Compare'
-                            className='action-btn hover-up'
-                            onClick={(e) =>
-                              handleCompare(product)
-                            }
+                            aria-label="Compare"
+                            className="action-btn hover-up"
+                            onClick={(e) => handleCompare(product)}
                           >
-                            <i className='fi-rs-shuffle'></i>
+                            <i className="fi-rs-shuffle"></i>
                           </a>
                         </div>
                       </div>
-                      <ul className='product-meta font-xs color-grey mt-50'>
-                        <li className='mb-5'>
+                      <ul className="product-meta font-xs color-grey mt-50">
+                        <li className="mb-5">
                           SKU:
-                          <a href='src/components/ecommerce/ProductDetails#'>FWM15VKT</a>
+                          <a href="src/components/ecommerce/ProductDetails#">FWM15VKT</a>
                         </li>
-                        <li className='mb-5'>
+                        <li className="mb-5">
                           Tags:
                           <a
-                            href='src/components/ecommerce/ProductDetails#'
-                            rel='tag'
-                            className='me-1'
+                            href="src/components/ecommerce/ProductDetails#"
+                            rel="tag"
+                            className="me-1"
                           >
                             Cloth,
                           </a>
                         </li>
                         <li>
                           Availability:
-                          <span className='in-stock text-success ml-5'>
+                          <span className="in-stock text-success ml-5">
                             {product.stock} Items In Stock
                           </span>
                         </li>
@@ -289,34 +250,30 @@ const ProductDetails = ({
                 {quickView ? null : (
                   <>
                     <ProductTab />
-                    <div className='row mt-60'>
-                      <div className='col-12'>
-                        <h3 className='section-title style-1 mb-30'>
-                          Related products
-                        </h3>
+                    <div className="row mt-60">
+                      <div className="col-12">
+                        <h3 className="section-title style-1 mb-30">Related products</h3>
                       </div>
-                      <div className='col-12'>
-                        <div className='row related-products position-relative'>
+                      <div className="col-12">
+                        <div className="row related-products position-relative">
                           <RelatedSlider />
                         </div>
                       </div>
                     </div>
-                    <div className='banner-img banner-big wow fadeIn f-none animated mt-50'>
+                    <div className="banner-img banner-big wow fadeIn f-none animated mt-50">
                       <div style={{ width: '100%' }}>
-                      <Image
-                        className='border-radius-10'
-                        src='/assets/images/banner/banner-4.png'
-                        alt=''
-                        layout={'responsive'}
-                        width={1320}
-                        height={300}
-                      />
+                        <Image
+                          className="border-radius-10"
+                          src="/assets/images/banner/banner-4.png"
+                          alt=""
+                          layout={'responsive'}
+                          width={1320}
+                          height={300}
+                        />
                       </div>
-                      <div className='banner-text'>
-                        <h4 className='mb-15 mt-40'>
-                          Repair Services
-                        </h4>
-                        <h2 className='fw-600 mb-20'>
+                      <div className="banner-text">
+                        <h4 className="mb-15 mt-40">Repair Services</h4>
+                        <h2 className="fw-600 mb-20">
                           We're an Apple <br />
                           Authorised Service Provider
                         </h2>

@@ -221,7 +221,7 @@ const ResourceTab = () => {
                             />
                           </div>
                           <h6>
-                            <a href="src/components/elements/ResourceTab#">Jacky Chan</a>
+                            <a href="src/components/resources/ResourceTab#">Jacky Chan</a>
                           </h6>
                           <p className="font-xxs">Since 2012</p>
                         </div>
@@ -239,7 +239,7 @@ const ResourceTab = () => {
                             <div className="d-flex align-items-center">
                               <p className="font-xs mr-30">December 4, 2020 at 3:12 pm</p>
                               <a
-                                href="src/components/elements/ResourceTab#"
+                                href="src/components/resources/ResourceTab#"
                                 className="text-brand btn-reply"
                               >
                                 Reply
@@ -264,7 +264,7 @@ const ResourceTab = () => {
                             />
                           </div>
                           <h6>
-                            <a href="src/components/elements/ResourceTab#">Ana Rosie</a>
+                            <a href="src/components/resources/ResourceTab#">Ana Rosie</a>
                           </h6>
                           <p className="font-xxs">Since 2008</p>
                         </div>
@@ -282,7 +282,7 @@ const ResourceTab = () => {
                             <div className="d-flex align-items-center">
                               <p className="font-xs mr-30">December 4, 2020 at 3:12 pm</p>
                               <a
-                                href="src/components/elements/ResourceTab#"
+                                href="src/components/resources/ResourceTab#"
                                 className="text-brand btn-reply"
                               >
                                 Reply
@@ -307,7 +307,7 @@ const ResourceTab = () => {
                             />
                           </div>
                           <h6>
-                            <a href="src/components/elements/ResourceTab#">Steven Keny</a>
+                            <a href="src/components/resources/ResourceTab#">Steven Keny</a>
                           </h6>
                           <p className="font-xxs">Since 2010</p>
                         </div>
@@ -328,7 +328,7 @@ const ResourceTab = () => {
                             <div className="d-flex align-items-center">
                               <p className="font-xs mr-30">December 4, 2020 at 3:12 pm</p>
                               <a
-                                href="src/components/elements/ResourceTab#"
+                                href="src/components/resources/ResourceTab#"
                                 className="text-brand btn-reply"
                               >
                                 Reply
@@ -429,7 +429,7 @@ const ResourceTab = () => {
                       85%
                     </div>
                   </div>
-                  <a href="src/components/elements/ResourceTab#" className="font-xs text-muted">
+                  <a href="src/components/resources/ResourceTab#" className="font-xs text-muted">
                     How are ratings calculated?
                   </a>
                 </div>
@@ -443,7 +443,7 @@ const ResourceTab = () => {
                 <div className="col-lg-8 col-md-12">
                   <form
                     className="form-contact comment_form"
-                    action="src/components/elements/ResourceTab#"
+                    action="src/components/resources/ResourceTab#"
                     id="commentForm"
                   >
                     <div className="row">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // import "./styles.css";
 
 function Pagination({ prev, currentPage, getPaginationGroup, next, pages, handleActive }) {
