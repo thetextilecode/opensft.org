@@ -77,3 +77,25 @@ export interface IProduct {
   trending?: boolean;
 }
 
+export interface IResource {
+  brand?: string;
+  created?: boolean;
+  desc?: string;
+  discount?: {
+    isActive?: boolean;
+    percentage?: number;
+  };
+  images?: {
+    img?: any;
+    height: number;
+    width: number;
+  }[];
+  items: any[];
+  oldPrice?: any;
+  price?: any;
+  ratingScore?: any;
+  slug?: string;
+  title?: string;
+  totalSell?: number;
+  trending?: boolean;
+}

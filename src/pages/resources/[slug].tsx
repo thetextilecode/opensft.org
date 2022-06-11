@@ -1,58 +1,58 @@
-import ProductDetails from '../../components/ecommerce/ProductDetails';
+import ResourceDetails from '../../components/ecommerce/ResourceDetails';
 import Layout from '../../components/layout/Layout';
 import { server } from '../../../opensft.config';
-import { findProductIndex } from '../../lib/util';
-import { GetStaticProps } from 'next';
+import { findResourceIndex } from '../../lib/util';
+// import { GetStaticProps } from 'next';
 
-export interface IProductId {
+export interface IResourceId {
   newsletterId: string;
   newsletterUser: string;
-  product: any;
+  resource: any;
 }
 
-const ProductId = (props: IProductId) => {
+const ResourceId = (props: IResourceId) => {
   return (
     <Layout
       parent="Home"
       sub="Shop"
-      subChild={props.product.title}
+      subChild={props.resource.title}
       newsletterId={props.newsletterId}
       newsletterUser={props.newsletterUser}
     >
       <div className="container">
-        <ProductDetails product={props.product} />
+        <ResourceDetails resource={props.resource} />
       </div>
     </Layout>
   );
 };
 
 export async function getServerSideProps(params) {
-  const request = await fetch(`${server}/static/product.json`);
+  const request = await fetch(`${server}/static/resource.json`);
   const data = await request.json();
 
-  const index = findProductIndex(data, params.query.slug);
+  const index = findResourceIndex(data, params.query.slug);
   // console.log(params);
 
   return {
     props: {
       newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
       newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
-      product: data[index],
+      resource: data[index],
     },
   };
 }
 
-// ProductId.getInitialProps = async (params) => {
-//   const request = await fetch(`${server}/static/product.json`);
+// ResourceId.getInitialProps = async (params) => {
+//   const request = await fetch(`${server}/static/resource.json`);
 //   const data = await request.json();
 //
-//   const index = findProductIndex(data, params.query.slug);
+//   const index = findResourceIndex(data, params.query.slug);
 //   // console.log(params);
 //
-//   return { product: data[index] };
+//   return { resource: data[index] };
 // };
 
-export default ProductId;
+export default ResourceId;
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   return {
