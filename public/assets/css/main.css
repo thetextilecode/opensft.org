@@ -4933,7 +4933,36 @@ h6.post-title {
   opacity: 1;
 }
 
-/*RESOURCES*/ /*LAYOUT -> HEADER STYLE*/
+/*RESOURCES*/
+a.resource-extra-link {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  border-radius: 4px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: 40px;
+  margin: 0 3px;
+  transition: all 0.5s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+}
+a.resource-extra-link:hover {
+  background-color: #6FB1B6;
+  color: #fff;
+}
+
+.button.button-learn-more {
+  padding: 8px 40px;
+}
+.button:hover {
+  color: #fff;
+}
+
+/*LAYOUT -> HEADER STYLE*/
 /*Header default*/
 .header-top-ptb-1 {
   padding: 10px 0;

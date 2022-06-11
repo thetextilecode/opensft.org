@@ -4,6 +4,7 @@ import 'swiper/css/thumbs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import Zoom from 'react-img-zoom';
 import Image from 'next/image';
+import { infoConfig } from '../../../opensft.config';
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -30,7 +31,7 @@ const ThumbSlider = ({ product, resource }: IThumbSlider) => {
         thumbs={{ swiper: thumbsSwiper }}
         className="mySwiper2"
       >
-        {resource &&
+        {resource?.gallery &&
           resource.gallery.map((item, i: number) => (
             <SwiperSlide key={i}>
               <div style={{ width: '100%' }}>
@@ -52,7 +53,7 @@ const ThumbSlider = ({ product, resource }: IThumbSlider) => {
             /> */}
             </SwiperSlide>
           ))}
-        {product &&
+        {product?.gallery &&
           product.gallery.map((item, i: number) => (
             <SwiperSlide key={i}>
               <div style={{ width: '100%' }}>
@@ -84,19 +85,44 @@ const ThumbSlider = ({ product, resource }: IThumbSlider) => {
         watchSlidesProgress={true}
         className="mySwiper"
       >
-        {resource &&
-          resource.gallery.map((item, i: number) => (
-            <SwiperSlide key={i}>
-              <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
-                <Image src={item.thumb} alt="evara" layout="responsive" height={600} width={600} />
-              </div>
-            </SwiperSlide>
-          ))}
-        {product &&
+        {resource && (
+          <>
+            {resource.gallery ? (
+              resource.gallery.map((item, i: number) => (
+                <SwiperSlide key={i}>
+                  <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
+                    <Image
+                      src={item.thumb}
+                      alt="OpenSFT"
+                      layout="responsive"
+                      height={600}
+                      width={600}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))
+            ) : (
+              <Image
+                src={'/assets/images/page/placeholder.png'}
+                alt="OpenSFT"
+                layout="responsive"
+                height={600}
+                width={600}
+              />
+            )}
+          </>
+        )}
+        {product?.gallery &&
           product.gallery.map((item, i: number) => (
             <SwiperSlide key={i}>
               <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
-                <Image src={item.thumb} alt="evara" layout="responsive" height={600} width={600} />
+                <Image
+                  src={item.thumb}
+                  alt="OpenSFT"
+                  layout="responsive"
+                  height={600}
+                  width={600}
+                />
               </div>
             </SwiperSlide>
           ))}

@@ -44,25 +44,22 @@ const ResourceDetails = ({
                 <div className="row mb-50">
                   <div className="col-md-6 col-sm-12 col-xs-12">
                     <div className="detail-gallery">
-                      {resource.img && (
-                        <div className="product-image-slider">
-                          <ThumbSlider resource={resource} />
-                        </div>
-                      )}
+                      <div className="product-image-slider">
+                        <ThumbSlider resource={resource} />
+                      </div>
                     </div>
 
-                    <ShareIcons />
+                    {/*<ShareIcons />*/}
                   </div>
-                  <div className="col-md-6 col-sm-12 col-xs-12">
+
+                  <div className={'col-md-6 col-sm-12 col-xs-12'}>
                     <div className="detail-info">
                       <h2 className="title-detail">{resource.title}</h2>
                       <div className="product-detail-rating">
                         <div className="pro-details-brand">
                           <span>
-                            Company:&nbsp;
-                            <Link href="/src/pages">
-                              <a>{resource.brand}</a>
-                            </Link>
+                            Category:&nbsp;&nbsp;
+                            <span className="badge bg-secondary">{resource.categoryLabel}</span>
                           </span>
                         </div>
                       </div>
@@ -73,37 +70,43 @@ const ResourceDetails = ({
                       <div className="product_sort_info font-xs mb-30">
                         <ul>
                           <li className="mb-10">
-                            <i className="fi-rs-crown mr-5"></i>1 Year AL Jazeera Brand Warranty
+                            <i className="fi-rs-world mr-5"></i>
+                            Free or Open Source
                           </li>
                           <li className="mb-10">
-                            <i className="fi-rs-refresh mr-5"></i>
-                            30 Day Return Policy
+                            <i className="fi-rs-crown mr-5"></i>
+                            {resource.license ?? '1 Year AL Jazeera Brand Warranty'}
                           </li>
                           <li>
-                            <i className="fi-rs-credit-card mr-5"></i>
-                            Cash on Delivery available
+                            <i className="fi-rs-pencil mr-5"></i>
+                            See something wrong? <Link href={'/contact'}>Let us know</Link>
                           </li>
                         </ul>
                       </div>
                       <div className="bt-1 border-color-1 mt-30 mb-30"></div>
                       <div className="detail-extralink">
-                        <div className="product-extra-link2">
-                          <button className="button button-add-to-cart">Learn More</button>
-                          {/*<a*/}
-                          {/*  aria-label="Add To Saved"*/}
-                          {/*  className="action-btn hover-up"*/}
-                          {/*  onClick={(e) => handleWishlist(resource)}*/}
-                          {/*>*/}
-                          {/*  <i className="fi-rs-heart"></i>*/}
-                          {/*</a>*/}
-                          {/*<a*/}
-                          {/*  aria-label="Compare"*/}
-                          {/*  className="action-btn hover-up"*/}
-                          {/*  onClick={(e) => handleCompare(resource)}*/}
-                          {/*>*/}
-                          {/*  <i className="fi-rs-shuffle"></i>*/}
-                          {/*</a>*/}
-                        </div>
+                        <a
+                          className="button button-add-to-cart"
+                          href={resource.url}
+                          target={'_blank'}
+                          rel={'noopener nofollow noreferrer'}
+                        >
+                          Learn More
+                        </a>
+                        {/*<a*/}
+                        {/*  aria-label="Add To Saved"*/}
+                        {/*  className="action-btn hover-up resource-extra-link"*/}
+                        {/*  onClick={(e) => handleWishlist(resource)}*/}
+                        {/*>*/}
+                        {/*  <i className="fi-rs-heart"></i>*/}
+                        {/*</a>*/}
+                        {/*<a*/}
+                        {/*  aria-label="Compare"*/}
+                        {/*  className="action-btn hover-up resource-extra-link"*/}
+                        {/*  onClick={(e) => handleCompare(resource)}*/}
+                        {/*>*/}
+                        {/*  <i className="fi-rs-shuffle"></i>*/}
+                        {/*</a>*/}
                       </div>
                     </div>
                   </div>
@@ -114,7 +117,7 @@ const ResourceDetails = ({
                     <ResourceTab />
                     <div className="row mt-60">
                       <div className="col-12">
-                        <h3 className="section-title style-1 mb-30">Related resources</h3>
+                        <h3 className="section-title style-1 mb-30">Related Resources</h3>
                       </div>
                       <div className="col-12">
                         <div className="row related-products position-relative">
@@ -159,9 +162,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   addToCompare,
   addToWishlist,
-  addToCart,
-  increaseQuantity,
-  decreaseQuantity,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResourceDetails);

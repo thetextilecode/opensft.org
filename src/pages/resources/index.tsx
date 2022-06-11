@@ -105,7 +105,7 @@ const Resources = ({
                 <div className="single-post clearfix">
                   <div className="image">
                     <Image
-                      src="/assets/images/shop/thumbnail-5.jpg"
+                      src="/assets/images/page/placeholder.png"
                       alt="#"
                       layout={'responsive'}
                       width={600}
