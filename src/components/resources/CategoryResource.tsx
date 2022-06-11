@@ -29,6 +29,9 @@ const CategoryResource = ({ updateResourceCategory }: ICategoryResource) => {
         <li onClick={(e) => selectCategory(e, 'analytics')}>
           <a>Analytics</a>
         </li>
+        <li onClick={(e) => selectCategory(e, 'artificial-intelligence')}>
+          <a>Artificial Intelligence (AI)</a>
+        </li>
         <li onClick={(e) => selectCategory(e, 'customer-relations')}>
           <a>Customer Relations</a>
         </li>

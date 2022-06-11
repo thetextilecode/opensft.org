@@ -922,7 +922,7 @@ const Header = ({
                       <Link href="/cart">
                         <a className="mini-cart-icon">
                           <Image
-                            alt="Evara"
+                            alt="OpenSFT"
                             src="/assets/images/theme/icons/icon-cart.svg"
                             layout="responsive"
                             width={25}

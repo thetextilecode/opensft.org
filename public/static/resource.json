@@ -91,6 +91,15 @@
     "created": "2022-04-23T00:00:00"
   },
   {
+    "title": "Optaplanner",
+    "desc": "A fast, easy-to-use, open source AI constraint solver for software developers",
+    "url": "https://github.com/kiegroup/optaplanner",
+    "category": "artificial-intelligence",
+    "categoryLabel": "Artificial Intelligence (AI)",
+    "lang": "java",
+    "created": "2022-06-11T00:00:00"
+  },
+  {
     "title": "OSCommerce",
     "id": "10",
     "desc": "OsCommerce is an e-commerce and online store-management software program. It can be used on any web server that has PHP and MySQL installed. It is available as free software under the GNU General Public License.",
@@ -205,7 +214,8 @@
     "desc": "Sylius is an Open Source Headless eCommerce Platform based on Symfony.",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
-    "created": "2022-04-23T00:00:00"
+    "created": "2022-04-23T00:00:00",
+    "lang": "php"
   },
   {
     "title": "Vendure",
@@ -213,7 +223,8 @@
     "desc": "A headless GraphQL ecommerce framework.",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
-    "created": "2022-04-23T00:00:00"
+    "created": "2022-04-23T00:00:00",
+    "tags": "headless"
   },
   {
     "title": "Woocommerce",
@@ -221,7 +232,8 @@
     "desc": "A customizable, open-source eCommerce platform built on WordPress. Build any commerce solution you can imagine.",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
-    "created": "2022-04-23T00:00:00"
+    "created": "2022-04-23T00:00:00",
+    "lang": "php"
   },
   {
     "title": "Zen Cart",

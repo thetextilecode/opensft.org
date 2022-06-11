@@ -111,6 +111,10 @@ export const menuItems = [
     href: '/blog',
   },
   {
+    title: 'Resources',
+    href: '/resources',
+  },
+  {
     title: 'Contact',
     href: '/contact',
   },
