@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  footerConfig,
-  homeConfig,
-  infoConfig,
-  socialConfig,
-} from '../../../opensft.config';
+import { footerConfig, homeConfig, infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
 import Newsletter from '../elements/Newsletter';
 
@@ -21,12 +16,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
       {footerConfig.showFooterTop &&
         footerConfig.footerTop.showNewsletter &&
         newsletterUser &&
-        newsletterId && (
-          <Newsletter
-            newsletterId={newsletterId}
-            newsletterUser={newsletterUser}
-          />
-        )}
+        newsletterId && <Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser} />}
 
       {/* Footer Mid */}
       {footerConfig.showFooterMid && (
@@ -40,8 +30,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                     <strong>Address: </strong>
                     {infoConfig.addressLine1}
                     <br />
-                    {infoConfig.addressLine2}, {infoConfig.addressCity}{' '}
-                    {infoConfig.addressPostcode}
+                    {infoConfig.addressLine2}, {infoConfig.addressCity} {infoConfig.addressPostcode}
                   </p>
                   <p className="wow fadeIn animated">
                     <strong>Phone: </strong>
@@ -51,9 +40,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                     <strong>Hours: </strong>
                     {infoConfig.hours}
                   </p>
-                  <h5 className="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">
-                    Follow Us
-                  </h5>
+                  <h5 className="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                   <SocialIcons
                     facebook={socialConfig.facebook}
                     instagram={socialConfig.instagram}
@@ -81,9 +68,15 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                 </ul>
               </div>
               <div className="col-lg-2 col-md-1">
-                <div className="logo logo-width-1 wow fadeIn animated mx-auto">
-                  <img
-                    src={'/assets/images/logo/logo-illustration.svg'}
+                <div
+                  className="logo logo-width-1 wow fadeIn animated mx-auto"
+                  style={{ width: '120px', margin: '1.5em 0.5em' }}
+                >
+                  <Image
+                    src={infoConfig.logoIllustration}
+                    width={infoConfig.logoIllustrationWidth}
+                    height={infoConfig.logoIllustrationHeight}
+                    layout={'responsive'}
                     alt={infoConfig.companyName + ' logo'}
                   />
                 </div>
