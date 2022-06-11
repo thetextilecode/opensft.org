@@ -1,19 +1,26 @@
 [
   {
+    "title": "Aimeos",
+    "desc": "Laravel ecommerce package for ultra fast online shops, scalable marketplaces, complex B2B applications and #gigacommerce",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce",
+    "url": "https://github.com/aimeos/aimeos-laravel",
+    "lang": "php",
+    "created": "2022-06-11T00:00:00"
+  },
+  {
     "title": "Bagisto",
-    "slug": "bagisto",
     "id": "1",
     "desc": "An easy to use, free and open source laravel eCommerce platform to build your online shop in no time.",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
     "url": "https://github.com/bagisto/bagisto",
     "featured": false,
-    "tags": "php",
+    "lang": "php",
     "created": "2022-04-23T00:00:00"
   },
   {
-    "title": "Dolibarr",
-    "slug": "dolibarr",
+    "title": "Dolibarr ERP & CRM",
     "id": "2",
     "desc": "Dolibarr ERP CRM is an open source, free software package for companies of any size, foundations or freelancers. It includes different features for enterprise resource planning and customer relationship management but also other features for different activities.",
     "url": "https://www.dolibarr.org/",
@@ -25,18 +32,17 @@
     "created": "2022-06-09T00:00:00"
   },
   {
-    "title": "SuiteCRM",
-    "slug": "suitecrm",
-    "id": "3",
-    "desc": "Open source CRM for the world",
-    "category": "customer-relations",
-    "categoryLabel": "Customer Relations",
+    "title": "Kaoto",
+    "desc": "Kaoto is an open source integration editor with a user-friendly drag and drop interface. Use it to automate common tasks in your day-to-day ecommerce workflow.",
+    "url": "https://kaoto.io",
+    "category": "integration-automation",
+    "categoryLabel": "Integration & Automation",
     "featured": true,
+    "lang": "java",
     "created": "2022-04-23T00:00:00"
   },
   {
     "title": "Magento",
-    "slug": "magento",
     "id": "4",
     "desc": "Magento is an open-source e-commerce platform written in PHP. It uses multiple other PHP frameworks such as Laminas and Symfony.",
     "category": "ecommerce",
@@ -44,12 +50,11 @@
     "url": "https://github.com/magento/magento2",
     "featured": true,
     "weight": 150,
-    "tags": "php",
+    "lang": "php",
     "created": "2022-04-23T00:00:00"
   },
   {
     "title": "nopCommerce",
-    "slug": "nopcommerce",
     "id": "5",
     "desc": "ASP.NET Core eCommerce software. nopCommerce is a free and open-source shopping cart.",
     "url": "https://github.com/nopSolutions/nopCommerce",
@@ -58,39 +63,38 @@
     "categoryLabel": "E-Commerce",
     "featured": true,
     "weight": 150,
-    "tags": ".net",
+    "lang": "c#",
     "created": "2022-04-23T00:00:00"
   },
   {
-    "title": "Odoo",
-    "slug": "odoo",
+    "title": "Odoo Commerce",
     "id": "6",
-    "desc": "Open Source Apps To Grow Your Business.",
+    "desc": "Odoo is a suite of web based open source business apps.",
     "url": "https://www.odoo.com/app/ecommerce",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
+    "lang": "python",
     "featured": true,
     "weight": 150,
     "created": "2022-04-23T00:00:00"
   },
   {
     "title": "Opencart",
-    "slug": "opencart",
     "id": "9",
     "desc": "A free shopping cart system. OpenCart is an open source PHP-based online e-commerce solution.",
+    "url": "https://github.com/opencart/opencart",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
     "featured": false,
     "weight": 150,
-    "tags": "php",
+    "lang": "php",
     "created": "2022-04-23T00:00:00"
   },
   {
     "title": "OSCommerce",
-    "slug": "oscommerce",
     "id": "10",
-    "price": 67,
     "desc": "OsCommerce is an e-commerce and online store-management software program. It can be used on any web server that has PHP and MySQL installed. It is available as free software under the GNU General Public License.",
+    "url": "https://github.com/osCommerce",
     "license": "GNU General Public License",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
@@ -99,16 +103,30 @@
     "created": "2022-04-23T00:00:00"
   },
   {
+    "title": "Pimcore",
+    "url": "https://github.com/pimcore/pimcore",
+    "desc": "Open Source Data & Experience Management Platform (PIM, MDM, CDP, DAM, DXP/CMS & Digital Commerce)",
+    "category": "customer-relations",
+    "categoryLabel": "Customer Relations",
+    "created": "2022-05-15T00:00:00"
+  },
+  {
     "title": "Prestashop",
-    "slug": "prestashop",
     "id": "11",
     "desc": "PrestaShop is an Open Source e-commerce platform, committed to providing the best shopping cart experience for both merchants and customers.",
     "url": "https://github.com/PrestaShop/PrestaShop",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
     "weight": 150,
-    "tags": "dress",
     "created": "2022-04-23T00:00:00"
+  },
+  {
+    "title": "Reaction",
+    "url": "https://github.com/reactioncommerce/reaction",
+    "desc": "Mailchimp Open Commerce is an API-first, headless commerce platform built using Node.js, React, GraphQL. Deployed via Docker and Kubernetes.",
+    "category": "ecommerce",
+    "categoryLabel": "E-Commerce",
+    "tags": "headless"
   },
   {
     "title": "Saleor",
@@ -121,7 +139,7 @@
     "categoryLabel": "Customer Relations",
     "featured": true,
     "weight": 150,
-    "tags": "python",
+    "lang": "python",
     "created": "2022-04-23T00:00:00"
   },
   {
@@ -133,8 +151,15 @@
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
     "weight": 150,
-    "tags": "women",
+    "lang": "php",
     "created": "2022-04-23T00:00:00"
+  },
+  {
+    "title": "Shuup",
+    "url": "https://github.com/shuup/shuup",
+    "desc": "E-Commerce Platform",
+    "lang": "python",
+    "created": "2022-06-10T00:00:00"
   },
   {
     "title": "Snipcart",
@@ -153,6 +178,25 @@
     "desc": "Open Source headless multi-language/multi-currency/multi-store eCommerce platform.",
     "category": "ecommerce",
     "categoryLabel": "E-Commerce",
+    "created": "2022-04-23T00:00:00",
+    "tags": "headless"
+  },
+  {
+    "title": "Solidus",
+    "url": "https://github.com/solidusio/solidus",
+    "desc": "Rails eCommerce System",
+    "lang": "ruby",
+    "created": "2022-06-05T00:00:00"
+  },
+  {
+    "title": "SuiteCRM",
+    "slug": "suitecrm",
+    "id": "3",
+    "desc": "Open source CRM for the world",
+    "url": "https://github.com/salesagility/SuiteCRM",
+    "category": "customer-relations",
+    "categoryLabel": "Customer Relations",
+    "featured": true,
     "created": "2022-04-23T00:00:00"
   },
   {

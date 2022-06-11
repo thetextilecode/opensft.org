@@ -3,7 +3,7 @@ import FetchTab2 from '../components/ecommerce/fetchTabSlider';
 import Banner2 from '../components/elements/Banner2';
 import Bottom from '../components/elements/Bottom';
 import QuickView from '../components/ecommerce/QuickView';
-import Banner3 from '../components/elements/Banner3';
+import HomeBanner from '../components/elements/HomeBanner';
 import Banner4 from '../components/elements/Banner4';
 import Banner5 from '../components/elements/Banner5';
 import BannerFeatures from '../components/elements/BannerFeatures';
@@ -27,11 +27,7 @@ type IndexProps = {
   posts: IBlogPost[];
 };
 
-export default function Home({
-  newsletterId,
-  newsletterUser,
-  posts,
-}: IndexProps) {
+export default function Home({ newsletterId, newsletterUser, posts }: IndexProps) {
   return (
     <>
       {homeConfig.showPopupModal && <IntroPopup />}
@@ -163,7 +159,7 @@ export default function Home({
                 </div>
                 <div className="col-lg-6">
                   <div className="row">
-                    <Banner3 />
+                    <HomeBanner />
                   </div>
                 </div>
               </div>

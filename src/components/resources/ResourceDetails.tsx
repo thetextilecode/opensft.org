@@ -73,10 +73,12 @@ const ResourceDetails = ({
                             <i className="fi-rs-world mr-5"></i>
                             Free or Open Source
                           </li>
-                          <li className="mb-10">
-                            <i className="fi-rs-crown mr-5"></i>
-                            {resource.license ?? '1 Year AL Jazeera Brand Warranty'}
-                          </li>
+                          {resource.license && (
+                            <li className="mb-10">
+                              <i className="fi-rs-crown mr-5"></i>
+                              {resource.license}
+                            </li>
+                          )}
                           <li>
                             <i className="fi-rs-pencil mr-5"></i>
                             See something wrong? <Link href={'/contact'}>Let us know</Link>
@@ -84,30 +86,32 @@ const ResourceDetails = ({
                         </ul>
                       </div>
                       <div className="bt-1 border-color-1 mt-30 mb-30"></div>
-                      <div className="detail-extralink">
-                        <a
-                          className="button button-add-to-cart"
-                          href={resource.url}
-                          target={'_blank'}
-                          rel={'noopener nofollow noreferrer'}
-                        >
-                          Learn More
-                        </a>
-                        {/*<a*/}
-                        {/*  aria-label="Add To Saved"*/}
-                        {/*  className="action-btn hover-up resource-extra-link"*/}
-                        {/*  onClick={(e) => handleWishlist(resource)}*/}
-                        {/*>*/}
-                        {/*  <i className="fi-rs-heart"></i>*/}
-                        {/*</a>*/}
-                        {/*<a*/}
-                        {/*  aria-label="Compare"*/}
-                        {/*  className="action-btn hover-up resource-extra-link"*/}
-                        {/*  onClick={(e) => handleCompare(resource)}*/}
-                        {/*>*/}
-                        {/*  <i className="fi-rs-shuffle"></i>*/}
-                        {/*</a>*/}
-                      </div>
+                      {resource.url && (
+                        <div className="detail-extralink">
+                          <a
+                            className="button button-add-to-cart"
+                            href={resource.url}
+                            target={'_blank'}
+                            rel={'noopener nofollow noreferrer'}
+                          >
+                            Learn More
+                          </a>
+                          {/*<a*/}
+                          {/*  aria-label="Add To Saved"*/}
+                          {/*  className="action-btn hover-up resource-extra-link"*/}
+                          {/*  onClick={(e) => handleWishlist(resource)}*/}
+                          {/*>*/}
+                          {/*  <i className="fi-rs-heart"></i>*/}
+                          {/*</a>*/}
+                          {/*<a*/}
+                          {/*  aria-label="Compare"*/}
+                          {/*  className="action-btn hover-up resource-extra-link"*/}
+                          {/*  onClick={(e) => handleCompare(resource)}*/}
+                          {/*>*/}
+                          {/*  <i className="fi-rs-shuffle"></i>*/}
+                          {/*</a>*/}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
