@@ -19,12 +19,12 @@ export interface ISingleProduct {
 }
 
 const SingleProduct = ({
-                         product,
-                         addToCart,
-                         addToCompare,
-                         addToWishlist,
-                         openQuickView,
-                       }: ISingleProduct) => {
+  product,
+  addToCart,
+  addToCompare,
+  addToWishlist,
+  openQuickView,
+}: ISingleProduct) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const SingleProduct = ({
 
     setLoading(true);
     setTimeout(() => {
-      if(isMounted) {
+      if (isMounted) {
         setLoading(false);
       }
     }, 2000);
@@ -60,32 +60,23 @@ const SingleProduct = ({
   return (
     <>
       {!loading ? (
-        <div className='product-cart-wrap mb-30'>
-          <div className='product-img-action-wrap'>
-            <div className='product-img product-img-zoom'>
-              <Link
-                href='/products/[slug]'
-                as={`/products/${product.slug}`}
-              >
+        <div className="product-cart-wrap mb-30">
+          <div className="product-img-action-wrap">
+            <div className="product-img product-img-zoom">
+              <Link href="/products/[slug]" as={`/products/${product.slug}`}>
                 <a>
-                  {/*<div style={{ width: '100%' }}>*/}
                   <Image
-                      className='default-img'
-                      src={product.images[0].img}
-                      alt=''
-                      layout={'fill'}
-                      // layout={'responsive'}
-                      // width={product.images[0].width}
-                      // height={product.images[0].height}
-                    />
-                  {/*</div>*/}
+                    className="default-img"
+                    src={product.images[0].img}
+                    alt=""
+                    layout={'fill'}
+                  />
 
                   <div style={{ width: '100%' }}>
-                  <Image
-                      className='hover-img'
+                    <Image
+                      className="hover-img"
                       src={product.images[1].img}
-                      alt=''
-                      // layout={'fill'}
+                      alt=""
                       layout={'responsive'}
                       width={product.images[1].width}
                       height={product.images[1].height}
@@ -94,76 +85,75 @@ const SingleProduct = ({
                 </a>
               </Link>
             </div>
-            <div className='product-action-1'>
+            <div className="product-action-1">
               <a
-                aria-label='Quick view'
-                className='action-btn hover-up'
-                data-bs-toggle='modal'
+                aria-label="Quick view"
+                className="action-btn hover-up"
+                data-bs-toggle="modal"
                 onClick={(e) => openQuickView(product)}
               >
-                <i className='fi-rs-eye'></i>
+                <i className="fi-rs-eye"></i>
               </a>
               <a
-                aria-label='Add To Saved'
-                className='action-btn hover-up'
+                aria-label="Add To Saved"
+                className="action-btn hover-up"
                 onClick={(e) => handleWishlist(product)}
               >
-                <i className='fi-rs-heart'></i>
+                <i className="fi-rs-heart"></i>
               </a>
               <a
-                aria-label='Compare'
-                className='action-btn hover-up'
+                aria-label="Compare"
+                className="action-btn hover-up"
                 onClick={(e) => handleCompare(product)}
               >
-                <i className='fi-rs-shuffle'></i>
+                <i className="fi-rs-shuffle"></i>
               </a>
             </div>
 
-            <div className='product-badges product-badges-position product-badges-mrg'>
-              {product.trending && <span className='hot'>Hot</span>}
-              {product.created && <span className='new'>New</span>}
-              {product.totalSell > 100 && <span className='best'>Best Sell</span>}
-              {product.discount.isActive && <span className='sale'>Sale</span>}
-              {product.discount.percentage >= 5 && <span className='hot'>{product.discount.percentage}%</span>}
+            <div className="product-badges product-badges-position product-badges-mrg">
+              {product.trending && <span className="hot">Hot</span>}
+              {product.created && <span className="new">New</span>}
+              {product.totalSell > 100 && <span className="best">Best Sell</span>}
+              {product.discount.isActive && <span className="sale">Sale</span>}
+              {product.discount.percentage >= 5 && (
+                <span className="hot">{product.discount.percentage}%</span>
+              )}
             </div>
           </div>
-          <div className='product-content-wrap'>
-            <div className='product-category'>
-              <Link href='/index'>
-                <a>
-                  {product.brand}
-                </a>
+          <div className="product-content-wrap">
+            <div className="product-category">
+              <Link href="/index">
+                <a>{product.brand}</a>
               </Link>
             </div>
             <h2>
-              <Link
-                href='/products/[slug]'
-                as={`/products/${product.slug}`}
-              >
+              <Link href="/products/[slug]" as={`/products/${product.slug}`}>
                 <a>{product.title}</a>
               </Link>
             </h2>
-            <div className='rating-result' title='90%'>
+            <div className="rating-result" title="90%">
               <span>
                 <span>{product.ratingScore}%</span>
               </span>
             </div>
-            <div className='product-price'>
+            <div className="product-price">
               <span>${product.price} </span>
-              <span className='old-price'>{product.oldPrice && `$ ${product.oldPrice}`}</span>
+              <span className="old-price">{product.oldPrice && `$ ${product.oldPrice}`}</span>
             </div>
-            <div className='product-action-1 show'>
+            <div className="product-action-1 show">
               <a
-                aria-label='Add To Cart'
-                className='action-btn hover-up'
+                aria-label="Add To Cart"
+                className="action-btn hover-up"
                 onClick={(e) => handleCart(product)}
               >
-                <i className='fi-rs-shopping-bag-add'></i>
+                <i className="fi-rs-shopping-bag-add"></i>
               </a>
             </div>
           </div>
         </div>
-      ) : (<Loader />)}
+      ) : (
+        <Loader />
+      )}
     </>
   );
 };

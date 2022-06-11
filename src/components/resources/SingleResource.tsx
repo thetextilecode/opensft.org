@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -7,7 +6,6 @@ import { addToCompare } from '../../redux/action/compareAction';
 import { openQuickView } from '../../redux/action/quickViewAction';
 import { addToWishlist } from '../../redux/action/wishlistAction';
 import Loader from '../elements/Loader';
-import Image from 'next/image';
 import { IResource } from '../../../types';
 
 export interface ISingleResource {
@@ -20,7 +18,6 @@ export interface ISingleResource {
 
 const SingleResource = ({
   resource,
-  addToCart,
   addToCompare,
   addToWishlist,
   openQuickView,
@@ -44,12 +41,12 @@ const SingleResource = ({
 
   const handleCompare = (resource: IResource) => {
     addToCompare(resource);
-    toast.success('Add to Compare !');
+    toast.success('Added to Comparisons');
   };
 
   const handleWishlist = (resource: IResource) => {
     addToWishlist(resource);
-    toast.success('Add to Saved !');
+    toast.success('Added to Saved');
   };
 
   return (
@@ -59,9 +56,7 @@ const SingleResource = ({
           <div className="product-content-wrap">
             <br />
             <h2>
-              {/*<Link href="/resources/[slug]" as={`/resources/${resource.slug}`}>*/}
               <a onClick={(e) => openQuickView(resource)}>{resource.title}</a>
-              {/*</Link>*/}
             </h2>
             <div className="rating-result" title="90%">
               <span>
@@ -69,9 +64,6 @@ const SingleResource = ({
               </span>
             </div>
             <div className="product-price">
-              {/*<span>${resource.price} </span>*/}
-              {/*<span className="old-price">{resource.oldPrice && `$ ${resource.oldPrice}`}</span>*/}
-              {/*<p>{resource.desc}</p>*/}
               <p>{resource.categoryLabel}</p>
             </div>
             <div className="product-action-1 show">

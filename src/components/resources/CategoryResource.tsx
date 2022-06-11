@@ -19,7 +19,6 @@ const CategoryResource = ({ updateResourceCategory }: ICategoryResource) => {
     e.preventDefault();
     removeSearchTerm();
     updateResourceCategory(category);
-    // router.push('/')
   };
   return (
     <>
