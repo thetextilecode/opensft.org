@@ -15,6 +15,12 @@ import { IResource } from '../../../types';
 import { GetStaticProps } from 'next';
 
 export interface IResources {
+  configFooter: any;
+  configInfo: any;
+  configSeo: any;
+  configSite: any;
+  configSocial: any;
+  configLanguages: any;
   fetchResource?: any;
   newsletterId: string;
   newsletterUser: string;
@@ -23,6 +29,12 @@ export interface IResources {
 }
 
 const Resources = ({
+  configFooter,
+  configInfo,
+  configSeo,
+  configSite,
+  configSocial,
+  configLanguages,
   newsletterUser,
   newsletterId,
   resources,
@@ -87,6 +99,12 @@ const Resources = ({
       sub="Resources"
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
+      configFooter={configFooter}
+      configInfo={configInfo}
+      configSeo={configSeo}
+      configSite={configSite}
+      configSocial={configSocial}
+      configLanguages={configLanguages}
     >
       <section className="mt-50 mb-50">
         <div className="container">

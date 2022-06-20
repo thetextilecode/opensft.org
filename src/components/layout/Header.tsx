@@ -3,12 +3,22 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
-import { headerConfig, infoConfig, languages } from '../../../opensft.config';
+import {
+  footerConfig,
+  headerConfig,
+  infoConfig,
+  languages,
+  menuItems,
+} from '../../../opensft.config';
 import Menu from './Menu';
 
 export interface IHeader {
+  configHeader: any;
+  configInfo: any;
+  configLanguages: any;
   headerStyle?: any;
   isToggled?: boolean;
+  menu: any;
   toggleClick?: any;
   totalCartItems?: any;
   totalCompareItems?: any;
@@ -16,6 +26,10 @@ export interface IHeader {
 }
 
 const Header = ({
+  configHeader,
+  configInfo,
+  configLanguages,
+  menu,
   totalCartItems,
   totalCompareItems,
   toggleClick,
@@ -45,23 +59,23 @@ const Header = ({
   return (
     // <header className={`header-area ${headerStyle} header-height-2`}>
     <header className={`header-area header-height-2`}>
-      {headerConfig.showHeaderTop && (
+      {configHeader.showHeaderTop && (
         <div className="header-top header-top-ptb-1 d-none d-lg-block">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xl-3 col-lg-4">
                 <div className="header-info">
                   <ul>
-                    {headerConfig.top.showPhone && (
+                    {configHeader.top.showPhone && (
                       <li>
                         <i className="fi-rs-smartphone"></i>
                         <Link href="/#">
-                          <a>{infoConfig.phone}</a>
+                          <a>{configInfo.phone}</a>
                         </Link>
                       </li>
                     )}
 
-                    {headerConfig.top.showLocation && (
+                    {configHeader.top.showLocation && (
                       <li>
                         <i className="fi-rs-marker"></i>
                         <Link href="/contact">
@@ -73,15 +87,15 @@ const Header = ({
                 </div>
               </div>
 
-              {headerConfig.top.showNewsflash && (
+              {configHeader.top.showNewsflash && (
                 <div className="col-xl-6 col-lg-4">
                   <div className="text-center">
                     <div id="news-flash" className="d-inline-block">
                       <ul>
                         <li>
-                          {headerConfig.top.newsflash.text}
-                          <Link href={headerConfig.top.newsflash.href}>
-                            <a>{headerConfig.top.newsflash.callToAction}</a>
+                          {configHeader.top.newsflash.text}
+                          <Link href={configHeader.top.newsflash.href}>
+                            <a>{configHeader.top.newsflash.callToAction}</a>
                           </Link>
                         </li>
                       </ul>
@@ -94,7 +108,7 @@ const Header = ({
                 <div className="header-info header-info-right">
                   <ul>
                     {/* Languages */}
-                    {headerConfig.top.showLanguages && (
+                    {configHeader.top.showLanguages && (
                       <li>
                         <Link href="/#">
                           <a className="language-dropdown-active">
@@ -104,7 +118,7 @@ const Header = ({
                           </a>
                         </Link>
                         <ul className="language-dropdown">
-                          {languages.map((language, idx) => {
+                          {configLanguages.map((language, idx) => {
                             return (
                               <li key={idx}>
                                 <Link href={language.href ?? '/#'}>
@@ -126,7 +140,7 @@ const Header = ({
                       </li>
                     )}
 
-                    {headerConfig.top.showLoginRegister && (
+                    {configHeader.top.showLoginSignup && (
                       <li>
                         <i className="fi-rs-user"></i>
                         <Link href="/login-register">
@@ -141,7 +155,7 @@ const Header = ({
           </div>
         </div>
       )}
-      {headerConfig.showHeaderMiddle && (
+      {configHeader.showHeaderMiddle && (
         <div className="header-middle header-middle-ptb-1 d-none d-lg-block">
           <div className="container">
             <div className="header-wrap">
@@ -149,13 +163,13 @@ const Header = ({
               <div className="logo logo-width-1">
                 <Link href="/">
                   <a>
-                    <div style={{ width: infoConfig.logoWidth }}>
+                    <div style={{ width: configInfo.logoWidth }}>
                       <Image
-                        src={infoConfig.logo}
-                        alt={infoConfig.companyName + ' Logo'}
+                        src={configInfo.logo}
+                        alt={configInfo.companyName + ' Logo'}
                         layout={'responsive'}
-                        width={infoConfig.logoWidth}
-                        height={infoConfig.logoHeight}
+                        width={configInfo.logoWidth}
+                        height={configInfo.logoHeight}
                       />
                     </div>
                   </a>
@@ -221,7 +235,7 @@ const Header = ({
           </div>
         </div>
       )}
-      {headerConfig.showHeaderBottom && (
+      {configHeader.showHeaderBottom && (
         <div
           className={
             scroll
@@ -237,11 +251,11 @@ const Header = ({
                   <a>
                     <div style={{ margin: '0.8em 0', width: '250px' }}>
                       <Image
-                        src={infoConfig.logo}
-                        alt={infoConfig.companyName + ' Logo'}
+                        src={configInfo.logo}
+                        alt={configInfo.companyName + ' Logo'}
                         layout={'responsive'}
-                        width={infoConfig.logoWidth}
-                        height={infoConfig.logoHeight}
+                        width={configInfo.logoWidth}
+                        height={configInfo.logoHeight}
                       />
                     </div>
                   </a>
@@ -255,11 +269,11 @@ const Header = ({
                     <a>
                       <div style={{ margin: '0.8em 0', width: '250px' }}>
                         <Image
-                          src={infoConfig.logo}
-                          alt={infoConfig.companyName + ' Logo'}
+                          src={configInfo.logo}
+                          alt={configInfo.companyName + ' Logo'}
                           layout={'responsive'}
-                          width={infoConfig.logoWidth}
-                          height={infoConfig.logoHeight}
+                          width={configInfo.logoWidth}
+                          height={configInfo.logoHeight}
                         />
                       </div>
                     </a>
@@ -267,7 +281,7 @@ const Header = ({
                 </div>
 
                 {/* Browse Categories */}
-                {headerConfig.bottom.showBrowseCategories && (
+                {configHeader.bottom.showBrowseCategories && (
                   <div className="main-category-wrap d-none d-lg-block">
                     <a className="category-button-active" onClick={handleToggle}>
                       <span className="fi-rs-apps"></span>
@@ -864,9 +878,9 @@ const Header = ({
                 )}
 
                 {/* Menu/Navbar Items */}
-                <Menu />
+                <Menu menu={menu} />
               </div>
-              {headerConfig.bottom.showHotline && (
+              {configHeader.bottom.showHotline && (
                 <div className="hotline d-none d-lg-block">
                   <p>
                     <i className="fi-rs-headset"></i>
@@ -874,7 +888,7 @@ const Header = ({
                   </p>
                 </div>
               )}
-              {headerConfig.bottom.showMobilePromo && (
+              {configHeader.bottom.showMobilePromo && (
                 <p className="mobile-promotion">
                   Happy
                   <span className="text-brand">Mother's Day</span>. Big Sale Up to 40%
@@ -883,7 +897,7 @@ const Header = ({
 
               <div className="header-action-right d-block d-lg-none">
                 <div className="header-action-2">
-                  {headerConfig.bottom.showIconCompare && (
+                  {configHeader.bottom.showIconCompare && (
                     <div className="header-action-icon-2">
                       <Link href="/saved">
                         <a>
@@ -900,7 +914,7 @@ const Header = ({
                     </div>
                   )}
 
-                  {headerConfig.bottom.showIconSaved && (
+                  {configHeader.bottom.showIconSaved && (
                     <div className="header-action-icon-2">
                       <Link href="/saved">
                         <a>
@@ -917,7 +931,7 @@ const Header = ({
                     </div>
                   )}
 
-                  {headerConfig.bottom.showIconCart && (
+                  {configHeader.bottom.showIconCart && (
                     <div className="header-action-icon-2">
                       <Link href="/cart">
                         <a className="mini-cart-icon">
@@ -1038,6 +1052,11 @@ const Header = ({
 };
 
 const mapStateToProps = (state) => ({
+  configHeader: headerConfig,
+  configFooter: footerConfig,
+  configInfo: infoConfig,
+  configLanguages: languages,
+  menu: menuItems,
   totalCartItems: state.cart.length,
   totalCompareItems: state.compare.items.length,
   totalSavedItems: state.wishlist.items.length,

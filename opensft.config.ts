@@ -1,3 +1,5 @@
+import { IMobileMenu } from './src/components/layout/MobileMenu';
+
 const dev = process.env.NODE_ENV !== 'production';
 import { ICategory, ITag } from './types';
 

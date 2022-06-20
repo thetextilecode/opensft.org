@@ -1,20 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { IBlogPost, ICategory, ITag } from '../../../types';
-import { sidebarConfig } from '../../../opensft.config';
 import DraftBadge from './DraftBadge';
 
 interface IBlogSidebar {
   categories: ICategory[];
+  configSidebar: any;
   show?: number;
   tags: ITag[];
   trendingPosts: IBlogPost[];
 }
 
-const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) => {
+const BlogSidebar = ({ categories, configSidebar, show, tags, trendingPosts }: IBlogSidebar) => {
   return (
     <div className="widget-area">
-      {sidebarConfig.showSearch && (
+      {configSidebar.showSearch && (
         <div className="sidebar-widget widget_search mb-50">
           <div className="search-form">
             <form action="/">
@@ -27,7 +27,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
         </div>
       )}
 
-      {sidebarConfig.showCategories && (
+      {configSidebar.showCategories && (
         <div className="sidebar-widget widget_categories mb-40">
           <div className="widget-header position-relative mb-20 pb-10">
             <h5 className="widget-title">Categories</h5>
@@ -49,7 +49,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
         </div>
       )}
 
-      {sidebarConfig.showTrendingPosts && (
+      {configSidebar.showTrendingPosts && (
         <div className="sidebar-widget widget_alitheme_lastpost mb-20">
           <div className="widget-header position-relative mb-20 pb-10">
             <h5 className="widget-title">Trending Now</h5>
@@ -105,7 +105,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
         </div>
       )}
 
-      {sidebarConfig.showBanner && (
+      {configSidebar.showBanner && (
         <div className="banner-img wow fadeIn mb-45 animated d-lg-block d-none animated">
           <div style={{ width: '100%' }}>
             <Image
@@ -131,7 +131,7 @@ const BlogSidebar = ({ categories, show, tags, trendingPosts }: IBlogSidebar) =>
         </div>
       )}
 
-      {sidebarConfig.showPopularTags && (
+      {configSidebar.showPopularTags && (
         <div className="sidebar-widget widget_tags mb-50">
           <div className="widget-header position-relative mb-20 pb-10">
             <h5 className="widget-title">Popular tags </h5>

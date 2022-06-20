@@ -1,25 +1,33 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { footerConfig, homeConfig, infoConfig, socialConfig } from '../../../opensft.config';
 import SocialIcons from '../elements/SocialIcons';
 import Newsletter from '../elements/Newsletter';
 
 export interface IFooter {
+  configFooter: any;
+  configInfo: any;
+  configSocial: any;
   newsletterId?: string;
   newsletterUser?: string;
 }
 
-const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
+const Footer = ({
+  configInfo,
+  configFooter,
+  configSocial,
+  newsletterId,
+  newsletterUser,
+}: IFooter) => {
   return (
     <footer className="main">
       {/* Footer Top (wide newsletter) */}
-      {footerConfig.showFooterTop &&
-        footerConfig.footerTop.showNewsletter &&
+      {configFooter.showFooterTop &&
+        configFooter.footerTop.showNewsletter &&
         newsletterUser &&
         newsletterId && <Newsletter newsletterId={newsletterId} newsletterUser={newsletterUser} />}
 
       {/* Footer Mid */}
-      {footerConfig.showFooterMid && (
+      {configFooter.showFooterMid && (
         <section className="section-padding footer-mid">
           <div className="container pt-15 pb-20">
             <div className="row">
@@ -28,23 +36,23 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                   <h5 className="widget-title wow fadeIn animated">Contact</h5>
                   <p className="wow fadeIn animated">
                     <strong>Address: </strong>
-                    {infoConfig.addressLine1}
+                    {configInfo.addressLine1}
                     <br />
-                    {infoConfig.addressLine2}, {infoConfig.addressCity} {infoConfig.addressPostcode}
+                    {configInfo.addressLine2}, {configInfo.addressCity} {configInfo.addressPostcode}
                   </p>
                   <p className="wow fadeIn animated">
                     <strong>Phone: </strong>
-                    {infoConfig.phone}
+                    {configInfo.phone}
                   </p>
                   <p className="wow fadeIn animated">
                     <strong>Hours: </strong>
-                    {infoConfig.hours}
+                    {configInfo.hours}
                   </p>
                   <h5 className="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
                   <SocialIcons
-                    facebook={socialConfig.facebook}
-                    instagram={socialConfig.instagram}
-                    twitter={socialConfig.twitter}
+                    facebook={configSocial.facebook}
+                    instagram={configSocial.instagram}
+                    twitter={configSocial.twitter}
                   />
                 </div>
               </div>
@@ -73,11 +81,11 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
                   style={{ width: '120px', margin: '1.5em 0.5em' }}
                 >
                   <Image
-                    src={infoConfig.logoIllustration}
-                    width={infoConfig.logoIllustrationWidth}
-                    height={infoConfig.logoIllustrationHeight}
+                    src={configInfo.logoIllustration}
+                    width={configInfo.logoIllustrationWidth}
+                    height={configInfo.logoIllustrationHeight}
                     layout={'responsive'}
-                    alt={infoConfig.companyName + ' logo'}
+                    alt={configInfo.companyName + ' logo'}
                   />
                 </div>
               </div>
@@ -87,7 +95,7 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
       )}
 
       {/* Footer Bottom */}
-      {footerConfig.showFooterBottom && (
+      {configFooter.showFooterBottom && (
         <div className="container pb-20 wow fadeIn animated">
           <div className="row">
             <div className="col-12 mb-20">
@@ -95,12 +103,12 @@ const Footer = ({ newsletterId, newsletterUser }: IFooter) => {
             </div>
             <div className="col-lg-6">
               <p className="float-md-left font-sm text-muted mb-0">
-                {footerConfig.footerBottom.leftCopy}
+                {configFooter.footerBottom.leftCopy}
               </p>
             </div>
             <div className="col-lg-6">
               <p className="text-lg-end text-start font-sm text-muted mb-0">
-                {footerConfig.footerBottom.rightCopy}
+                {configFooter.footerBottom.rightCopy}
               </p>
             </div>
           </div>
