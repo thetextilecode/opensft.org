@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { POSTS_PATH } from './mdxUtils';
 import { ICategory, ITag } from '../../types';
+import { postCategories, postTags } from '../../opensft.config';
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(POSTS_PATH);
@@ -77,89 +78,11 @@ export function getCategoryByValue(value: string | string[]) {
 
 export function getAllCategories(): ICategory[] {
   // need to create proper categories, and count of posts
-  return [
-    {
-      label: 'Business',
-      value: 'business',
-    },
-    {
-      label: 'News',
-      value: 'news',
-    },
-    {
-      label: 'Supply Chain',
-      value: 'supply-chain',
-    },
-    {
-      label: 'Technology',
-      value: 'technology',
-    },
-  ];
+  return postCategories;
 }
 
 export function getAllTags(fields?: string[]): ITag[] {
-  let tags = [
-    {
-      label: 'AI',
-      value: 'ai',
-      description: '',
-    },
-    {
-      label: 'Automation',
-      value: 'automation',
-      description: '',
-    },
-    {
-      label: 'Blockchain',
-      value: 'blockchain',
-      description: '',
-    },
-    {
-      label: 'Business Intelligence',
-      value: 'business-intelligence',
-      description: '',
-    },
-    {
-      label: 'ERP',
-      value: 'erp',
-      description: '',
-    },
-    {
-      label: 'IoT',
-      value: 'iot',
-      description: '',
-    },
-    {
-      label: 'Materials',
-      value: 'materials',
-      description: '',
-    },
-    {
-      label: 'Open Source',
-      value: 'open source',
-      description: '',
-    },
-    {
-      label: 'PLM',
-      value: 'plm',
-      description: '',
-    },
-    {
-      label: 'Retail',
-      value: 'retail',
-      description: '',
-    },
-    {
-      label: 'SCM',
-      value: 'scm',
-      description: '',
-    },
-    {
-      label: 'Transparency',
-      value: 'transparency',
-      description: '',
-    },
-  ];
+  let tags = postTags;
 
   // if fields are not provided, just return them all
   if (fields) {

@@ -1,4 +1,5 @@
 const dev = process.env.NODE_ENV !== 'production';
+import { ICategory, ITag } from './types';
 
 export const server = dev ? 'http://localhost:3000' : 'https://opensft.org';
 
@@ -9,6 +10,88 @@ export const blogConfig = {
   showComments: false,
   showDate: true,
 };
+
+export const postCategories: ICategory[] = [
+  {
+    label: 'Business',
+    value: 'business',
+  },
+  {
+    label: 'News',
+    value: 'news',
+  },
+  {
+    label: 'Supply Chain',
+    value: 'supply-chain',
+  },
+  {
+    label: 'Technology',
+    value: 'technology',
+  },
+];
+
+export const postTags: ITag[] = [
+  {
+    label: 'AI',
+    value: 'ai',
+    description: '',
+  },
+  {
+    label: 'Automation',
+    value: 'automation',
+    description: '',
+  },
+  {
+    label: 'Blockchain',
+    value: 'blockchain',
+    description: '',
+  },
+  {
+    label: 'Business Intelligence',
+    value: 'business-intelligence',
+    description: '',
+  },
+  {
+    label: 'ERP',
+    value: 'erp',
+    description: '',
+  },
+  {
+    label: 'IoT',
+    value: 'iot',
+    description: '',
+  },
+  {
+    label: 'Materials',
+    value: 'materials',
+    description: '',
+  },
+  {
+    label: 'Open Source',
+    value: 'open source',
+    description: '',
+  },
+  {
+    label: 'PLM',
+    value: 'plm',
+    description: '',
+  },
+  {
+    label: 'Retail',
+    value: 'retail',
+    description: '',
+  },
+  {
+    label: 'SCM',
+    value: 'scm',
+    description: '',
+  },
+  {
+    label: 'Transparency',
+    value: 'transparency',
+    description: '',
+  },
+];
 
 export const siteConfig = {
   favicon: '/favicon.ico',

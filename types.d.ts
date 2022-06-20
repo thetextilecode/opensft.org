@@ -34,13 +34,11 @@ export interface ICategory {
   label: string;
   quantity?: number;
   value: string;
-}
-
-export interface ITag {
   description?: string;
-  label: string;
-  value: string;
-  featured?: boolean;
+  image?: string;
+  imageHeight?: number;
+  imageWidth?: number;
+  slug?: string;
 }
 
 export interface IMetaProps {
@@ -100,4 +98,11 @@ export interface IResource {
   title?: string;
   totalSell?: number;
   trending?: boolean;
+}
+
+export interface ITag {
+  description?: string;
+  label: string;
+  value: string;
+  featured?: boolean;
 }
