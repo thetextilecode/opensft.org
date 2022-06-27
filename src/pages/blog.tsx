@@ -3,27 +3,11 @@ import BlogSidebar from '../components/elements/BlogSidebar';
 import Layout from '../components/layout/Layout';
 import { GetStaticProps } from 'next';
 import { getAllCategories, getAllPosts, getAllTags } from '../lib/api';
-import { IBlogPost, ICategory, ITag } from '../../types';
-import {
-  blogConfig,
-  footerConfig,
-  infoConfig,
-  seoConfig,
-  sidebarConfig,
-  siteConfig,
-  socialConfig,
-} from '../../opensft.config';
+import { IBlogPost, ICategory, IConfig, ITag } from '../../types';
 
 export interface IPageBlogList {
   categories: ICategory[];
-  configBlog: any;
-  configFooter: any;
-  configInfo: any;
-  configLanguages: any;
-  configSeo: any;
-  configSidebar: any;
-  configSite: any;
-  configSocial: any;
+  config: IConfig;
   newsletterId: string;
   newsletterUser: string;
   posts: IBlogPost[];
@@ -32,14 +16,7 @@ export interface IPageBlogList {
 
 function PageBlogList({
   categories,
-  configBlog,
-  configFooter,
-  configLanguages,
-  configInfo,
-  configSeo,
-  configSidebar,
-  configSite,
-  configSocial,
+  config,
   newsletterId,
   newsletterUser,
   posts,
@@ -51,12 +28,7 @@ function PageBlogList({
       sub="Blog"
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
-      configFooter={configFooter}
-      configInfo={configInfo}
-      configSeo={configSeo}
-      configSite={configSite}
-      configSocial={configSocial}
-      configLanguages={configLanguages}
+      {...config}
     >
       <section className="mt-50 mb-50">
         <div className="container custom">
@@ -72,14 +44,14 @@ function PageBlogList({
                 {/*</div>*/}
               </div>
               <div className="loop-grid loop-list pr-30">
-                <BlogList posts={posts} show={configBlog.postsPerPage} />
+                <BlogList posts={posts} show={config.configBlog.postsPerPage} />
               </div>
             </div>
             <div className="col-lg-3 primary-sidebar sticky-sidebar">
               <BlogSidebar
                 categories={categories}
-                configSidebar={configSidebar}
-                show={configBlog.postsPerSidebar}
+                configSidebar={config.configSidebar}
+                show={config.configBlog.postsPerSidebar}
                 tags={tags}
                 trendingPosts={posts.filter((post) => post.trending)}
               />
@@ -118,15 +90,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       categories,
-      configBlog: blogConfig,
-      configFooter: footerConfig,
-      configInfo: infoConfig,
-      configSeo: seoConfig,
-      configSidebar: sidebarConfig,
-      configSite: siteConfig,
-      configSocial: socialConfig,
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
       posts,
       tags,
     },

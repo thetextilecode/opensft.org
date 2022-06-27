@@ -2,14 +2,10 @@ import ResourceDetails from '../../components/resources/ResourceDetails';
 import Layout from '../../components/layout/Layout';
 import { server } from '../../../opensft.config';
 import { findResourceIndex } from '../../lib/util';
+import { IConfig } from '../../../types';
 
 export interface IResourceId {
-  configFooter: any;
-  configInfo: any;
-  configSeo: any;
-  configSite: any;
-  configSocial: any;
-  configLanguages: any;
+  config: IConfig;
   newsletterId: string;
   newsletterUser: string;
   resource: any;
@@ -23,12 +19,7 @@ const ResourceId = (props: IResourceId) => {
       subChild={props.resource.title}
       newsletterId={props.newsletterId}
       newsletterUser={props.newsletterUser}
-      configFooter={props.configFooter}
-      configInfo={props.configInfo}
-      configSeo={props.configSeo}
-      configSite={props.configSite}
-      configSocial={props.configSocial}
-      configLanguages={props.configLanguages}
+      {...props.config}
     >
       <div className="container">
         <ResourceDetails resource={props.resource} />
@@ -45,8 +36,6 @@ export async function getServerSideProps(params) {
 
   return {
     props: {
-      newsletterId: process.env.REACT_APP_MAILCHIMP_ID,
-      newsletterUser: process.env.REACT_APP_MAILCHIMP_U,
       resource: data[index],
     },
   };

@@ -41,6 +41,18 @@ export interface ICategory {
   slug?: string;
 }
 
+export interface IConfig {
+  configBlog: any;
+  configFooter: any;
+  configHome: any;
+  configInfo: any;
+  configLanguages: any;
+  configSeo: any;
+  configSidebar: any;
+  configSite: any;
+  configSocial: any;
+}
+
 export interface IMetaProps {
   date?: string;
   description?: string;

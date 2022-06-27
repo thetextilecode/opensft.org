@@ -1,16 +1,24 @@
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
+import { IConfig } from '../../types';
 
 export interface IAccount {
+  config: IConfig;
   newsletterId: string;
   newsletterUser: string;
 }
 
-function Account({ newsletterUser, newsletterId }: IAccount) {
+function Account({ config, newsletterUser, newsletterId }: IAccount) {
   return (
     // <Layout parent='Home' sub='Pages' subChild='Account' newsletterId={newsletterId} newsletterUser={newsletterUser}>
-    <Layout parent="Home" sub="Account" newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    <Layout
+      parent="Home"
+      sub="Account"
+      {...config}
+      newsletterId={newsletterId}
+      newsletterUser={newsletterUser}
+    >
       <section className="pt-150 pb-150">
         <div className="container">
           <div className="row">

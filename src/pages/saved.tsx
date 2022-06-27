@@ -9,12 +9,13 @@ import {
 } from '../redux/action/wishlistAction';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';
-import { getAllPosts } from '../lib/api';
+import { IConfig } from '../../types';
 
 export interface IWishlist {
   addToCart?: any;
   clearWishlist?: any;
   closeWishlistModal?: any;
+  config: IConfig;
   deleteFromWishlist?: any;
   newsletterId: string;
   newsletterUser: string;
@@ -22,153 +23,104 @@ export interface IWishlist {
 }
 
 const Saved = ({
-                 addToCart,
-                 clearWishlist,
-                 closeWishlistModal,
-                 deleteFromWishlist,
-                 newsletterId,
-                 newsletterUser,
-                 wishlist,
-               }: IWishlist) => {
-
+  addToCart,
+  clearWishlist,
+  closeWishlistModal,
+  config,
+  deleteFromWishlist,
+  newsletterId,
+  newsletterUser,
+  wishlist,
+}: IWishlist) => {
   const handleCart = (product) => {
     addToCart(product);
     toast.success('Add to Cart !');
   };
 
   return (
-    <Layout parent='Home' sub='Shop' subChild='Saved' newsletterId={newsletterId} newsletterUser={newsletterUser}>
-      <section className='mt-50 mb-50'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-12'>
+    <Layout
+      parent="Home"
+      sub="Shop"
+      subChild="Saved"
+      {...config}
+      newsletterId={newsletterId}
+      newsletterUser={newsletterUser}
+    >
+      <section className="mt-50 mb-50">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
               {wishlist.items.length > 0 ? (
-                <div className='table-responsive'>
-                  <table className='table shopping-summary text-center'>
+                <div className="table-responsive">
+                  <table className="table shopping-summary text-center">
                     <thead>
-                    <tr className='main-heading'>
-                      <th scope='col' colSpan={2}>
-                        Product
-                      </th>
-                      <th scope='col'>Price</th>
-                      <th scope='col'>
-                        Stock Status
-                      </th>
-                      <th scope='col'>Action</th>
-                      <th scope='col'>Remove</th>
-                    </tr>
+                      <tr className="main-heading">
+                        <th scope="col" colSpan={2}>
+                          Product
+                        </th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock Status</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Remove</th>
+                      </tr>
                     </thead>
                     <tbody>
-                    {wishlist.items.map(
-                      (product, i) => (
+                      {wishlist.items.map((product, i) => (
                         <tr key={i}>
-                          <td className='image product-thumbnail'>
-                            <img
-                              src={
-                                product
-                                  .images[0]
-                                  .img
-                              }
-                              alt=''
-                              className='img-fluid'
-                            />
+                          <td className="image product-thumbnail">
+                            <img src={product.images[0].img} alt="" className="img-fluid" />
                           </td>
 
-                          <td className='product-des product-name'>
-                            <h5 className='product-name'>
-                              <a>
-                                {
-                                  product.title
-                                }
-                              </a>
+                          <td className="product-des product-name">
+                            <h5 className="product-name">
+                              <a>{product.title}</a>
                             </h5>
-                            <p className='font-xs'>
-                              Maboriosam
-                              in a tonto
-                              nesciung
-                              eget
+                            <p className="font-xs">
+                              Maboriosam in a tonto nesciung eget
                               <br />
-                              distingy
-                              magndapibus.
+                              distingy magndapibus.
                             </p>
                           </td>
-                          <td
-                            className='price'
-                            data-title='Price'
-                          >
-                            <span>
-                              ${product.price}
-                            </span>
+                          <td className="price" data-title="Price">
+                            <span>${product.price}</span>
                           </td>
-                          <td
-                            className='text-center'
-                            data-title='Stock'
-                          >
+                          <td className="text-center" data-title="Stock">
                             {product.stock === 0 ? (
-                              <span className='text-danger font-weight-bold'>
-                                Out of stock
-                              </span>
+                              <span className="text-danger font-weight-bold">Out of stock</span>
                             ) : (
-                              <span className='color3 font-weight-bold'>
-                                In Stock
-                              </span>
+                              <span className="color3 font-weight-bold">In Stock</span>
                             )}
                           </td>
-                          <td
-                            className='text-right'
-                            data-title='Cart'
-                          >
+                          <td className="text-right" data-title="Cart">
                             {product.stock === 0 ? (
-                              <button className='btn btn-sm btn-secondary'>
-                                <i className='fi-rs-headset mr-5'></i>
+                              <button className="btn btn-sm btn-secondary">
+                                <i className="fi-rs-headset mr-5"></i>
                                 Contact Us
                               </button>
                             ) : (
-                              <button
-                                className='btn btn-sm'
-                                onClick={(
-                                  e,
-                                ) =>
-                                  handleCart(product)
-                                }
-                              >
-                                <i className='fi-rs-shopping-bag mr-5'></i>
+                              <button className="btn btn-sm" onClick={(e) => handleCart(product)}>
+                                <i className="fi-rs-shopping-bag mr-5"></i>
                                 Add to cart
                               </button>
                             )}
                           </td>
-                          <td
-                            className='action'
-                            data-title='Remove'
-                          >
-                            <a
-                              onClick={(
-                                e,
-                              ) =>
-                                deleteFromWishlist(
-                                  product.id,
-                                )
-                              }
-                            >
-                              <i className='fi-rs-trash'></i>
+                          <td className="action" data-title="Remove">
+                            <a onClick={(e) => deleteFromWishlist(product.id)}>
+                              <i className="fi-rs-trash"></i>
                             </a>
                           </td>
                         </tr>
-                      ),
-                    )}
+                      ))}
                     </tbody>
                   </table>
-                  <div className='text-right'>
-                    <span
-                      className='clear-btn'
-                      onClick={clearWishlist}
-                    >
+                  <div className="text-right">
+                    <span className="clear-btn" onClick={clearWishlist}>
                       Clear All
                     </span>
                   </div>
                 </div>
               ) : (
-                <h4 className='mb-0'>No Products</h4>
+                <h4 className="mb-0">No Products</h4>
               )}
             </div>
           </div>
@@ -190,13 +142,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Saved);
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};
-

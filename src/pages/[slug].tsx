@@ -10,17 +10,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import path from 'path';
 import { postFilePaths, POSTS_PATH } from '../lib/mdxUtils';
-import { IBlogPost, ICategory, IMetaProps, ITag } from '../../types';
+import { IBlogPost, ICategory, IConfig, IMetaProps, ITag } from '../../types';
 import Layout from '../components/layout/Layout';
-import {
-  blogConfig,
-  footerConfig,
-  infoConfig,
-  seoConfig,
-  sidebarConfig,
-  siteConfig,
-  socialConfig,
-} from '../../opensft.config';
 import BlogSidebar from '../components/elements/BlogSidebar';
 import ShareIcons from '../components/elements/ShareIcons';
 import CommentsArea from '../components/elements/CommentsArea';
@@ -45,14 +36,7 @@ const components = {
 type ArticlePageProps = {
   baseUrl: string;
   categories: ICategory[];
-  configBlog: any;
-  configFooter: any;
-  configInfo: any;
-  configLanguages: any;
-  configSeo: any;
-  configSidebar: any;
-  configSite: any;
-  configSocial: any;
+  config: IConfig;
   isLocal: boolean;
   newsletterId: string;
   newsletterUser: string;
@@ -65,14 +49,7 @@ type ArticlePageProps = {
 const ArticlePage = ({
   baseUrl,
   categories,
-  configBlog,
-  configFooter,
-  configInfo,
-  configLanguages,
-  configSeo,
-  configSidebar,
-  configSite,
-  configSocial,
+  config,
   isLocal,
   newsletterUser,
   newsletterId,
@@ -82,7 +59,7 @@ const ArticlePage = ({
   tags,
 }: ArticlePageProps): JSX.Element => {
   const customMeta: IMetaProps = {
-    title: `${post.title} | ${configSite.title}`,
+    title: `${post.title} | ${config.configSite.title}`,
     description: post.description,
     image: `${post.image}`,
     date: post.date,
@@ -101,12 +78,7 @@ const ArticlePage = ({
           subChild="Blog Details"
           newsletterUser={newsletterUser}
           newsletterId={newsletterId}
-          configFooter={configFooter}
-          configInfo={configInfo}
-          configSeo={configSeo}
-          configSite={configSite}
-          configSocial={configSocial}
-          configLanguages={configLanguages}
+          {...config}
         >
           <section className="mt-50 mb-50">
             <div className="container custom">
@@ -185,7 +157,7 @@ const ArticlePage = ({
                         <ShareIcons url={`${baseUrl}/${post.slug}`} title={post.title} />
                       </div>
 
-                      {configBlog.showComments && (
+                      {config.configBlog.showComments && (
                         <>
                           <CommentsArea />
                           <CommentsForm />
@@ -197,8 +169,8 @@ const ArticlePage = ({
                 <div className="col-lg-3 primary-sidebar sticky-sidebar">
                   <BlogSidebar
                     categories={categories}
-                    configSidebar={configSidebar}
-                    show={configSidebar.postsPerSidebar}
+                    configSidebar={config.configSidebar}
+                    show={config.configSidebar.postsPerSidebar}
                     tags={tags}
                     trendingPosts={posts.filter((post) => post.trending)}
                   />
@@ -242,16 +214,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       baseUrl: String(process.env.APP_BASE_URL),
       categories,
-      configBlog: blogConfig,
-      configFooter: footerConfig,
-      configInfo: infoConfig,
-      configSeo: seoConfig,
-      configSidebar: sidebarConfig,
-      configSite: siteConfig,
-      configSocial: socialConfig,
       isLocal: process.env.NODE_ENV === 'development',
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
       post: data,
       posts,
       source: mdxSource,

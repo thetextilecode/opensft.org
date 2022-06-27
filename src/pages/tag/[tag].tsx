@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { IBlogPost, ITag } from '../../../types';
+import { IBlogPost, IConfig, ITag } from '../../../types';
 import Layout from '../../components/layout/Layout';
 import { getAllPosts, getAllTags, getTagByValue } from '../../lib/api';
 import category from '../../components/sliders/Category';
@@ -7,28 +7,45 @@ import BlogList from '../../components/elements/BlogList';
 import { blogConfig } from '../../../opensft.config';
 
 type TagPageProps = {
+  config: IConfig;
   newsletterUser: string;
   newsletterId: string;
   posts: IBlogPost[];
   tag: ITag;
 };
 
-const TagPage = ({ newsletterUser, newsletterId, posts, tag }: TagPageProps): JSX.Element => {
+const TagPage = ({
+  config,
+  newsletterUser,
+  newsletterId,
+  posts,
+  tag,
+}: TagPageProps): JSX.Element => {
   return (
-    <Layout parent='Home' sub='Tags' subChild={tag.label} newsletterUser={newsletterUser} newsletterId={newsletterId}>
-      <section className='mt-50 mb-50'>
-        <div className='container custom'>
-          <div className='row'>
+    <Layout
+      parent="Home"
+      sub="Tags"
+      {...config}
+      subChild={tag.label}
+      newsletterUser={newsletterUser}
+      newsletterId={newsletterId}
+    >
+      <section className="mt-50 mb-50">
+        <div className="container custom">
+          <div className="row">
             <div className={'col-lg-12'}>
-              <div className='single-header mb-50'>
-                <h1 className='font-xxl text-brand'>{tag.label}</h1>
-                <div className='entry-meta meta-1 font-xs mt-15 mb-15'>
-                  <span
-                    className='post-on'>{posts.length > 0 ? `${posts.length} Article${posts.length > 1 ? 's' : ''}` : 'No articles'}</span>
+              <div className="single-header mb-50">
+                <h1 className="font-xxl text-brand">{tag.label}</h1>
+                <div className="entry-meta meta-1 font-xs mt-15 mb-15">
+                  <span className="post-on">
+                    {posts.length > 0
+                      ? `${posts.length} Article${posts.length > 1 ? 's' : ''}`
+                      : 'No articles'}
+                  </span>
                 </div>
               </div>
-              <div className='loop-grid loop-list pr-30'>
-                <div className='row'>
+              <div className="loop-grid loop-list pr-30">
+                <div className="row">
                   <BlogList posts={posts} show={blogConfig.postsPerPage} />
                 </div>
               </div>
@@ -41,20 +58,23 @@ const TagPage = ({ newsletterUser, newsletterId, posts, tag }: TagPageProps): JS
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const posts = getAllPosts([
-    'category',
-    'date',
-    'description',
-    'draft',
-    'image',
-    'imageAlt',
-    'imageOriginalWidth',
-    'imageOriginalHeight',
-    'readTime',
-    'slug',
-    'tags',
-    'title',
-  ], params.tag.toString());
+  const posts = getAllPosts(
+    [
+      'category',
+      'date',
+      'description',
+      'draft',
+      'image',
+      'imageAlt',
+      'imageOriginalWidth',
+      'imageOriginalHeight',
+      'readTime',
+      'slug',
+      'tags',
+      'title',
+    ],
+    params.tag.toString()
+  );
 
   const tag = getTagByValue(params.tag.toString());
 
@@ -67,7 +87,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   };
 };
-
 
 export async function getStaticPaths() {
   const tags = getAllTags(['value']);

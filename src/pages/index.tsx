@@ -16,35 +16,36 @@ import BrandSlider from '../components/sliders/Brand';
 import CategorySlider from '../components/sliders/Category';
 import HomeSlider from '../components/sliders/HomeSlider';
 import NewArrival from '../components/sliders/NewArrival';
-import { IBlogPost } from '../../types';
+import { IBlogPost, IConfig } from '../../types';
 import { GetStaticProps } from 'next';
 import { getAllPosts } from '../lib/api';
-import { homeConfig } from '../../opensft.config';
 
 type IndexProps = {
+  config: IConfig;
   newsletterId: string;
   newsletterUser: string;
   posts: IBlogPost[];
 };
 
-export default function Home({ newsletterId, newsletterUser, posts }: IndexProps) {
+export default function Home({ config, newsletterId, newsletterUser, posts }: IndexProps) {
   return (
     <>
-      {homeConfig.showPopupModal && <IntroPopup />}
+      {config.configHome.showPopupModal && <IntroPopup />}
 
       <Layout
         noBreadcrumb="d-none"
         headerStyle="header-style-1"
+        {...config}
         newsletterId={newsletterId}
         newsletterUser={newsletterUser}
       >
-        {homeConfig.showHomeSlider && (
+        {config.configHome.showHomeSlider && (
           <section className="home-slider position-relative pt-50">
             <HomeSlider />
           </section>
         )}
 
-        {homeConfig.showFeaturesBanner && (
+        {config.configHome.showFeaturesBanner && (
           <section className="featured section-padding position-relative">
             <div className="container">
               <div className="row">
@@ -54,7 +55,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showProductTabs && (
+        {config.configHome.showProductTabs && (
           <section className="product-tabs section-padding position-relative wow fadeIn animated">
             <div className="container">
               <div className="col-lg-12">
@@ -64,7 +65,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showBanner2 && (
+        {config.configHome.showBanner2 && (
           <section className="banner-2 section-padding pb-0">
             <div className="container">
               <Banner2 />
@@ -72,7 +73,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showPopularCategories && (
+        {config.configHome.showPopularCategories && (
           <section className="popular-categories section-padding mt-15 mb-25">
             <div className="container wow fadeIn animated">
               <h3 className="section-title mb-20">
@@ -87,7 +88,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showBanner5 && (
+        {config.configHome.showBanner5 && (
           <section className="banners mb-15">
             <div className="container">
               <div className="row">
@@ -97,7 +98,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showNewArrivals && (
+        {config.configHome.showNewArrivals && (
           <section className="section-padding">
             <div className="container wow fadeIn animated">
               <h3 className="section-title mb-20">
@@ -110,7 +111,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showDeals && (
+        {config.configHome.showDeals && (
           <section className="deals section-padding">
             <div className="container">
               <div className="row">
@@ -125,7 +126,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showFeaturedBrands && (
+        {config.configHome.showFeaturedBrands && (
           <section className="section-padding">
             <div className="container">
               <h3 className="section-title mb-20 wow fadeIn animated">
@@ -138,7 +139,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showFetchTab2 && (
+        {config.configHome.showFetchTab2 && (
           <section className="bg-grey-9 section-padding">
             <div className="container pt-25 pb-25">
               <FetchTab2 />
@@ -147,7 +148,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
         )}
 
         {/* Latest Articles & Side Banners */}
-        {homeConfig.showBlogPosts && (
+        {config.configHome.showBlogPosts && (
           <section className="section-padding">
             <div className="container pt-25 pb-20">
               <div className="row">
@@ -167,7 +168,7 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showBanner4 && (
+        {config.configHome.showBanner4 && (
           <section className="mb-50">
             <div className="container">
               <div className="row">
@@ -179,9 +180,9 @@ export default function Home({ newsletterId, newsletterUser, posts }: IndexProps
           </section>
         )}
 
-        {homeConfig.showBottom && <Bottom />}
+        {config.configHome.showBottom && <Bottom />}
 
-        {homeConfig.showQuickView && <QuickView />}
+        {config.configHome.showQuickView && <QuickView />}
       </Layout>
     </>
   );
@@ -206,8 +207,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
       posts,
     },
   };

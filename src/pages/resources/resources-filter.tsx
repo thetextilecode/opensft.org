@@ -12,23 +12,9 @@ import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
 import ResourcesFilter from '../../components/resources/ResourcesFilter';
 import { GetStaticProps } from 'next';
-import {
-  blogConfig,
-  footerConfig,
-  infoConfig,
-  seoConfig,
-  sidebarConfig,
-  siteConfig,
-  socialConfig,
-} from '../../../opensft.config';
 
 const ResourcesFullWidth = ({
-  configFooter,
-  configInfo,
-  configLanguages,
-  configSeo,
-  configSite,
-  configSocial,
+  config,
   newsletterUser,
   newsletterId,
   resources,
@@ -93,12 +79,7 @@ const ResourcesFullWidth = ({
         parent="Home"
         sub="Resources"
         subChild="Filter"
-        configFooter={configFooter}
-        configInfo={configInfo}
-        configSeo={configSeo}
-        configSite={configSite}
-        configSocial={configSocial}
-        configLanguages={configLanguages}
+        {...config}
         newsletterId={newsletterId}
         newsletterUser={newsletterUser}
       >
@@ -174,19 +155,3 @@ const mapDidpatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDidpatchToProps)(ResourcesFullWidth);
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      configBlog: blogConfig,
-      configFooter: footerConfig,
-      configInfo: infoConfig,
-      configSeo: seoConfig,
-      configSidebar: sidebarConfig,
-      configSite: siteConfig,
-      configSocial: socialConfig,
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

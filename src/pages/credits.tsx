@@ -2,11 +2,12 @@ import Layout from '../components/layout/Layout';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-function Credits({ newsletterId, newsletterUser }) {
+function Credits({ config, newsletterId, newsletterUser }) {
   return (
     <Layout
       parent="Home"
       sub="Credits"
+      {...config}
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
     >
@@ -43,12 +44,3 @@ function Credits({ newsletterId, newsletterUser }) {
 }
 
 export default Credits;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

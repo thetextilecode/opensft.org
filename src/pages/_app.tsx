@@ -17,8 +17,18 @@ import 'swiper/css/navigation';
 import Preloader from '../components/elements/Preloader';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import Fonts from '../lib/fonts';
+import {
+  blogConfig,
+  footerConfig,
+  homeConfig,
+  infoConfig,
+  seoConfig,
+  sidebarConfig,
+  siteConfig,
+  socialConfig,
+} from '../../opensft.config';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: AppProps) {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -45,7 +55,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           <SSRProvider>
             <StorageWrapper>
               <ToastContainer />
-              <Component {...pageProps} />
+              <Component
+                config={config}
+                newsletterId={newsletterId}
+                newsletterUser={newsletterUser}
+                {...pageProps}
+              />
             </StorageWrapper>
           </SSRProvider>
         </Provider>
@@ -55,5 +70,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+MyApp.getInitialProps = async () => {
+  return {
+    config: {
+      configBlog: blogConfig,
+      configFooter: footerConfig,
+      configHome: homeConfig,
+      configInfo: infoConfig,
+      configSeo: seoConfig,
+      configSidebar: sidebarConfig,
+      configSite: siteConfig,
+      configSocial: socialConfig,
+    },
+    newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
+    newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
+  };
+};
 
 export default MyApp;

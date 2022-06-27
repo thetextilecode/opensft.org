@@ -2,11 +2,12 @@ import Layout from '../components/layout/Layout';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-function GetInvolved({ newsletterId, newsletterUser }) {
+function GetInvolved({ config, newsletterId, newsletterUser }) {
   return (
     <Layout
       parent="Home"
       sub="Get Involved"
+      {...config}
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
     >
@@ -20,10 +21,9 @@ function GetInvolved({ newsletterId, newsletterUser }) {
               <div className="single-content">
                 <h4>Businesses</h4>
                 <p>
-                  Do you own a business that relates to fashion and textiles?
-                  Then we want to hear from you. We are in the process of
-                  building state-of-the-art software for businesses like you.
-                  Have a seat at the table and help determine which features to
+                  Do you own a business that relates to fashion and textiles? Then we want to hear
+                  from you. We are in the process of building state-of-the-art software for
+                  businesses like you. Have a seat at the table and help determine which features to
                   prioritise.
                 </p>
                 <ul>
@@ -33,10 +33,9 @@ function GetInvolved({ newsletterId, newsletterUser }) {
                 <p />
                 <h4>Developers</h4>
                 <p>
-                  Are you a developer with open source experience? Do you have
-                  experience with or an interest in ecommerce and fashion? You
-                  could help pave the way to a better industry by helping us
-                  develop relevant products for businesses and professionals.
+                  Are you a developer with open source experience? Do you have experience with or an
+                  interest in ecommerce and fashion? You could help pave the way to a better
+                  industry by helping us develop relevant products for businesses and professionals.
                 </p>
                 <ul>
                   <li>Development toolchain</li>
@@ -68,12 +67,3 @@ function GetInvolved({ newsletterId, newsletterUser }) {
 }
 
 export default GetInvolved;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

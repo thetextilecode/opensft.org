@@ -1,13 +1,13 @@
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
-import { GetStaticProps } from 'next';
 import { NetlifyForm, Honeypot } from 'react-netlify-forms';
 
-function Contact({ newsletterId, newsletterUser }) {
+function Contact({ config, newsletterId, newsletterUser }) {
   return (
     <Layout
       parent="Home"
       subChild="Contact"
+      {...config}
       newsletterId={newsletterId}
       newsletterUser={newsletterUser}
     >
@@ -137,12 +137,3 @@ function Contact({ newsletterId, newsletterUser }) {
 }
 
 export default Contact;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

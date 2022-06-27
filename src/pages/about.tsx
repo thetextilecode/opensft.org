@@ -2,15 +2,23 @@ import Layout from '../components/layout/Layout';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import { IConfig } from '../../types';
 
 export interface IAbout {
+  config: IConfig;
   newsletterId: string;
   newsletterUser: string;
 }
 
-function About({ newsletterId, newsletterUser }: IAbout) {
+function About({ config, newsletterId, newsletterUser }: IAbout) {
   return (
-    <Layout parent="Home" sub="About" newsletterId={newsletterId} newsletterUser={newsletterUser}>
+    <Layout
+      parent="Home"
+      sub="About"
+      {...config}
+      newsletterId={newsletterId}
+      newsletterUser={newsletterUser}
+    >
       <section className="section-padding">
         <div className="container pt-25">
           <div className="row">

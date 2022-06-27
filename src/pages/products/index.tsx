@@ -15,10 +15,10 @@ import Layout from '../../components/layout/Layout';
 import { fetchProduct } from '../../redux/action/product';
 import Link from 'next/link';
 import Image from 'next/image';
-import { IProduct } from '../../../types';
-import { GetStaticProps } from 'next';
+import { IConfig, IProduct } from '../../../types';
 
 export interface IProducts {
+  config: IConfig;
   fetchProduct?: any;
   newsletterId: string;
   newsletterUser: string;
@@ -27,6 +27,7 @@ export interface IProducts {
 }
 
 const Products = ({
+  config,
   newsletterUser,
   newsletterId,
   products,
@@ -92,6 +93,7 @@ const Products = ({
       parent="Home"
       sub="Shop"
       subChild="Products"
+      {...config}
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
     >
@@ -285,12 +287,3 @@ const mapDidpatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDidpatchToProps)(Products);
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

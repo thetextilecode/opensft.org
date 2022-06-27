@@ -11,16 +11,11 @@ import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
 import Image from 'next/image';
-import { IResource } from '../../../types';
+import { IConfig, IResource } from '../../../types';
 import { GetStaticProps } from 'next';
 
 export interface IResources {
-  configFooter: any;
-  configInfo: any;
-  configSeo: any;
-  configSite: any;
-  configSocial: any;
-  configLanguages: any;
+  config: IConfig;
   fetchResource?: any;
   newsletterId: string;
   newsletterUser: string;
@@ -29,12 +24,7 @@ export interface IResources {
 }
 
 const Resources = ({
-  configFooter,
-  configInfo,
-  configSeo,
-  configSite,
-  configSocial,
-  configLanguages,
+  config,
   newsletterUser,
   newsletterId,
   resources,
@@ -99,12 +89,7 @@ const Resources = ({
       sub="Resources"
       newsletterUser={newsletterUser}
       newsletterId={newsletterId}
-      configFooter={configFooter}
-      configInfo={configInfo}
-      configSeo={configSeo}
-      configSite={configSite}
-      configSocial={configSocial}
-      configLanguages={configLanguages}
+      {...config}
     >
       <section className="mt-50 mb-50">
         <div className="container">
@@ -202,12 +187,3 @@ const mapDidpatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDidpatchToProps)(Resources);
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};

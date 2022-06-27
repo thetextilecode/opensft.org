@@ -1,28 +1,40 @@
 import { connect } from 'react-redux';
 import CompareTable from '../components/ecommerce/CompareTable';
 import Layout from '../components/layout/Layout';
-import {
-  clearCompare,
-  deleteFromCompare,
-} from '../redux/action/compareAction';
-import { GetStaticProps } from 'next';
+import { clearCompare, deleteFromCompare } from '../redux/action/compareAction';
+import { IConfig } from '../../types';
 
 export interface ICompare {
   clearCompare?: any;
   compare?: any;
+  config: IConfig;
   deleteFromCompare?: any;
   newsletterId: string;
   newsletterUser: string;
 }
 
-const Compare = ({ compare, clearCompare, deleteFromCompare, newsletterUser, newsletterId }: ICompare) => {
+const Compare = ({
+  compare,
+  clearCompare,
+  config,
+  deleteFromCompare,
+  newsletterUser,
+  newsletterId,
+}: ICompare) => {
   return (
-    <Layout parent='Home' sub='Shop' subChild='Compare' newsletterUser={newsletterUser} newsletterId={newsletterId}>
-      <section className='mt-50 mb-50'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-12'>
-              <div className='table-responsive'>
+    <Layout
+      parent="Home"
+      sub="Shop"
+      subChild="Compare"
+      {...config}
+      newsletterUser={newsletterUser}
+      newsletterId={newsletterId}
+    >
+      <section className="mt-50 mb-50">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="table-responsive">
                 {compare.items.length > 0 ? (
                   <>
                     <CompareTable
@@ -41,15 +53,10 @@ const Compare = ({ compare, clearCompare, deleteFromCompare, newsletterUser, new
                         'buy',
                         ' ',
                       ]}
-                      deleteFromCompare={
-                        deleteFromCompare
-                      }
+                      deleteFromCompare={deleteFromCompare}
                     />
-                    <div className='text-right'>
-                      <span
-                        className='clear-btn'
-                        onClick={clearCompare}
-                      >
+                    <div className="text-right">
+                      <span className="clear-btn" onClick={clearCompare}>
                         Clear All
                       </span>
                     </div>
@@ -76,13 +83,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Compare);
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};
-
