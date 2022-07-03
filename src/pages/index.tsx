@@ -152,16 +152,14 @@ export default function Home({ config, newsletterId, newsletterUser, posts }: In
           <section className="section-padding">
             <div className="container pt-25 pb-20">
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-sm-12">
                   <h3 className="section-title mb-20">
                     <span>Latest</span> Articles
                   </h3>
                   <HomeBlog latestPosts={posts.slice(0, 2)} />
                 </div>
-                <div className="col-lg-6">
-                  <div className="row">
-                    <HomeBanner />
-                  </div>
+                <div className="col-lg-6 col-sm-12">
+                  <HomeBanner />
                 </div>
               </div>
             </div>
