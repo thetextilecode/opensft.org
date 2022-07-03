@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { updateProductRating } from '../../redux/action/productFiltersAction';

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as Types from '../../redux/constants/actionTypes';
 import storage from '../../lib/localStorage';
