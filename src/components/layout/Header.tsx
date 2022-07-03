@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import Search from '../ecommerce/Search';
+import Search from '../resources/Search';
 import Image from 'next/image';
 import Menu from './Menu';
 import { IHeader } from '../../../types';
@@ -124,7 +124,7 @@ const Header = ({
                     {configHeader.top.showLoginSignup && (
                       <li>
                         <i className="fi-rs-user"></i>
-                        <Link href="/login-register">
+                        <Link href="/">
                           <a>Log In / Sign Up</a>
                         </Link>
                       </li>
@@ -169,8 +169,7 @@ const Header = ({
                   <div className="header-action-right">
                     <div className="header-action-2">
                       <div className="header-action-icon-2">
-                        Hello
-                        <Link href="/compare">
+                        <Link href="/">
                           <a>
                             <Image
                               className="svgInject"
@@ -185,7 +184,7 @@ const Header = ({
                         </Link>
                       </div>
                       <div className="header-action-icon-2">
-                        <Link href="/cart">
+                        <Link href="/">
                           <a className="mini-cart-icon">
                             <Image
                               alt="Cart"
@@ -268,7 +267,7 @@ const Header = ({
                     >
                       <ul>
                         <li className="has-children">
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-dress"></i>
                               Women's Clothing
@@ -436,7 +435,7 @@ const Header = ({
                           </div>
                         </li>
                         <li className="has-children">
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-tshirt"></i>
                               Men's Clothing
@@ -577,7 +576,7 @@ const Header = ({
                           </div>
                         </li>
                         <li className="has-children">
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-smartphone"></i>
                               Cellphones
@@ -751,7 +750,7 @@ const Header = ({
                           </div>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-desktop"></i>
                               Computer & Office
@@ -759,7 +758,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-cpu"></i>
                               Consumer Electronics
@@ -767,7 +766,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-diamond"></i>
                               Jewelry & Accessories
@@ -775,7 +774,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-home"></i>
                               Home & Garden
@@ -783,7 +782,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-high-heels"></i>
                               Shoes
@@ -791,7 +790,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-teddy-bear"></i>
                               Mother & Kids
@@ -799,7 +798,7 @@ const Header = ({
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/shop-grid-right">
+                          <Link href="/">
                             <a>
                               <i className="evara-font-kite"></i>
                               Outdoor fun
@@ -809,7 +808,7 @@ const Header = ({
                         <li>
                           <ul className="more_slide_open" style={{ display: 'none' }}>
                             <li>
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <i className="evara-font-desktop"></i>
                                   Beauty, Health
@@ -817,7 +816,7 @@ const Header = ({
                               </Link>
                             </li>
                             <li>
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <i className="evara-font-cpu"></i>
                                   Bags and Shoes
@@ -825,7 +824,7 @@ const Header = ({
                               </Link>
                             </li>
                             <li>
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <i className="evara-font-diamond"></i>
                                   Consumer Electronics
@@ -833,7 +832,7 @@ const Header = ({
                               </Link>
                             </li>
                             <li>
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <i className="evara-font-home"></i>
                                   Automobiles & Motorcycles
@@ -904,7 +903,7 @@ const Header = ({
 
                   {configHeader.bottom.showIconCart && (
                     <div className="header-action-icon-2">
-                      <Link href="/cart">
+                      <Link href="/">
                         <a className="mini-cart-icon">
                           <Image
                             alt="OpenSFT"
@@ -920,7 +919,7 @@ const Header = ({
                         <ul>
                           <li>
                             <div className="shopping-cart-img">
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <Image
                                     alt="Cart"
@@ -934,7 +933,7 @@ const Header = ({
                             </div>
                             <div className="shopping-cart-title">
                               <h4>
-                                <Link href="/products/shop-grid-right">
+                                <Link href="/">
                                   <a>Plain Striola Shirts</a>
                                 </Link>
                               </h4>
@@ -953,7 +952,7 @@ const Header = ({
                           </li>
                           <li>
                             <div className="shopping-cart-img">
-                              <Link href="/products/shop-grid-right">
+                              <Link href="/">
                                 <a>
                                   <Image
                                     alt="OpenSFT"
@@ -967,7 +966,7 @@ const Header = ({
                             </div>
                             <div className="shopping-cart-title">
                               <h4>
-                                <Link href="/products/shop-grid-right">
+                                <Link href="/">
                                   <a>Macbook Pro 2022</a>
                                 </Link>
                               </h4>
@@ -993,10 +992,10 @@ const Header = ({
                             </h4>
                           </div>
                           <div className="shopping-cart-button">
-                            <Link href="/cart">
+                            <Link href="/">
                               <a>View cart</a>
                             </Link>
-                            <Link href="/checkout">
+                            <Link href="/">
                               <a>Checkout</a>
                             </Link>
                           </div>

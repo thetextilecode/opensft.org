@@ -4,16 +4,14 @@ import 'swiper/css/thumbs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import Zoom from 'react-img-zoom';
 import Image from 'next/image';
-import { infoConfig } from '../../../opensft.config';
 
 SwiperCore.use([Navigation, Thumbs]);
 
 export interface IThumbSlider {
-  product?: any;
   resource?: any;
 }
 
-const ThumbSlider = ({ product, resource }: IThumbSlider) => {
+const ThumbSlider = ({ resource }: IThumbSlider) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -33,28 +31,6 @@ const ThumbSlider = ({ product, resource }: IThumbSlider) => {
       >
         {resource?.gallery &&
           resource.gallery.map((item, i: number) => (
-            <SwiperSlide key={i}>
-              <div style={{ width: '100%' }}>
-                <Image
-                  src={item.thumb}
-                  alt="evara"
-                  layout="responsive"
-                  height={600}
-                  width={600}
-                  priority={true}
-                />
-              </div>
-              {/* <Zoom
-                img={item.thumb}
-                zoomScale={5}
-                width={500}
-                height={500}
-                ransitionTime={0.5}
-            /> */}
-            </SwiperSlide>
-          ))}
-        {product?.gallery &&
-          product.gallery.map((item, i: number) => (
             <SwiperSlide key={i}>
               <div style={{ width: '100%' }}>
                 <Image
@@ -112,20 +88,6 @@ const ThumbSlider = ({ product, resource }: IThumbSlider) => {
             )}
           </>
         )}
-        {product?.gallery &&
-          product.gallery.map((item, i: number) => (
-            <SwiperSlide key={i}>
-              <div style={{ position: 'relative', height: 'auto', width: '100%' }}>
-                <Image
-                  src={item.thumb}
-                  alt="OpenSFT"
-                  layout="responsive"
-                  height={600}
-                  width={600}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
       </Swiper>
     </div>
   );

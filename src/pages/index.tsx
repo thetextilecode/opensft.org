@@ -1,8 +1,6 @@
-import FetchTab from '../components/ecommerce/fetchTab';
-import FetchTab2 from '../components/ecommerce/fetchTabSlider';
 import Banner2 from '../components/elements/Banner2';
 import Bottom from '../components/elements/Bottom';
-import QuickView from '../components/ecommerce/QuickView';
+import QuickView from '../components/resources/QuickView';
 import HomeBanner from '../components/elements/HomeBanner';
 import Banner4 from '../components/elements/Banner4';
 import Banner5 from '../components/elements/Banner5';
@@ -15,7 +13,6 @@ import Layout from '../components/layout/Layout';
 import BrandSlider from '../components/sliders/Brand';
 import CategorySlider from '../components/sliders/Category';
 import HomeSlider from '../components/sliders/HomeSlider';
-import NewArrival from '../components/sliders/NewArrival';
 import { IBlogPost, IConfig } from '../../types';
 import { GetStaticProps } from 'next';
 import { getAllPosts } from '../lib/api';
@@ -55,16 +52,6 @@ export default function Home({ config, newsletterId, newsletterUser, posts }: In
           </section>
         )}
 
-        {config.configHome.showProductTabs && (
-          <section className="product-tabs section-padding position-relative wow fadeIn animated">
-            <div className="container">
-              <div className="col-lg-12">
-                <FetchTab />
-              </div>
-            </div>
-          </section>
-        )}
-
         {config.configHome.showBanner2 && (
           <section className="banner-2 section-padding pb-0">
             <div className="container">
@@ -98,19 +85,6 @@ export default function Home({ config, newsletterId, newsletterUser, posts }: In
           </section>
         )}
 
-        {config.configHome.showNewArrivals && (
-          <section className="section-padding">
-            <div className="container wow fadeIn animated">
-              <h3 className="section-title mb-20">
-                <span>New</span> Arrivals
-              </h3>
-              <div className="carousel-6-columns-cover position-relative">
-                <NewArrival />
-              </div>
-            </div>
-          </section>
-        )}
-
         {config.configHome.showDeals && (
           <section className="deals section-padding">
             <div className="container">
@@ -135,14 +109,6 @@ export default function Home({ config, newsletterId, newsletterUser, posts }: In
               <div className="carousel-6-columns-cover position-relative wow fadeIn animated">
                 <BrandSlider />
               </div>
-            </div>
-          </section>
-        )}
-
-        {config.configHome.showFetchTab2 && (
-          <section className="bg-grey-9 section-padding">
-            <div className="container pt-25 pb-25">
-              <FetchTab2 />
             </div>
           </section>
         )}

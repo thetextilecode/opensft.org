@@ -115,13 +115,10 @@ export const homeConfig = {
   showDeals: false,
   showFeaturedBrands: false,
   showFeaturesBanner: false,
-  showFetchTab2: false,
   showHomeSlider: true,
   showPopupModal: false,
-  showNewArrivals: false,
   showPopularBrands: false,
   showPopularCategories: false,
-  showProductTabs: false,
   showQuickView: true,
 };
 

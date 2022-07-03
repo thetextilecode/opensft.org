@@ -5,7 +5,7 @@ import 'react-responsive-modal/styles.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import store from '../redux/store';
-import StorageWrapper from '../components/ecommerce/storage-wrapper';
+import StorageWrapper from '../components/resources/storage-wrapper';
 import '../../public/assets/css/main.css';
 import { useEffect, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
@@ -32,7 +32,13 @@ import {
   socialConfig,
 } from '../../opensft.config';
 
-function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: AppProps) {
+type CustomAppProps = AppProps & {
+  config?: any;
+  newsletterId: any;
+  newsletterUser: any;
+};
+
+function MyApp({ Component, config, newsletterId, newsletterUser, pageProps }: CustomAppProps) {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {

@@ -11,7 +11,6 @@ import WishlistModal from '../../components/resources/WishlistModal';
 import Layout from '../../components/layout/Layout';
 import { fetchResource } from '../../redux/action/resource';
 import ResourcesFilter from '../../components/resources/ResourcesFilter';
-import { GetStaticProps } from 'next';
 
 const ResourcesFullWidth = ({
   config,
