@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Head from 'next/head';
 import Header from './Header';
 import MobileMenu from './MobileMenu';
-import { IMetaProps } from '../../../types';
+import { IMenu, IMetaProps } from '../../../types';
 import { useRouter } from 'next/router';
 
 export interface ILayout {
@@ -17,6 +17,7 @@ export interface ILayout {
   configSocial?: any;
   customMeta?: IMetaProps;
   headerStyle?: any;
+  menu: IMenu[];
   newsletterId?: string;
   newsletterUser?: string;
   noBreadcrumb?: any;
@@ -29,11 +30,11 @@ const Layout = ({
   children,
   configFooter,
   configInfo,
-  configLanguages,
   configSeo,
   configSite,
   configSocial,
   customMeta,
+  menu,
   newsletterId,
   newsletterUser,
   parent,
@@ -93,7 +94,7 @@ const Layout = ({
       {isToggled && <div className="body-overlay-1" onClick={toggleClick}></div>}
 
       <Header headerStyle={headerStyle} isToggled={isToggled} toggleClick={toggleClick} />
-      <MobileMenu isToggled={isToggled} toggleClick={toggleClick} />
+      <MobileMenu menu={menu} isToggled={isToggled} toggleClick={toggleClick} />
       <main className="main">
         <Breadcrumb parent={parent} sub={sub} subChild={subChild} noBreadcrumb={noBreadcrumb} />
         {children}

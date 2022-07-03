@@ -51,6 +51,13 @@ export interface IConfig {
   configSidebar: any;
   configSite: any;
   configSocial: any;
+  menu: IMenu[];
+}
+
+export interface IMenu {
+  href: string;
+  title: string;
+  children: any[];
 }
 
 export interface IMetaProps {
