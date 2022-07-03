@@ -132,12 +132,15 @@ export const headerConfig = {
   bottom: {
     showBrowseCategories: false,
     showHotline: false,
-    showIconCompare: true,
+    showIconCompare: false,
     showIconCart: false,
-    showIconSaved: true,
+    showIconSaved: false,
     showMobilePromo: false,
   },
-  middle: {},
+  middle: {
+    showSearch: true,
+    showCompareCartSaved: false,
+  },
   top: {
     showLanguages: false,
     showLocation: false,

@@ -65,6 +65,19 @@ export interface IConfigMobile {
   showSearch: boolean;
 }
 
+export interface IHeader {
+  configHeader: any;
+  configInfo: any;
+  configLanguages: any;
+  headerStyle?: any;
+  isToggled?: boolean;
+  menu: any;
+  toggleClick?: any;
+  totalCartItems?: any;
+  totalCompareItems?: any;
+  totalSavedItems?: any;
+}
+
 export interface IMenu {
   href: string;
   title: string;

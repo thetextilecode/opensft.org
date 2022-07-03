@@ -33,6 +33,7 @@ const Layout = ({
   configFooter,
   configHeader,
   configInfo,
+  configLanguages,
   configMobile,
   configSeo,
   configSite,
@@ -97,7 +98,15 @@ const Layout = ({
 
       {isToggled && <div className="body-overlay-1" onClick={toggleClick}></div>}
 
-      <Header headerStyle={headerStyle} isToggled={isToggled} toggleClick={toggleClick} />
+      <Header
+        configHeader={configHeader}
+        configInfo={configInfo}
+        configLanguages={configLanguages}
+        headerStyle={headerStyle}
+        isToggled={isToggled}
+        menu={menu}
+        toggleClick={toggleClick}
+      />
       <MobileMenu
         configFooter={configFooter}
         configHeader={configHeader}

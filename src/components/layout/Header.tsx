@@ -3,27 +3,8 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Search from '../ecommerce/Search';
 import Image from 'next/image';
-import {
-  footerConfig,
-  headerConfig,
-  infoConfig,
-  languages,
-  menuItems,
-} from '../../../opensft.config';
 import Menu from './Menu';
-
-export interface IHeader {
-  configHeader: any;
-  configInfo: any;
-  configLanguages: any;
-  headerStyle?: any;
-  isToggled?: boolean;
-  menu: any;
-  toggleClick?: any;
-  totalCartItems?: any;
-  totalCompareItems?: any;
-  totalSavedItems?: any;
-}
+import { IHeader } from '../../../types';
 
 const Header = ({
   configHeader,
@@ -177,59 +158,49 @@ const Header = ({
               </div>
               <div className="header-right">
                 {/* Search */}
-                <div className="search-style-2">
-                  <Search />
-                </div>
+                {configHeader.middle.showSearch && (
+                  <div className="search-style-2">
+                    <Search />
+                  </div>
+                )}
 
                 {/* Compare, Cart & Saved Icons */}
-                <div className="header-action-right">
-                  <div className="header-action-2">
-                    <div className="header-action-icon-2">
-                      <Link href="/compare">
-                        <a>
-                          <Image
-                            className="svgInject"
-                            alt="Compare"
-                            src="/assets/images/theme/icons/icon-compare.svg"
-                            layout={'responsive'}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count blue">{totalCompareItems}</span>
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="header-action-icon-2">
-                      <Link href="/saved">
-                        <a>
-                          <Image
-                            className="svgInject"
-                            alt="Saved"
-                            src="/assets/images/theme/icons/icon-heart.svg"
-                            layout={'responsive'}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count blue">{totalSavedItems}</span>
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="header-action-icon-2">
-                      <Link href="/cart">
-                        <a className="mini-cart-icon">
-                          <Image
-                            alt="Cart"
-                            src="/assets/images/theme/icons/icon-cart.svg"
-                            layout={'responsive'}
-                            width={25}
-                            height={25}
-                          />
-                          <span className="pro-count blue">{totalCartItems}</span>
-                        </a>
-                      </Link>
+                {configHeader.middle.showCompareCartSaved === true && (
+                  <div className="header-action-right">
+                    <div className="header-action-2">
+                      <div className="header-action-icon-2">
+                        Hello
+                        <Link href="/compare">
+                          <a>
+                            <Image
+                              className="svgInject"
+                              alt="Compare"
+                              src="/assets/images/theme/icons/icon-compare.svg"
+                              layout={'responsive'}
+                              width={25}
+                              height={25}
+                            />
+                            <span className="pro-count blue">{totalCompareItems}</span>
+                          </a>
+                        </Link>
+                      </div>
+                      <div className="header-action-icon-2">
+                        <Link href="/cart">
+                          <a className="mini-cart-icon">
+                            <Image
+                              alt="Cart"
+                              src="/assets/images/theme/icons/icon-cart.svg"
+                              layout={'responsive'}
+                              width={25}
+                              height={25}
+                            />
+                            <span className="pro-count blue">{totalCartItems}</span>
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -1052,11 +1023,6 @@ const Header = ({
 };
 
 const mapStateToProps = (state) => ({
-  configHeader: headerConfig,
-  configFooter: footerConfig,
-  configInfo: infoConfig,
-  configLanguages: languages,
-  menu: menuItems,
   totalCartItems: state.cart.length,
   totalCompareItems: state.compare.items.length,
   totalSavedItems: state.wishlist.items.length,
