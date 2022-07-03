@@ -6,8 +6,8 @@ import { IMenu } from '../../../types';
 import SocialIcons from '../elements/SocialIcons';
 
 export interface IMobileMenu {
-  configFooter: any;
-  configHeader: any;
+  configFooter?: any;
+  configHeader?: any;
   configInfo: any;
   configMobile: any;
   configSocial: any;
@@ -17,8 +17,6 @@ export interface IMobileMenu {
 }
 
 const MobileMenu = ({
-  configFooter,
-  configHeader,
   configInfo,
   configMobile,
   configSocial,
