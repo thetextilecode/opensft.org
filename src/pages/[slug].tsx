@@ -101,7 +101,7 @@ const ArticlePage = ({
                         <div className="single-header-meta">
                           <div className="entry-meta meta-1 font-xs mt-15 mb-15">
                             <span className="post-by">
-                              By <Link href="/#">{blogConfig.author}</Link>
+                              By <Link href="/#">{config.configBlog.author}</Link>
                             </span>
                             <span className="post-on has-dot">
                               Published on{'  '}
