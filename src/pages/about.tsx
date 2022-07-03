@@ -1,6 +1,5 @@
 import Layout from '../components/layout/Layout';
 import Image from 'next/image';
-import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { IConfig } from '../../types';
 
@@ -82,12 +81,3 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
 }
 
 export default About;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      newsletterId: String(process.env.REACT_APP_MAILCHIMP_ID),
-      newsletterUser: String(process.env.REACT_APP_MAILCHIMP_U),
-    },
-  };
-};
