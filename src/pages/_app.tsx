@@ -20,9 +20,11 @@ import Fonts from '../lib/fonts';
 import {
   blogConfig,
   footerConfig,
+  headerConfig,
   homeConfig,
   infoConfig,
   menuItems,
+  mobileConfig,
   seoConfig,
   sidebarConfig,
   siteConfig,
@@ -77,8 +79,10 @@ MyApp.getInitialProps = async () => {
     config: {
       configBlog: blogConfig,
       configFooter: footerConfig,
+      configHeader: headerConfig,
       configHome: homeConfig,
       configInfo: infoConfig,
+      configMobile: mobileConfig,
       configSeo: seoConfig,
       configSidebar: sidebarConfig,
       configSite: siteConfig,

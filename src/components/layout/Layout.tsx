@@ -10,12 +10,14 @@ import { useRouter } from 'next/router';
 export interface ILayout {
   children?: ReactNode;
   configFooter?: any;
+  configHeader?: any;
   configInfo?: any;
   configLanguages?: any;
   configSeo?: any;
   configSite?: any;
   configSocial?: any;
   customMeta?: IMetaProps;
+  configMobile: any;
   headerStyle?: any;
   menu: IMenu[];
   newsletterId?: string;
@@ -29,7 +31,9 @@ export interface ILayout {
 const Layout = ({
   children,
   configFooter,
+  configHeader,
   configInfo,
+  configMobile,
   configSeo,
   configSite,
   configSocial,
@@ -94,7 +98,16 @@ const Layout = ({
       {isToggled && <div className="body-overlay-1" onClick={toggleClick}></div>}
 
       <Header headerStyle={headerStyle} isToggled={isToggled} toggleClick={toggleClick} />
-      <MobileMenu menu={menu} isToggled={isToggled} toggleClick={toggleClick} />
+      <MobileMenu
+        configFooter={configFooter}
+        configHeader={configHeader}
+        configInfo={configInfo}
+        configMobile={configMobile}
+        configSocial={configSocial}
+        menu={menu}
+        isToggled={isToggled}
+        toggleClick={toggleClick}
+      />
       <main className="main">
         <Breadcrumb parent={parent} sub={sub} subChild={subChild} noBreadcrumb={noBreadcrumb} />
         {children}

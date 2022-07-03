@@ -1,7 +1,7 @@
 import { IMobileMenu } from './src/components/layout/MobileMenu';
 
 const dev = process.env.NODE_ENV !== 'production';
-import { ICategory, ITag } from './types';
+import { ICategory, IConfigMobile, ITag } from './types';
 
 export const server = dev ? 'http://localhost:3000' : 'https://opensft.org';
 
@@ -204,6 +204,16 @@ export const menuItems = [
     href: '/contact',
   },
 ];
+
+export const mobileConfig: IConfigMobile = {
+  showCart: false,
+  showCategories: false,
+  showCompare: false,
+  showMegaMenu: false,
+  showFooterContact: false,
+  showFooterSocial: true,
+  showSearch: false,
+};
 
 export const seoConfig = {
   googleAnalytics: '',

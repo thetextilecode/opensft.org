@@ -47,11 +47,22 @@ export interface IConfig {
   configHome: any;
   configInfo: any;
   configLanguages: any;
+  configMobile: IConfigMobile;
   configSeo: any;
   configSidebar: any;
   configSite: any;
   configSocial: any;
   menu: IMenu[];
+}
+
+export interface IConfigMobile {
+  showCart: boolean;
+  showCategories: boolean;
+  showCompare: boolean;
+  showFooterContact: boolean;
+  showFooterSocial: boolean;
+  showMegaMenu: boolean;
+  showSearch: boolean;
 }
 
 export interface IMenu {
