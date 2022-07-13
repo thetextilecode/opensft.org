@@ -77,20 +77,6 @@ const Layout = ({
 
         <link rel="canonical" href={`${configSite.url}${router.asPath}`} />
 
-        {/*<!-- Google Tag Manager -->*/}
-        <Script
-          strategy="afterInteractive"
-          id={'tag-manager'}
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','${configSeo.googleTagManager}');`,
-          }}
-        ></Script>
-        {/*<!-- End Google Tag Manager -->*/}
-
         <meta
           property="og:description"
           content={customMeta?.description ?? configSeo.meta_og_description}
@@ -143,12 +129,6 @@ const Layout = ({
         configInfo={configInfo}
         configSocial={configSocial}
       />
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${configSeo.googleTagManager}"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-        }}
-      ></noscript>
     </>
   );
 };
