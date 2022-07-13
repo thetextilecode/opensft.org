@@ -216,7 +216,8 @@ export const mobileConfig: IConfigMobile = {
 };
 
 export const seoConfig = {
-  googleAnalytics: '',
+  googleAnalytics: 'G-9WS3JV03MY',
+  googleTagManager: 'GTM-N4CSFFB',
   meta_og_title: 'Open Source Fashion & Textiles',
   meta_og_type: 'website',
   // meta_twitter_card: 'summary',
