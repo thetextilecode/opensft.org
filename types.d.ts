@@ -4,6 +4,7 @@
 
 declare global {
   interface Window {
+    gtag: any;
     products: any[];
     WOW: any;
   }

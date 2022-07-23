@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 class MyDocument extends Document {
   render(): JSX.Element {
@@ -7,25 +6,25 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/*<!-- Global site tag (gtag.js) - Google Analytics -->*/}
-          <Script
-            strategy="afterInteractive"
+          <script
             async
-            src={'https://www.googletagmanager.com/gtag/js?id=G-9WS3JV03MY'}
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
             id={'site-tag-01'}
-          ></Script>
-          <Script
-            strategy="afterInteractive"
+          ></script>
+          <script
             id={'site-tag-02'}
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-9WS3JV03MY');`,
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });`,
             }}
-          ></Script>
+          ></script>
         </Head>
-        <body>
+        <body className={'opensft'}>
           <Main />
           <NextScript />
         </body>
