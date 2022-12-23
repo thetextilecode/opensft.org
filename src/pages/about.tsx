@@ -26,17 +26,22 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
                 Our Mission
               </h6>
               <h1 className="font-heading mb-40">
-                We Want to Empower Businesses in Fashion with Open Source
+                We Want to Empower Businesses in Fashion with Technology
               </h1>
               <p>
-                OpenSFT is a nonprofit organisation that exists to provide the fashion and textile
-                sector with educational resources and tools based on free and open source
-                technology.
+                OpenSFT exists to develop solutions for the fashion industry with the planet in
+                mind. We provide the fashion and textile sector with technical solutions focused on
+                conscious decisions from the ground up, to better tackle important issues such as
+                climate change.
               </p>
+              <br />
+
               <p>
-                An open source community fosters collaboration and makes it substantially easier for
-                companies of varying sizes to pool together resources for important issues such as
-                sustainability.
+                <Link href={'/contact'}>
+                  <a className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up">
+                    Contact Us
+                  </a>
+                </Link>
               </p>
             </div>
             <div className="col-lg-6">
@@ -47,31 +52,6 @@ function About({ config, newsletterId, newsletterUser }: IAbout) {
                 width={1500}
                 height={1000}
               />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="team" className="pt-25 wow fadeIn animated">
-        <div className="container">
-          <div className="row mb-50 align-items-center">
-            <div className="col-md-6">
-              <h6 className="mt-0 mb-15 text-uppercase font-sm text-brand wow fadeIn animated">
-                Our Team
-              </h6>
-              <h2 className="mb-15 wow fadeIn animated">Who is behind OpenSFT?</h2>
-              <p className="text-grey-3 wow fadeIn animated">
-                OpenSFT primarily consists of volunteers with a passion to change fashion for the
-                better. We have a combined experience of over ten years in open source software and
-                the fashion sector. If you would like to take part, be sure to{' '}
-                <Link href={'/contact'}>reach out</Link> to us.
-              </p>
-            </div>
-            <div className="col-md-6 text-md-end mt-30">
-              <Link href={'/contact'}>
-                <a className="btn btn-outline btn-lg btn-brand-outline font-weight-bold text-brand text-hover-white border-radius-5 btn-shadow-brand hover-up">
-                  Contact Us
-                </a>
-              </Link>
             </div>
           </div>
         </div>

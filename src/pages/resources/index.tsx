@@ -133,7 +133,7 @@ const Resources = ({
                   <p>
                     We found
                     <strong className="text-brand">{resources.items.length}</strong>
-                    open source resources
+                    resources
                   </p>
                 </div>
                 <div className="sort-by-product-area">

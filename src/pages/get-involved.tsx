@@ -22,33 +22,9 @@ function GetInvolved({ config, newsletterId, newsletterUser }) {
                 <h4>Businesses</h4>
                 <p>
                   Do you own a business that relates to fashion and textiles? Then we want to hear
-                  from you. We are in the process of building state-of-the-art software for
-                  businesses like you. Have a seat at the table and help determine which features to
-                  prioritise.
+                  from you. We are building state-of-the-art software for businesses like yours.
+                  Have a seat at the table and be part of the change.
                 </p>
-                <ul>
-                  <li>Product development</li>
-                  <li>Content generation</li>
-                </ul>
-                <p />
-                <h4>Developers</h4>
-                <p>
-                  Are you a developer with open source experience? Do you have experience with or an
-                  interest in ecommerce and fashion? You could help pave the way to a better
-                  industry by helping us develop relevant products for businesses and professionals.
-                </p>
-                <ul>
-                  <li>Development toolchain</li>
-                  <li>Application lifecycle management</li>
-                  <li>Community development and advocacy</li>
-                  <li>Open source security and licensing</li>
-                </ul>
-                <p />
-                <h4>Other areas</h4>
-                <ul>
-                  <li>Marketing and content generation</li>
-                  <li>Graphic design</li>
-                </ul>
                 <p />
                 <p className="wow fadeIn animated">
                   <Link href="/contact">
